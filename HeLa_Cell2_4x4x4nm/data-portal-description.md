@@ -11,7 +11,7 @@ A cultured HeLa cell. Sample provided by Aubrey Weigel, prepared by Gleb Stengel
 Resolution: 4 nm x 4 nm x 4 nm (z, y, x)
 </details>
 
-<details open> 
+<details> 
 <summary> <b>Data sources</b> </summary>
 
 * Raw FIB-SEM data
