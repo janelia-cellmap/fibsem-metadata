@@ -2,7 +2,7 @@
 
 <details open>
 <summary><b>About this sample</b></summary>
-A cultured HeLa cell. Sample provided by Aubrey Weigel, prepared by Gleb Stengel, and imaged by Shan Xu.
+A cultured HeLa cell. Sample provided by Aubrey Weigel, prepared by Gleb Shtengel, and imaged by Shan Xu.
 </details>
 
 
