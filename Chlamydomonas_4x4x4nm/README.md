@@ -1,12 +1,15 @@
-## Chlamydomonas
+# Chlamydomonas
 
-# About
-Chlamydomonas, acquired in June, 2015
+## About
+_Chlamydomonas reinhardtii_ cells, acquired in June, 2015. Described in published work: [Enhanced FIB-SEM systems for large-volume 3D imaging](https://elifesciences.org/articles/25916)   
 
-# Construct
+## Voxel size (x, y, z)
+Acquisition: 2 nm x 2 nm x 2 nm. 
 
-# Freeze substitution protocol
+## Construct
 
-# Resin
+## Freeze substitution protocol
 
-# Internal
+## Resin
+
+## Internal

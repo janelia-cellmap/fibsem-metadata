@@ -1,18 +1,21 @@
-## (short name tbd)
+# (short name tbd)
 
-# About
+## About
 Nocodazole-treated HeLa cell
 
-# Construct
+## Voxel size (x, y, z)
+
+
+## Construct
 ManII, Nocodazole treatment, DMEM Fluorobrite + 25% Dextran
 
-# Freeze substitution protocol
+## Freeze substitution protocol
 Standard slow, 2%OsO4 0.1%UA 3%H2O in acetone. Program by Gleb Stengel and David Hoffman.
 
-# Resin
+## Resin
 Epon, new stock, new UA (labeled GSN2), encapsulated in Durcopan
 
-# Internal
-FS_RE_ID: 162
-frozen_id: 553
-FS-RE start date: 09/10/2018
+## Internal
+FS_RE_ID: 162  
+frozen_id: 553  
+FS-RE start date: 09/10/2018  

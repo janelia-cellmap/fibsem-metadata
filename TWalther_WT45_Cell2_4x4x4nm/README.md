@@ -1,19 +1,22 @@
-## SUM 1
+# SUM 1
 
-# About
+## About
 SUM cell. Provided by Tobias Walther
 
-# Construct
+## Voxel size (x, y, z)
+Acquired at ? nm x 4 nm x 4 nm. 
+
+## Construct
 WT45; DMEM + Dextran 20%
 
-# Freeze substitution protocol
+## Freeze substitution protocol
 2%OsO4 0.1%UA 3%H2O in acetone. Program by Gleb Stengel and David Hoffman.
 
-# Resin
+## Resin
 Epon encapsulated in Durcopan
 
-# Internal
-FS_RE_ID: 122
-LoadID: 252
-frozen_id: 238
+## Internal 
+FS_RE_ID: 122  
+LoadID: 252  
+frozen_id: 238  
 FS-RE start date: 10/09/2017
