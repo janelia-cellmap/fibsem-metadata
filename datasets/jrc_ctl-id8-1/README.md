@@ -13,7 +13,7 @@ Sample provided by Alex Ritter (Genentech), prepared for imaging by Gleb Shtenge
 <summary><b>Acquisition information</b></summary>
 <ul>
 <li>Sample: Killer T-Cell (WT) + ID8 Cancer Cell</li>
-<li>Protocol: High pressure freezing, freeze-substitution resin embedding with 2%OsO4 0.1%UA 3%H2O in Acetone</li>
+  <li>Protocol: High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1 % UA 3% H<sub>2</sub>O in Acetone</li>
 <li>Imaging current (nA): 0.25</li>
 <li>Scanning speed (MHz): 0.2</li>
 <li>Imaging duration (days): 29</li> 
