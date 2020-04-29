@@ -1,4 +1,4 @@
-## Mouse Pancreas Islet Cells
+## Isolated Mouse Pancreatic Islets
 
 <details open>
 <summary><b>About this sample</b></summary>
@@ -12,7 +12,7 @@ Sample provided by Andreas Mueller and Michele Solimena (TU-Dresden), prepared a
 <summary><b>Acquisition information</b></summary>
 <ul>
 <li>Sample: Wild-type mouse pancreatic islet cells treated with high glucose.</li>
-<li>Protocol: Chemical Fixation, ORTO-Lead-EPTA staining with Progressive Lowering of Temperature and Low Temperature Staining (PLT-LTS)</li>
+<li>Protocol: High-pressure freezing and freeze-substitution with 2% OsO<sub>4</sub>, 1% UA, 0.5% GA, 5% H<sub>2</sub>O in Acetone with 1% Methanol, followed by 0.2% TCH in 80% Methanol at RT, 2% OsO<sub>4</sub> in Acetone at RT, 1% UA in Acetone + 10% Methanol </li>
 <li>EHT (kV): 0.9</li>
 <li>Bias (V): 0</li>
 <li>Imaging current (nA): 0.14</li>
@@ -22,6 +22,7 @@ Sample provided by Andreas Mueller and Michele Solimena (TU-Dresden), prepared a
 <li>Final voxel size (nm): 4 x 4 x 4 (X,Y,Z)</li>
 <li>Data dimensions (µm): 30 x 20 x 29 (X,Y,Z)</li>
 <li>Hess lab internal ID: <code>Pancreatic Islets_G64-2-1 (High Glucose treated)</code></li>
+<li>Date: 3/1/2019</li>
 </ul>
 </details>
 <details>

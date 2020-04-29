@@ -22,6 +22,7 @@ Sample provided by Huxley Kaminski and Schuyler van Engelenburg (U. Denver), pre
 <li>Final voxel size (nm): 4 x 4 x 4 (X,Y,Z)</li>
 <li>Data dimensions (µm): 40 x 12 x 34 (X,Y,Z)</li>
 <li>Hess lab internal ID: <code>Cryo_2017_FS96_Cell1 (Cryo)</code></li>
+<li>Date: 8/10/2018</li>
 </ul>
 </details>
 <details>

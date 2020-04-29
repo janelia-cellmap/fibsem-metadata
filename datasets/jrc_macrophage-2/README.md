@@ -22,6 +22,7 @@ Sample provided by Huxley Kaminski and Schuyler van Engelenburg (U. Denver), pre
 <li>Data dimensions (µm): 40 x 8 x 44 (X,Y,Z)</li>
 <li>Hess lab internal ID: <code>FS80_Cell2</code></li>
 </ul>
+<li>Date: 11/11/2018</li>
 </details>
 <details>
 <summary><b>Data sources</b></summary>
