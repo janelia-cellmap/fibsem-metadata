@@ -13,12 +13,14 @@ Sample provided by Andreas Mueller and Michele Solimena (TU-Dresden), prepared a
 <ul>
 <li>Sample: Wild-type mouse pancreatic islet cells treated with high glucose.</li>
 <li>Protocol: Chemical Fixation, ORTO-Lead-EPTA staining with Progressive Lowering of Temperature and Low Temperature Staining (PLT-LTS)</li>
+<li>EHT (kV): 0.9</li>
+<li>Bias (V): 0</li>
 <li>Imaging current (nA): 0.14</li>
 <li>Scanning speed (MHz): 0.2</li>
 <li>Imaging duration (days): 15</li> 
 <li>Data size (GB): 268</li>
 <li>Final voxel size (nm): 4 x 4 x 4 (X,Y,Z)</li>
-<li>Data volume (µm<sup>3</sup>): 30 x 20 x 29 (X,Y,Z)</li>
+<li>Data dimensions (µm): 30 x 20 x 29 (X,Y,Z)</li>
 <li>Hess lab internal ID: <code>Pancreatic Islets_G64-2-1 (High Glucose treated)</code></li>
 </ul>
 </details>

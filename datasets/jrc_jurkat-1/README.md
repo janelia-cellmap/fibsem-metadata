@@ -13,12 +13,14 @@ Sample provided by Huxley Kaminski and Schuyler van Engelenburg (U. Denver), pre
 <ul>
 <li>Sample: Wild-type Jurkat cell</li>
 <li>Protocol: High pressure freezng, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in Acetone</li>
+<li>EHT (kV): 1.0</li>
+<li>Bias (V): 0</li>
 <li>Imaging current (nA): 0.25</li>
 <li>Scanning speed (MHz): 0.2</li>
 <li>Imaging duration (days): 19</li> 
 <li>Data size (GB): 251</li>
 <li>Final voxel size (nm): 4 x 4 x 4 (X,Y,Z)</li>
-<li>Data volume (µm<sup>3</sup>): 40 x 12 x 34 (X,Y,Z)</li>
+<li>Data dimensions (µm): 40 x 12 x 34 (X,Y,Z)</li>
 <li>Hess lab internal ID: <code>Cryo_2017_FS96_Cell1 (Cryo)</code></li>
 </ul>
 </details>

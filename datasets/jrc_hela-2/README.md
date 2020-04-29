@@ -13,12 +13,14 @@ Sample provided by Aubrey Weigel (HHMI/Janelia), prepared for imaging by Gleb Sh
 <ul>
 <li>Sample: Wild-type HeLa cell</li>
 <li>Protocol: High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in Acetone</li>
+<li>EHT (kV): 0.4</li>
+<li>Bias (V): 500</li>
 <li>Imaging current (nA): 0.25</li>
 <li>Scanning speed (MHz): 0.1</li>
 <li>Imaging duration (days): 25</li> 
 <li>Data size (GB): 119</li>
 <li>Final voxel size (nm): 4 x 4 x 4 (X,Y,Z)</li>
-<li>Data volume (µm<sup>3</sup>): 48 x 6 x 25 (X,Y,Z)</li>
+<li>Data dimensions (µm): 48 x 6 x 25 (X,Y,Z)</li>
 <li>Hess lab internal ID: <code>Aubrey_17-7_17_Cell2 (Cryo)</code></li>
 </ul>
 </details>

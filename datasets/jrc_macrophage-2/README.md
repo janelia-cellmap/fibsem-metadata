@@ -12,12 +12,14 @@ Sample provided by Huxley Kaminski and Schuyler van Engelenburg (U. Denver), pre
 <ul>
 <li>Sample: Wild-type THP-1 macrophage</li>
 <li>Protocol: High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in Acetone</li>
+<li>EHT (kV): 1.2</li>
+<li>Bias (V): 0</li>
 <li>Imaging current (nA): 0.25</li>
 <li>Scanning speed (MHz): 0.2</li>
 <li>Imaging duration (days): 20</li> 
 <li>Data size (GB): 217</li>
 <li>Final voxel size (nm): 4 x 4 x 4 (X,Y,Z)</li>
-<li>Data volume (µm<sup>3</sup>): 40 x 8 x 44 (X,Y,Z)</li>
+<li>Data dimensions (µm): 40 x 8 x 44 (X,Y,Z)</li>
 <li>Hess lab internal ID: <code>FS80_Cell2</code></li>
 </ul>
 </details>

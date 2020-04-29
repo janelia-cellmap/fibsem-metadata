@@ -13,12 +13,14 @@ Sample provided by Zhiyuan Lu (HHMI/Janelia), prepared and imaged by by Song Pan
 <ul>
 <li>Sample: Fanshaped Body of a 5 day-old adult male drosophila (Genome type: iso Canton S G1 x w1118 iso 5905)</li>
 <li>Protocol: Chemical Fixation, ORTO-Lead-EPTA staining with Progressive Lowering of Temperature and Low Temperature Staining (PLT-LTS)</li>
+<li>EHT (kV): 0.7</li>
+<li>Bias (V): 0</li>
 <li>Imaging current (nA): 0.24</li>
 <li>Scanning speed (MHz): 1.5</li>
 <li>Imaging duration (days): 15</li> 
 <li>Data size (GB): 1770</li>
 <li>Final voxel size (nm): 4 x 4 x 4 (X,Y,Z)</li>
-<li>Data volume (µm<sup>3</sup>): 45 x 56 x 45 (X,Y,Z)</li>
+<li>Data dimensions (µm): 45 x 56 x 45 (X,Y,Z)</li>
 <li>Hess lab internal ID: <code>Super Fly_Z0519-11</code></li>
 </ul>
 </details>
