@@ -22,7 +22,7 @@ Sample provided by Zhiyuan Lu (HHMI/Janelia), prepared and imaged by by Song Pan
 <li>Final voxel size (nm): 4 x 4 x 4 (X,Y,Z)</li>
 <li>Data dimensions (µm): 50 x 40 x 87 (X,Y,Z)</li>
 <li>Hess lab internal ID: <code>Super Fly_Z0519-15</code></li>
-<li>Date: 12/6/2019</li>
+<li>Imaging start date: 12/6/2019</li>
 </ul>
 </details>
 <details>

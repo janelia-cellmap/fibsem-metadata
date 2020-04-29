@@ -21,7 +21,7 @@ Sample provided by Alex Ritter (Genentech), prepared for imaging by Gleb Shtenge
 <li>Final voxel size (nm): 4 x 4 x 4 (X,Y,Z)</li>
 <li>Data dimensions (µm): 74 x 13 x 48 (X,Y,Z)</li>
 <li>Hess lab internal ID: <code>Cryo_LoadID496_Atlas1</code></li>
-<li>Date: 2/4/2020</li>
+<li>Imaging start date: 2/4/2020</li>
 </ul>
 </details>
 <details>

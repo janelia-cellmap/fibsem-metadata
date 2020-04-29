@@ -22,7 +22,7 @@ Sample provided by Andreas Mueller and Michele Solimena (TU-Dresden), prepared a
 <li>Final voxel size (nm): 4 x 4 x 4 (X,Y,Z)</li>
 <li>Data dimensions (µm): 30 x 20 x 29 (X,Y,Z)</li>
 <li>Hess lab internal ID: <code>Pancreatic Islets_G64-2-1 (High Glucose treated)</code></li>
-<li>Date: 3/1/2019</li>
+<li>Imaging start date: 3/1/2019</li>
 </ul>
 </details>
 <details>

@@ -22,7 +22,7 @@ Sample provided by Aubrey Weigel (HHMI/Janelia), prepared for imaging by Gleb Sh
 <li>Final voxel size (nm): 4 x 4 x 4 (X,Y,Z)</li>
 <li>Data dimensions (µm): 50 x 4 x 48 (X,Y,Z)</li>
 <li>Hess lab internal ID: <code>Aubrey_17-7_17_Cell3 (Cryo)</code></li>
-<li>Date: 8/9/2017</li>
+<li>Imaging start date: 8/9/2017</li>
 </ul>
 </details>
 <details>

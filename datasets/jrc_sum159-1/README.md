@@ -21,7 +21,7 @@ Sample provided by Jeeyun Chung (Harvard U.), prepared for imaging by Gleb Shten
 <li>Final voxel size (nm): 4 x 4 x 4 (X,Y,Z)</li>
 <li>Data dimensions (µm): 64 x 11 x 31 (X,Y,Z)</li>
 <li>Hess lab internal ID: <code>WT45_Cell2</code></li>
-<li>Date: 11/21/2017</li>
+<li>Imaging start date: 11/21/2017</li>
 </ul>
 </details>
 <details>
