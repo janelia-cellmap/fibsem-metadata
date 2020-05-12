@@ -1,0 +1,21 @@
+{
+    "Title": "Drosophila Fan-Shaped Body",
+    "About this sample": {
+        "Sample": "Fan-shaped body of a 5 day-old adult male drosophila (Genome type: iso Canton S G1 x w1118 iso 5905).",
+        "Protocol": "Chemical Fixation, ORTO-Lead-EPTA staining via progressive lowering of temperature and low temperature staining (PLT-LTS) heavy metal enhancement protocol.",
+        "Contributions": "Sample provided by Zhiyuan Lu (HHMI/Janelia), prepared, imaged and post-processed by Song Pang (HHMI/Janelia), with post-processing by C. Shan Xu (HHMI/Janelia)."
+    },
+    "Acquisition information": {
+        "EHT (kV)": "0.7",
+        "Bias (V)": "0",
+        "Imaging current (nA)": "0.24",
+        "Scanning speed (MHz)": "1.5",
+        "Imaging duration (days)": "15",
+        "Data size (GB)": "1770",
+        "Final voxel size (nm)": "4 x 4 x 4 (X, Y, Z)",
+        "Data dimensions (µm)": "45 x 56 x 45 (X, Y, Z",
+        "Imaging start date": "9/14/2019"
+    },
+    "Data sources": {"fibsem/aligned": "SIFT-aligned raw FIB-SEM data"},
+    "Publications": {}
+}

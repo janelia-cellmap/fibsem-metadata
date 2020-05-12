@@ -1,0 +1,22 @@
+{
+    "Title": "Mitotic HeLa Cell",
+    "About this sample": {
+        "Sample": "Wild-type HeLa cell.",
+        "Protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in acetone; resin embedding in Eponate 12.",
+        "Contributions": "Sample provided by Aubrey Weigel (HHMI/Janelia), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia)."
+    },
+    "Acquisition information": {
+        "EHT (kV)": "0.9",
+        "Bias (V)": "0",
+        "Imaging current (nA)": "0.24",
+        "Scanning speed (MHz)": "0.2",
+        "Imaging duration (days)": "15",
+        "Data size (GB)": "203",
+        "Final voxel size (nm)": "4 x 4 x 4 (X, Y, Z)",
+        "Data dimensions (µm)": "30 x 14 x 33 (X, Y, Z",
+        "Imaging start date": "5/30/2019"
+    },
+    "Data sources": {"fibsem/aligned": "SIFT-aligned raw FIB-SEM data",
+                    "fibsem/destreak": "Destreaked SIFT-aligned raw FIB-SEM data"},
+    "Publications": {}
+}

@@ -12,7 +12,9 @@
 <details>
 <summary><b>Acquisition information</b></summary>
 <ul>
-<li>Imaging current (nA): 0.25</li>
+<li>EHT (kV):  0.7</li>
+<li>Bias (V):  0</li>
+<li>Imaging current (nA):  0.25</li>
 <li>Scanning speed (MHz): 0.2</li>
 <li>Imaging duration (days): 29</li> 
 <li>Data size (GB): 694</li>

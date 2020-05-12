@@ -1,0 +1,21 @@
+{
+    "Title": "Macrophage",
+    "About this sample": {
+        "Sample": "Wild-type THP-1 macrophage.",
+        "Protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in acetone; resin embedding in Eponate 12.",
+        "Contributions": "Sample provided by Huxley Kaminski and Schuyler van Engelenburg (U. Denver), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia)."
+    },
+    "Acquisition information": {
+        "EHT (kV)": "1.2",
+        "Bias (V)": "0",
+        "Imaging current (nA)": "0.25",
+        "Scanning speed (MHz)": "0.2",
+        "Imaging duration (days)": "20",
+        "Data size (GB)": "217",
+        "Final voxel size (nm)": "4 x 4 x 4 (X, Y, Z)",
+        "Data dimensions (µm)": "40 x 8 x 44 (X, Y, Z",
+        "Imaging start date": "11/11/2018"
+    },
+    "Data sources": {"fibsem/aligned": "SIFT-aligned raw FIB-SEM data"},
+    "Publications": {}
+}

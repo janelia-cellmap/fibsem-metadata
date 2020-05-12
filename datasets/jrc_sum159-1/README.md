@@ -1,4 +1,4 @@
-## Macrophage
+## SUM159 cell 
 
 <details open>
 <summary><b>About this sample</b></summary>
