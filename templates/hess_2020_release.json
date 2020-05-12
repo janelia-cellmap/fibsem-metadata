@@ -1,0 +1,21 @@
+{
+    "Title": "",
+    "About this sample": {
+        "Sample": "",
+        "Protocol": "",
+        "Contributions": ""
+    },
+    "Acquisition information": {
+        "EHT (kV)": "0.7",
+        "Bias (V)": "0",
+        "Imaging current (nA)": "",
+        "Scanning speed (MHz)": "",
+        "Imaging duration (days)": "",
+        "Data size (GB)": "",
+        "Final voxel size (nm)": "",
+        "Data dimensions (µm)": "",
+        "Imaging start date": ""
+    },
+    "Data sources": {},
+    "Publications": {}
+}
