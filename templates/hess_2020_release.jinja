@@ -1,0 +1,22 @@
+{%- for field in fields -%}
+{%- if field == 'Title' -%}
+## {{fields.Title}}
+{%- else -%}
+{%- if field == 'About this sample' %}
+<details open>
+{%- else -%}
+<details closed>
+{%- endif -%}
+<summary><b>{{field}}</b></summary>
+<ul>
+{%- for item in fields[field] %}
+{% if fields[field] is mapping -%}
+<li>{{item}}: {{fields[field][item]}}</li>
+{%- else %}
+<li>{{item}}</li>
+{%- endif -%}
+{%- endfor -%}
+</ul>
+</details>
+{%- endif -%}
+{%- endfor -%}
