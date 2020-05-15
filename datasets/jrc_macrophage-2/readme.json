@@ -13,7 +13,7 @@
         "Imaging duration (days)": "20",
         "Data size (GB)": "217",
         "Final voxel size (nm)": "4 x 4 x 4 (X, Y, Z)",
-        "Data dimensions (µm)": "40 x 8 x 44 (X, Y, Z",
+        "Data dimensions (µm)": "40 x 8 x 44 (X, Y, Z)",
         "Imaging start date": "11/11/2018"
     },
     "Data sources": {"fibsem/aligned": "SIFT-aligned raw FIB-SEM data"},
