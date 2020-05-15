@@ -6,8 +6,8 @@
         "Contributions": ""
     },
     "Acquisition information": {
-        "EHT (kV)": "0.7",
-        "Bias (V)": "0",
+        "EHT (kV)": "",
+        "Bias (V)": "",
         "Imaging current (nA)": "",
         "Scanning speed (MHz)": "",
         "Imaging duration (days)": "",
