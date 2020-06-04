@@ -12,8 +12,8 @@
         "Scanning speed (MHz)": "0.2",
         "Imaging duration (days)": "15",
         "Data size (GB)": "268",
-        "Final voxel size (nm)": "4 x 4 x 4 (X, Y, Z)",
-        "Data dimensions (µm)": "30 x 20 x 29 (X, Y, Z)",
+        "Final voxel size (nm)": "4.00 x 4.00 x 3.40 (X, Y, Z)",
+        "Data dimensions (µm)": "30 x 20 x 25 (X, Y, Z)",
         "Imaging start date": "3/1/2019"
     },
     "Data sources": {"fibsem/aligned": "SIFT-aligned raw FIB-SEM data"},
