@@ -12,7 +12,7 @@
         "Scanning speed (MHz)": "1.5",
         "Imaging duration (days)": "15",
         "Data size (GB)": "1770",
-        "Final voxel size (nm)": "4 x 4 x 4 (X, Y, Z)",
+        "Final voxel size (nm)": "4.00 x 4.00 x 4.00 (X, Y, Z)",
         "Data dimensions (µm)": "45 x 56 x 45 (X, Y, Z)",
         "Imaging start date": "9/14/2019"
     },
