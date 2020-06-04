@@ -1,21 +1,23 @@
 {
-    "Title": "Isolated Mouse Pancreatic Islets",
-    "About this sample": {
-        "Sample": "Wild-type mouse pancreatic islets treated with high glucose.",
-        "Protocol": "High-pressure freezing and freeze-substitution with 2% OsO<sub>4</sub>, 1% UA, 0.5% GA, 5% H<sub>2</sub>O in acetone with 1% methanol, followed by 0.2% TCH in 80% methanol at RT, 2% OsO<sub>4</sub> in acetone at RT, 1% UA in acetone + 10% methanol.",
-        "Contributions": "Sample provided by Andreas Mueller and Michele Solimena (Paul Langerhans Institute, Dresden), prepared for imaging by Song Pang (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia)."
-    },
-    "Acquisition information": {
-        "EHT (kV)": "0.9",
-        "Bias (V)": "0",
-        "Imaging current (nA)": "0.14",
-        "Scanning speed (MHz)": "0.2",
-        "Imaging duration (days)": "15",
-        "Data size (GB)": "268",
-        "Final voxel size (nm)": "4.00 x 4.00 x 3.40 (X, Y, Z)",
-        "Data dimensions (µm)": "30 x 20 x 25 (X, Y, Z)",
-        "Imaging start date": "3/1/2019"
-    },
-    "Data sources": {"fibsem/aligned": "SIFT-aligned raw FIB-SEM data"},
-    "Publications": {}
+  "Title": "Isolated Mouse Pancreatic Islets",
+  "About this sample": {
+    "Sample": "Wild-type mouse pancreatic islets treated with high glucose.",
+    "Protocol": "High-pressure freezing and freeze-substitution with 2% OsO<sub>4</sub>, 1% UA, 0.5% GA, 5% H<sub>2</sub>O in acetone with 1% methanol, followed by 0.2% TCH in 80% methanol at RT, 2% OsO<sub>4</sub> in acetone at RT, 1% UA in acetone + 10% methanol.",
+    "Contributions": "Sample provided by Andreas Mueller and Michele Solimena (Paul Langerhans Institute, Dresden), prepared for imaging by Song Pang (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia)."
+  },
+  "Acquisition information": {
+    "Final voxel size (nm)": "4.00 x 4.00 x 3.40 (X, Y, Z)",
+    "Data dimensions (\u00b5m)": "30 x 20 x 25 (X, Y, Z)",
+    "Data size (GB)": "268",
+    "Imaging duration (days)": "15",
+    "Imaging start date": "3/1/2019",
+    "Primary energy (eV)": 900.0,
+    "Bias (V)": "0",
+    "Imaging current (nA)": "0.14",
+    "Scanning speed (MHz)": "0.2"
+  },
+  "Data sources": {
+    "fibsem/aligned": "SIFT-aligned raw FIB-SEM data"
+  },
+  "Publications": {}
 }
