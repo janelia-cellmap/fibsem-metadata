@@ -1,5 +1,5 @@
 {
-  "Title": "Drosophila Accessory Calyx",
+  "Title": "Drosophila Accessory Calyx, 4nm voxel, 2670 GB",
   "About this sample": {
     "Sample": "Accessory calyx of a 5 day-old adult male drosophila (Genome type: iso Canton S G1 x w1118 iso 5905).",
     "Protocol": "Chemical Fixation, ORTO-Lead-EPTA staining via progressive lowering of temperature and low temperature staining (PLT-LTS) heavy metal enhancement protocol.",
@@ -11,7 +11,7 @@
     "Data size (GB)": "2670",
     "Imaging duration (days)": "19",
     "Imaging start date": "12/6/2019",
-    "Primary energy (eV)": 700.0,
+    "Primary energy (eV)": "700.0",
     "Bias (V)": "0",
     "Imaging current (nA)": "0.3",
     "Scanning speed (MHz)": "2"

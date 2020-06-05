@@ -1,5 +1,5 @@
 {
-  "Title": "Jurkat Cell",
+  "Title": "Jurkat Cell, 4nm voxel, 251 GB",
   "About this sample": {
     "Sample": "Wild-type Jurkat cell.",
     "Protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in acetone; resin embedding in Eponate 12.",
@@ -11,7 +11,7 @@
     "Data size (GB)": "251",
     "Imaging duration (days)": "19",
     "Imaging start date": "8/10/2018",
-    "Primary energy (eV)": 1000.0,
+    "Primary energy (eV)": "1000.0",
     "Bias (V)": "0",
     "Imaging current (nA)": "0.25",
     "Scanning speed (MHz)": "0.2"
