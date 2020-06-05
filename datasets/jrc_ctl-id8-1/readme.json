@@ -11,7 +11,7 @@
     "Data size (GB)": "694",
     "Imaging duration (days)": "29",
     "Imaging start date": "2/4/2020",
-    "Primary energy (eV)": 700.0,
+    "Primary energy (eV)": "700.0",
     "Bias (V)": "0",
     "Imaging current (nA)": "0.25",
     "Scanning speed (MHz)": "0.2"
