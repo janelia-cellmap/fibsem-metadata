@@ -1,5 +1,6 @@
 {
-  "Title": "Isolated Mouse Pancreatic Islets",
+  "Title": "JRC Mus Pancreas-1",
+  "Subtitle": "Isolated Murine Pancreatic Islets",
   "About this sample": {
     "Sample": "Wild-type mouse pancreatic islets treated with high glucose.",
     "Protocol": "High-pressure freezing and freeze-substitution with 2% OsO<sub>4</sub>, 1% UA, 0.5% GA, 5% H<sub>2</sub>O in acetone with 1% methanol, followed by 0.2% TCH in 80% methanol at RT, 2% OsO<sub>4</sub> in acetone at RT, 1% UA in acetone + 10% methanol.",
@@ -11,7 +12,7 @@
     "Data size (GB)": "268",
     "Imaging duration (days)": "15",
     "Imaging start date": "3/1/2019",
-    "Primary energy (eV)": 900.0,
+    "Primary energy (eV)": "900.0",
     "Bias (V)": "0",
     "Imaging current (nA)": "0.14",
     "Scanning speed (MHz)": "0.2"

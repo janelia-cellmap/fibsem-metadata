@@ -1,5 +1,6 @@
 {
-  "Title": "HeLa Cell 3",
+  "Title": "JRC HeLa-3",
+  "Subtitle": "HeLa Cell 3",
   "About this sample": {
     "Sample": "Wild-type HeLa cell.",
     "Protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in acetone; resin embedding in Eponate 12.",
@@ -11,7 +12,7 @@
     "Data size (GB)": "145",
     "Imaging duration (days)": "31",
     "Imaging start date": "8/9/2017",
-    "Primary energy (eV)": 1000.0,
+    "Primary energy (eV)": "1000.0",
     "Bias (V)": "0",
     "Imaging current (nA)": "0.24",
     "Scanning speed (MHz)": "0.2"
