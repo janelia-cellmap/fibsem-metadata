@@ -1,12 +1,10 @@
-{%- for field in fields -%}
-{%- if field == 'Title' -%}
-### {{fields.Title}}
+{%- for field in fields %}
+{% if field == 'Title' -%}
+## {{fields.Title}}
+{%- elif field == 'Subtitle' -%}
+### {{fields.Subtitle}}
 {%- else -%}
-{%- if field == 'About this sample' %}
 <details closed>
-{%- else -%}
-<details closed>
-{%- endif -%}
 <summary><b>{{field}}</b></summary>
 <ul>
 {%- for item in fields[field] %}

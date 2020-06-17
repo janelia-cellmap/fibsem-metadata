@@ -1,5 +1,6 @@
 {
-  "Title": "Drosophila Fan-Shaped Body, 4nm voxel, 1770 GB",
+  "Title": "JRC Fly-FSB",
+  "Subtitle": "Drosophila Fan-Shaped Body",
   "About this sample": {
     "Sample": "Fan-shaped body of a 5 day-old adult male drosophila (Genome type: iso Canton S G1 x w1118 iso 5905).",
     "Protocol": "Chemical Fixation, ORTO-Lead-EPTA staining via progressive lowering of temperature and low temperature staining (PLT-LTS) heavy metal enhancement protocol.",

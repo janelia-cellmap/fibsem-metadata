@@ -1,5 +1,6 @@
 {
-  "Title": "Mitotic HeLa Cell, 4nm voxel, 203 GB",
+  "Title": "JRC HeLa-4",
+  "Subtitle": "Mitotic HeLa Cell",
   "About this sample": {
     "Sample": "Wild-type HeLa cell.",
     "Protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in acetone; resin embedding in Eponate 12.",

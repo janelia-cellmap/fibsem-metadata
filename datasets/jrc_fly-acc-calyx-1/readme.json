@@ -1,5 +1,6 @@
 {
-  "Title": "Drosophila Accessory Calyx, 4nm voxel, 2670 GB",
+  "Title": "JRC Fly-AccCalyx",
+  "Subtitle": "Drosophila Accessory Calyx",
   "About this sample": {
     "Sample": "Accessory calyx of a 5 day-old adult male drosophila (Genome type: iso Canton S G1 x w1118 iso 5905).",
     "Protocol": "Chemical Fixation, ORTO-Lead-EPTA staining via progressive lowering of temperature and low temperature staining (PLT-LTS) heavy metal enhancement protocol.",

@@ -1,7 +1,8 @@
 {
-  "Title": "Killer T-Cell attacking ID8 Cancer Cell, 4nm voxel, 694GB",
+  "Title": "JRC CTL-ID8",
+  "Subtitle": "T-Cell attacking a cancer cell.",
   "About this sample": {
-    "Sample": "Wild-type killer T-Cell attacking a ID8 Cancer Cell.",
+    "Sample": "Wild-type killer T-Cell attacking a ID8 cancer cell.",
     "Protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in acetone; resin embedding in Eponate 12.",
     "Contributions": "Sample provided by Alex Ritter (Genentech), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia)."
   },
