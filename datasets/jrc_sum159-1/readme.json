@@ -9,7 +9,7 @@
   "Acquisition information": {
     "Final voxel size (nm)": "4.00 x 4.00 x 4.56 (X, Y, Z)",
     "Data dimensions (\u00b5m)": "64 x 11 x 35 (X, Y, Z)",
-    "Data size (GB)": "334",
+    "Data size (GB)": "668",
     "Imaging duration (days)": "18",
     "Imaging start date": "11/21/2017",
     "Primary energy (eV)": "1200.0",

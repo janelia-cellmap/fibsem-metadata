@@ -1,5 +1,5 @@
 {
-  "Title": "JRC Macrophage-1",
+  "Title": "JRC Macrophage-2",
   "Subtitle": "Macrophage",
   "About this sample": {
     "Sample": "Wild-type THP-1 macrophage.",
@@ -9,7 +9,7 @@
   "Acquisition information": {
     "Final voxel size (nm)": "4.0 x 4.0 x 3.36 (X, Y, Z)",
     "Data dimensions (\u00b5m)": "40 x 8 x 37 (X, Y, Z)",
-    "Data size (GB)": "217",
+    "Data size (GB)": "434",
     "Imaging duration (days)": "20",
     "Imaging start date": "11/11/2018",
     "Primary energy (eV)": "1200.0",
