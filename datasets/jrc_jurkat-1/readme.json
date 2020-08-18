@@ -1,6 +1,11 @@
 {
-  "Title": "JRC Jurkat-1",
-  "Subtitle": "Jurkat Cell",
+  "Title": "Wild-type Jurkat (immortalized T lymphocyte) cell. (4 nm)",
+  "Summary": {
+    "Acquisition date": "2018-8-10",
+    "Dataset ID": "jrc_jurkat-1",
+    "Voxel size (nm)":"4.0 x 4.0 x 3.44 (X, Y, Z)",
+    "Dimensions (\u00b5m)": "40 x 12 x 29 (X, Y, Z)"
+  },
   "About this sample": {
     "Sample": "Wild-type Jurkat cell.",
     "Protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in acetone; resin embedding in Eponate 12.",
@@ -8,17 +13,13 @@
   },
   "Acquisition information": {
     "Final voxel size (nm)": "4.0 x 4.0 x 3.44 (X, Y, Z)",
-    "Data dimensions (\u00b5m)": "40 x 12 x 29 (X, Y, Z)",
-    "Data size (GB)": "251",
+    "Dimensions (\u00b5m)": "40 x 12 x 29 (X, Y, Z)",
+    "Size (GB)": "251",
     "Imaging duration (days)": "19",
-    "Imaging start date": "8/10/2018",
+    "Imaging start date": "2018-8-10",
     "Primary energy (eV)": "1000.0",
     "Bias (V)": "0",
     "Imaging current (nA)": "0.25",
     "Scanning speed (MHz)": "0.2"
-  },
-  "Data sources": {
-    "fibsem/aligned": "SIFT-aligned raw FIB-SEM data"
-  },
-  "Publications": {}
+  }
 }
