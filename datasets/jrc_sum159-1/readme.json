@@ -1,6 +1,11 @@
 {
-  "Title": "JRC SUM159-1",
-  "Subtitle": "SUM159 Cell",
+  "Title": "Wild-type SUM159 (immortalized breast cancer) cell. (4 nm)",
+  "Summary": {
+    "Acquisition date": "2017-11-21",
+    "Dataset ID": "jrc_sum-159-1",
+    "Voxel size (nm)": "4.00 x 4.00 x 4.56 (X, Y, Z)",
+    "Dimensions (\u00b5m)": "64 x 11 x 35 (X, Y, Z)"
+  },
   "About this sample": {
     "Sample": "Wild-type SUM159 (immortalized breast cancer) cell.",
     "Protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in Acetone, resin embedding in Eponate 12.",
@@ -8,17 +13,18 @@
   },
   "Acquisition information": {
     "Final voxel size (nm)": "4.00 x 4.00 x 4.56 (X, Y, Z)",
+<<<<<<< HEAD
     "Data dimensions (\u00b5m)": "64 x 11 x 35 (X, Y, Z)",
     "Data size (GB)": "668",
+=======
+    "Dimensions (\u00b5m)": "64 x 11 x 35 (X, Y, Z)",
+    "Size (GB)": "334",
+>>>>>>> 2fe775c84badfc8081856a700e30e1e3e882a86f
     "Imaging duration (days)": "18",
-    "Imaging start date": "11/21/2017",
+    "Imaging start date": "2017-11-21",
     "Primary energy (eV)": "1200.0",
     "Bias (V)": "0",
     "Imaging current (nA)": "0.25",
     "Scanning speed (MHz)": "0.2"
-  },
-  "Data sources": {
-    "fibsem/aligned": "SIFT-aligned raw FIB-SEM data"
-  },
-  "Publications": {}
+  }
 }

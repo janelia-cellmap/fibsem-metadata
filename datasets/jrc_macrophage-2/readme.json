@@ -1,6 +1,11 @@
 {
-  "Title": "JRC Macrophage-2",
-  "Subtitle": "Macrophage",
+  "Title": "Wild-type THP-1 macrophage. (4 nm)",
+  "Summary": {
+    "Acquisition date": "2018-11-11",
+    "Dataset ID": "jrc_macrophage-2",
+    "Voxel size (nm)":"4.0 x 4.0 x 3.36 (X, Y, Z)",
+    "Dimensions (\u00b5m)": "40 x 8 x 37 (X, Y, Z)"
+  },
   "About this sample": {
     "Sample": "Wild-type THP-1 macrophage.",
     "Protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in acetone; resin embedding in Eponate 12.",
@@ -8,17 +13,13 @@
   },
   "Acquisition information": {
     "Final voxel size (nm)": "4.0 x 4.0 x 3.36 (X, Y, Z)",
-    "Data dimensions (\u00b5m)": "40 x 8 x 37 (X, Y, Z)",
-    "Data size (GB)": "434",
+    "Dimensions (\u00b5m)": "40 x 8 x 37 (X, Y, Z)",
+    "Size (GB)": "217",
     "Imaging duration (days)": "20",
-    "Imaging start date": "11/11/2018",
+    "Imaging start date": "2018-11-11",
     "Primary energy (eV)": "1200.0",
     "Bias (V)": "0",
     "Imaging current (nA)": "0.25",
     "Scanning speed (MHz)": "0.2"
-  },
-  "Data sources": {
-    "fibsem/aligned": "SIFT-aligned raw FIB-SEM data"
-  },
-  "Publications": {}
+  }
 }

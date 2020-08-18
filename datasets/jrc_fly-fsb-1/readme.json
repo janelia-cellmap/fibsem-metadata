@@ -1,6 +1,11 @@
 {
-  "Title": "JRC Fly-FSB",
-  "Subtitle": "Drosophila Fan-Shaped Body",
+  "Title": "Drosophila brain: Fan-shaped body. (4 nm)",
+  "Summary": {
+    "Acquisition date": "2019-9-14",
+    "Dataset ID": "jrc_fly-fsb-1",
+    "Voxel size (nm)": "4.00 x 4.00 x 4.00 (X, Y, Z)",
+    "Dimensions (\u00b5m)": "45 x 56 x 45 (X, Y, Z)"
+  },
   "About this sample": {
     "Sample": "Fan-shaped body of a 5 day-old adult male drosophila (Genome type: iso Canton S G1 x w1118 iso 5905).",
     "Protocol": "Chemical Fixation, ORTO-Lead-EPTA staining via progressive lowering of temperature and low temperature staining (PLT-LTS) heavy metal enhancement protocol.",
@@ -8,17 +13,13 @@
   },
   "Acquisition information": {
     "Final voxel size (nm)": "4.00 x 4.00 x 4.00 (X, Y, Z)",
-    "Data dimensions (\u00b5m)": "45 x 56 x 45 (X, Y, Z)",
-    "Data size (GB)": "3540",
+    "Dimensions (\u00b5m)": "45 x 56 x 45 (X, Y, Z)",
+    "Size (GB)": "1770",
     "Imaging duration (days)": "15",
-    "Imaging start date": "9/14/2019",
+    "Imaging start date": "2019-9-14",
     "Primary energy (eV)": "700.0",
     "Bias (V)": "0",
     "Imaging current (nA)": "0.24",
     "Scanning speed (MHz)": "1.5"
-  },
-  "Data sources": {
-    "fibsem/aligned": "SIFT-aligned raw FIB-SEM data"
-  },
-  "Publications": {}
+  }
 }

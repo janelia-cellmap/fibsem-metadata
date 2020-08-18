@@ -1,6 +1,11 @@
 {
-  "Title": "JRC Hela-2",
-  "Subtitle": "HeLa Cell 2",
+  "Title": "Wild-type interphase HeLa cell. (4 nm)",
+  "Summary": {
+    "Acquisition date": "2017-6-21",
+    "Dataset ID": "jrc_hela-2",
+    "Voxel size (nm)": "4.0 x 4.0 x 5.24 (X, Y, Z)",
+    "Dimensions (\u00b5m)": "48 x 6 x 33 (X, Y, Z)"
+  },
   "About this sample": {
     "Sample": "Wild-type HeLa cell.",
     "Protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in acetone; resin embedding in Eponate 12.",
@@ -11,14 +16,10 @@
     "Data dimensions (\u00b5m)": "48 x 6 x 33 (X, Y, Z)",
     "Data size (GB)": "238",
     "Imaging duration (days)": "25",
-    "Imaging start date": "6/21/2017",
+    "Imaging start date": "2017-6-21",
     "Primary energy (eV)": "900.0",
     "Bias (V)": "500",
     "Imaging current (nA)": "0.25",
     "Scanning speed (MHz)": "0.1"
-  },
-  "Data sources": {
-    "fibsem/aligned": "SIFT-aligned raw FIB-SEM data"
-  },
-  "Publications": {}
+  }
 }
