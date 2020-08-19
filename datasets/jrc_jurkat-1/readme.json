@@ -1,5 +1,5 @@
 {
-  "Title": "Wild-type Jurkat (immortalized T lymphocyte) cell. (4 nm)",
+  "Title": "Immortalized T-Cells (Jurkat)",
   "Summary": {
     "Acquisition date": "2018-8-10",
     "Dataset ID": "jrc_jurkat-1",
@@ -7,7 +7,7 @@
     "Dimensions (\u00b5m)": "40 x 12 x 29 (X, Y, Z)"
   },
   "About this sample": {
-    "Sample": "Wild-type Jurkat cell.",
+    "Sample": " Wild-type Jurkats",
     "Protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in acetone; resin embedding in Eponate 12.",
     "Contributions": "Sample provided by Huxley Kaminski and Schuyler van Engelenburg (U. Denver), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia)"
   },

@@ -1,5 +1,5 @@
 {
-  "Title": "Wild-type THP-1 macrophage. (4 nm)",
+  "Title": " Macrophage cell",
   "Summary": {
     "Acquisition date": "2018-11-11",
     "Dataset ID": "jrc_macrophage-2",
@@ -7,7 +7,7 @@
     "Dimensions (\u00b5m)": "40 x 8 x 37 (X, Y, Z)"
   },
   "About this sample": {
-    "Sample": "Wild-type THP-1 macrophage.",
+    "Sample": " Wild-type THP-1 macrophage",
     "Protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in acetone; resin embedding in Eponate 12.",
     "Contributions": "Sample provided by Huxley Kaminski and Schuyler van Engelenburg (U. Denver), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia)."
   },
