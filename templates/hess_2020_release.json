@@ -1,21 +1,25 @@
 {
     "Title": "",
+    "Summary": {
+      "Acquisition date": "",
+      "Dataset ID": "",
+      "Voxel size (nm)": "",
+      "Dimensions (\u00b5m)": ""
+    },
     "About this sample": {
-        "Sample": "",
-        "Protocol": "",
-        "Contributions": ""
+      "Sample": "",
+      "Protocol": "",
+      "Contributions": ""
     },
     "Acquisition information": {
-        "EHT (kV)": "",
-        "Bias (V)": "",
-        "Imaging current (nA)": "",
-        "Scanning speed (MHz)": "",
-        "Imaging duration (days)": "",
-        "Data size (GB)": "",
-        "Final voxel size (nm)": "",
-        "Data dimensions (µm)": "",
-        "Imaging start date": ""
-    },
-    "Data sources": {},
-    "Publications": {}
-}
+      "Final voxel size (nm)": "",
+      "Dimensions (\u00b5m)": "",
+      "Size (GB)": "",
+      "Imaging duration (days)": "",
+      "Imaging start date": "",
+      "Primary energy (eV)": "",
+      "Bias (V)": "",
+      "Imaging current (nA)": "",
+      "Scanning speed (MHz)": ""
+    }
+  }
