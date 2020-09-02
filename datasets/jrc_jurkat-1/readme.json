@@ -1,7 +1,7 @@
 {
   "Title": "Immortalized T-Cells (Jurkat)",
   "Summary": {
-    "Acquisition date": "2018-8-10",
+    "Acquisition date": "2018-08-10",
     "Dataset ID": "jrc_jurkat-1",
     "Voxel size (nm)":"4.0 x 4.0 x 3.44 (X, Y, Z)",
     "Dimensions (\u00b5m)": "40 x 12 x 29 (X, Y, Z)"

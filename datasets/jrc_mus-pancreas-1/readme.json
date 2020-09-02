@@ -1,7 +1,7 @@
 {
   "Title": "Isolated murine pancreatic islets",
   "Summary": {
-    "Acquisition date": "2019-3-1",
+    "Acquisition date": "2019-03-01",
     "Dataset ID": "jrc_mus-pancreas-1",
     "Voxel size (nm)":"4.00 x 4.00 x 3.40 (X, Y, Z)",
     "Dimensions (\u00b5m)": "30 x 20 x 25 (X, Y, Z)"

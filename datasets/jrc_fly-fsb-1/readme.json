@@ -1,13 +1,13 @@
 {
-  "Title": "Drosophila brain: Fan-shaped body",
+  "Title": "<i>Drosophila</i> brain: Fan-shaped body",
   "Summary": {
-    "Acquisition date": "2019-9-14",
+    "Acquisition date": "2019-09-14",
     "Dataset ID": "jrc_fly-fsb-1",
     "Voxel size (nm)": "4.00 x 4.00 x 4.00 (X, Y, Z)",
     "Dimensions (\u00b5m)": "45 x 56 x 45 (X, Y, Z)"
   },
   "About this sample": {
-    "Sample": "Fan-shaped body of a 5 day-old adult male drosophila (Genome type: iso Canton S G1 x w1118 iso 5905).",
+    "Sample": "Fan-shaped body of a 5 day-old adult male <i>Drosophila</i> (Genome type: iso Canton S G1 x w1118 iso 5905).",
     "Protocol": "Chemical Fixation, ORTO-Lead-EPTA staining via progressive lowering of temperature and low temperature staining (PLT-LTS) heavy metal enhancement protocol.",
     "Contributions": "Sample provided by Zhiyuan Lu (HHMI/Janelia), prepared, imaged and post-processed by Song Pang (HHMI/Janelia), with post-processing by C. Shan Xu (HHMI/Janelia)."
   },

@@ -1,7 +1,7 @@
 {
   "Title": "Interphase HeLa cell",
   "Summary": {
-    "Acquisition date": "2017-6-21",
+    "Acquisition date": "2017-06-21",
     "Dataset ID": "jrc_hela-2",
     "Voxel size (nm)": "4.0 x 4.0 x 5.24 (X, Y, Z)",
     "Dimensions (\u00b5m)": "48 x 6 x 33 (X, Y, Z)"

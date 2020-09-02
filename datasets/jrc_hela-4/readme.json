@@ -1,7 +1,7 @@
 {
   "Title": "Mitotic HeLa cell",
   "Summary": {
-    "Acquisition date": "2019-5-30",
+    "Acquisition date": "2019-05-30",
     "Dataset ID": "jrc_hela-4",
     "Voxel size (nm)": "4.00 x 4.00 x 4.28 (X, Y, Z)",
     "Dimensions (\u00b5m)": "30 x 14 x 35 (X, Y, Z)"
