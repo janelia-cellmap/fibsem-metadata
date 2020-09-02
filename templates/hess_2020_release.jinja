@@ -3,7 +3,7 @@
 ### {{fields.Title}}
 {% elif field == 'Summary' -%}
 {%- for item in fields[field] %}
-#### **{{item}}**: {{fields[field][item]}}  
+<strong>{{item}}</strong>: {{fields[field][item]}}<br/>
 {%- endfor -%}
 {%- else -%}
 <details closed>
