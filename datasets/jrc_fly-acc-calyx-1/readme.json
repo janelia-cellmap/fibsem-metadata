@@ -1,7 +1,7 @@
 {
   "Title": "<i>Drosophila</i> brain: Accessory calyx",
   "Summary": {
-    "Acquisition date": "2019-12-6",
+    "Acquisition date": "2019-12-06",
     "Dataset ID": "jrc_fly-acc-calyx-1",
     "Voxel size (nm)": "4.00 x 4.00 x 3.72 (X, Y, Z)",
     "Dimensions (\u00b5m)": "50 x 40 x 81 (X, Y, Z)"
