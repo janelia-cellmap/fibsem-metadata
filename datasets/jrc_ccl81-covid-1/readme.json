@@ -1,0 +1,25 @@
+{
+    "Title": "",
+    "Summary": {
+      "Acquisition date": "",
+      "Dataset ID": "jrc_ccl81-covid-1",
+      "Voxel size (nm)": "4 x 4 x 4 (X, Y, Z)",
+      "Dimensions (\u00b5m)": "15 x 20 x 25.8 (X, Y, Z)"
+    },
+    "About this sample": {
+      "Sample": "African green monkey kidney cell (CCL81) 24 hours post-infection with SARS-COV-2.",
+      "Protocol": "",
+      "Contributions": "Sample provided by John Bernbaum, Jens Kuhn (NIH/NIAID), prepared for imaging by Song Pang (HHMI/Janelia), imaging by Song Pang (HHMI/Janelia), and post-procssing by C. Shan Xu (HHMI/Janelia)."
+    },
+    "Acquisition information": {
+      "Final voxel size (nm)": "",
+      "Dimensions (\u00b5m)": "",
+      "Size (GB)": "",
+      "Imaging duration (days)": "11",
+      "Imaging start date": "2020-09-10",
+      "Primary energy (eV)": "700",
+      "Bias (V)": "0",
+      "Imaging current (nA)": "0.25",
+      "Scanning speed (MHz)": "0.2"
+    }
+  }

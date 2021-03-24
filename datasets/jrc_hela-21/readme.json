@@ -1,0 +1,25 @@
+{
+    "Title": "HeLa cell with RUSH cargo",
+    "Summary": {
+      "Acquisition date": "2017-04-12",
+      "Dataset ID": "jrc_hela-21",
+      "Voxel size (nm)": "8 x 8 x 8 (X, Y, Z)",
+      "Dimensions (\u00b5m)": "50 x 10 x 15.58 (X, Y, Z)"
+    },
+    "About this sample": {
+      "Sample": "Interphase HeLa cell (ATCC CCL-2) overexpressing mApple-TNFa-RUSH, frozen 8 min post 50 μM biotin addition.",
+      "Protocol": "High pressure freezing, freeze-substitution resin embedding with 1% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in acetone; resin embedding in Eponate 12.",
+      "Contributions": "Sample provided by Aubrey Weigel (HHMI/Janelia), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia)."
+    },
+    "Acquisition information": {
+      "Final voxel size (nm)": "8 x 8 x 8 (X, Y, Z)",
+      "Dimensions (\u00b5m)": "50 x 10 x 15.58 (X, Y, Z)",
+      "Size (GB)": "",
+      "Imaging duration (days)": "",
+      "Imaging start date": "2017-04-12",
+      "Primary energy (eV)": "",
+      "Bias (V)": "",
+      "Imaging current (nA)": "",
+      "Scanning speed (MHz)": ""
+      }
+    }
