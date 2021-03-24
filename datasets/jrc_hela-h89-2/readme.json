@@ -4,7 +4,7 @@
       "Acquisition date": "2020-10-15",
       "Dataset ID": "jrc_hela-h89-2",
       "Voxel size (nm)": "8 x 8 x 8 (X, Y, Z)",
-      "Dimensions (\u00b5m)": "50 x 8 x 98.86 (X, Y, Z)",
+      "Dimensions (\u00b5m)": "50 x 8 x 98.86 (X, Y, Z)"
     },
     "About this sample": {
       "Sample": "Interphase HeLa cell (ATCC CCL-2) overexpressing mEmerald-Sec23 frozen 9 min post 50 μM H89 addition.",
