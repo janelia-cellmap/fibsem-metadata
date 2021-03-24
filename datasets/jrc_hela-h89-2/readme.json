@@ -9,7 +9,7 @@
     "About this sample": {
       "Sample": "Interphase HeLa cell (ATCC CCL-2) overexpressing mEmerald-Sec23 frozen 9 min post 50 μM H89 addition.",
       "Protocol": "High pressure freezing, freeze-substitution resin embedding with 1% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in acetone; resin embedding in Eponate 12.",
-      "Contributions": "Sample provided by Aubrey Weigel and Chi-Lun Chang (HHMI/Janelia), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia).",
+      "Contributions": "Sample provided by Aubrey Weigel and Chi-Lun Chang (HHMI/Janelia), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia)."
     },
     "Acquisition information": {
       "Final voxel size (nm)": "8 x 8 x 8 (X, Y, Z)",
