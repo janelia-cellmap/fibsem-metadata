@@ -21,5 +21,10 @@
     "Bias (V)": "0",
     "Imaging current (nA)": "0.3",
     "Scanning speed (MHz)": "2"
+  },
+  "Dataset information": {
+    "EM DOI": "10.25378/janelia.13114514",
+    "Dataset ID": "jrc_fly-acc-calyx-1",
+    "Publications": "Xu et al., 2020"
   }
 }

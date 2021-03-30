@@ -21,5 +21,10 @@
     "Bias (V)": "0",
     "Imaging current (nA)": "0.25",
     "Scanning speed (MHz)": "0.2"
+  },
+  "Dataset information": {
+    "EM DOI": "10.25378/janelia.13114454",
+    "Dataset ID": "jrc_ctl-id8-1",
+    "Publications": "Xu et al., 2020"
   }
 }

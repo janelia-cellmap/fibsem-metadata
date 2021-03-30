@@ -7,9 +7,9 @@
     "Dimensions (\u00b5m)": "40 x 12 x 29 (X, Y, Z)"
   },
   "About this sample": {
-    "Sample": "Wild-type Jurkats",
+    "Sample": "Wild-type Jurkats. Clone E6-1 (ATCC TIB-152)",
     "Protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in acetone; resin embedding in Eponate 12.",
-    "Contributions": "Sample provided by Huxley Kaminski and Schuyler van Engelenburg (U. Denver), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia)"
+    "Contributions": "Sample provided by Huxley Hoffman and Schuyler van Engelenburg (U. Denver), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia)"
   },
   "Acquisition information": {
     "Final voxel size (nm)": "4.0 x 4.0 x 3.44 (X, Y, Z)",
@@ -21,5 +21,11 @@
     "Bias (V)": "0",
     "Imaging current (nA)": "0.25",
     "Scanning speed (MHz)": "0.2"
+  },
+  "Dataset information": {
+    "EM DOI": "10.25378/janelia.13114259",
+    "Segmentations DOI": "10.25378/janelia.13117697",
+    "Dataset ID": "jrc_jurkat-1",
+    "Publications": "Xu et al., 2020; Heinrich et al., 2020"
   }
 }
