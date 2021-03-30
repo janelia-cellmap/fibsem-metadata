@@ -21,5 +21,11 @@
     "Bias (V)": "",
     "Imaging current (nA)": "",
     "Scanning speed (MHz)": ""
+    },
+    "Dataset information": {
+    "EM DOI": "",
+    "Segmentations DOI": "",
+    "Dataset ID": "jrc_ctl-id8-2",
+    "Publications": ""
     }
-  }
+}
