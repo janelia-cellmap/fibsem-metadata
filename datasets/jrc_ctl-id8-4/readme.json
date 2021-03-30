@@ -1,5 +1,5 @@
 {
-    "Title": "",
+    "Title": "Killer T-Cell attacking cancer cell",
     "Summary": {
       "Acquisition date": "",
       "Dataset ID": "jrc_ctl-id8-4",
@@ -14,12 +14,12 @@
     "Acquisition information": {
       "Final voxel size (nm)": "8 x 8 x 8 (X, Y, Z)",
       "Dimensions (\u00b5m)": "60 x 11 x 39.46 (X, Y, Z)",
-      "Size (GB)": "",
-      "Imaging duration (days)": "",
-      "Imaging start date": "",
-      "Primary energy (eV)": "",
-      "Bias (V)": "",
-      "Imaging current (nA)": "",
-      "Scanning speed (MHz)": ""
+      "Size (GB)": "50.87",
+      "Imaging duration (days)": "5",
+      "Imaging start date": "2020-03-12",
+      "Primary energy (eV)": "1200",
+      "Bias (V)": "0",
+      "Imaging current (nA)": "2",
+      "Scanning speed (MHz)": "0.25"
       }
     }
