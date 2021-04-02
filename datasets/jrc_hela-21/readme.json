@@ -14,12 +14,18 @@
     "Acquisition information": {
       "Final voxel size (nm)": "8 x 8 x 8 (X, Y, Z)",
       "Dimensions (\u00b5m)": "50 x 10 x 15.58 (X, Y, Z)",
-      "Size (GB)": "",
-      "Imaging duration (days)": "",
+      "Size (GB)": "15",
+      "Imaging duration (days)": "3",
       "Imaging start date": "2017-04-12",
-      "Primary energy (eV)": "",
-      "Bias (V)": "",
-      "Imaging current (nA)": "",
-      "Scanning speed (MHz)": ""
+      "Primary energy (eV)": "900",
+      "Bias (V)": "500",
+      "Imaging current (nA)": "1",
+      "Scanning speed (MHz)": "0.125"
+      },
+      "Dataset information": {
+        "EM DOI": "10.25378/janelia.13469550",
+        "Segmentations DOI": "",
+        "Dataset ID": "jrc_hela-21",
+        "Publications": "Weigel, Chang, et al., 2021"
       }
     }

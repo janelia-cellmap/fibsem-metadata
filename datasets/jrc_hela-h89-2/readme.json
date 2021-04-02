@@ -23,9 +23,9 @@
       "Scanning speed (MHz)": "0.25"
     },
     "Dataset information": {
-      "EM DOI": "",
+      "EM DOI": "10.25378/janelia.13469964",
       "Segmentations DOI": "",
       "Dataset ID": "jrc_hela-h89-2",
-      "Publications": ""
+      "Publications": "Weigel, Chang, et al., 2021"
     }
   }
