@@ -1,0 +1,309 @@
+{
+  "title": "DatasetIndex",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "volumes": {
+      "title": "Volumes",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/VolumeSource"
+      }
+    },
+    "views": {
+      "title": "Views",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/DatasetView"
+      }
+    }
+  },
+  "required": [
+    "name",
+    "volumes",
+    "views"
+  ],
+  "definitions": {
+    "ArrayContainerTypeEnum": {
+      "title": "ArrayContainerTypeEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "n5",
+        "zarr",
+        "precomputed",
+        "mrc",
+        "hdf5",
+        "tif"
+      ],
+      "type": "string"
+    },
+    "SpatialTransform": {
+      "title": "SpatialTransform",
+      "type": "object",
+      "properties": {
+        "axes": {
+          "title": "Axes",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "units": {
+          "title": "Units",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "translate": {
+          "title": "Translate",
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "scale": {
+          "title": "Scale",
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        }
+      },
+      "required": [
+        "axes",
+        "units",
+        "translate",
+        "scale"
+      ]
+    },
+    "ContrastLimits": {
+      "title": "ContrastLimits",
+      "description": "Metadata for contrast limits. Currently these values are in normalized units, i.e. drawn from the interval [0,1]",
+      "type": "object",
+      "properties": {
+        "start": {
+          "title": "Start",
+          "default": 0.0,
+          "type": "number"
+        },
+        "end": {
+          "title": "End",
+          "default": 1.0,
+          "type": "number"
+        },
+        "min": {
+          "title": "Min",
+          "default": 0.0,
+          "type": "number"
+        },
+        "max": {
+          "title": "Max",
+          "default": 1.0,
+          "type": "number"
+        }
+      }
+    },
+    "DisplaySettings": {
+      "title": "DisplaySettings",
+      "description": "Metadata for display settings",
+      "type": "object",
+      "properties": {
+        "contrastLimits": {
+          "title": "Contrastlimits",
+          "default": {
+            "start": 0.0,
+            "end": 1.0,
+            "min": 0.0,
+            "max": 1.0
+          },
+          "allOf": [
+            {
+              "$ref": "#/definitions/ContrastLimits"
+            }
+          ]
+        },
+        "color": {
+          "title": "Color",
+          "default": "white",
+          "type": "string",
+          "format": "color"
+        },
+        "invertLUT": {
+          "title": "Invertlut",
+          "default": false,
+          "type": "boolean"
+        }
+      }
+    },
+    "MeshTypeEnum": {
+      "title": "MeshTypeEnum",
+      "description": "Strings representing support mesh formats",
+      "enum": [
+        "neuroglancer_legacy_mesh",
+        "neuroglancer_multilod_draco"
+      ],
+      "type": "string"
+    },
+    "MeshSource": {
+      "title": "MeshSource",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "format": {
+          "$ref": "#/definitions/MeshTypeEnum"
+        },
+        "transform": {
+          "$ref": "#/definitions/SpatialTransform"
+        },
+        "description": {
+          "title": "Description",
+          "default": "",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "default": "0",
+          "type": "string"
+        },
+        "tags": {
+          "title": "Tags",
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ids": {
+          "title": "Ids",
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "name",
+        "path",
+        "format",
+        "transform",
+        "ids"
+      ]
+    },
+    "VolumeSource": {
+      "title": "VolumeSource",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "format": {
+          "$ref": "#/definitions/ArrayContainerTypeEnum"
+        },
+        "transform": {
+          "$ref": "#/definitions/SpatialTransform"
+        },
+        "description": {
+          "title": "Description",
+          "default": "",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "default": "0",
+          "type": "string"
+        },
+        "tags": {
+          "title": "Tags",
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "dataType": {
+          "title": "Datatype",
+          "type": "string"
+        },
+        "displaySettings": {
+          "$ref": "#/definitions/DisplaySettings"
+        },
+        "subsources": {
+          "title": "Subsources",
+          "default": [],
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MeshSource"
+          }
+        }
+      },
+      "required": [
+        "name",
+        "path",
+        "format",
+        "transform",
+        "dataType",
+        "displaySettings"
+      ]
+    },
+    "DatasetView": {
+      "title": "DatasetView",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "position": {
+          "title": "Position",
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "scale": {
+          "title": "Scale",
+          "type": "number"
+        },
+        "orientation": {
+          "title": "Orientation",
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "volumeNames": {
+          "title": "Volumenames",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "volumeNames"
+      ]
+    }
+  }
+}
