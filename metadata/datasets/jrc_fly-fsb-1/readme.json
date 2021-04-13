@@ -20,7 +20,8 @@
     "Primary energy (eV)": "700.0",
     "Bias (V)": "0",
     "Imaging current (nA)": "0.24",
-    "Scanning speed (MHz)": "1.5"
+    "Scanning speed (MHz)": "1.5",
+    "id": "FB-Z0519-11"
   },
   "Dataset information": {
     "EM DOI": "10.25378/janelia.13114529",

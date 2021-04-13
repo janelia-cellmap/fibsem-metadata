@@ -20,12 +20,13 @@
       "Primary energy (eV)": "1200",
       "Bias (V)": "600",
       "Imaging current (nA)": "1",
-      "Scanning speed (MHz)": "0.125"
+      "Scanning speed (MHz)": "0.125",
+      "id": "Cryo_20170412_CS6_Cell25"
       },
       "Dataset information": {
         "EM DOI": "10.25378/janelia.13469901",
         "Segmentations DOI": "",
-        "Dataset ID": "jrc_hela-bfa-1",
+        "Dataset ID": "jrc_hela-22",
         "Publications": "Weigel, Chang, et al., 2021"
       }
     }

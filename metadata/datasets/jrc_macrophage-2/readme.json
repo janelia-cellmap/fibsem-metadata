@@ -20,7 +20,8 @@
     "Primary energy (eV)": "1200.0",
     "Bias (V)": "0",
     "Imaging current (nA)": "0.25",
-    "Scanning speed (MHz)": "0.2"
+    "Scanning speed (MHz)": "0.2",
+    "id" : "Cryo_FS80_Cell2"
   },
   "Dataset information": {
     "EM DOI": "10.25378/janelia.13114343",

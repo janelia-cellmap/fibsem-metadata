@@ -20,7 +20,8 @@
     "Primary energy (eV)": "1200",
     "Bias (V)": "0",
     "Imaging current (nA)": "2",
-    "Scanning speed (MHz)": "0.5"
+    "Scanning speed (MHz)": "0.5",
+    "id" : "Cryo_LoadID_277_Cell11"
   },
   "Dataset information": {
     "EM DOI": "10.25378/janelia.13123385",

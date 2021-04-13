@@ -20,6 +20,13 @@
       "Primary energy (eV)": "700",
       "Bias (V)": "0",
       "Imaging current (nA)": "0.25",
-      "Scanning speed (MHz)": "0.2"
+      "Scanning speed (MHz)": "0.2",
+      "id": "NIH2020_18A"
+    },
+    "Dataset information": {
+      "EM DOI": "",
+      "Segmentations DOI": "",
+      "Dataset ID": "jrc_ccl81-covid-1",
+      "Publications": ""
     }
   }

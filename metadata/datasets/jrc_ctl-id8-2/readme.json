@@ -20,7 +20,8 @@
     "Primary energy (eV)": "",
     "Bias (V)": "",
     "Imaging current (nA)": "",
-    "Scanning speed (MHz)": ""
+    "Scanning speed (MHz)": "",
+    "id": "Cryo_LoadID410_ROI1"
     },
     "Dataset information": {
     "EM DOI": "",
