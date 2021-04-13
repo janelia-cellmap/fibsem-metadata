@@ -428,6 +428,7 @@ class_info = ClassMetadataCollection(
     }
 )
 
+
 @click.command()
 @click.option("-s", "--schema", required=False, type=bool, is_flag=True)
 def main(schema: bool) -> None:
@@ -437,5 +438,5 @@ def main(schema: bool) -> None:
         print(class_info.json(indent=2))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

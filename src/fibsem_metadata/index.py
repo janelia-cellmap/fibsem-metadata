@@ -2,13 +2,15 @@ from enum import Enum
 from pydantic import BaseModel
 from typing import Sequence, Optional
 from pydantic.color import Color
-from .spatial_metadata import SpatialTransform
+from fibsem_metadata.multiscale.cosem import SpatialTransform
 import click
+
 
 class MeshTypeEnum(str, Enum):
     """
     Strings representing support mesh formats
     """
+
     neuroglancer_legacy_mesh = "neuroglancer_legacy_mesh"
     neuroglancer_multilod_draco = "neuroglancer_multilod_draco"
 
@@ -92,5 +94,6 @@ class DatasetIndex(BaseModel):
 def main() -> None:
     print(DatasetIndex.schema_json(indent=2))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
