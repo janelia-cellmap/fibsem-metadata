@@ -28,7 +28,7 @@ class ContentTypeEnum(str, Enum):
     em = "em"
     lm = "lm"
     prediction = "prediction"
-    segmentationm = "segmentation"
+    segmentation = "segmentation"
     analysis = "analysis"
 
 
@@ -71,7 +71,9 @@ class MeshSource(DataSource):
 class VolumeSource(DataSource):
     format: ArrayContainerTypeEnum
     dataType: str
+    contentType: ContentTypeEnum
     displaySettings: DisplaySettings
+    
     subsources: Sequence[MeshSource] = []
 
 
