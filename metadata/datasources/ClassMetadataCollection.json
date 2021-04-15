@@ -63,7 +63,7 @@
       "color": "blue"
     },
     "eres": {
-      "description": "Endoplasmic Reticulum Exit Site",
+      "description": "Endoplasmic Reticulum Exit Sites",
       "contentTypes": [
         "segmentation",
         "prediction"

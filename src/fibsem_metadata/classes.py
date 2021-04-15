@@ -135,7 +135,7 @@ class_info = ClassMetadataCollection(
             contentTypes=["segmentation", "prediction"],
         ),
         "eres": ClassMetadata(
-            description="Endoplasmic Reticulum Exit Site",
+            description="Endoplasmic Reticulum Exit Sites",
             color="white",
             contentTypes=["segmentation", "prediction"],
         ),
