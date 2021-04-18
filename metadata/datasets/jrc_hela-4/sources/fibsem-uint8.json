@@ -1,0 +1,42 @@
+{
+  "name": "fibsem-uint8",
+  "path": "/groups/hess/hesslab/HighResPaper_rawdata/10. HeLa_mitotic_17-7_Cell4_4x4x4nm/HeLa_mitotic_17-7_17_Cell4 4x4x4nm_raw.mrc",
+  "format": "mrc",
+  "transform": {
+    "axes": [
+      "z",
+      "y",
+      "x"
+    ],
+    "units": [
+      "nm",
+      "nm",
+      "nm"
+    ],
+    "translate": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      4.28,
+      4.0,
+      4.0
+    ]
+  },
+  "description": "FIB-SEM Data (compressed)",
+  "version": "0",
+  "tags": [],
+  "dataType": "uint8",
+  "displaySettings": {
+    "contrastLimits": {
+      "start": 0.57,
+      "end": 0.805,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "color": "white",
+    "invertLUT": false
+  },
+  "subsources": []
+}

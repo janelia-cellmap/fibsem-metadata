@@ -1,0 +1,42 @@
+{
+  "name": "fibsem-uint16",
+  "path": "/groups/hess/hesslab/HighResPaper_rawdata/9. TCell_on_cancer_4x4x4nm/TCell_on_cancer_Atlas1_4x4x4nm 16bit.mrc",
+  "format": "mrc",
+  "transform": {
+    "axes": [
+      "z",
+      "y",
+      "x"
+    ],
+    "units": [
+      "nm",
+      "nm",
+      "nm"
+    ],
+    "translate": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      3.48,
+      4.0,
+      4.0
+    ]
+  },
+  "description": "FIB-SEM Data (uncompressed)",
+  "version": "0",
+  "tags": [],
+  "dataType": "uint16",
+  "displaySettings": {
+    "contrastLimits": {
+      "start": 0.166,
+      "end": 0.265,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "color": "white",
+    "invertLUT": true
+  },
+  "subsources": []
+}

@@ -1,0 +1,42 @@
+{
+  "name": "pm_pred",
+  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/pm_pred",
+  "format": "n5",
+  "transform": {
+    "axes": [
+      "z",
+      "y",
+      "x"
+    ],
+    "units": [
+      "nm",
+      "nm",
+      "nm"
+    ],
+    "translate": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      4.0,
+      4.0,
+      4.0
+    ]
+  },
+  "description": "Plasma Membrane",
+  "version": "0",
+  "tags": [],
+  "dataType": "uint8",
+  "displaySettings": {
+    "contrastLimits": {
+      "start": 0.0,
+      "end": 1.0,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "color": "orange",
+    "invertLUT": false
+  },
+  "subsources": []
+}

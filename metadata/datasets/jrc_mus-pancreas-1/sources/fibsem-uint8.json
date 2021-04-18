@@ -1,0 +1,42 @@
+{
+  "name": "fibsem-uint8",
+  "path": "/groups/hess/hesslab/HighResPaper_rawdata/1. Pancreas Islet_G64-2-1-HighGlucose_4x4x4nm/G64-2-1_HighGlucose 4x4x4nm.mrc",
+  "format": "mrc",
+  "transform": {
+    "axes": [
+      "z",
+      "y",
+      "x"
+    ],
+    "units": [
+      "nm",
+      "nm",
+      "nm"
+    ],
+    "translate": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      3.4,
+      4.0,
+      4.0
+    ]
+  },
+  "description": "FIB-SEM Data (compressed)",
+  "version": "0",
+  "tags": [],
+  "dataType": "uint8",
+  "displaySettings": {
+    "contrastLimits": {
+      "start": 0.7176,
+      "end": 0.8117,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "color": "white",
+    "invertLUT": false
+  },
+  "subsources": []
+}

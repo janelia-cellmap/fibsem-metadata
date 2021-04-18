@@ -1,0 +1,42 @@
+{
+  "name": "fibsem-uint16",
+  "path": "/groups/hess/hesslab/HighResPaper_rawdata/8. SUM159_WT45_Cell2_4x4x4nm/SUM159_WT45_Cell2_Cryo_20171009_4x4x4nm 16bit.mrc",
+  "format": "mrc",
+  "transform": {
+    "axes": [
+      "z",
+      "y",
+      "x"
+    ],
+    "units": [
+      "nm",
+      "nm",
+      "nm"
+    ],
+    "translate": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      4.56,
+      4.0,
+      4.0
+    ]
+  },
+  "description": "FIB-SEM Data (uncompressed)",
+  "version": "0",
+  "tags": [],
+  "dataType": "uint16",
+  "displaySettings": {
+    "contrastLimits": {
+      "start": 0.241,
+      "end": 0.334,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "color": "white",
+    "invertLUT": true
+  },
+  "subsources": []
+}

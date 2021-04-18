@@ -1,0 +1,42 @@
+{
+  "name": "fibsem-uint8",
+  "path": "/groups/cosem/cosem/data/HeLa_Cell1_8x8x8nm/Aubrey_17-7_17_Cell1_D05-10_8x8x8nm.mrc",
+  "format": "mrc",
+  "transform": {
+    "axes": [
+      "z",
+      "y",
+      "x"
+    ],
+    "units": [
+      "nm",
+      "nm",
+      "nm"
+    ],
+    "translate": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      8.0,
+      8.0,
+      8.0
+    ]
+  },
+  "description": "FIB-SEM Data (compressed)",
+  "version": "0",
+  "tags": [],
+  "dataType": "uint8",
+  "displaySettings": {
+    "contrastLimits": {
+      "start": 0.39,
+      "end": 0.56,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "color": "white",
+    "invertLUT": true
+  },
+  "subsources": []
+}

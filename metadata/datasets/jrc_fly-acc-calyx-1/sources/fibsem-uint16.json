@@ -1,0 +1,42 @@
+{
+  "name": "fibsem-uint16",
+  "path": "/groups/cosem/cosem/bennettd/imports/jrc_fly-acc-calyx-1/jrc_fly-acc-calyx-1.n5/aligned_uint16",
+  "format": "n5",
+  "transform": {
+    "axes": [
+      "z",
+      "y",
+      "x"
+    ],
+    "units": [
+      "nm",
+      "nm",
+      "nm"
+    ],
+    "translate": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      3.72,
+      4.0,
+      4.0
+    ]
+  },
+  "description": "FIB-SEM Data (uncompressed)",
+  "version": "0",
+  "tags": [],
+  "dataType": "uint16",
+  "displaySettings": {
+    "contrastLimits": {
+      "start": 0.02499,
+      "end": 0.04994,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "color": "white",
+    "invertLUT": true
+  },
+  "subsources": []
+}

@@ -1,0 +1,42 @@
+{
+  "name": "fibsem-uint8",
+  "path": "/groups/hess/hesslab/HighResPaper_rawdata/7. Jurkat_Cryo_2017_FS96_Cell1_4x4x4nm/Jurkat_Cryo_2017_FS96_Area1 4x4x4nm.mrc",
+  "format": "mrc",
+  "transform": {
+    "axes": [
+      "z",
+      "y",
+      "x"
+    ],
+    "units": [
+      "nm",
+      "nm",
+      "nm"
+    ],
+    "translate": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      3.44,
+      4.0,
+      4.0
+    ]
+  },
+  "description": "FIB-SEM Data (compressed)",
+  "version": "0",
+  "tags": [],
+  "dataType": "uint8",
+  "displaySettings": {
+    "contrastLimits": {
+      "start": 0.826,
+      "end": 0.924,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "color": "white",
+    "invertLUT": false
+  },
+  "subsources": []
+}

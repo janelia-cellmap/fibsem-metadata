@@ -1,0 +1,42 @@
+{
+  "name": "er_sim",
+  "path": "/nrs/cosem/bennettd/data/jrc_cos7-11/jrc_cos7-11.n5/volumes/lm/er_sim",
+  "format": "n5",
+  "transform": {
+    "axes": [
+      "z",
+      "y",
+      "x"
+    ],
+    "units": [
+      "nm",
+      "nm",
+      "nm"
+    ],
+    "translate": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      26.0,
+      52.0,
+      26.0
+    ]
+  },
+  "description": "Light Microscopy (SIM) of the ER",
+  "version": "0",
+  "tags": [],
+  "dataType": "uint8",
+  "displaySettings": {
+    "contrastLimits": {
+      "start": 0.0,
+      "end": 1.0,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "color": "white",
+    "invertLUT": false
+  },
+  "subsources": []
+}
