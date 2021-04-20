@@ -15,12 +15,12 @@
       "Final voxel size (nm)": "8 x 8 x 8 (X, Y, Z)",
       "Dimensions (\u00b5m)": "70 x 12.8 x 32.24 (X, Y, Z)",
       "Size (GB)": "",
-      "Imaging duration (days)": "",
-      "Imaging start date": "",
-      "Primary energy (eV)": "",
-      "Bias (V)": "",
-      "Imaging current (nA)": "",
-      "Scanning speed (MHz)": "",
+      "Imaging duration (days)": "5",
+      "Imaging start date": "2020-02-12",
+      "Primary energy (eV)": "1200",
+      "Bias (V)": "0",
+      "Imaging current (nA)": "2",
+      "Scanning speed (MHz)": "0.25",
       "id": "Cryo_LoadID494_ROI5"
       },
     "Dataset information": {
