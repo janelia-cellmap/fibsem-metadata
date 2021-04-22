@@ -1,0 +1,43 @@
+{
+  "name": "fibsem-uint16",
+  "path": "/groups/cosem/cosem/data/jrc_hela-h89-1/jrc_hela-h89-1.n5/volumes/raw/",
+  "format": "n5",
+  "transform": {
+    "axes": [
+      "z",
+      "y",
+      "x"
+    ],
+    "units": [
+      "nm",
+      "nm",
+      "nm"
+    ],
+    "translate": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      4.0,
+      8.0,
+      8.0
+    ]
+  },
+  "description": "",
+  "version": "0",
+  "tags": [],
+  "dataType": "uint16",
+  "contentType": "em",
+  "displaySettings": {
+    "contrastLimits": {
+      "start": 0.0,
+      "end": 1.0,
+      "min": 0.021362630655375,
+      "max": 0.031464103150988
+    },
+    "color": "white",
+    "invertLUT": false
+  },
+  "subsources": []
+}

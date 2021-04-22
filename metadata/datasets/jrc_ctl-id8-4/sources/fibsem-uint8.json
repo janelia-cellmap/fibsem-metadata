@@ -1,0 +1,43 @@
+{
+  "name": "fibsem-uint8",
+  "path": "/groups/cosem/cosem/data/jrc_ctl-id8-4/EM_LID_493_ROI2_8x8x8nm_resliced.tif",
+  "format": "n5",
+  "transform": {
+    "axes": [
+      "z",
+      "y",
+      "x"
+    ],
+    "units": [
+      "nm",
+      "nm",
+      "nm"
+    ],
+    "translate": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      8.0,
+      8.0,
+      8.0
+    ]
+  },
+  "description": "",
+  "version": "0",
+  "tags": [],
+  "dataType": "uint8",
+  "contentType": "em",
+  "displaySettings": {
+    "contrastLimits": {
+      "start": 0.0,
+      "end": 1.0,
+      "min": 0.419607843137255,
+      "max": 0.725490196078431
+    },
+    "color": "white",
+    "invertLUT": false
+  },
+  "subsources": []
+}

@@ -24,10 +24,11 @@
       4.0
     ]
   },
-  "description": "Endoplasmic Reticulum Exit Site",
+  "description": "Endoplasmic Reticulum Exit Sites",
   "version": "0",
   "tags": [],
   "dataType": "uint16",
+  "contentType": "segmentation",
   "displaySettings": {
     "contrastLimits": {
       "start": 0.0,

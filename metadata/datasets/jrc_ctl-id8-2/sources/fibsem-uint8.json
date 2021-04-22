@@ -1,0 +1,43 @@
+{
+  "name": "fibsem-uint8",
+  "path": "/tmp/tmplt744_lz.jpg",
+  "format": "n5",
+  "transform": {
+    "axes": [
+      "z",
+      "y",
+      "x"
+    ],
+    "units": [
+      "nm",
+      "nm",
+      "nm"
+    ],
+    "translate": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      8.0,
+      8.0,
+      8.0
+    ]
+  },
+  "description": "",
+  "version": "0",
+  "tags": [],
+  "dataType": "uint8",
+  "contentType": "em",
+  "displaySettings": {
+    "contrastLimits": {
+      "start": 0.0,
+      "end": 1.0,
+      "min": 0.580392156862745,
+      "max": 0.737254901960784
+    },
+    "color": "white",
+    "invertLUT": false
+  },
+  "subsources": []
+}

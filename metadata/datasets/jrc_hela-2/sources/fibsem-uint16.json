@@ -28,6 +28,7 @@
   "version": "0",
   "tags": [],
   "dataType": "uint16",
+  "contentType": "em",
   "displaySettings": {
     "contrastLimits": {
       "start": 0.373,
