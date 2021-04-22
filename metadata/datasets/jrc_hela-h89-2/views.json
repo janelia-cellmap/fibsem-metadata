@@ -12,7 +12,7 @@
           0.0
         ],
         "volumeNames": [
-          "fibsem-uint8"
+          "fibsem-uint16"
         ]
       }
     ]
