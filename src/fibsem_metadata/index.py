@@ -86,6 +86,10 @@ class DatasetView(BaseModel):
     volumeNames: Sequence[str]
 
 
+class DatasetViewCollection(BaseModel):
+    views: Sequence[DatasetView]
+
+
 class DatasetIndex(BaseModel):
     name: str
     volumes: Sequence[VolumeSource]
