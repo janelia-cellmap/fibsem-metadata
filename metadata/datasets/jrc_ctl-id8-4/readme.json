@@ -7,7 +7,7 @@
       "Dimensions (\u00b5m)": "60 x 11 x 39.46 (X, Y, Z)"
     },
     "About this sample": {
-      "Sample": "OT-I mouse cytotoxic T lymphocyte attacking an ID8 cell",
+      "Sample": "OT-I mouse cytotoxic T lymphocyte attacking an ID8 ovarian cancer cell;  fixed and imaged moments after the release of perforin/granzyme from lytic granules. The ID8 murine ovarian cancer cell is stably expressing mEmerald-Chmp4b and TOMM20-SNAP.",
       "Protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in acetone; resin embedding in Eponate 12.",
       "Contributions": "Sample provided by Alex Ritter (Genentech), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia)."
     },
