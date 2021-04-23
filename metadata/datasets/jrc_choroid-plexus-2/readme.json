@@ -9,7 +9,7 @@
   "About this sample": {
     "Sample": "Mouse choroid plexus",
     "Protocol": "Postfixed in 1.0% OsO<sub>4</sub> in 0.1M cacodylate buffer (pH 7.4) for 1 hour at room temperature. Following postfixation, the samples were rinsed with buffer, dehydrated through a graded series of ethanol, and embedded in durcupan.",
-    "Contributions": "Sample provided by Michael Coulter & Christopher Walsh (HHMI/Harvard), prepared for imaging by Song Pang (HHMI/Janelia), with imaging by Song Pang and C. Shan Xu and post-processing by C. Shan Xu (HHMI/Janelia)."
+    "Contributions": "Sample provided by Michael Coulter & Christopher Walsh (HHMI/Harvard), prepared for imaging by Song Pang (HHMI/Janelia), with imaging by Song Pang and C. Shan Xu and post-processing by C. Shan Xu (HHMI/Janelia). Segmentation and analysis by COSEM Project Team (HHMI/Janelia)."
   },
   "Acquisition information": {
     "Final voxel size (nm)": "8.00 x 8.00 x 8.00 (X, Y, Z)",

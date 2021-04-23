@@ -9,7 +9,7 @@
   "About this sample": {
     "Sample": "Wild-type, interphase HeLa cell (ATCC CCL-2).",
     "Protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in acetone; resin embedding in Eponate 12.",
-    "Contributions": "Sample provided by Aubrey Weigel (HHMI/Janelia), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia)."
+    "Contributions": "Sample provided by Aubrey Weigel (HHMI/Janelia), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia). Segmentation and analysis by COSEM Project Team (HHMI/Janelia)."
   },
   "Acquisition information": {
     "Final voxel size (nm)": "4.0 x 4.0 x 3.24 (X, Y, Z)",
