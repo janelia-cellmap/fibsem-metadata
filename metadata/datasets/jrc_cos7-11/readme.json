@@ -9,7 +9,7 @@
   "About this sample": {
     "Sample": "COS-7 cell overexpressing mEmerald-ER3 and Halo/JF525-TOMM20 (ATCC CRL-1651)",
     "Protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in acetone; resin embedding in Eponate 12.",
-    "Contributions": "Sample provided by Melanie Freeman (HHMI/Janelia), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia)."
+    "Contributions": "Sample provided by Melanie Freeman (HHMI/Janelia), prepared for imaging by Gleb Shtengel (HHMI/Janelia). LM imaging by Gleb Shtengel and David Hoffman (HHMI/Janelia), and EM imaging and post-processing by C. Shan Xu (HHMI/Janelia). Segmentation and analysis by COSEM Project Team (HHMI/Janelia)."
   },
   "Acquisition information": {
     "Final voxel size (nm)": "8.00 x 8.00 x 8.00 (X, Y, Z)",
