@@ -1296,7 +1296,7 @@
           },
           "description": "",
           "version": "0",
-          "tags": [],
+          "tags": ["flip_y"],
           "ids": []
         }
       ]

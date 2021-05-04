@@ -69,7 +69,7 @@
       "description": "",
       "version": "0",
       "tags": [],
-      "ids": []
+      "ids": ['flip_y']
     }
   ]
 }
