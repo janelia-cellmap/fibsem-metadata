@@ -32,7 +32,7 @@
   "displaySettings": {
     "contrastLimits": {
       "start": 0.0,
-      "end": 0.0,
+      "end": 0.00392156862745098,
       "min": 0.0,
       "max": 1.0
     },
