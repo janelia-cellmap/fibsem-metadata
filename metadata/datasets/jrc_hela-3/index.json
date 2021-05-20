@@ -648,7 +648,7 @@
     },
     {
       "name": "endo_seg",
-      "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/labels/endo_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/endo_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -705,13 +705,13 @@
             ],
             "translate": [
               0.0,
-              0.0,
+              4000.0,
               0.0
             ],
             "scale": [
-              3.24,
-              4.0,
-              4.0
+              1.0,
+              -1.0,
+              1.0
             ]
           },
           "description": "",
@@ -995,13 +995,13 @@
             ],
             "translate": [
               0.0,
-              0.0,
+              4000.0,
               0.0
             ],
             "scale": [
-              3.24,
-              4.0,
-              4.0
+              1.0,
+              -1.0,
+              1.0
             ]
           },
           "description": "",
@@ -1142,7 +1142,7 @@
     },
     {
       "name": "er_seg",
-      "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/labels/er_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/er_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1199,13 +1199,13 @@
             ],
             "translate": [
               0.0,
-              0.0,
+              4000.0,
               0.0
             ],
             "scale": [
-              3.24,
-              4.0,
-              4.0
+              1.0,
+              -1.0,
+              1.0
             ]
           },
           "description": "",
@@ -1389,7 +1389,7 @@
     },
     {
       "name": "golgi-mem_seg",
-      "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/labels/golgi-mem_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/golgi-mem_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1475,7 +1475,7 @@
     },
     {
       "name": "golgi_seg",
-      "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/labels/golgi_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/golgi_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1532,13 +1532,13 @@
             ],
             "translate": [
               0.0,
-              0.0,
+              4000.0,
               0.0
             ],
             "scale": [
-              3.24,
-              4.0,
-              4.0
+              1.0,
+              -1.0,
+              1.0
             ]
           },
           "description": "",
@@ -2152,7 +2152,7 @@
     },
     {
       "name": "mito_seg",
-      "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/labels/mito_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/mito_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2209,13 +2209,13 @@
             ],
             "translate": [
               0.0,
-              0.0,
+              4000.0,
               0.0
             ],
             "scale": [
-              3.24,
-              4.0,
-              4.0
+              1.0,
+              -1.0,
+              1.0
             ]
           },
           "description": "",
@@ -2829,7 +2829,7 @@
     },
     {
       "name": "nucleus_seg",
-      "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/labels/nucleus_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/nucleus_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2886,13 +2886,13 @@
             ],
             "translate": [
               0.0,
-              0.0,
+              4000.0,
               0.0
             ],
             "scale": [
-              3.24,
-              4.0,
-              4.0
+              1.0,
+              -1.0,
+              1.0
             ]
           },
           "description": "",
@@ -2947,7 +2947,7 @@
     },
     {
       "name": "pm_seg",
-      "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/labels/pm_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/pm_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -3004,13 +3004,13 @@
             ],
             "translate": [
               0.0,
-              0.0,
+              4000.0,
               0.0
             ],
             "scale": [
-              3.24,
-              4.0,
-              4.0
+              1.0,
+              -1.0,
+              1.0
             ]
           },
           "description": "",
@@ -3280,7 +3280,7 @@
     },
     {
       "name": "vesicle_seg",
-      "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/labels/vesicle_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/vesicle_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -3337,13 +3337,13 @@
             ],
             "translate": [
               0.0,
-              0.0,
+              4000.0,
               0.0
             ],
             "scale": [
-              3.24,
-              4.0,
-              4.0
+              1.0,
+              -1.0,
+              1.0
             ]
           },
           "description": "",
