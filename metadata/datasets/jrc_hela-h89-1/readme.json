@@ -15,7 +15,7 @@
       "Final voxel size (nm)": "8 x 8 x 8 (X, Y, Z)",
       "Dimensions (\u00b5m)": "80 x 6 x 101.82 (X, Y, Z)",
       "Size (GB)": "154",
-      "Imaging duration (days)": "",
+      "Imaging duration (days)": "5",
       "Imaging start date": "2020-10-09",
       "Primary energy (eV)": "1200",
       "Bias (V)": "0",
