@@ -1,31 +1,25 @@
 {
-  "Title": "Killer T-Cell attacking cancer cell",
-  "Summary": {
-    "Acquisition date": "2020-02-04",
-    "Dataset ID": "jrc_ctl-id8-1",
-    "Voxel size (nm)": "4.00 x 4.00 x 3.48 (X, Y, Z)",
-    "Dimensions (\u00b5m)": "74 x 13 x 42 (X, Y, Z)"
-  },
-  "About this sample": {
-    "Sample": "OT-I mouse cytotoxic T lymphocyte attacking an ID8 cell",
-    "Protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in acetone; resin embedding in Eponate 12.",
-    "Contributions": "Sample provided by Alex Ritter (Genentech), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia)."
-  },
-  "Acquisition information": {
-    "Final voxel size (nm)": "4.00 x 4.00 x 3.48 (X, Y, Z)",
-    "Dimensions (\u00b5m)": "74 x 13 x 42 (X, Y, Z)",
-    "Size (GB)": "694",
-    "Imaging duration (days)": "29",
-    "Imaging start date": "2020-2-4",
-    "Primary energy (eV)": "700.0",
-    "Bias (V)": "0",
-    "Imaging current (nA)": "0.25",
-    "Scanning speed (MHz)": "0.2",
+  "title": "Killer T-Cell attacking cancer cell",
+  "id": "jrc_ctl-id8-1",
+  "publications": [],
+  "imaging": {
+    "startDate": "2020-02-04",
+    "duration": 29,
+    "biasVoltage": 0.0,
+    "scanRate": 0.2,
+    "current": 0.25,
+    "primaryEnergy": 700.0,
     "id": "Cryo_LoadID496_Atlas1"
   },
-  "Dataset information": {
-    "EM DOI": "10.25378/janelia.13114454",
-    "Dataset ID": "jrc_ctl-id8-1",
-    "Publications": "Xu et al., 2020"
-  }
+  "sample": {
+    "description": "OT-I mouse cytotoxic T lymphocyte attacking an ID8 cell",
+    "protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in acetone; resin embedding in Eponate 12.",
+    "contributions": "Sample provided by Alex Ritter (Genentech), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia)."
+  },
+  "DOI": [
+    {
+      "id": "EM",
+      "DOI": "10.25378/janelia.13114454"
+    }
+  ]
 }

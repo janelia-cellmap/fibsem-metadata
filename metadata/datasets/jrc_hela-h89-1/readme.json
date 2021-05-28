@@ -1,32 +1,25 @@
 {
-    "Title": "H89 treated HeLa cell",
-    "Summary": {
-      "Acquisition date": "2020-10-09",
-      "Dataset ID": "jrc_hela-h89-1",
-      "Voxel size (nm)": "8 x 8 x 8 (X, Y, Z)",
-      "Dimensions (\u00b5m)": "80 x 6 x 101.82 (X, Y, Z)"
-    },
-    "About this sample": {
-      "Sample": "Interphase HeLa cell (ATCC CCL-2) overexpressing mEmerald-Sec23 frozen 9 min post 50 μM H89 addition.",
-      "Protocol": "High pressure freezing, freeze-substitution resin embedding with 1% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in acetone; resin embedding in Eponate 12.",
-      "Contributions": "Sample provided by Aubrey Weigel and Chi-Lun Chang (HHMI/Janelia), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia)."
-    },
-    "Acquisition information": {
-      "Final voxel size (nm)": "8 x 8 x 8 (X, Y, Z)",
-      "Dimensions (\u00b5m)": "80 x 6 x 101.82 (X, Y, Z)",
-      "Size (GB)": "154",
-      "Imaging duration (days)": "",
-      "Imaging start date": "2020-10-09",
-      "Primary energy (eV)": "1200",
-      "Bias (V)": "0",
-      "Imaging current (nA)": "3",
-      "Scanning speed (MHz)": "0.25",
-      "id": "CryoLoadID526_ROI7"
-    },
-    "Dataset information": {
-      "EM DOI": "10.25378/janelia.13469964",
-      "Segmentations DOI": "",
-      "Dataset ID": "jrc_hela-h89-1",
-      "Publications": "Weigel, Chang, et al., 2021"
+  "title": "H89 treated HeLa cell",
+  "id": "jrc_hela-h89-1",
+  "publications": [],
+  "imaging": {
+    "startDate": "2020-10-09",
+    "duration": 5,
+    "biasVoltage": 0.0,
+    "scanRate": 0.25,
+    "current": 3.0,
+    "primaryEnergy": 1200.0,
+    "id": "CryoLoadID526_ROI7"
+  },
+  "sample": {
+    "description": "Interphase HeLa cell (ATCC CCL-2) overexpressing mEmerald-Sec23 frozen 9 min post 50 \u03bcM H89 addition.",
+    "protocol": "High pressure freezing, freeze-substitution resin embedding with 1% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in acetone; resin embedding in Eponate 12.",
+    "contributions": "Sample provided by Aubrey Weigel and Chi-Lun Chang (HHMI/Janelia), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia)."
+  },
+  "DOI": [
+    {
+      "id": "EM",
+      "DOI": "10.25378/janelia.13469964"
     }
-  }
+  ]
+}
