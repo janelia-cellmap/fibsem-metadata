@@ -9,6 +9,22 @@
     "scanRate": 0.125,
     "current": 1.0,
     "primaryEnergy": 1200.0,
+    "gridSpacing": {
+      "unit": "nm",
+      "values": {
+        "z": 8.0,
+        "y": 8.0,
+        "x": 8.0
+      }
+    },
+    "dimensions": {
+      "unit": "\u00b5m",
+      "values": {
+        "z": 3.36,
+        "y": 8.46,
+        "x": 33.0
+      }
+    },
     "id": "Cryo_20170412_CS6_Cell25"
   },
   "sample": {

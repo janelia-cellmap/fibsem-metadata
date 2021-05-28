@@ -9,6 +9,22 @@
     "scanRate": 1.5,
     "current": 0.24,
     "primaryEnergy": 700.0,
+    "gridSpacing": {
+      "unit": "nm",
+      "values": {
+        "z": 4.0,
+        "y": 4.0,
+        "x": 4.0
+      }
+    },
+    "dimensions": {
+      "unit": "\u00b5m",
+      "values": {
+        "z": 45.0,
+        "y": 56.0,
+        "x": 45.0
+      }
+    },
     "id": "FB-Z0519-11"
   },
   "sample": {

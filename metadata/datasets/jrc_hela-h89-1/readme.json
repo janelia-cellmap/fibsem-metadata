@@ -9,6 +9,22 @@
     "scanRate": 0.25,
     "current": 3.0,
     "primaryEnergy": 1200.0,
+    "gridSpacing": {
+      "unit": "nm",
+      "values": {
+        "z": 8.0,
+        "y": 8.0,
+        "x": 8.0
+      }
+    },
+    "dimensions": {
+      "unit": "\u00b5m",
+      "values": {
+        "z": 80.0,
+        "y": 6.0,
+        "x": 101.82
+      }
+    },
     "id": "CryoLoadID526_ROI7"
   },
   "sample": {

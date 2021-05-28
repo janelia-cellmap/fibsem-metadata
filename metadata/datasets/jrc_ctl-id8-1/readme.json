@@ -9,6 +9,22 @@
     "scanRate": 0.2,
     "current": 0.25,
     "primaryEnergy": 700.0,
+    "gridSpacing": {
+      "unit": "nm",
+      "values": {
+        "z": 4.0,
+        "y": 4.0,
+        "x": 3.48
+      }
+    },
+    "dimensions": {
+      "unit": "\u00b5m",
+      "values": {
+        "z": 74.0,
+        "y": 13.0,
+        "x": 42.0
+      }
+    },
     "id": "Cryo_LoadID496_Atlas1"
   },
   "sample": {
