@@ -1,7 +1,10 @@
 {
   "title": "Isolated murine pancreatic islets",
   "id": "jrc_mus-pancreas-1",
-  "publications": [],
+  "publications": [
+    "Xu et al., 2020",
+    "Mueller et al., 2020"
+  ],
   "imaging": {
     "startDate": "2019-03-01",
     "duration": 15,
@@ -34,7 +37,7 @@
   },
   "DOI": [
     {
-      "id": "EM",
+      "id": "em",
       "DOI": "10.25378/janelia.13114499"
     }
   ]

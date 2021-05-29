@@ -1,7 +1,10 @@
 {
   "title": "Immortalized breast cancer cell (SUM159)",
   "id": "jrc_sum159-1",
-  "publications": [],
+  "publications": [
+    "Xu et al., 2020",
+    "Heinrich et al., 2020"
+  ],
   "imaging": {
     "startDate": "2017-11-21",
     "duration": 18,
@@ -34,8 +37,12 @@
   },
   "DOI": [
     {
-      "id": "EM",
+      "id": "em",
       "DOI": "10.25378/janelia.13114352"
+    },
+    {
+      "id": "seg",
+      "DOI": "10.25378/janelia.13118156"
     }
   ]
 }

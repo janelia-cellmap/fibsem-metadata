@@ -1,7 +1,9 @@
 {
   "title": "",
   "id": "jrc_ccl81-covid-1",
-  "publications": [],
+  "publications": [
+    ""
+  ],
   "imaging": {
     "startDate": "2020-09-10",
     "duration": 11,
@@ -34,7 +36,11 @@
   },
   "DOI": [
     {
-      "id": "EM",
+      "id": "em",
+      "DOI": ""
+    },
+    {
+      "id": "seg",
       "DOI": ""
     }
   ]

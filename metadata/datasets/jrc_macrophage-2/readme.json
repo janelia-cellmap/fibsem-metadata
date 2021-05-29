@@ -1,7 +1,10 @@
 {
   "title": "Macrophage cell",
   "id": "jrc_macrophage-2",
-  "publications": [],
+  "publications": [
+    "Xu et al., 2020",
+    "Heinrich et al., 2020"
+  ],
   "imaging": {
     "startDate": "2018-11-11",
     "duration": 20,
@@ -34,8 +37,12 @@
   },
   "DOI": [
     {
-      "id": "EM",
+      "id": "em",
       "DOI": "10.25378/janelia.13114343"
+    },
+    {
+      "id": "seg",
+      "DOI": "10.25378/janelia.13117745"
     }
   ]
 }

@@ -1,7 +1,10 @@
 {
   "title": "Immortalized T-Cells (Jurkat)",
   "id": "jrc_jurkat-1",
-  "publications": [],
+  "publications": [
+    "Xu et al., 2020",
+    "Heinrich et al., 2020"
+  ],
   "imaging": {
     "startDate": "2018-08-10",
     "duration": 19,
@@ -34,8 +37,12 @@
   },
   "DOI": [
     {
-      "id": "EM",
+      "id": "em",
       "DOI": "10.25378/janelia.13114259"
+    },
+    {
+      "id": "seg",
+      "DOI": "10.25378/janelia.13117697"
     }
   ]
 }

@@ -1,7 +1,9 @@
 {
   "title": "<i>Drosophila</i> brain: Fan-shaped body",
   "id": "jrc_fly-fsb-1",
-  "publications": [],
+  "publications": [
+    "Xu et al., 2020"
+  ],
   "imaging": {
     "startDate": "2019-09-14",
     "duration": 15,
@@ -34,7 +36,7 @@
   },
   "DOI": [
     {
-      "id": "EM",
+      "id": "em",
       "DOI": "10.25378/janelia.13114529"
     }
   ]

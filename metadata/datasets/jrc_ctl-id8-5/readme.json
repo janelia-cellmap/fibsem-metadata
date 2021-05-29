@@ -1,7 +1,9 @@
 {
   "title": "",
   "id": "jrc_ctl-id8-5",
-  "publications": [],
+  "publications": [
+    "Ritter et al., 2021"
+  ],
   "imaging": {
     "startDate": "2020-01-29",
     "duration": 4,
@@ -34,8 +36,12 @@
   },
   "DOI": [
     {
-      "id": "EM",
+      "id": "em",
       "DOI": "10.6084/m9.figshare.14447568"
+    },
+    {
+      "id": "seg",
+      "DOI": ""
     }
   ]
 }

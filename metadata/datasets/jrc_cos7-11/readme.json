@@ -1,7 +1,10 @@
 {
   "title": "COS-7 cell overexpressing ER and mictochondra markers for CLEM",
   "id": "jrc_cos7-11",
-  "publications": [],
+  "publications": [
+    "Hoffman et al., 2020",
+    "Heinrich et al., 2020"
+  ],
   "imaging": {
     "startDate": "2018-04-27",
     "duration": 10,
@@ -34,8 +37,12 @@
   },
   "DOI": [
     {
-      "id": "EM",
+      "id": "em",
       "DOI": "10.25378/janelia.13123385"
+    },
+    {
+      "id": "seg",
+      "DOI": "10.25378/janelia.13120265"
     }
   ]
 }

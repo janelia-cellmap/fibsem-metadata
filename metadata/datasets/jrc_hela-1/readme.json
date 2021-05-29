@@ -1,7 +1,9 @@
 {
   "title": "Interphase HeLa cell",
   "id": "jrc_hela-1",
-  "publications": [],
+  "publications": [
+    "Heinrich et al., 2020"
+  ],
   "imaging": {
     "startDate": "2017-04-05",
     "duration": 6,
@@ -34,8 +36,12 @@
   },
   "DOI": [
     {
-      "id": "EM",
+      "id": "em",
       "DOI": "10.25378/janelia.13123415"
+    },
+    {
+      "id": "seg",
+      "DOI": "10.25378/janelia.13120280"
     }
   ]
 }

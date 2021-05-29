@@ -1,7 +1,9 @@
 {
   "title": "BFA-treated HeLa cell",
   "id": "jrc_hela-bfa",
-  "publications": [],
+  "publications": [
+    "Weigel, Chang, et al., 2021"
+  ],
   "imaging": {
     "startDate": "2019-10-09",
     "duration": 5,
@@ -34,8 +36,12 @@
   },
   "DOI": [
     {
-      "id": "EM",
+      "id": "em",
       "DOI": "10.25378/janelia.13469814"
+    },
+    {
+      "id": "seg",
+      "DOI": ""
     }
   ]
 }

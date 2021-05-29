@@ -1,7 +1,10 @@
 {
   "title": "Mouse choroid plexus",
   "id": "jrc_choroid-plexus-2",
-  "publications": [],
+  "publications": [
+    "Coulter et al., 2018",
+    "Heinrich et al., 2020"
+  ],
   "imaging": {
     "startDate": "2017-04-05",
     "duration": 3,
@@ -34,8 +37,12 @@
   },
   "DOI": [
     {
-      "id": "EM",
+      "id": "em",
       "DOI": "10.25378/janelia.13123427"
+    },
+    {
+      "id": "seg",
+      "DOI": "10.25378/janelia.13122509"
     }
   ]
 }

@@ -1,7 +1,9 @@
 {
   "title": "Killer T-Cell attacking cancer cell",
   "id": "jrc_ctl-id8-1",
-  "publications": [],
+  "publications": [
+    "Xu et al., 2020"
+  ],
   "imaging": {
     "startDate": "2020-02-04",
     "duration": 29,
@@ -34,7 +36,7 @@
   },
   "DOI": [
     {
-      "id": "EM",
+      "id": "em",
       "DOI": "10.25378/janelia.13114454"
     }
   ]
