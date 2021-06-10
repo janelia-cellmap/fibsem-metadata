@@ -15,17 +15,17 @@
     "gridSpacing": {
       "unit": "nm",
       "values": {
-        "z": 4.0,
+        "x": 4.0,
         "y": 4.0,
-        "x": 4.56
+        "z": 4.56
       }
     },
     "dimensions": {
       "unit": "\u00b5m",
       "values": {
-        "z": 64.0,
+        "x": 64.0,
         "y": 11.0,
-        "x": 35.0
+        "z": 35.0
       }
     },
     "id": "Cryo_20171009_WT45_Cell2"

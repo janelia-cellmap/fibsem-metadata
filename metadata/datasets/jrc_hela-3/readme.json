@@ -15,24 +15,24 @@
     "gridSpacing": {
       "unit": "nm",
       "values": {
-        "z": 4.0,
+        "x": 4.0,
         "y": 4.0,
-        "x": 3.24
+        "z": 3.24
       }
     },
     "dimensions": {
-      "unit": "µm",
+      "unit": "\u00b5m",
       "values": {
-        "z": 50.0,
+        "x": 50.0,
         "y": 4.0,
-        "x": 39.0
+        "z": 39.0
       }
     },
     "id": "Aubrey_17-7-17_Cell3"
   },
   "sample": {
     "description": "Wild-type, interphase HeLa cell (ATCC CCL-2).",
-    "protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO₄ 0.1% UA 3% H₂O in acetone; resin embedding in Eponate 12.",
+    "protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO\u2084 0.1% UA 3% H\u2082O in acetone; resin embedding in Eponate 12.",
     "contributions": "Sample provided by Aubrey Weigel (HHMI/Janelia), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia). Segmentation and analysis by COSEM Project Team (HHMI/Janelia)."
   },
   "DOI": [

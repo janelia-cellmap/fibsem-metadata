@@ -15,24 +15,24 @@
     "gridSpacing": {
       "unit": "nm",
       "values": {
-        "z": 8.0,
+        "x": 8.0,
         "y": 8.0,
-        "x": 8.0
+        "z": 8.0
       }
     },
     "dimensions": {
-      "unit": "µm",
+      "unit": "\u00b5m",
       "values": {
-        "z": 20.0,
+        "x": 20.0,
         "y": 40.0,
-        "x": 2.0
+        "z": 2.0
       }
     },
     "id": "?"
   },
   "sample": {
     "description": "Mouse choroid plexus",
-    "protocol": "Postfixed in 1.0% OsO₄ in 0.1M cacodylate buffer (pH 7.4) for 1 hour at room temperature. Following postfixation, the samples were rinsed with buffer, dehydrated through a graded series of ethanol, and embedded in durcupan.",
+    "protocol": "Postfixed in 1.0% OsO\u2084 in 0.1M cacodylate buffer (pH 7.4) for 1 hour at room temperature. Following postfixation, the samples were rinsed with buffer, dehydrated through a graded series of ethanol, and embedded in durcupan.",
     "contributions": "Sample provided by Michael Coulter & Christopher Walsh (HHMI/Harvard), prepared for imaging by Song Pang (HHMI/Janelia), with imaging by Song Pang and C. Shan Xu and post-processing by C. Shan Xu (HHMI/Janelia). Segmentation and analysis by COSEM Project Team (HHMI/Janelia)."
   },
   "DOI": [

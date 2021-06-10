@@ -15,24 +15,24 @@
     "gridSpacing": {
       "unit": "nm",
       "values": {
-        "z": 4.0,
+        "x": 4.0,
         "y": 4.0,
-        "x": 3.4
+        "z": 3.4
       }
     },
     "dimensions": {
-      "unit": "µm",
+      "unit": "\u00b5m",
       "values": {
-        "z": 30.0,
+        "x": 30.0,
         "y": 20.0,
-        "x": 25.0
+        "z": 25.0
       }
     },
     "id": "G64-2-1_HighGlucose"
   },
   "sample": {
     "description": "Wild-type mouse pancreatic islets treated with high glucose.",
-    "protocol": "High-pressure freezing and freeze-substitution with 2% OsO₄, 1% UA, 0.5% GA, 5% H₂O in acetone with 1% methanol, followed by 0.2% TCH in 80% methanol at RT, 2% OsO₄ in acetone at RT, 1% UA in acetone + 10% methanol.",
+    "protocol": "High-pressure freezing and freeze-substitution with 2% OsO\u2084, 1% UA, 0.5% GA, 5% H\u2082O in acetone with 1% methanol, followed by 0.2% TCH in 80% methanol at RT, 2% OsO\u2084 in acetone at RT, 1% UA in acetone + 10% methanol.",
     "contributions": "Sample provided by Andreas Mueller and Michele Solimena (Paul Langerhans Institute, Dresden), prepared for imaging by Song Pang (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia)."
   },
   "DOI": [
