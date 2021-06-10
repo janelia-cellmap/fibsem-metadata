@@ -21,7 +21,7 @@
       }
     },
     "dimensions": {
-      "unit": "\u00b5m",
+      "unit": "µm",
       "values": {
         "z": 40.0,
         "y": 12.0,
@@ -32,7 +32,7 @@
   },
   "sample": {
     "description": "Wild-type Jurkats. Clone E6-1 (ATCC TIB-152)",
-    "protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in acetone; resin embedding in Eponate 12.",
+    "protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO₄ 0.1% UA 3% H₂O in acetone; resin embedding in Eponate 12.",
     "contributions": "Sample provided by Huxley Hoffman and Schuyler van Engelenburg (U. Denver), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia). Segmentation and analysis by COSEM Project Team (HHMI/Janelia)."
   },
   "DOI": [

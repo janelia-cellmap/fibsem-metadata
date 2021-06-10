@@ -20,7 +20,7 @@
       }
     },
     "dimensions": {
-      "unit": "\u00b5m",
+      "unit": "µm",
       "values": {
         "z": 50.0,
         "y": 10.0,
@@ -31,7 +31,7 @@
   },
   "sample": {
     "description": "Interphase HeLa cell (ATCC CCL-2) overexpressing mApple-TNFa-RUSH, frozen 8 min post 50 \u03bcM biotin addition.",
-    "protocol": "High pressure freezing, freeze-substitution resin embedding with 1% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in acetone; resin embedding in Eponate 12.",
+    "protocol": "High pressure freezing, freeze-substitution resin embedding with 1% OsO₄ 0.1% UA 3% H₂O in acetone; resin embedding in Eponate 12.",
     "contributions": "Sample provided by Aubrey Weigel (HHMI/Janelia), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia)."
   },
   "DOI": [

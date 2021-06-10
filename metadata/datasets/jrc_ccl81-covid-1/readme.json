@@ -20,7 +20,7 @@
       }
     },
     "dimensions": {
-      "unit": "\u00b5m",
+      "unit": "µm",
       "values": {
         "z": 15.0,
         "y": 20.0,
