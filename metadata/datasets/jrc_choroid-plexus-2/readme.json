@@ -1,32 +1,48 @@
 {
-  "Title": "Mouse choroid plexus",
-  "Summary": {
-    "Acquisition date": "2017-04-05",
-    "Dataset ID": "jrc_choroid-plexus-2",
-    "Voxel size (nm)": "8.00 x 8.00 x 8.00 (X, Y, Z)",
-    "Dimensions (\u00b5m)": "20 x 40 x 2 (X, Y, Z)"
-  },
-  "About this sample": {
-    "Sample": "Mouse choroid plexus",
-    "Protocol": "Postfixed in 1.0% OsO<sub>4</sub> in 0.1M cacodylate buffer (pH 7.4) for 1 hour at room temperature. Following postfixation, the samples were rinsed with buffer, dehydrated through a graded series of ethanol, and embedded in durcupan.",
-    "Contributions": "Sample provided by Michael Coulter & Christopher Walsh (HHMI/Harvard), prepared for imaging by Song Pang (HHMI/Janelia), with imaging by Song Pang and C. Shan Xu and post-processing by C. Shan Xu (HHMI/Janelia). Segmentation and analysis by COSEM Project Team (HHMI/Janelia)."
-  },
-  "Acquisition information": {
-    "Final voxel size (nm)": "8.00 x 8.00 x 8.00 (X, Y, Z)",
-    "Dimensions (\u00b5m)": "20 x 40 x 2 (X, Y, Z)",
-    "Size (GB)": "9",
-    "Imaging duration (days)": "3",
-    "Imaging start date": "2017-04-05",
-    "Primary energy (eV)": "1100",
-    "Bias (V)": "400",
-    "Imaging current (nA)": "1",
-    "Scanning speed (MHz)": "0.5",
+  "title": "Mouse choroid plexus",
+  "id": "jrc_choroid-plexus-2",
+  "publications": [
+    "Coulter et al., 2018",
+    "Heinrich et al., 2020"
+  ],
+  "imaging": {
+    "startDate": "2017-04-05",
+    "duration": 3,
+    "biasVoltage": 400.0,
+    "scanRate": 0.5,
+    "current": 1.0,
+    "primaryEnergy": 1100.0,
+    "gridSpacing": {
+      "unit": "nm",
+      "values": {
+        "x": 8.0,
+        "y": 8.0,
+        "z": 8.0
+      }
+    },
+    "dimensions": {
+      "unit": "\u00b5m",
+      "values": {
+        "x": 20.0,
+        "y": 40.0,
+        "z": 2.0
+      }
+    },
     "id": "?"
   },
-  "Dataset information": {
-    "EM DOI": "10.25378/janelia.13123427",
-    "Segmentations DOI": "10.25378/janelia.13122509",
-    "Dataset ID": "jrc_choroid-plexus-2",
-    "Publications": "Coulter et al., 2018; Heinrich et al., 2020"
-  }
+  "sample": {
+    "description": "Mouse choroid plexus",
+    "protocol": "Postfixed in 1.0% OsO\u2084 in 0.1M cacodylate buffer (pH 7.4) for 1 hour at room temperature. Following postfixation, the samples were rinsed with buffer, dehydrated through a graded series of ethanol, and embedded in durcupan.",
+    "contributions": "Sample provided by Michael Coulter & Christopher Walsh (HHMI/Harvard), prepared for imaging by Song Pang (HHMI/Janelia), with imaging by Song Pang and C. Shan Xu and post-processing by C. Shan Xu (HHMI/Janelia). Segmentation and analysis by COSEM Project Team (HHMI/Janelia)."
+  },
+  "DOI": [
+    {
+      "id": "em",
+      "DOI": "10.25378/janelia.13123427"
+    },
+    {
+      "id": "seg",
+      "DOI": "10.25378/janelia.13122509"
+    }
+  ]
 }

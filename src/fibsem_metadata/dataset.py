@@ -1,7 +1,11 @@
 import click
 from pydantic import BaseModel
 from datetime import date
-from typing import List
+from typing import List, Dict
+
+class UnitfulVector(BaseModel):
+    unit: str
+    values: Dict[str, float]    
 
 
 class Imaging(BaseModel):
@@ -15,6 +19,8 @@ class Imaging(BaseModel):
     scanRate: float
     current: float
     primaryEnergy: float
+    gridSpacing: UnitfulVector
+    dimensions: UnitfulVector
     id: str
 
 

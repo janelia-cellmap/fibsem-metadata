@@ -1,32 +1,47 @@
 {
-"Title": "Killer T-Cell attacking cancer cell",
-"Summary": {
-    "Acquisition date": "2019-10-18",
-    "Dataset ID": "jrc_ctl-id8-2",
-    "Voxel size (nm)": "8 x 8 x 8 (X, Y, Z)",
-    "Dimensions (\u00b5m)": "50 x 9 x 62.9 (X, Y, Z)"
-},
-"About this sample": {
-    "Sample": "OT-I mouse cytotoxic T lymphocyte attacking an ID8 ovarian cancer cell;  fixed and imaged moments after the release of perforin/granzyme from lytic granules. The ID8 murine ovarian cancer cell is stably expressing mEmerald-Chmp4b and TOMM20-SNAP.",
-    "Protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in acetone; resin embedding in Eponate 12.",
-    "Contributions": "Sample provided by Alex Ritter (Genentech) and prepared for imaging by Gleb Shtengel and Nirmala Iyer (HHMI/Janelia). LM imaging by Nensi Alivodej, Gleb Shtengel, and David Hoffman (HHMI/Janelia). EM imaging and post-processing by C. Shan Xu (HHMI/Janelia)."
-},
-"Acquisition information": {
-    "Final voxel size (nm)": "8 x 8 x 8 (X, Y, Z)",
-    "Dimensions (\u00b5m)": "50 x 9 x 62.9 (X, Y, Z)",
-    "Size (GB)": "",
-    "Imaging duration (days)": "6",
-    "Imaging start date": "2019-10-18",
-    "Primary energy (eV)": "1200",
-    "Bias (V)": "0",
-    "Imaging current (nA)": "2",
-    "Scanning speed (MHz)": "0.25",
-    "id": "Cryo_LoadID410_ROI1"
+  "title": "Killer T-Cell attacking cancer cell",
+  "id": "jrc_ctl-id8-2",
+  "publications": [
+    "Ritter et al., 2021"
+  ],
+  "imaging": {
+    "startDate": "2019-10-18",
+    "duration": 6,
+    "biasVoltage": 0.0,
+    "scanRate": 0.25,
+    "current": 2.0,
+    "primaryEnergy": 1200.0,
+    "gridSpacing": {
+      "unit": "nm",
+      "values": {
+        "x": 8.0,
+        "y": 8.0,
+        "z": 8.0
+      }
     },
-    "Dataset information": {
-    "EM DOI": "10.6084/m9.figshare.14447541",
-    "Segmentations DOI": "",
-    "Dataset ID": "jrc_ctl-id8-2",
-    "Publications": "Ritter et al., 2021"
+    "dimensions": {
+      "unit": "\u00b5m",
+      "values": {
+        "x": 50.0,
+        "y": 9.0,
+        "z": 62.9
+      }
+    },
+    "id": "Cryo_LoadID410_ROI1"
+  },
+  "sample": {
+    "description": "OT-I mouse cytotoxic T lymphocyte attacking an ID8 ovarian cancer cell;  fixed and imaged moments after the release of perforin/granzyme from lytic granules. The ID8 murine ovarian cancer cell is stably expressing mEmerald-Chmp4b and TOMM20-SNAP.",
+    "protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO\u2084 0.1% UA 3% H\u2082O in acetone; resin embedding in Eponate 12.",
+    "contributions": "Sample provided by Alex Ritter (Genentech) and prepared for imaging by Gleb Shtengel and Nirmala Iyer (HHMI/Janelia). LM imaging by Nensi Alivodej, Gleb Shtengel, and David Hoffman (HHMI/Janelia). EM imaging and post-processing by C. Shan Xu (HHMI/Janelia)."
+  },
+  "DOI": [
+    {
+      "id": "em",
+      "DOI": "10.6084/m9.figshare.14447541"
+    },
+    {
+      "id": "seg",
+      "DOI": ""
     }
+  ]
 }
