@@ -1,7 +1,7 @@
 {
   "name": "fibsem-uint8",
-  "path": "/groups/hess/hesslab/HighResPaper_rawdata/10. HeLa_mitotic_17-7_Cell4_4x4x4nm/HeLa_mitotic_17-7_17_Cell4 4x4x4nm_raw.mrc",
-  "format": "mrc",
+  "path": "s3://janelia-cosem/jrc_hela-4/neuroglancer/em/fibsem-uint8.precomputed",
+  "format": "precomputed",
   "transform": {
     "axes": [
       "z",

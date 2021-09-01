@@ -1,6 +1,6 @@
 {
   "name": "endo_golgi_contacts",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_macrophage-2/jrc_macrophage-2.n5/endo_golgi_contacts",
+  "path": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/endo_golgi_contacts",
   "format": "n5",
   "transform": {
     "axes": [

@@ -1,7 +1,7 @@
 {
   "name": "fibsem-uint8",
-  "path": "/groups/hess/hesslab/HighResPaper_rawdata/7. Jurkat_Cryo_2017_FS96_Cell1_4x4x4nm/Jurkat_Cryo_2017_FS96_Area1 4x4x4nm.mrc",
-  "format": "mrc",
+  "path": "s3://janelia-cosem/jrc_jurkat-1/neuroglancer/em/fibsem-uint8.precomputed",
+  "format": "precomputed",
   "transform": {
     "axes": [
       "z",

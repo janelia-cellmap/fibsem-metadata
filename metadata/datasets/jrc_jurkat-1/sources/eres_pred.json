@@ -1,6 +1,6 @@
 {
   "name": "eres_pred",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_jurkat-1/jrc_jurkat-1.n5/eres_pred",
+  "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/eres_pred",
   "format": "n5",
   "transform": {
     "axes": [

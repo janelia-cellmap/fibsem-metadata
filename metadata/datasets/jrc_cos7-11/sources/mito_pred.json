@@ -1,6 +1,6 @@
 {
   "name": "mito_pred",
-  "path": "/nrs/cosem/bennettd/data/jrc_cos7-11/jrc_cos7-11.n5/volumes/labels/mito_pred",
+  "path": "s3://janelia-cosem/jrc_cos7-11/jrc_cos7-11.n5/labels/mito_pred",
   "format": "n5",
   "transform": {
     "axes": [

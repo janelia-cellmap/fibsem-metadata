@@ -1,6 +1,6 @@
 {
   "name": "pm_pred",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/pm_pred",
+  "path": "s3://janelia-cosem/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/labels/pm_pred",
   "format": "n5",
   "transform": {
     "axes": [

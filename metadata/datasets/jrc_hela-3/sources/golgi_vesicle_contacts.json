@@ -1,6 +1,6 @@
 {
   "name": "golgi_vesicle_contacts",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_hela-3/jrc_hela-3.n5/golgi_vesicle_contacts",
+  "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/labels/golgi_vesicle_contacts",
   "format": "n5",
   "transform": {
     "axes": [

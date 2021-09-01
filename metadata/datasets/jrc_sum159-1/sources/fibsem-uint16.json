@@ -1,7 +1,7 @@
 {
   "name": "fibsem-uint16",
-  "path": "/groups/hess/hesslab/HighResPaper_rawdata/8. SUM159_WT45_Cell2_4x4x4nm/SUM159_WT45_Cell2_Cryo_20171009_4x4x4nm 16bit.mrc",
-  "format": "mrc",
+  "path": "s3://janelia-cosem/jrc_sum159-1/jrc_sum159-1.n5/em/fibsem-uint16",
+  "format": "n5",
   "transform": {
     "axes": [
       "z",

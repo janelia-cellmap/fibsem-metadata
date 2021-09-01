@@ -1,7 +1,7 @@
 {
   "name": "fibsem-uint16",
-  "path": "/groups/hess/hesslab/HighResPaper_rawdata/2. HeLa2_Aubrey_17-7_17_Cell2_4x4x4nm/Aubrey_17-7_17_Cell2 4x4x4nm 16bit.mrc",
-  "format": "mrc",
+  "path": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/em/fibsem-uint16",
+  "format": "n5",
   "transform": {
     "axes": [
       "z",

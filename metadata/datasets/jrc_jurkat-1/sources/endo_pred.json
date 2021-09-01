@@ -1,6 +1,6 @@
 {
   "name": "endo_pred",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_jurkat-1/jrc_jurkat-1.n5/endo_pred",
+  "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/endo_pred",
   "format": "n5",
   "transform": {
     "axes": [

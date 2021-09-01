@@ -1,6 +1,6 @@
 {
   "name": "er_seg",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_hela-2/jrc_hela-2.n5/er_seg",
+  "path": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/er_seg",
   "format": "n5",
   "transform": {
     "axes": [
@@ -32,7 +32,7 @@
   "displaySettings": {
     "contrastLimits": {
       "start": 0.0,
-      "end": 0.00392156862745098,
+      "end": 1.0,
       "min": 0.0,
       "max": 1.0
     },
@@ -42,7 +42,7 @@
   "subsources": [
     {
       "name": "er_seg",
-      "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_hela-2/mesh/er_seg",
+      "path": "s3://janelia-cosem/jrc_hela-2/neuroglancer/mesh/er_seg",
       "format": "neuroglancer_legacy_mesh",
       "transform": {
         "axes": [

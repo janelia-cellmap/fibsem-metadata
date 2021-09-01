@@ -1,6 +1,6 @@
 {
   "name": "nucleolus_pred",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_jurkat-1/jrc_jurkat-1.n5/nucleolus_pred",
+  "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/nucleolus_pred",
   "format": "n5",
   "transform": {
     "axes": [

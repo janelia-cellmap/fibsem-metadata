@@ -1,6 +1,6 @@
 {
   "name": "ne-mem_seg",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_hela-3/jrc_hela-3.n5/ne-mem_seg",
+  "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/labels/ne-mem_seg",
   "format": "n5",
   "transform": {
     "axes": [

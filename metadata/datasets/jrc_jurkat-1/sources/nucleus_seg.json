@@ -1,6 +1,6 @@
 {
   "name": "nucleus_seg",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_jurkat-1/jrc_jurkat-1.n5/nucleus_seg",
+  "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/nucleus_seg",
   "format": "n5",
   "transform": {
     "axes": [
@@ -42,7 +42,7 @@
   "subsources": [
     {
       "name": "nucleus_seg",
-      "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_jurkat-1/mesh/nucleus_seg",
+      "path": "s3://janelia-cosem/jrc_jurkat-1/neuroglancer/mesh/nucleus_seg",
       "format": "neuroglancer_legacy_mesh",
       "transform": {
         "axes": [

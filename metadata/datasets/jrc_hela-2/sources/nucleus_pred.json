@@ -1,6 +1,6 @@
 {
   "name": "nucleus_pred",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_hela-2/jrc_hela-2.n5/nucleus_pred",
+  "path": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/nucleus_pred",
   "format": "n5",
   "transform": {
     "axes": [
