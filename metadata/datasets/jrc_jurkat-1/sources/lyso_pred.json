@@ -1,6 +1,6 @@
 {
   "name": "lyso_pred",
-  "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/lyso_pred",
+  "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/lyso_pred",
   "format": "n5",
   "transform": {
     "axes": [
