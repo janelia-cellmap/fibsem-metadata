@@ -1,6 +1,6 @@
 {
   "name": "ne_seg",
-  "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/labels/ne_seg",
+  "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/ne_seg",
   "format": "n5",
   "transform": {
     "axes": [
