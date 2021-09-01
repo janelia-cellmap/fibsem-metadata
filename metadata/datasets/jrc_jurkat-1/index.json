@@ -46,7 +46,7 @@
     },
     {
       "name": "cent-dapp_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/cent-dapp_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/cent-dapp_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -89,7 +89,7 @@
     },
     {
       "name": "cent-dapp_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/cent-dapp_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/cent-dapp_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -132,7 +132,7 @@
     },
     {
       "name": "cent_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/cent_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/cent_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -175,7 +175,7 @@
     },
     {
       "name": "cent_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/cent_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/cent_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -218,7 +218,7 @@
     },
     {
       "name": "chrom_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/chrom_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/chrom_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -261,7 +261,7 @@
     },
     {
       "name": "chrom_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/chrom_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/chrom_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -304,7 +304,7 @@
     },
     {
       "name": "ecs_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ecs_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ecs_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -347,7 +347,7 @@
     },
     {
       "name": "ecs_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ecs_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ecs_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -390,7 +390,7 @@
     },
     {
       "name": "endo-mem_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/endo-mem_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/endo-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -433,7 +433,7 @@
     },
     {
       "name": "endo-mem_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/endo-mem_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/endo-mem_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -476,7 +476,7 @@
     },
     {
       "name": "endo_er_contacts",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/endo_er_contacts",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/endo_er_contacts",
       "format": "n5",
       "transform": {
         "axes": [
@@ -519,7 +519,7 @@
     },
     {
       "name": "endo_golgi_contacts",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/endo_golgi_contacts",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/endo_golgi_contacts",
       "format": "n5",
       "transform": {
         "axes": [
@@ -562,7 +562,7 @@
     },
     {
       "name": "endo_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/endo_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/endo_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -605,7 +605,7 @@
     },
     {
       "name": "endo_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/endo_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/endo_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -661,14 +661,14 @@
               "nm"
             ],
             "translate": [
-              0.0,
-              0.0,
-              0.0
+              0,
+              12000,
+              0
             ],
             "scale": [
-              3.44,
-              4.0,
-              4.0
+              1,
+              -1,
+              1
             ]
           },
           "description": "",
@@ -680,7 +680,7 @@
     },
     {
       "name": "er-mem_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er-mem_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -723,7 +723,7 @@
     },
     {
       "name": "er-mem_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er-mem_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er-mem_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -766,7 +766,7 @@
     },
     {
       "name": "er_curvature",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er_curvature",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er_curvature",
       "format": "n5",
       "transform": {
         "axes": [
@@ -809,7 +809,7 @@
     },
     {
       "name": "er_golgi_contacts",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er_golgi_contacts",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er_golgi_contacts",
       "format": "n5",
       "transform": {
         "axes": [
@@ -852,7 +852,7 @@
     },
     {
       "name": "er_medial-surface",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er_medial-surface",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er_medial-surface",
       "format": "n5",
       "transform": {
         "axes": [
@@ -895,7 +895,7 @@
     },
     {
       "name": "er_mito_contacts",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er_mito_contacts",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er_mito_contacts",
       "format": "n5",
       "transform": {
         "axes": [
@@ -951,14 +951,14 @@
               "nm"
             ],
             "translate": [
-              0.0,
-              0.0,
-              0.0
+              0,
+              12000,
+              0
             ],
             "scale": [
-              3.44,
-              4.0,
-              4.0
+              1,
+              -1,
+              1
             ]
           },
           "description": "",
@@ -970,7 +970,7 @@
     },
     {
       "name": "er_pm_contacts",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er_pm_contacts",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er_pm_contacts",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1013,7 +1013,7 @@
     },
     {
       "name": "er_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1056,7 +1056,7 @@
     },
     {
       "name": "er_ribo_contacts",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er_ribo_contacts",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er_ribo_contacts",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1099,7 +1099,7 @@
     },
     {
       "name": "er_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1155,14 +1155,14 @@
               "nm"
             ],
             "translate": [
-              0.0,
-              0.0,
-              0.0
+              0,
+              12000,
+              0
             ],
             "scale": [
-              3.44,
-              4.0,
-              4.0
+              1,
+              -1,
+              1
             ]
           },
           "description": "",
@@ -1174,7 +1174,7 @@
     },
     {
       "name": "er_vesicle_contacts",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er_vesicle_contacts",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er_vesicle_contacts",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1217,7 +1217,7 @@
     },
     {
       "name": "eres_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/eres_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/eres_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1260,7 +1260,7 @@
     },
     {
       "name": "eres_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/eres_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/eres_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1303,7 +1303,7 @@
     },
     {
       "name": "golgi-mem_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/golgi-mem_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/golgi-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1346,7 +1346,7 @@
     },
     {
       "name": "golgi-mem_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/golgi-mem_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/golgi-mem_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1389,7 +1389,7 @@
     },
     {
       "name": "golgi_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/golgi_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/golgi_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1432,7 +1432,7 @@
     },
     {
       "name": "golgi_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/golgi_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/golgi_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1488,14 +1488,14 @@
               "nm"
             ],
             "translate": [
-              0.0,
-              0.0,
-              0.0
+              0,
+              12000,
+              0
             ],
             "scale": [
-              3.44,
-              4.0,
-              4.0
+              1,
+              -1,
+              1
             ]
           },
           "description": "",
@@ -1507,7 +1507,7 @@
     },
     {
       "name": "golgi_vesicle_contacts",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/golgi_vesicle_contacts",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/golgi_vesicle_contacts",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1550,7 +1550,7 @@
     },
     {
       "name": "gt",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/gt",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/gt",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1593,7 +1593,7 @@
     },
     {
       "name": "ld-mem_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ld-mem_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ld-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1636,7 +1636,7 @@
     },
     {
       "name": "ld-mem_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ld-mem_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ld-mem_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1679,7 +1679,7 @@
     },
     {
       "name": "ld_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ld_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ld_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1722,7 +1722,7 @@
     },
     {
       "name": "ld_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ld_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ld_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1765,7 +1765,7 @@
     },
     {
       "name": "lyso-mem_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/lyso-mem_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/lyso-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1808,7 +1808,7 @@
     },
     {
       "name": "lyso-mem_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/lyso-mem_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/lyso-mem_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1851,7 +1851,7 @@
     },
     {
       "name": "lyso_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/lyso_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/lyso_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1894,7 +1894,7 @@
     },
     {
       "name": "lyso_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/lyso_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/lyso_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1937,7 +1937,7 @@
     },
     {
       "name": "mito-mem_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mito-mem_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mito-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1980,7 +1980,7 @@
     },
     {
       "name": "mito-mem_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mito-mem_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mito-mem_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2023,7 +2023,7 @@
     },
     {
       "name": "mito_pm_contacts",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mito_pm_contacts",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mito_pm_contacts",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2066,7 +2066,7 @@
     },
     {
       "name": "mito_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mito_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mito_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2109,7 +2109,7 @@
     },
     {
       "name": "mito_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mito_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mito_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2165,14 +2165,14 @@
               "nm"
             ],
             "translate": [
-              0.0,
-              0.0,
-              0.0
+              0,
+              12000,
+              0
             ],
             "scale": [
-              3.44,
-              4.0,
-              4.0
+              1,
+              -1,
+              1
             ]
           },
           "description": "",
@@ -2184,7 +2184,7 @@
     },
     {
       "name": "ne-mem_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ne-mem_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ne-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2227,7 +2227,7 @@
     },
     {
       "name": "ne-mem_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ne-mem_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ne-mem_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2313,7 +2313,7 @@
     },
     {
       "name": "ne_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ne_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ne_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2485,7 +2485,7 @@
     },
     {
       "name": "np_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/np_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/np_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2571,7 +2571,7 @@
     },
     {
       "name": "nucleolus_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/nucleolus_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/nucleolus_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2657,7 +2657,7 @@
     },
     {
       "name": "nucleus_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/nucleus_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/nucleus_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2713,14 +2713,14 @@
               "nm"
             ],
             "translate": [
-              0.0,
-              0.0,
-              0.0
+              0,
+              12000,
+              0
             ],
             "scale": [
-              3.44,
-              4.0,
-              4.0
+              1,
+              -1,
+              1
             ]
           },
           "description": "",
@@ -2775,7 +2775,7 @@
     },
     {
       "name": "pm_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/pm_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/pm_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2831,14 +2831,14 @@
               "nm"
             ],
             "translate": [
-              0.0,
-              0.0,
-              0.0
+              0,
+              12000,
+              0
             ],
             "scale": [
-              3.44,
-              4.0,
-              4.0
+              1,
+              -1,
+              1
             ]
           },
           "description": "",
@@ -2850,7 +2850,7 @@
     },
     {
       "name": "ribo_classified",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ribo_classified",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ribo_classified",
       "format": "n5",
       "transform": {
         "axes": [
@@ -3022,7 +3022,7 @@
     },
     {
       "name": "vesicle-mem_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/vesicle-mem_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/vesicle-mem_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -3108,7 +3108,7 @@
     },
     {
       "name": "vesicle_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/vesicle_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/vesicle_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -3164,14 +3164,14 @@
               "nm"
             ],
             "translate": [
-              0.0,
-              0.0,
-              0.0
+              0,
+              12000,
+              0
             ],
             "scale": [
-              3.44,
-              4.0,
-              4.0
+              1,
+              -1,
+              1
             ]
           },
           "description": "",
