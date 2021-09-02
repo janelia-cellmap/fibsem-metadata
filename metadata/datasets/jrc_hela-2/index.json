@@ -3479,9 +3479,9 @@
       "position": null,
       "scale": null,
       "orientation": [
+        1.0,
         0.0,
         0.0,
-        -1.0,
         0.0
       ],
       "volumeNames": [
