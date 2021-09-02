@@ -12,7 +12,7 @@
         0.0
       ],
       "volumeNames": [
-        "fibsem-uint8"
+        "fibsem-uint16"
       ]
     },
     {
@@ -32,7 +32,7 @@
       ],
       "volumeNames": [
         "gt",
-        "fibsem-uint8"
+        "fibsem-uint16"
       ]
     },
     {
@@ -53,7 +53,7 @@
       "volumeNames": [
         "mt-out_pred",
         "mt-out_seg",
-        "fibsem-uint8"
+        "fibsem-uint16"
       ]
     },
     {
@@ -75,7 +75,7 @@
         "nucleus_seg",
         "pm_seg",
         "vesicle_seg",
-        "fibsem-uint8"
+        "fibsem-uint16"
       ]
     },
     {
@@ -107,7 +107,7 @@
         "mito_mt_contacts",
         "mt_nucleus_contacts",
         "mt_vesicle_contacts",
-        "fibsem-uint8"
+        "fibsem-uint16"
       ]
     },
     {
@@ -131,7 +131,7 @@
         "er_curvature",
         "mito_seg",
         "er_mito_contacts",
-        "fibsem-uint8"
+        "fibsem-uint16"
       ]
     },
     {
@@ -152,7 +152,7 @@
       "volumeNames": [
         "er_seg",
         "ribo_classified",
-        "fibsem-uint8"
+        "fibsem-uint16"
       ]
     },
     {
@@ -173,7 +173,7 @@
       "volumeNames": [
         "mito_pred",
         "mito_seg",
-        "fibsem-uint8"
+        "fibsem-uint16"
       ]
     },
     {
@@ -195,7 +195,7 @@
         "mito_skeleton",
         "mito_skeleton-lsp",
         "mito_seg",
-        "fibsem-uint8"
+        "fibsem-uint16"
       ]
     },
     {
@@ -217,7 +217,7 @@
         "mito_seg",
         "er_seg",
         "er_mito_contacts",
-        "fibsem-uint8"
+        "fibsem-uint16"
       ]
     },
     {
@@ -239,7 +239,7 @@
         "er_seg",
         "er_medial-surface",
         "er_curvature",
-        "fibsem-uint8"
+        "fibsem-uint16"
       ]
     }
   ]
