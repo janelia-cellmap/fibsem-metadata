@@ -2,49 +2,6 @@
   "name": "jrc_hela-3",
   "volumes": [
     {
-      "name": "fibsem-uint16",
-      "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/em/fibsem-uint16",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          3.24,
-          4.0,
-          4.0
-        ]
-      },
-      "description": "FIB-SEM Data (uncompressed)",
-      "version": "0",
-      "tags": [],
-      "dataType": "uint16",
-      "contentType": "em",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0.313,
-          "end": 0.409,
-          "min": 0.0,
-          "max": 1.0
-        },
-        "color": "white",
-        "invertLUT": true
-      },
-      "subsources": []
-    },
-    {
       "name": "cent-dapp_pred",
       "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/labels/cent-dapp_pred",
       "format": "n5",
@@ -1012,6 +969,49 @@
       ]
     },
     {
+      "name": "er_mt_contacts",
+      "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/er_mt_contacts",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.24,
+          4.0,
+          4.0
+        ]
+      },
+      "description": "ER - Microtubule Contact Sites",
+      "version": "0",
+      "tags": [],
+      "dataType": "uint16",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0.0,
+          "end": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
       "name": "er_pm_contacts",
       "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/labels/er_pm_contacts",
       "format": "n5",
@@ -1345,6 +1345,92 @@
       "subsources": []
     },
     {
+      "name": "fibsem-uint16",
+      "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/em/fibsem-uint16",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.24,
+          4.0,
+          4.0
+        ]
+      },
+      "description": "FIB-SEM Data (uncompressed)",
+      "version": "0",
+      "tags": [],
+      "dataType": "uint16",
+      "contentType": "em",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0.313,
+          "end": 0.409,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "color": "white",
+        "invertLUT": true
+      },
+      "subsources": []
+    },
+    {
+      "name": "fibsem-uint8",
+      "path": "s3://janelia-cosem/jrc_hela-3/neuroglancer/em/fibsem-uint8.precomputed",
+      "format": "precomputed",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.24,
+          4.0,
+          4.0
+        ]
+      },
+      "description": "FIB-SEM Data (compressed)",
+      "version": "0",
+      "tags": [],
+      "dataType": "uint8",
+      "contentType": "em",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0.216,
+          "end": 0.944,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
       "name": "golgi-mem_pred",
       "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/labels/golgi-mem_pred",
       "format": "n5",
@@ -1426,6 +1512,49 @@
           "max": 1.0
         },
         "color": "cyan",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "golgi_mt_contacts",
+      "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/golgi_mt_contacts",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.24,
+          4.0,
+          4.0
+        ]
+      },
+      "description": "Golgi - Microtubule Contact Sites",
+      "version": "0",
+      "tags": [],
+      "dataType": "uint16",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0.0,
+          "end": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "color": "white",
         "invertLUT": false
       },
       "subsources": []
@@ -2065,6 +2194,49 @@
       "subsources": []
     },
     {
+      "name": "mito_mt_contacts",
+      "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/mito_mt_contacts",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.24,
+          4.0,
+          4.0
+        ]
+      },
+      "description": "Mitochondria - Microtubule Contact Sites",
+      "version": "0",
+      "tags": [],
+      "dataType": "uint16",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0.0,
+          "end": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
       "name": "mito_pm_contacts",
       "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/labels/mito_pm_contacts",
       "format": "n5",
@@ -2312,6 +2484,124 @@
       "subsources": []
     },
     {
+      "name": "mt-out_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/mt-out_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.24,
+          4.0,
+          4.0
+        ]
+      },
+      "description": "Microtubule outer",
+      "version": "0",
+      "tags": [],
+      "dataType": "uint16",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0.0,
+          "end": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "color": "orange",
+        "invertLUT": false
+      },
+      "subsources": [
+        {
+          "name": "mt-out_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_hela-3/mesh/mt-out_seg",
+          "format": "neuroglancer_legacy_mesh",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              3.24,
+              4.0,
+              4.0
+            ]
+          },
+          "description": "",
+          "version": "0",
+          "tags": [],
+          "ids": []
+        }
+      ]
+    },
+    {
+      "name": "mt_nucleus_contacts",
+      "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/mt_nucleus_contacts",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.24,
+          4.0,
+          4.0
+        ]
+      },
+      "description": "Microtubule - Nucleus Contact Sites",
+      "version": "0",
+      "tags": [],
+      "dataType": "uint8",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0.0,
+          "end": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
       "name": "mt_pm_contacts",
       "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/labels/mt_pm_contacts",
       "format": "n5",
@@ -2338,6 +2628,49 @@
         ]
       },
       "description": "Microtubule - Plasma Membrane Contact Sites",
+      "version": "0",
+      "tags": [],
+      "dataType": "uint16",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0.0,
+          "end": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "mt_vesicle_contacts",
+      "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/mt_vesicle_contacts",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.24,
+          4.0,
+          4.0
+        ]
+      },
+      "description": "Microtubule - Vesicle Contact Sites",
       "version": "0",
       "tags": [],
       "dataType": "uint16",
@@ -3352,49 +3685,6 @@
           "ids": []
         }
       ]
-    },
-    {
-      "name": "fibsem-uint8",
-      "path": "s3://janelia-cosem/jrc_hela-3/neuroglancer/em/fibsem-uint8.precomputed",
-      "format": "precomputed",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          3.24,
-          4.0,
-          4.0
-        ]
-      },
-      "description": "FIB-SEM Data (compressed)",
-      "version": "0",
-      "tags": [],
-      "dataType": "uint8",
-      "contentType": "em",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0.216,
-          "end": 0.944,
-          "min": 0.0,
-          "max": 1.0
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
     }
   ],
   "views": [

@@ -1,6 +1,6 @@
 {
   "name": "mito_mt_contacts",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_hela-3/jrc_hela-3.n5/mito_mt_contacts",
+  "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/mito_mt_contacts",
   "format": "n5",
   "transform": {
     "axes": [
