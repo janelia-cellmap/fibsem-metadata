@@ -3532,7 +3532,11 @@
     {
       "name": "Refined, whole-cell predictions",
       "description": "Renderings of refined predictions for multiple organelles, as presented in Fig. 2e of Heinrich et al., 2020",
-      "position": null,
+      "position": [
+        24000.5,
+        3200.5,
+        16684.5
+      ],
       "scale": null,
       "orientation": [
         1.0,
