@@ -1,6 +1,6 @@
 {
   "name": "ecs_seg",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_macrophage-2/jrc_macrophage-2.n5/ecs_seg",
+  "path": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ecs_seg",
   "format": "n5",
   "transform": {
     "axes": [

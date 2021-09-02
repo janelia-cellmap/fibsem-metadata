@@ -1,7 +1,7 @@
 {
   "name": "fibsem-uint16",
-  "path": "/groups/hess/hesslab/HighResPaper_rawdata/4. Fly Fan Shaped Body[Column1-9]_Z0519-11_4x4x4nm/FB-Z0519-11 4x4x4nm 16bit.mrc",
-  "format": "mrc",
+  "path": "s3://janelia-cosem/jrc_fly-fsb-1/jrc_fly-fsb-1.n5/em/fibsem-uint16",
+  "format": "n5",
   "transform": {
     "axes": [
       "z",

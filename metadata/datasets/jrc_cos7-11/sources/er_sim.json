@@ -1,6 +1,6 @@
 {
   "name": "er_sim",
-  "path": "/nrs/cosem/bennettd/data/jrc_cos7-11/jrc_cos7-11.n5/volumes/lm/er_sim",
+  "path": "s3://janelia-cosem/jrc_cos7-11/jrc_cos7-11.n5/lm/er_sim",
   "format": "n5",
   "transform": {
     "axes": [

@@ -73,7 +73,7 @@ class VolumeSource(DataSource):
     dataType: str
     contentType: ContentTypeEnum
     displaySettings: DisplaySettings
-    
+
     subsources: Sequence[MeshSource] = []
 
 

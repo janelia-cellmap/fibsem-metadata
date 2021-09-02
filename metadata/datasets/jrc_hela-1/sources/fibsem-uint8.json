@@ -1,7 +1,7 @@
 {
   "name": "fibsem-uint8",
-  "path": "/groups/cosem/cosem/data/HeLa_Cell1_8x8x8nm/Aubrey_17-7_17_Cell1_D05-10_8x8x8nm.mrc",
-  "format": "mrc",
+  "path": "s3://janelia-cosem/jrc_hela-1/neuroglancer/em/fibsem-uint8.precomputed",
+  "format": "precomputed",
   "transform": {
     "axes": [
       "z",

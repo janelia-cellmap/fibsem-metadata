@@ -1,6 +1,6 @@
 {
   "name": "er_pred",
-  "path": "/nrs/cosem/bennettd/data/jrc_cos7-11/jrc_cos7-11.n5/volumes/labels/er_pred",
+  "path": "s3://janelia-cosem/jrc_cos7-11/jrc_cos7-11.n5/labels/er_pred",
   "format": "n5",
   "transform": {
     "axes": [
@@ -19,9 +19,9 @@
       0.0
     ],
     "scale": [
-      4.0,
-      4.0,
-      4.0
+      8.0,
+      8.0,
+      8.0
     ]
   },
   "description": "Endoplasmic Reticulum",

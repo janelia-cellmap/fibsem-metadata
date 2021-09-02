@@ -1,7 +1,7 @@
 {
   "name": "fibsem-uint8",
-  "path": "/groups/hess/hesslab/HighResPaper_rawdata/8. SUM159_WT45_Cell2_4x4x4nm/SUM159_WT45_Cell2_Cryo_20171009_4x4x4nm.mrc",
-  "format": "mrc",
+  "path": "s3://janelia-cosem/jrc_sum159-1/neuroglancer/em/fibsem-uint8.precomputed",
+  "format": "precomputed",
   "transform": {
     "axes": [
       "z",

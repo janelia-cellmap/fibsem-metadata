@@ -1,6 +1,6 @@
 {
   "name": "pm_seg",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_hela-3/jrc_hela-3.n5/pm_seg",
+  "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/pm_seg",
   "format": "n5",
   "transform": {
     "axes": [
@@ -42,7 +42,7 @@
   "subsources": [
     {
       "name": "pm_seg",
-      "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_hela-3/mesh/pm_seg",
+      "path": "s3://janelia-cosem/jrc_hela-3/neuroglancer/mesh/pm_seg",
       "format": "neuroglancer_legacy_mesh",
       "transform": {
         "axes": [
@@ -57,13 +57,13 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          4000.0,
           0.0
         ],
         "scale": [
-          3.24,
-          4.0,
-          4.0
+          1.0,
+          -1.0,
+          1.0
         ]
       },
       "description": "",

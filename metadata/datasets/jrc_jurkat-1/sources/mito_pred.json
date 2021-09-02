@@ -1,6 +1,6 @@
 {
   "name": "mito_pred",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_jurkat-1/jrc_jurkat-1.n5/mito_pred",
+  "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mito_pred",
   "format": "n5",
   "transform": {
     "axes": [

@@ -1,6 +1,6 @@
 {
   "name": "ne_seg",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_jurkat-1/jrc_jurkat-1.n5/ne_seg",
+  "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ne_seg",
   "format": "n5",
   "transform": {
     "axes": [

@@ -1,7 +1,7 @@
 {
   "name": "fibsem-uint8",
-  "path": "/groups/cosem/cosem/data/Macrophage_FS80_Cell2_4x4x4nm/Cryo_FS80_Cell2 4x4x4nm.mrc",
-  "format": "mrc",
+  "path": "s3://janelia-cosem/jrc_macrophage-2/neuroglancer/em/fibsem-uint8.precomputed",
+  "format": "precomputed",
   "transform": {
     "axes": [
       "z",

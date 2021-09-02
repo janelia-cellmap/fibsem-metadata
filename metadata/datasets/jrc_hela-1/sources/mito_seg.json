@@ -1,6 +1,6 @@
 {
   "name": "mito_seg",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_hela-1/jrc_hela-1.n5/mito_seg",
+  "path": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/mito_seg",
   "format": "n5",
   "transform": {
     "axes": [
@@ -39,5 +39,37 @@
     "color": "green",
     "invertLUT": false
   },
-  "subsources": []
+  "subsources": [
+    {
+      "name": "mito_seg",
+      "path": "s3://janelia-cosem/jrc_hela-1/neuroglancer/mesh/mito_seg",
+      "format": "neuroglancer_legacy_mesh",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          4.0,
+          4.0,
+          4.0
+        ]
+      },
+      "description": "",
+      "version": "0",
+      "tags": [],
+      "ids": []
+    }
+  ]
 }
