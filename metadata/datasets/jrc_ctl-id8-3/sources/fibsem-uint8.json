@@ -1,6 +1,6 @@
 {
   "name": "fibsem-uint8",
-  "path": "/groups/cosem/cosem/data/jrc_ctl-id8-3/EM_LID494_ROI5_8x8x8nm_resliced.tif",
+  "path": "s3://janelia-cosem/jrc_ctl-id8-3/jrc_ctl-id8-3.n5/em/fibsem-uint8",
   "format": "n5",
   "transform": {
     "axes": [

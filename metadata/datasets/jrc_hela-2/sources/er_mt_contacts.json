@@ -1,6 +1,6 @@
 {
   "name": "er_mt_contacts",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_hela-2/jrc_hela-2.n5/er_mt_contacts",
+  "path": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/er_mt_contacts",
   "format": "n5",
   "transform": {
     "axes": [

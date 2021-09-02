@@ -1,6 +1,6 @@
 {
   "name": "mito_palm",
-  "path": "/nrs/cosem/bennettd/data/jrc_cos7-11/jrc_cos7-11.n5/volumes/lm/mito_palm",
+  "path": "s3://janelia-cosem/jrc_cos7-11/jrc_cos7-11.n5/lm/mito_palm",
   "format": "n5",
   "transform": {
     "axes": [

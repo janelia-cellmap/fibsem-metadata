@@ -1,6 +1,6 @@
 {
   "name": "gt",
-  "path": "/nrs/cosem/bennettd/groundtruth/jrc_hela-2/jrc_hela-2.n5/groundtruth_0003",
+  "path": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/gt",
   "format": "n5",
   "transform": {
     "axes": [
@@ -19,9 +19,9 @@
       0.0
     ],
     "scale": [
-      5.24,
-      4.0,
-      4.0
+      2.62,
+      2.0,
+      2.0
     ]
   },
   "description": "Ground truth",

@@ -1,6 +1,6 @@
 {
   "name": "cent_seg",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_hela-2/jrc_hela-2.n5/cent_seg",
+  "path": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/cent_seg",
   "format": "n5",
   "transform": {
     "axes": [

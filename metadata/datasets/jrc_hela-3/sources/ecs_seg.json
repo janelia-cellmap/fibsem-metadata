@@ -1,6 +1,6 @@
 {
   "name": "ecs_seg",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_hela-3/jrc_hela-3.n5/ecs_seg",
+  "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/labels/ecs_seg",
   "format": "n5",
   "transform": {
     "axes": [

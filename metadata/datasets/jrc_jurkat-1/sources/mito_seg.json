@@ -1,6 +1,6 @@
 {
   "name": "mito_seg",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_jurkat-1/jrc_jurkat-1.n5/mito_seg",
+  "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mito_seg",
   "format": "n5",
   "transform": {
     "axes": [
@@ -42,7 +42,7 @@
   "subsources": [
     {
       "name": "mito_seg",
-      "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_jurkat-1/mesh/mito_seg",
+      "path": "s3://janelia-cosem/jrc_jurkat-1/neuroglancer/mesh/mito_seg",
       "format": "neuroglancer_legacy_mesh",
       "transform": {
         "axes": [
@@ -57,13 +57,13 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
-          3.44,
-          4.0,
-          4.0
+          1.0,
+          -1.0,
+          1.0
         ]
       },
       "description": "",

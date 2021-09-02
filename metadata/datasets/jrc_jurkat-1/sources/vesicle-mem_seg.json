@@ -1,6 +1,6 @@
 {
   "name": "vesicle-mem_seg",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_jurkat-1/jrc_jurkat-1.n5/vesicle-mem_seg",
+  "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/vesicle-mem_seg",
   "format": "n5",
   "transform": {
     "axes": [

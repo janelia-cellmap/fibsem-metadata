@@ -1,6 +1,6 @@
 {
   "name": "endo_seg",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_hela-2/jrc_hela-2.n5/endo_seg",
+  "path": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/endo_seg",
   "format": "n5",
   "transform": {
     "axes": [
@@ -42,7 +42,7 @@
   "subsources": [
     {
       "name": "endo_seg",
-      "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_hela-2/mesh/endo_seg",
+      "path": "s3://janelia-cosem/jrc_hela-2/neuroglancer/mesh/endo_seg",
       "format": "neuroglancer_legacy_mesh",
       "transform": {
         "axes": [
@@ -57,12 +57,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          6400.0,
           0.0
         ],
         "scale": [
           1.0,
-          1.0,
+          -1.0,
           1.0
         ]
       },

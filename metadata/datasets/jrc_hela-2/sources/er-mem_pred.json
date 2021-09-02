@@ -1,6 +1,6 @@
 {
   "name": "er-mem_pred",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_hela-2/jrc_hela-2.n5/er-mem_pred",
+  "path": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/er-mem_pred",
   "format": "n5",
   "transform": {
     "axes": [

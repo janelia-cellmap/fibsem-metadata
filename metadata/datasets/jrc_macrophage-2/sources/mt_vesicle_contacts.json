@@ -1,6 +1,6 @@
 {
   "name": "mt_vesicle_contacts",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_macrophage-2/jrc_macrophage-2.n5/mt_vesicle_contacts",
+  "path": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mt_vesicle_contacts",
   "format": "n5",
   "transform": {
     "axes": [

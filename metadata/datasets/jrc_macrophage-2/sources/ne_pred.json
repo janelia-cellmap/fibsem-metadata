@@ -1,6 +1,6 @@
 {
   "name": "ne_pred",
-  "path": "/groups/cosem/cosem/ackermand/forDavis/renumbered/jrc_macrophage-2/jrc_macrophage-2.n5/ne_pred",
+  "path": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ne_pred",
   "format": "n5",
   "transform": {
     "axes": [
