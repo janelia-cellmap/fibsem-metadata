@@ -1,6 +1,6 @@
 {
   "name": "golgi-mem_seg",
-  "path": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/golgi-mem_seg",
+  "path": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/golgi-mem_seg",
   "format": "n5",
   "transform": {
     "axes": [
