@@ -3,9 +3,10 @@ from pydantic import BaseModel
 from datetime import date
 from typing import List, Dict
 
+
 class UnitfulVector(BaseModel):
     unit: str
-    values: Dict[str, float]    
+    values: Dict[str, float]
 
 
 class Imaging(BaseModel):
