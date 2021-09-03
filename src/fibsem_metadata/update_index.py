@@ -23,7 +23,7 @@ def append_element(
     if isinstance(new_element, VolumeSource):
         new_volumes = new_index["volumes"]
         for idx, volume in enumerate(new_volumes):
-            if volume.name == new_element.name:
+            if volume['name'] == new_element.name:
                 new_volumes[idx] = new_element
         new_index["volumes"] = new_volumes
     else:
