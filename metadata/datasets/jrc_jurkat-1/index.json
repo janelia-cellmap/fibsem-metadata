@@ -3,7 +3,7 @@
   "volumes": [
     {
       "name": "fibsem-uint16",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/em/fibsem-uint16",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/em/fibsem-uint16",
       "format": "n5",
       "transform": {
         "axes": [
@@ -647,7 +647,7 @@
       "subsources": [
         {
           "name": "endo_seg",
-          "path": "s3://janelia-cosem/jrc_jurkat-1/neuroglancer/mesh/endo_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/mesh/endo_seg",
           "format": "neuroglancer_legacy_mesh",
           "transform": {
             "axes": [
@@ -937,7 +937,7 @@
       "subsources": [
         {
           "name": "er_mito_contacts",
-          "path": "s3://janelia-cosem/jrc_jurkat-1/neuroglancer/mesh/er_mito_contacts",
+          "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/mesh/er_mito_contacts",
           "format": "neuroglancer_legacy_mesh",
           "transform": {
             "axes": [
@@ -1141,7 +1141,7 @@
       "subsources": [
         {
           "name": "er_seg",
-          "path": "s3://janelia-cosem/jrc_jurkat-1/neuroglancer/mesh/er_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/mesh/er_seg",
           "format": "neuroglancer_legacy_mesh",
           "transform": {
             "axes": [
@@ -1474,7 +1474,7 @@
       "subsources": [
         {
           "name": "golgi_seg",
-          "path": "s3://janelia-cosem/jrc_jurkat-1/neuroglancer/mesh/golgi_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/mesh/golgi_seg",
           "format": "neuroglancer_legacy_mesh",
           "transform": {
             "axes": [
@@ -2151,7 +2151,7 @@
       "subsources": [
         {
           "name": "mito_seg",
-          "path": "s3://janelia-cosem/jrc_jurkat-1/neuroglancer/mesh/mito_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/mesh/mito_seg",
           "format": "neuroglancer_legacy_mesh",
           "transform": {
             "axes": [
@@ -2270,7 +2270,7 @@
     },
     {
       "name": "ne_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ne_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ne_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2356,7 +2356,7 @@
     },
     {
       "name": "nhchrom_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/nhchrom_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/nhchrom_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2399,7 +2399,7 @@
     },
     {
       "name": "nhchrom_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/nhchrom_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/nhchrom_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2442,7 +2442,7 @@
     },
     {
       "name": "np_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/np_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/np_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2528,7 +2528,7 @@
     },
     {
       "name": "nucleolus_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/nucleolus_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/nucleolus_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2614,7 +2614,7 @@
     },
     {
       "name": "nucleus_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/nucleus_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/nucleus_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2699,7 +2699,7 @@
       "subsources": [
         {
           "name": "nucleus_seg",
-          "path": "s3://janelia-cosem/jrc_jurkat-1/neuroglancer/mesh/nucleus_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/mesh/nucleus_seg",
           "format": "neuroglancer_legacy_mesh",
           "transform": {
             "axes": [
@@ -2732,7 +2732,7 @@
     },
     {
       "name": "pm_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/pm_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/pm_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2817,7 +2817,7 @@
       "subsources": [
         {
           "name": "pm_seg",
-          "path": "s3://janelia-cosem/jrc_jurkat-1/neuroglancer/mesh/pm_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/mesh/pm_seg",
           "format": "neuroglancer_legacy_mesh",
           "transform": {
             "axes": [
@@ -2893,7 +2893,7 @@
     },
     {
       "name": "ribo_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ribo_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ribo_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2936,7 +2936,7 @@
     },
     {
       "name": "ribo_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ribo_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ribo_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2979,7 +2979,7 @@
     },
     {
       "name": "vesicle-mem_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/vesicle-mem_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/vesicle-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -3065,7 +3065,7 @@
     },
     {
       "name": "vesicle_pred",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/vesicle_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/vesicle_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -3150,7 +3150,7 @@
       "subsources": [
         {
           "name": "vesicle_seg",
-          "path": "s3://janelia-cosem/jrc_jurkat-1/neuroglancer/mesh/vesicle_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/mesh/vesicle_seg",
           "format": "neuroglancer_legacy_mesh",
           "transform": {
             "axes": [
@@ -3183,7 +3183,7 @@
     },
     {
       "name": "fibsem-uint8",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/neuroglancer/em/fibsem-uint8.precomputed",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/em/fibsem-uint8.precomputed",
       "format": "precomputed",
       "transform": {
         "axes": [

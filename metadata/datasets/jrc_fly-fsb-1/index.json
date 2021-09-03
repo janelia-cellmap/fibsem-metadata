@@ -3,7 +3,7 @@
   "volumes": [
     {
       "name": "fibsem-uint16",
-      "path": "s3://janelia-cosem/jrc_fly-fsb-1/jrc_fly-fsb-1.n5/em/fibsem-uint16",
+      "path": "s3://janelia-cosem-datasets/jrc_fly-fsb-1/jrc_fly-fsb-1.n5/em/fibsem-uint16",
       "format": "n5",
       "transform": {
         "axes": [

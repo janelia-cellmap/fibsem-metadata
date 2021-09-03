@@ -1,6 +1,6 @@
 {
   "name": "golgi-mem_pred",
-  "path": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/golgi-mem_pred",
+  "path": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/golgi-mem_pred",
   "format": "n5",
   "transform": {
     "axes": [

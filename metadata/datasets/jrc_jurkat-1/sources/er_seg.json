@@ -42,7 +42,7 @@
   "subsources": [
     {
       "name": "er_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/neuroglancer/mesh/er_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/mesh/er_seg",
       "format": "neuroglancer_legacy_mesh",
       "transform": {
         "axes": [

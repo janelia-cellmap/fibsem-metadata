@@ -1,6 +1,6 @@
 {
   "name": "er_ribo_contacts",
-  "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/labels/er_ribo_contacts",
+  "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/er_ribo_contacts",
   "format": "n5",
   "transform": {
     "axes": [

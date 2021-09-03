@@ -3,7 +3,7 @@
   "volumes": [
     {
       "name": "fibsem-uint16",
-      "path": "s3://janelia-cosem/jrc_sum159-1/jrc_sum159-1.n5/em/fibsem-uint16",
+      "path": "s3://janelia-cosem-datasets/jrc_sum159-1/jrc_sum159-1.n5/em/fibsem-uint16",
       "format": "n5",
       "transform": {
         "axes": [
@@ -46,7 +46,7 @@
     },
     {
       "name": "fibsem-uint8",
-      "path": "s3://janelia-cosem/jrc_sum159-1/neuroglancer/em/fibsem-uint8.precomputed",
+      "path": "s3://janelia-cosem-datasets/jrc_sum159-1/neuroglancer/em/fibsem-uint8.precomputed",
       "format": "precomputed",
       "transform": {
         "axes": [
