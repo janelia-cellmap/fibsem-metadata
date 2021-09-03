@@ -20,7 +20,7 @@
       "description": "Fifteen manually annotated regions used for training machine learning networks, as described in Fig. 1a of Heinrich et al., 2020.",
       "position": [
         25042.0,
-        5195.0,
+        1205.0,
         14561.0
       ],
       "scale": 3.9,
@@ -40,7 +40,7 @@
       "description": "Area used for validating microtubule renderings, as described in Fig. 2c of Heinrich et al., 2020",
       "position": [
         28300.0,
-        4112.0,
+        2288.0,
         2564.0
       ],
       "scale": 8.7,
@@ -61,7 +61,7 @@
       "description": "Renderings of refined predictions for multiple organelles, as presented in Fig. 2e of Heinrich et al., 2020",
       "position": [
         24000.5,
-        3200.5,
+        3199.5,
         16684.5
       ],
       "scale": null,
@@ -87,7 +87,7 @@
       "description": "Example of a microtubule interacting with five different organelles, including endosomes, the endoplasmic reticulum, Golgi, nucleus, and vesicles. A description can be found in Fig. 3b of Heinrich et al., 2020.",
       "position": [
         23240.0,
-        5291.0,
+        1109.0,
         10662.0
       ],
       "scale": 1.47,
@@ -119,7 +119,7 @@
       "description": "Example of planar regions of endoplasmic reticulum supported by mitochondria, as described in Heinrich et al., 2020",
       "position": [
         30273.0,
-        4391.0,
+        2009.0,
         22005.0
       ],
       "scale": 3.0,
@@ -143,7 +143,7 @@
       "description": "Ribosomes classified according to surface they are bound to, including the Nucleus, planar or tubular regions of the endoplasmic reticulum, or unbound in the cytosol. A description can be found in Fig. 3g of Heinrich et al., 2020.",
       "position": [
         25976.0,
-        4588.0,
+        1812.0,
         26121.0
       ],
       "scale": 3.32,
@@ -164,7 +164,7 @@
       "description": "Machine learning predictions for organelles such as mitochondria are oftern merged. To prevent overmerging, a combinated of watershed segmentation and agglomeration was applied to correctly \"split\" mitochondria. A detailed description can be found in Heinrich et al., 2020.",
       "position": [
         42000.0,
-        4400.0,
+        2000.0,
         28820.0
       ],
       "scale": 6.9,
@@ -185,7 +185,7 @@
       "description": "Topological thinning of mitochondria segmentations produces skeletons that can then be used for subsequent analysis such as length and diameter, as described in Supplmentatry Data 8 of Heinrich et al., 2020.",
       "position": [
         11634.0,
-        5254.0,
+        1146.0,
         15238.0
       ],
       "scale": 6.9,
@@ -207,7 +207,7 @@
       "description": "There is often interesting biology that occurs when two organelles are in contact with one another. Here, ER and mitochondria segmentations are used to calculate ER-mitochondria contact sites as described in Supplementary Data 9 of Heinrich et al., 2020.",
       "position": [
         10568.0,
-        4564.0,
+        1836.0,
         16490.0
       ],
       "scale": 3.3,
@@ -229,7 +229,7 @@
       "description": "The morphology of the endoplasmic reticulum segmentations was measured by first applying an iterative thinning procedure. This produced a medial surface, from which a planar metric could be calculated at each voxel. These planar metric values are then used to reconstruct the endoplasmic reticulum with curvature information. For a more detailed description see Supplementary Methods: Quantification of Heinrich et al., 2020.",
       "position": [
         25976.0,
-        4588.0,
+        1812.0,
         26121.0
       ],
       "scale": 3.3,
