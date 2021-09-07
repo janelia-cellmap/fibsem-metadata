@@ -65,9 +65,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Centrosome Distal Appendage",
@@ -151,9 +151,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Centrosome",
@@ -323,9 +323,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Extracellular Space",
@@ -409,9 +409,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Endosome membrane",
@@ -624,9 +624,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Endosomal Network",
@@ -742,9 +742,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Endoplasmic Reticulum membrane",
@@ -1161,9 +1161,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Endoplasmic Reticulum",
@@ -1203,9 +1203,9 @@
               0.0
             ],
             "scale": [
-              3.36,
-              4.0,
-              4.0
+              1.0,
+              1.0,
+              1.0
             ]
           },
           "description": "",
@@ -1494,9 +1494,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Golgi membrane",
@@ -1623,9 +1623,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Golgi",
@@ -1665,9 +1665,9 @@
               0.0
             ],
             "scale": [
-              3.36,
-              4.0,
-              4.0
+              1.0,
+              1.0,
+              1.0
             ]
           },
           "description": "",
@@ -1827,9 +1827,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Lipid Droplet membrane",
@@ -1913,9 +1913,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Lipid Droplet",
@@ -1999,9 +1999,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Lysosome membrane",
@@ -2085,9 +2085,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Lysosome",
@@ -2171,9 +2171,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Mitochondria membrane",
@@ -2343,9 +2343,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Mitochondria",
@@ -2385,9 +2385,9 @@
               0.0
             ],
             "scale": [
-              3.36,
-              4.0,
-              4.0
+              1.0,
+              1.0,
+              1.0
             ]
           },
           "description": "",
@@ -2547,9 +2547,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Microtubule outer",
@@ -2589,9 +2589,9 @@
               0.0
             ],
             "scale": [
-              3.36,
-              4.0,
-              4.0
+              1.0,
+              1.0,
+              1.0
             ]
           },
           "description": "",
@@ -2794,9 +2794,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Nuclear Envelope membrane",
@@ -2880,9 +2880,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Nuclear Envelope",
@@ -2966,9 +2966,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Nucleoulus associated Heterochromatin",
@@ -3052,9 +3052,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Nuclear Pore",
@@ -3138,9 +3138,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Nucleoulus",
@@ -3224,9 +3224,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Nucleus",
@@ -3266,9 +3266,9 @@
               0.0
             ],
             "scale": [
-              3.36,
-              4.0,
-              4.0
+              1.0,
+              1.0,
+              1.0
             ]
           },
           "description": "",
@@ -3342,9 +3342,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Plasma Membrane",
@@ -3384,9 +3384,9 @@
               0.0
             ],
             "scale": [
-              3.36,
-              4.0,
-              4.0
+              1.0,
+              1.0,
+              1.0
             ]
           },
           "description": "",
@@ -3503,9 +3503,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Ribosome",
@@ -3589,9 +3589,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Vesicle membrane",
@@ -3675,9 +3675,9 @@
           0.0
         ],
         "scale": [
-          1.0,
-          1.0,
-          1.0
+          3.36,
+          4.0,
+          4.0
         ]
       },
       "description": "Vesicle",
@@ -3717,9 +3717,9 @@
               0.0
             ],
             "scale": [
-              3.36,
-              4.0,
-              4.0
+              1.0,
+              1.0,
+              1.0
             ]
           },
           "description": "",
