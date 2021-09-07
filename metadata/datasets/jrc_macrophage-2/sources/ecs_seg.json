@@ -19,11 +19,11 @@
       0.0
     ],
     "scale": [
-      3.36,
-      4.0,
-      4.0
+      1.0,
+      1.0,
+      1.0
     ]
-  },
+},
   "description": "Extracellular Space",
   "version": "0",
   "tags": [],
