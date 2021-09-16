@@ -1,6 +1,6 @@
 {
   "name": "pm_pred",
-  "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/pm_pred",
+  "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/pm_pred",
   "format": "n5",
   "transform": {
     "axes": [
@@ -15,12 +15,12 @@
     ],
     "translate": [
       0.0,
-      0.0,
+      12000.0,
       0.0
     ],
     "scale": [
       3.44,
-      4.0,
+      -4.0,
       4.0
     ]
   },
