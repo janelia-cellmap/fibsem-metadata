@@ -1,6 +1,6 @@
 {
   "name": "ne_pred",
-  "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/ne_pred",
+  "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/labels/ne_pred",
   "format": "n5",
   "transform": {
     "axes": [
@@ -15,12 +15,12 @@
     ],
     "translate": [
       0.0,
-      0.0,
+      4000.0,
       0.0
     ],
     "scale": [
       3.24,
-      4.0,
+      -4.0,
       4.0
     ]
   },
