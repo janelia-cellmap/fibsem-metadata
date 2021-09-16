@@ -1,6 +1,6 @@
 {
   "name": "chrom_pred",
-  "path": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/chrom_pred",
+  "path": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/chrom_pred",
   "format": "n5",
   "transform": {
     "axes": [
