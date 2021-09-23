@@ -24,7 +24,7 @@
       8.0
     ]
   },
-  "description": "",
+  "description": "FIB-SEM Data (uncompressed)",
   "version": "0",
   "tags": [],
   "dataType": "uint16",
