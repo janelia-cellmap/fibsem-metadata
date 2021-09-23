@@ -1,5 +1,5 @@
 {
-  "title": "",
+  "title": "SARS-COV-2-infected vervet kidney epithelial (Vero) cells",
   "id": "jrc_ccl81-covid-1",
   "publications": [
     ""
@@ -31,13 +31,13 @@
   },
   "sample": {
     "description": "African green monkey kidney cell (CCL81) 24 hours post-infection with SARS-COV-2.",
-    "protocol": "",
-    "contributions": "Sample provided by John Bernbaum, Jens Kuhn (NIH/NIAID), prepared for imaging by Song Pang (HHMI/Janelia), imaging by Song Pang (HHMI/Janelia), and post-procssing by C. Shan Xu (HHMI/Janelia)."
+    "protocol": "CCL-81 cells were seeded in a T75 flask at 80% confluency and infected with SARS-CoV-2, at a MOI of 0.01. After 24 hours, the cells were collected from flasks and preserved in 2.5% Glutaraldehyde (E.M. Sciences, Warrington, PA), in Millonig’s Sodium Phosphate Buffer (Tousimis Research, Rockville, MD). After fixation was complete, the cells were washed repeatedly in Millonig’s Buffer, and incubated for two hours in 1.0% Osmium Tetroxide, in the same buffer. Following rinsing steps in Ultrapure Water and en bloc staining with 2.0% Uranyl Acetate, the samples were dehydrated in a series of graded ethanols, and infiltrated and embedded in Spurr’s plastic resin (E.M. Sciences).",
+    "contributions": "Sample provided by John Bernbaum and Jens H. Kuhn (NIH/NIAID/DCR/Integrated Research Facility at Fort Detrick), prepared for imaging by Song Pang (HHMI/Janelia), imaging by Song Pang (HHMI/Janelia), and post-processing by C. Shan Xu (HHMI/Janelia)"
   },
   "DOI": [
     {
       "id": "em",
-      "DOI": ""
+      "DOI": "10.25378/janelia.16638316"
     },
     {
       "id": "seg",
