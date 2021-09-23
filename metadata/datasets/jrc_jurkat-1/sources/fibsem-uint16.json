@@ -1,6 +1,6 @@
 {
   "name": "fibsem-uint16",
-  "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/em/fibsem-uint16",
+  "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/em/fibsem-uint16",
   "format": "n5",
   "transform": {
     "axes": [
@@ -14,8 +14,8 @@
       "nm"
     ],
     "translate": [
-      0.0,
-      0.0,
+      -5.0,
+      -35.0,
       0.0
     ],
     "scale": [

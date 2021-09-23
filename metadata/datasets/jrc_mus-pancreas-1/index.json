@@ -3,7 +3,7 @@
   "volumes": [
     {
       "name": "fibsem-uint16",
-      "path": "s3://janelia-cosem/jrc_mus-pancreas-1/jrc_mus-pancreas-1.n5/em/fibsem-uint16",
+      "path": "s3://janelia-cosem-datasets/jrc_mus-pancreas-1/jrc_mus-pancreas-1.n5/em/fibsem-uint16",
       "format": "n5",
       "transform": {
         "axes": [
@@ -46,7 +46,7 @@
     },
     {
       "name": "fibsem-uint8",
-      "path": "s3://janelia-cosem/jrc_mus-pancreas-1/neuroglancer/em/fibsem-uint8.precomputed",
+      "path": "s3://janelia-cosem-datasets/jrc_mus-pancreas-1/neuroglancer/em/fibsem-uint8.precomputed",
       "format": "precomputed",
       "transform": {
         "axes": [
@@ -96,7 +96,7 @@
       "scale": null,
       "orientation": [
         0.0,
-        0.0,
+        1.0,
         0.0,
         0.0
       ],
@@ -115,7 +115,7 @@
       "scale": 6.6,
       "orientation": [
         0.0,
-        0.0,
+        1.0,
         0.0,
         0.0
       ],
@@ -134,7 +134,7 @@
       "scale": 3.3,
       "orientation": [
         0.0,
-        0.0,
+        1.0,
         0.0,
         0.0
       ],
@@ -153,7 +153,7 @@
       "scale": 3.3,
       "orientation": [
         0.0,
-        0.0,
+        1.0,
         0.0,
         0.0
       ],
@@ -172,7 +172,7 @@
       "scale": 4.3,
       "orientation": [
         0.0,
-        0.0,
+        1.0,
         0.0,
         0.0
       ],
@@ -191,7 +191,7 @@
       "scale": 6.1,
       "orientation": [
         0.0,
-        0.0,
+        1.0,
         0.0,
         0.0
       ],

@@ -6,7 +6,7 @@
       "position": null,
       "scale": null,
       "orientation": [
-        0.0,
+        1.0,
         0.0,
         0.0,
         0.0
@@ -20,12 +20,12 @@
       "description": "Centrosome of a wild-type HeLa cell, as described in Fig. 2b of Xu et al. 2020c.",
       "position": [
         28441.0,
-        3183.0,
+        817.0,
         10662.0
       ],
       "scale": 7.5,
       "orientation": [
-        0.0,
+        1.0,
         0.0,
         0.0,
         0.0
@@ -39,12 +39,12 @@
       "description": "Golgi Stack of a wild-type HeLa cell, as described in Fig. 2c of Xu et al. 2020c.",
       "position": [
         30305.0,
-        2544.0,
+        1456.0,
         11262.0
       ],
       "scale": 4.5,
       "orientation": [
-        0.0,
+        1.0,
         0.0,
         0.0,
         0.0
@@ -58,12 +58,12 @@
       "description": "Nuclear envelope with polyribosomes of a wild-type HeLa cell, as described in Fig. 2d of Xu et al. 2020c.",
       "position": [
         24219.0,
-        829.0,
+        3171.0,
         10354.0
       ],
       "scale": 6.0,
       "orientation": [
-        0.0,
+        1.0,
         0.0,
         0.0,
         0.0
@@ -78,7 +78,7 @@
       "position": null,
       "scale": null,
       "orientation": [
-        0.0,
+        1.0,
         0.0,
         0.0,
         0.0
@@ -99,12 +99,12 @@
       "description": "Manually annotated block used for evaluation of machine learning classifiers along with corresponding predictions, as described in Supplementary Data 2 of Heinrich et al., 2020.",
       "position": [
         29736.0,
-        3226.0,
+        774.0,
         21076.0
       ],
       "scale": 8.5,
       "orientation": [
-        0.0,
+        1.0,
         0.0,
         0.0,
         0.0
@@ -127,7 +127,7 @@
       "position": null,
       "scale": null,
       "orientation": [
-        0.0,
+        1.0,
         0.0,
         0.0,
         0.0

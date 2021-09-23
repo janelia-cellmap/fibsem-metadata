@@ -1,6 +1,6 @@
 {
   "name": "er_seg",
-  "path": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_seg",
+  "path": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_seg",
   "format": "n5",
   "transform": {
     "axes": [
@@ -42,7 +42,7 @@
   "subsources": [
     {
       "name": "er_seg",
-      "path": "s3://janelia-cosem/jrc_macrophage-2/neuroglancer/mesh/er_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_macrophage-2/neuroglancer/mesh/er_seg",
       "format": "neuroglancer_legacy_mesh",
       "transform": {
         "axes": [
@@ -61,9 +61,9 @@
           0.0
         ],
         "scale": [
-          3.36,
-          4.0,
-          4.0
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "description": "",

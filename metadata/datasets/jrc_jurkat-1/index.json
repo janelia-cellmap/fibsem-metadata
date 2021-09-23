@@ -2,51 +2,8 @@
   "name": "jrc_jurkat-1",
   "volumes": [
     {
-      "name": "fibsem-uint16",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/em/fibsem-uint16",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          3.44,
-          4.0,
-          4.0
-        ]
-      },
-      "description": "FIB-SEM Data (uncompressed)",
-      "version": "0",
-      "tags": [],
-      "dataType": "uint16",
-      "contentType": "em",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0.297,
-          "end": 0.402,
-          "min": 0.0,
-          "max": 1.0
-        },
-        "color": "white",
-        "invertLUT": true
-      },
-      "subsources": []
-    },
-    {
       "name": "cent-dapp_pred",
-      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/cent-dapp_pred",
+      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/cent-dapp_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -61,12 +18,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
           3.44,
-          4.0,
+          -4.0,
           4.0
         ]
       },
@@ -132,7 +89,7 @@
     },
     {
       "name": "cent_pred",
-      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/cent_pred",
+      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/cent_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -147,12 +104,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
           3.44,
-          4.0,
+          -4.0,
           4.0
         ]
       },
@@ -218,7 +175,7 @@
     },
     {
       "name": "chrom_pred",
-      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/chrom_pred",
+      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/chrom_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -233,12 +190,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
           3.44,
-          4.0,
+          -4.0,
           4.0
         ]
       },
@@ -304,7 +261,7 @@
     },
     {
       "name": "ecs_pred",
-      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ecs_pred",
+      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ecs_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -319,12 +276,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
           3.44,
-          4.0,
+          -4.0,
           4.0
         ]
       },
@@ -390,7 +347,7 @@
     },
     {
       "name": "endo-mem_pred",
-      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/endo-mem_pred",
+      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/endo-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -405,12 +362,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
           3.44,
-          4.0,
+          -4.0,
           4.0
         ]
       },
@@ -561,8 +518,8 @@
       "subsources": []
     },
     {
-      "name": "endo_pred",
-      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/endo_pred",
+      "name": "endo_mt_contacts",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/endo_mt_contacts",
       "format": "n5",
       "transform": {
         "axes": [
@@ -583,6 +540,49 @@
         "scale": [
           3.44,
           4.0,
+          4.0
+        ]
+      },
+      "description": "Endosome - Microtubule Contact Sites",
+      "version": "0",
+      "tags": [],
+      "dataType": "uint16",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0.0,
+          "end": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "endo_pred",
+      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/endo_pred",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          12000.0,
+          0.0
+        ],
+        "scale": [
+          3.44,
+          -4.0,
           4.0
         ]
       },
@@ -647,7 +647,7 @@
       "subsources": [
         {
           "name": "endo_seg",
-          "path": "s3://janelia-cosem/jrc_jurkat-1/neuroglancer/mesh/endo_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/mesh/endo_seg",
           "format": "neuroglancer_legacy_mesh",
           "transform": {
             "axes": [
@@ -661,14 +661,14 @@
               "nm"
             ],
             "translate": [
-              0,
-              12000,
-              0
+              0.0,
+              0.0,
+              0.0
             ],
             "scale": [
-              1,
-              -1,
-              1
+              1.0,
+              1.0,
+              1.0
             ]
           },
           "description": "",
@@ -680,7 +680,7 @@
     },
     {
       "name": "er-mem_pred",
-      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er-mem_pred",
+      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -695,12 +695,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
           3.44,
-          4.0,
+          -4.0,
           4.0
         ]
       },
@@ -937,7 +937,7 @@
       "subsources": [
         {
           "name": "er_mito_contacts",
-          "path": "s3://janelia-cosem/jrc_jurkat-1/neuroglancer/mesh/er_mito_contacts",
+          "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/mesh/er_mito_contacts",
           "format": "neuroglancer_legacy_mesh",
           "transform": {
             "axes": [
@@ -951,14 +951,14 @@
               "nm"
             ],
             "translate": [
-              0,
-              12000,
-              0
+              0.0,
+              12000.0,
+              0.0
             ],
             "scale": [
-              1,
-              -1,
-              1
+              1.0,
+              -1.0,
+              1.0
             ]
           },
           "description": "",
@@ -967,6 +967,49 @@
           "ids": []
         }
       ]
+    },
+    {
+      "name": "er_mt_contacts",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/er_mt_contacts",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.44,
+          4.0,
+          4.0
+        ]
+      },
+      "description": "ER - Microtubule Contact Sites",
+      "version": "0",
+      "tags": [],
+      "dataType": "uint16",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0.0,
+          "end": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
     },
     {
       "name": "er_pm_contacts",
@@ -1013,7 +1056,7 @@
     },
     {
       "name": "er_pred",
-      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er_pred",
+      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1028,12 +1071,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
           3.44,
-          4.0,
+          -4.0,
           4.0
         ]
       },
@@ -1141,7 +1184,7 @@
       "subsources": [
         {
           "name": "er_seg",
-          "path": "s3://janelia-cosem/jrc_jurkat-1/neuroglancer/mesh/er_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/mesh/er_seg",
           "format": "neuroglancer_legacy_mesh",
           "transform": {
             "axes": [
@@ -1155,14 +1198,14 @@
               "nm"
             ],
             "translate": [
-              0,
-              12000,
-              0
+              0.0,
+              0.0,
+              0.0
             ],
             "scale": [
-              1,
-              -1,
-              1
+              1.0,
+              1.0,
+              1.0
             ]
           },
           "description": "",
@@ -1217,7 +1260,7 @@
     },
     {
       "name": "eres_pred",
-      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/eres_pred",
+      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/eres_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1232,12 +1275,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
           3.44,
-          4.0,
+          -4.0,
           4.0
         ]
       },
@@ -1302,8 +1345,94 @@
       "subsources": []
     },
     {
+      "name": "fibsem-uint16",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/em/fibsem-uint16",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          -5.0,
+          -35.0,
+          0.0
+        ],
+        "scale": [
+          3.44,
+          4.0,
+          4.0
+        ]
+      },
+      "description": "FIB-SEM Data (uncompressed)",
+      "version": "0",
+      "tags": [],
+      "dataType": "uint16",
+      "contentType": "em",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0.297,
+          "end": 0.402,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "color": "white",
+        "invertLUT": true
+      },
+      "subsources": []
+    },
+    {
+      "name": "fibsem-uint8",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/em/fibsem-uint8.precomputed",
+      "format": "precomputed",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          12000.0,
+          0.0
+        ],
+        "scale": [
+          3.44,
+          -4.0,
+          4.0
+        ]
+      },
+      "description": "FIB-SEM Data (compressed)",
+      "version": "0",
+      "tags": [],
+      "dataType": "uint8",
+      "contentType": "em",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0.826,
+          "end": 0.924,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
       "name": "golgi-mem_pred",
-      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/golgi-mem_pred",
+      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/golgi-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1318,12 +1447,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
           3.44,
-          4.0,
+          -4.0,
           4.0
         ]
       },
@@ -1388,8 +1517,8 @@
       "subsources": []
     },
     {
-      "name": "golgi_pred",
-      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/golgi_pred",
+      "name": "golgi_mt_contacts",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/golgi_mt_contacts",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1410,6 +1539,49 @@
         "scale": [
           3.44,
           4.0,
+          4.0
+        ]
+      },
+      "description": "Golgi - Microtubule Contact Sites",
+      "version": "0",
+      "tags": [],
+      "dataType": "uint16",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0.0,
+          "end": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "golgi_pred",
+      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/golgi_pred",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          12000.0,
+          0.0
+        ],
+        "scale": [
+          3.44,
+          -4.0,
           4.0
         ]
       },
@@ -1474,7 +1646,7 @@
       "subsources": [
         {
           "name": "golgi_seg",
-          "path": "s3://janelia-cosem/jrc_jurkat-1/neuroglancer/mesh/golgi_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/mesh/golgi_seg",
           "format": "neuroglancer_legacy_mesh",
           "transform": {
             "axes": [
@@ -1488,14 +1660,14 @@
               "nm"
             ],
             "translate": [
-              0,
-              12000,
-              0
+              0.0,
+              0.0,
+              0.0
             ],
             "scale": [
-              1,
-              -1,
-              1
+              1.0,
+              1.0,
+              1.0
             ]
           },
           "description": "",
@@ -1593,7 +1765,7 @@
     },
     {
       "name": "ld-mem_pred",
-      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ld-mem_pred",
+      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ld-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1608,12 +1780,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
           3.44,
-          4.0,
+          -4.0,
           4.0
         ]
       },
@@ -1679,7 +1851,7 @@
     },
     {
       "name": "ld_pred",
-      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ld_pred",
+      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ld_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1694,12 +1866,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
           3.44,
-          4.0,
+          -4.0,
           4.0
         ]
       },
@@ -1765,7 +1937,7 @@
     },
     {
       "name": "lyso-mem_pred",
-      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/lyso-mem_pred",
+      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/lyso-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1780,12 +1952,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
           3.44,
-          4.0,
+          -4.0,
           4.0
         ]
       },
@@ -1851,7 +2023,7 @@
     },
     {
       "name": "lyso_pred",
-      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/lyso_pred",
+      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/lyso_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1866,12 +2038,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
           3.44,
-          4.0,
+          -4.0,
           4.0
         ]
       },
@@ -1937,7 +2109,7 @@
     },
     {
       "name": "mito-mem_pred",
-      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mito-mem_pred",
+      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mito-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1952,12 +2124,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
           3.44,
-          4.0,
+          -4.0,
           4.0
         ]
       },
@@ -2022,6 +2194,49 @@
       "subsources": []
     },
     {
+      "name": "mito_mt_contacts",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/mito_mt_contacts",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.44,
+          4.0,
+          4.0
+        ]
+      },
+      "description": "Mitochondria - Microtubule Contact Sites",
+      "version": "0",
+      "tags": [],
+      "dataType": "uint8",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0.0,
+          "end": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
       "name": "mito_pm_contacts",
       "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mito_pm_contacts",
       "format": "n5",
@@ -2066,7 +2281,7 @@
     },
     {
       "name": "mito_pred",
-      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mito_pred",
+      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mito_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2081,12 +2296,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
           3.44,
-          4.0,
+          -4.0,
           4.0
         ]
       },
@@ -2151,7 +2366,7 @@
       "subsources": [
         {
           "name": "mito_seg",
-          "path": "s3://janelia-cosem/jrc_jurkat-1/neuroglancer/mesh/mito_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/mesh/mito_seg",
           "format": "neuroglancer_legacy_mesh",
           "transform": {
             "axes": [
@@ -2165,14 +2380,14 @@
               "nm"
             ],
             "translate": [
-              0,
-              12000,
-              0
+              0.0,
+              0.0,
+              0.0
             ],
             "scale": [
-              1,
-              -1,
-              1
+              1.0,
+              1.0,
+              1.0
             ]
           },
           "description": "",
@@ -2183,8 +2398,8 @@
       ]
     },
     {
-      "name": "ne-mem_pred",
-      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ne-mem_pred",
+      "name": "mt-out_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/mt-out_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2205,6 +2420,210 @@
         "scale": [
           3.44,
           4.0,
+          4.0
+        ]
+      },
+      "description": "Microtubule outer",
+      "version": "0",
+      "tags": [],
+      "dataType": "uint16",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0.0,
+          "end": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "color": "orange",
+        "invertLUT": false
+      },
+      "subsources": [
+        {
+          "name": "mt-out_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/mesh/mt-out_seg",
+          "format": "neuroglancer_legacy_mesh",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              3.44,
+              4.0,
+              4.0
+            ]
+          },
+          "description": "",
+          "version": "0",
+          "tags": [],
+          "ids": []
+        }
+      ]
+    },
+    {
+      "name": "mt_nucleus_contacts",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/mt_nucleus_contacts",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.44,
+          4.0,
+          4.0
+        ]
+      },
+      "description": "Microtubule - Nucleus Contact Sites",
+      "version": "0",
+      "tags": [],
+      "dataType": "uint8",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0.0,
+          "end": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "mt_pm_contacts",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/mt_pm_contacts",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.44,
+          4.0,
+          4.0
+        ]
+      },
+      "description": "Microtubule - Plasma Membrane Contact Sites",
+      "version": "0",
+      "tags": [],
+      "dataType": "uint8",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0.0,
+          "end": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "mt_vesicle_contacts",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/mt_vesicle_contacts",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.44,
+          4.0,
+          4.0
+        ]
+      },
+      "description": "Microtubule - Vesicle Contact Sites",
+      "version": "0",
+      "tags": [],
+      "dataType": "uint8",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0.0,
+          "end": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "ne-mem_pred",
+      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ne-mem_pred",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          12000.0,
+          0.0
+        ],
+        "scale": [
+          3.44,
+          -4.0,
           4.0
         ]
       },
@@ -2285,12 +2704,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
           3.44,
-          4.0,
+          -4.0,
           4.0
         ]
       },
@@ -2371,12 +2790,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
           3.44,
-          4.0,
+          -4.0,
           4.0
         ]
       },
@@ -2399,7 +2818,7 @@
     },
     {
       "name": "nhchrom_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/nhchrom_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/nhchrom_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2457,12 +2876,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
           3.44,
-          4.0,
+          -4.0,
           4.0
         ]
       },
@@ -2543,12 +2962,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
           3.44,
-          4.0,
+          -4.0,
           4.0
         ]
       },
@@ -2629,12 +3048,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
           3.44,
-          4.0,
+          -4.0,
           4.0
         ]
       },
@@ -2699,7 +3118,7 @@
       "subsources": [
         {
           "name": "nucleus_seg",
-          "path": "s3://janelia-cosem/jrc_jurkat-1/neuroglancer/mesh/nucleus_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/mesh/nucleus_seg",
           "format": "neuroglancer_legacy_mesh",
           "transform": {
             "axes": [
@@ -2713,14 +3132,14 @@
               "nm"
             ],
             "translate": [
-              0,
-              12000,
-              0
+              0.0,
+              0.0,
+              0.0
             ],
             "scale": [
-              1,
-              -1,
-              1
+              1.0,
+              1.0,
+              1.0
             ]
           },
           "description": "",
@@ -2747,12 +3166,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
           3.44,
-          4.0,
+          -4.0,
           4.0
         ]
       },
@@ -2817,7 +3236,7 @@
       "subsources": [
         {
           "name": "pm_seg",
-          "path": "s3://janelia-cosem/jrc_jurkat-1/neuroglancer/mesh/pm_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/mesh/pm_seg",
           "format": "neuroglancer_legacy_mesh",
           "transform": {
             "axes": [
@@ -2831,14 +3250,14 @@
               "nm"
             ],
             "translate": [
-              0,
-              12000,
-              0
+              0.0,
+              0.0,
+              0.0
             ],
             "scale": [
-              1,
-              -1,
-              1
+              1.0,
+              1.0,
+              1.0
             ]
           },
           "description": "",
@@ -2908,12 +3327,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
           3.44,
-          4.0,
+          -4.0,
           4.0
         ]
       },
@@ -2936,7 +3355,7 @@
     },
     {
       "name": "ribo_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ribo_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ribo_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2994,12 +3413,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
           3.44,
-          4.0,
+          -4.0,
           4.0
         ]
       },
@@ -3080,12 +3499,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          12000.0,
           0.0
         ],
         "scale": [
           3.44,
-          4.0,
+          -4.0,
           4.0
         ]
       },
@@ -3150,7 +3569,7 @@
       "subsources": [
         {
           "name": "vesicle_seg",
-          "path": "s3://janelia-cosem/jrc_jurkat-1/neuroglancer/mesh/vesicle_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/mesh/vesicle_seg",
           "format": "neuroglancer_legacy_mesh",
           "transform": {
             "axes": [
@@ -3164,14 +3583,14 @@
               "nm"
             ],
             "translate": [
-              0,
-              12000,
-              0
+              0.0,
+              0.0,
+              0.0
             ],
             "scale": [
-              1,
-              -1,
-              1
+              1.0,
+              1.0,
+              1.0
             ]
           },
           "description": "",
@@ -3180,49 +3599,6 @@
           "ids": []
         }
       ]
-    },
-    {
-      "name": "fibsem-uint8",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/neuroglancer/em/fibsem-uint8.precomputed",
-      "format": "precomputed",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          3.44,
-          4.0,
-          4.0
-        ]
-      },
-      "description": "FIB-SEM Data (compressed)",
-      "version": "0",
-      "tags": [],
-      "dataType": "uint8",
-      "contentType": "em",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0.826,
-          "end": 0.924,
-          "min": 0.0,
-          "max": 1.0
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
     }
   ],
   "views": [
@@ -3233,7 +3609,7 @@
       "scale": null,
       "orientation": [
         0.0,
-        0.0,
+        1.0,
         0.0,
         0.0
       ],
@@ -3248,7 +3624,7 @@
       "scale": null,
       "orientation": [
         0.0,
-        0.0,
+        1.0,
         0.0,
         0.0
       ],

@@ -1,6 +1,6 @@
 {
   "name": "nucleus_pred",
-  "path": "s3://janelia-cosem/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/labels/nucleus_pred",
+  "path": "s3://janelia-cosem-datasets/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/labels/nucleus_pred",
   "format": "n5",
   "transform": {
     "axes": [

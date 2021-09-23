@@ -3,7 +3,7 @@
   "volumes": [
     {
       "name": "fibsem-uint16",
-      "path": "s3://janelia-cosem/jrc_cos7-11/jrc_cos7-11.n5/em/fibsem-uint16",
+      "path": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/em/fibsem-uint16",
       "format": "n5",
       "transform": {
         "axes": [
@@ -46,7 +46,7 @@
     },
     {
       "name": "er_pred",
-      "path": "s3://janelia-cosem/jrc_cos7-11/jrc_cos7-11.n5/labels/er_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/labels/er_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -89,7 +89,7 @@
     },
     {
       "name": "mito_pred",
-      "path": "s3://janelia-cosem/jrc_cos7-11/jrc_cos7-11.n5/labels/mito_pred",
+      "path": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/labels/mito_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -132,7 +132,7 @@
     },
     {
       "name": "er_palm",
-      "path": "s3://janelia-cosem/jrc_cos7-11/jrc_cos7-11.n5/lm/er_palm",
+      "path": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/lm/er_palm",
       "format": "n5",
       "transform": {
         "axes": [
@@ -175,7 +175,7 @@
     },
     {
       "name": "er_sim",
-      "path": "s3://janelia-cosem/jrc_cos7-11/jrc_cos7-11.n5/lm/er_sim",
+      "path": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/lm/er_sim",
       "format": "n5",
       "transform": {
         "axes": [
@@ -218,7 +218,7 @@
     },
     {
       "name": "mito_palm",
-      "path": "s3://janelia-cosem/jrc_cos7-11/jrc_cos7-11.n5/lm/mito_palm",
+      "path": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/lm/mito_palm",
       "format": "n5",
       "transform": {
         "axes": [
@@ -261,7 +261,7 @@
     },
     {
       "name": "mito_sim",
-      "path": "s3://janelia-cosem/jrc_cos7-11/jrc_cos7-11.n5/lm/mito_sim",
+      "path": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/lm/mito_sim",
       "format": "n5",
       "transform": {
         "axes": [
@@ -311,7 +311,7 @@
       "scale": null,
       "orientation": [
         0.0,
-        0.0,
+        1.0,
         0.0,
         0.0
       ],
@@ -326,7 +326,7 @@
       "scale": null,
       "orientation": [
         0.0,
-        0.0,
+        1.0,
         0.0,
         0.0
       ],
@@ -345,7 +345,7 @@
       "scale": null,
       "orientation": [
         0.0,
-        0.0,
+        1.0,
         0.0,
         0.0
       ],

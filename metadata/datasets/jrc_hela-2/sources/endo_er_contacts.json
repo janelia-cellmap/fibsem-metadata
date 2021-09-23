@@ -1,6 +1,6 @@
 {
   "name": "endo_er_contacts",
-  "path": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/endo_er_contacts",
+  "path": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/endo_er_contacts",
   "format": "n5",
   "transform": {
     "axes": [

@@ -1,6 +1,6 @@
 {
   "name": "ecs_seg",
-  "path": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ecs_seg",
+  "path": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ecs_seg",
   "format": "n5",
   "transform": {
     "axes": [
@@ -23,7 +23,7 @@
       4.0,
       4.0
     ]
-  },
+},
   "description": "Extracellular Space",
   "version": "0",
   "tags": [],

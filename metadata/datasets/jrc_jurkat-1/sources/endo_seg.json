@@ -42,7 +42,7 @@
   "subsources": [
     {
       "name": "endo_seg",
-      "path": "s3://janelia-cosem/jrc_jurkat-1/neuroglancer/mesh/endo_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/mesh/endo_seg",
       "format": "neuroglancer_legacy_mesh",
       "transform": {
         "axes": [
@@ -57,12 +57,12 @@
         ],
         "translate": [
           0.0,
-          12000.0,
+          0.0,
           0.0
         ],
         "scale": [
           1.0,
-          -1.0,
+          1.0,
           1.0
         ]
       },

@@ -1,6 +1,6 @@
 {
   "name": "fibsem-uint8",
-  "path": "s3://janelia-cosem/jrc_sum159-1/neuroglancer/em/fibsem-uint8.precomputed",
+  "path": "s3://janelia-cosem-datasets/jrc_sum159-1/neuroglancer/em/fibsem-uint8.precomputed",
   "format": "precomputed",
   "transform": {
     "axes": [

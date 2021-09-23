@@ -7,7 +7,7 @@
       "scale": null,
       "orientation": [
         0.0,
-        0.0,
+        1.0,
         0.0,
         0.0
       ],
@@ -22,7 +22,7 @@
       "scale": null,
       "orientation": [
         0.0,
-        0.0,
+        1.0,
         0.0,
         0.0
       ],
@@ -41,7 +41,7 @@
       "scale": null,
       "orientation": [
         0.0,
-        0.0,
+        1.0,
         0.0,
         0.0
       ],

@@ -6,13 +6,13 @@
       "position": null,
       "scale": null,
       "orientation": [
-        0.0,
+        1.0,
         0.0,
         0.0,
         0.0
       ],
       "volumeNames": [
-        "fibsem-uint8"
+        "fibsem-uint16"
       ]
     },
     {
@@ -20,19 +20,19 @@
       "description": "Fifteen manually annotated regions used for training machine learning networks, as described in Fig. 1a of Heinrich et al., 2020.",
       "position": [
         25042.0,
-        5195.0,
+        1205.0,
         14561.0
       ],
       "scale": 3.9,
       "orientation": [
-        0.0,
+        1.0,
         0.0,
         0.0,
         0.0
       ],
       "volumeNames": [
         "gt",
-        "fibsem-uint8"
+        "fibsem-uint16"
       ]
     },
     {
@@ -40,12 +40,12 @@
       "description": "Area used for validating microtubule renderings, as described in Fig. 2c of Heinrich et al., 2020",
       "position": [
         28300.0,
-        4112.0,
+        2288.0,
         2564.0
       ],
       "scale": 8.7,
       "orientation": [
-        0.0,
+        1.0,
         0.0,
         0.0,
         0.0
@@ -53,16 +53,20 @@
       "volumeNames": [
         "mt-out_pred",
         "mt-out_seg",
-        "fibsem-uint8"
+        "fibsem-uint16"
       ]
     },
     {
       "name": "Refined, whole-cell predictions",
       "description": "Renderings of refined predictions for multiple organelles, as presented in Fig. 2e of Heinrich et al., 2020",
-      "position": null,
+      "position": [
+        24000.5,
+        3199.5,
+        16684.5
+      ],
       "scale": null,
       "orientation": [
-        0.0,
+        1.0,
         0.0,
         0.0,
         0.0
@@ -75,7 +79,7 @@
         "nucleus_seg",
         "pm_seg",
         "vesicle_seg",
-        "fibsem-uint8"
+        "fibsem-uint16"
       ]
     },
     {
@@ -83,12 +87,12 @@
       "description": "Example of a microtubule interacting with five different organelles, including endosomes, the endoplasmic reticulum, Golgi, nucleus, and vesicles. A description can be found in Fig. 3b of Heinrich et al., 2020.",
       "position": [
         23240.0,
-        5291.0,
+        1109.0,
         10662.0
       ],
       "scale": 1.47,
       "orientation": [
-        0.0,
+        1.0,
         0.0,
         0.0,
         0.0
@@ -107,7 +111,7 @@
         "mito_mt_contacts",
         "mt_nucleus_contacts",
         "mt_vesicle_contacts",
-        "fibsem-uint8"
+        "fibsem-uint16"
       ]
     },
     {
@@ -115,12 +119,12 @@
       "description": "Example of planar regions of endoplasmic reticulum supported by mitochondria, as described in Heinrich et al., 2020",
       "position": [
         30273.0,
-        4391.0,
+        2009.0,
         22005.0
       ],
       "scale": 3.0,
       "orientation": [
-        0.0,
+        1.0,
         0.0,
         0.0,
         0.0
@@ -131,7 +135,7 @@
         "er_curvature",
         "mito_seg",
         "er_mito_contacts",
-        "fibsem-uint8"
+        "fibsem-uint16"
       ]
     },
     {
@@ -139,12 +143,12 @@
       "description": "Ribosomes classified according to surface they are bound to, including the Nucleus, planar or tubular regions of the endoplasmic reticulum, or unbound in the cytosol. A description can be found in Fig. 3g of Heinrich et al., 2020.",
       "position": [
         25976.0,
-        4588.0,
+        1812.0,
         26121.0
       ],
       "scale": 3.32,
       "orientation": [
-        0.0,
+        1.0,
         0.0,
         0.0,
         0.0
@@ -152,7 +156,7 @@
       "volumeNames": [
         "er_seg",
         "ribo_classified",
-        "fibsem-uint8"
+        "fibsem-uint16"
       ]
     },
     {
@@ -160,12 +164,12 @@
       "description": "Machine learning predictions for organelles such as mitochondria are oftern merged. To prevent overmerging, a combinated of watershed segmentation and agglomeration was applied to correctly \"split\" mitochondria. A detailed description can be found in Heinrich et al., 2020.",
       "position": [
         42000.0,
-        4400.0,
+        2000.0,
         28820.0
       ],
       "scale": 6.9,
       "orientation": [
-        0.0,
+        1.0,
         0.0,
         0.0,
         0.0
@@ -173,7 +177,7 @@
       "volumeNames": [
         "mito_pred",
         "mito_seg",
-        "fibsem-uint8"
+        "fibsem-uint16"
       ]
     },
     {
@@ -181,12 +185,12 @@
       "description": "Topological thinning of mitochondria segmentations produces skeletons that can then be used for subsequent analysis such as length and diameter, as described in Supplmentatry Data 8 of Heinrich et al., 2020.",
       "position": [
         11634.0,
-        5254.0,
+        1146.0,
         15238.0
       ],
       "scale": 6.9,
       "orientation": [
-        0.0,
+        1.0,
         0.0,
         0.0,
         0.0
@@ -195,7 +199,7 @@
         "mito_skeleton",
         "mito_skeleton-lsp",
         "mito_seg",
-        "fibsem-uint8"
+        "fibsem-uint16"
       ]
     },
     {
@@ -203,12 +207,12 @@
       "description": "There is often interesting biology that occurs when two organelles are in contact with one another. Here, ER and mitochondria segmentations are used to calculate ER-mitochondria contact sites as described in Supplementary Data 9 of Heinrich et al., 2020.",
       "position": [
         10568.0,
-        4564.0,
+        1836.0,
         16490.0
       ],
       "scale": 3.3,
       "orientation": [
-        0.0,
+        1.0,
         0.0,
         0.0,
         0.0
@@ -217,7 +221,7 @@
         "mito_seg",
         "er_seg",
         "er_mito_contacts",
-        "fibsem-uint8"
+        "fibsem-uint16"
       ]
     },
     {
@@ -225,12 +229,12 @@
       "description": "The morphology of the endoplasmic reticulum segmentations was measured by first applying an iterative thinning procedure. This produced a medial surface, from which a planar metric could be calculated at each voxel. These planar metric values are then used to reconstruct the endoplasmic reticulum with curvature information. For a more detailed description see Supplementary Methods: Quantification of Heinrich et al., 2020.",
       "position": [
         25976.0,
-        4588.0,
+        1812.0,
         26121.0
       ],
       "scale": 3.3,
       "orientation": [
-        0.0,
+        1.0,
         0.0,
         0.0,
         0.0
@@ -239,7 +243,7 @@
         "er_seg",
         "er_medial-surface",
         "er_curvature",
-        "fibsem-uint8"
+        "fibsem-uint16"
       ]
     }
   ]

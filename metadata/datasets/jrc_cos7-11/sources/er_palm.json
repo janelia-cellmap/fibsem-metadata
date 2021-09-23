@@ -1,6 +1,6 @@
 {
   "name": "er_palm",
-  "path": "s3://janelia-cosem/jrc_cos7-11/jrc_cos7-11.n5/lm/er_palm",
+  "path": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/lm/er_palm",
   "format": "n5",
   "transform": {
     "axes": [
