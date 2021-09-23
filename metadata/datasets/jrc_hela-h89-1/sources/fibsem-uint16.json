@@ -24,7 +24,7 @@
       8.0
     ]
   },
-  "description": "",
+  "description": "FIB-SEM Data (uncompressed)",
   "version": "0",
   "tags": [],
   "dataType": "uint16",
@@ -37,7 +37,7 @@
       "max": 1.0
     },
     "color": "white",
-    "invertLUT": false
+    "invertLUT": true
   },
   "subsources": []
 }
