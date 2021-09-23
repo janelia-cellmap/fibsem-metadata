@@ -1,10 +1,15 @@
 # update index.json
 import json
 import click
+import os
 from pathlib import Path
 from fibsem_metadata.index import DatasetIndex
 from fibsem_metadata.index import DatasetIndex, VolumeSource, DatasetViewCollection
 from typing import Union, Any, Dict
+
+
+def find_index(element_path: str) -> str:
+    return os.path.join(*element_path.split(os.path.sep)[:-1], 'index.json') 
 
 
 def materialize_element(path: str) -> Union[VolumeSource, DatasetViewCollection]:
@@ -40,8 +45,13 @@ def sync_elements(index: DatasetIndex, element_path: str) -> DatasetIndex:
     return DatasetIndex(**new_index)
 
 
-def main(index_path: str, element_path: str):
-    old_index = DatasetIndex.parse_file(index_path)
+def main(element_path: str):
+    index_path = find_index(element_path)
+    name = index_path.split(os.path.sep)[-2]
+    if os.path.exists(index_path):
+        old_index = DatasetIndex.parse_file(index_path)
+    else:
+        old_index = DatasetIndex(name=name, volumes=[], views=[])
 
     # syncing
     if Path(element_path).is_dir():
@@ -60,10 +70,9 @@ def main(index_path: str, element_path: str):
 
 
 @click.command()
-@click.argument("index_path", type=click.Path(exists=True, dir_okay=False))
 @click.argument("element_path", type=click.Path(exists=True, dir_okay=True))
-def main_cli(index_path: str, element_path: str):
-    return main(index_path, element_path)
+def main_cli(element_path: str):
+    return main(element_path)
 
 
 if __name__ == "__main__":
