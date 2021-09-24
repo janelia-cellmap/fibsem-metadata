@@ -4,11 +4,11 @@
   "publications": [
   ],
   "imaging": {
-    "startDate": "2019-09-14",
-    "duration": 15,
+    "startDate": "2020-05-12",
+    "duration": 59,
     "biasVoltage": 0.0,
-    "scanRate": 1.5,
-    "current": 0.24,
+    "scanRate": 2.0,
+    "current": 0.25,
     "primaryEnergy": 700.0,
     "gridSpacing": {
       "unit": "nm",
@@ -21,17 +21,17 @@
     "dimensions": {
       "unit": "\u00b5m",
       "values": {
-        "x": 45.0,
-        "y": 56.0,
-        "z": 45.0
+        "x": 120.0,
+        "y": 72.0,
+        "z": 100.0
       }
     },
-    "id": "FB-Z0519-11"
+    "id": "Z0419_20_MB"
   },
   "sample": {
-    "description": "Fan-shaped body of a 5 day-old adult male <i>Drosophila</i> (Genome type: iso Canton S G1 x w1118 iso 5905).",
+    "description": "Drosophila mushroom body: The largest tissue sample imaged at 4-nm voxels to date. Entire alpha and alpha' lobes of a 5 day-old adult female  (Genome type: iso Canton S G1 x w1118 iso 5905)",
     "protocol": "Chemical Fixation, ORTO-Lead-EPTA staining via progressive lowering of temperature and low temperature staining (PLT-LTS) heavy metal enhancement protocol.",
-    "contributions": "Sample provided by Zhiyuan Lu (HHMI/Janelia), prepared, imaged and post-processed by Song Pang (HHMI/Janelia), with post-processing by C. Shan Xu (HHMI/Janelia)."
+    "contributions": "Sample provided by Zhiyuan Lu (HHMI/Janelia), prepared for imaging by Song Pang (HHMI/Janelia), with imaging by Song Pang (HHMI/Janelia) and C. Shan Xu (HHMI/Janelia), and post-processing by Stephen Preibisch and Eric Trautman (HHMI/Janelia)."
   },
   "DOI": [
     {
