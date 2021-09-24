@@ -3,7 +3,7 @@
   "volumes": [
     {
       "name": "endo_pred",
-      "path": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/endo_pred",
+      "path": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/endo_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -121,7 +121,7 @@
     },
     {
       "name": "er_pred",
-      "path": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/er_pred",
+      "path": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/er_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -282,7 +282,7 @@
     },
     {
       "name": "mito_pred",
-      "path": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/mito_pred",
+      "path": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/mito_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -400,7 +400,7 @@
     },
     {
       "name": "nucleus_pred",
-      "path": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/nucleus_pred",
+      "path": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/nucleus_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -518,7 +518,7 @@
     },
     {
       "name": "pm_pred",
-      "path": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/pm_pred",
+      "path": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/pm_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -636,7 +636,7 @@
     },
     {
       "name": "vesicle_pred",
-      "path": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/vesicle_pred",
+      "path": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/vesicle_pred",
       "format": "n5",
       "transform": {
         "axes": [
