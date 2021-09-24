@@ -1,0 +1,49 @@
+{
+  "name": "jrc_fly-mb-1",
+  "volumes": [
+    {
+      "name": "fibsem-uint8",
+      "path": "s3://janelia-cosem-datasets/jrc_fly-mb-1/jrc_fly-mb-1.n5/em/fibsem-uint8",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          4.0,
+          4.0,
+          4.0
+        ]
+      },
+      "description": "FIB-SEM Data (compressed)",
+      "version": "0",
+      "tags": [],
+      "dataType": "uint8",
+      "contentType": "em",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0.28,
+          "end": 0.69,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    }
+  ],
+  "views": []
+}
