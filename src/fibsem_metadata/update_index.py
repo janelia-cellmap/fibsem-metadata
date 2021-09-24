@@ -3,8 +3,8 @@ import json
 import click
 import os
 from pathlib import Path
-from fibsem_metadata.index import DatasetIndex
-from fibsem_metadata.index import DatasetIndex, VolumeSource, DatasetViewCollection
+from fibsem_metadata.models.index import DatasetIndex
+from fibsem_metadata.models.index import DatasetIndex, VolumeSource, DatasetViewCollection
 from typing import Union, Any, Dict
 
 

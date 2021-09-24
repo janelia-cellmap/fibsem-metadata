@@ -1,6 +1,6 @@
 # one-time script to update individual sources based on index.json
 
-from fibsem_metadata.index import DatasetIndex, DataSource
+from fibsem_metadata.models.index import DatasetIndex
 import os
 from glob import glob
 

@@ -3,7 +3,7 @@
 from pathlib import Path
 from fibsem_tools.io import read
 import os
-from fibsem_metadata.index import DatasetViewCollection, DatasetView
+from fibsem_metadata.models.index import DatasetViewCollection, DatasetView
 
 bucket = 's3://janelia-cosem-datasets'
 flip_axis = 'y'
