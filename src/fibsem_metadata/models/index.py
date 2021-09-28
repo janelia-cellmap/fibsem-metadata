@@ -3,33 +3,13 @@ from click.decorators import group
 from pydantic import BaseModel
 from typing import Sequence, Optional, Union
 from pydantic.color import Color
+from fibsem_metadata.models.dataset import Sample
 from fibsem_metadata.models.multiscale.cosem import SpatialTransform
 import fsspec
 import json
 import click
   
-class MultiscaleN5Validity(BaseModel):
-    group_meta_exists: bool = False
 
-
-def validate_multiscale_n5(path: str, dataType: str) -> MultiscaleN5Validity:
-    """
-    Check that an n5-backed volume located at `path` has the following 
-    properties:
-    - `path/attributes.json` exists
-    - `path/attributes.json` contains valid multiscale metadata 
-    - The datasets enumerated in the `datasets` property of the multiscale 
-    metadata exist, and each have valid metadata.
-    - The datatype of all the volumes matches `dataType`
-    """
-    mapper = fsspec.get_mapper(path)
-    validity = MultiscaleN5Validity()
-    group_meta_bytes: Union[None, bytes] = mapper.get('attributes.json')
-    if group_meta_bytes is not None:
-        group_meta = json.loads(group_meta_bytes)
-        validity.group_meta_exists = True
-
-    return validity
 
 
 class MeshTypeEnum(str, Enum):
@@ -56,6 +36,11 @@ class ContentTypeEnum(str, Enum):
     prediction = "prediction"
     segmentation = "segmentation"
     analysis = "analysis"
+
+
+class SampleTypeEnum(str, Enum):
+    scalar = "scalar"
+    label = "label"
 
 
 class ContrastLimits(BaseModel):
@@ -97,6 +82,7 @@ class MeshSource(DataSource):
 class VolumeSource(DataSource):
     format: ArrayContainerTypeEnum
     dataType: str
+    sampleType: SampleTypeEnum = 'scalar'
     contentType: ContentTypeEnum
     displaySettings: DisplaySettings
 
