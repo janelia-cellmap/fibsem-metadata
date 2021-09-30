@@ -1,6 +1,6 @@
 {
   "name": "gt",
-  "path": "/nrs/cosem/bennettd/groundtruth/jrc_sum159-1/jrc_sum159-1.n5/groundtruth_0003/",
+  "path": "s3://janelia-cosem-datasets/jrc_sum159-1/jrc_sum159-1.n5/labels/gt",
   "format": "n5",
   "transform": {
     "axes": [
