@@ -254,12 +254,12 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          8000.0,
           0.0
         ],
         "scale": [
           8.0,
-          8.0,
+          -8.0,
           8.0
         ]
       },
@@ -760,8 +760,8 @@
       "position": null,
       "scale": null,
       "orientation": [
-        0.0,
         1.0,
+        0.0,
         0.0,
         0.0
       ],
@@ -775,8 +775,8 @@
       "position": null,
       "scale": null,
       "orientation": [
-        0.0,
         1.0,
+        0.0,
         0.0,
         0.0
       ],
