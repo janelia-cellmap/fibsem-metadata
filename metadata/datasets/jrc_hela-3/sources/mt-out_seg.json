@@ -1,6 +1,6 @@
 {
   "name": "mt-out_seg",
-  "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/mt-out_seg",
+  "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/mt-out_seg",
   "format": "n5",
   "transform": {
     "axes": [
@@ -61,9 +61,9 @@
           0.0
         ],
         "scale": [
-          3.24,
-          4.0,
-          4.0
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "description": "",

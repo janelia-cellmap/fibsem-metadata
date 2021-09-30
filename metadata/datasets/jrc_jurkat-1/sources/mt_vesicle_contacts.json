@@ -1,6 +1,6 @@
 {
   "name": "mt_vesicle_contacts",
-  "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/mt_vesicle_contacts",
+  "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mt_vesicle_contacts",
   "format": "n5",
   "transform": {
     "axes": [

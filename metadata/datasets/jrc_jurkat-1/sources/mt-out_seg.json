@@ -1,6 +1,6 @@
 {
   "name": "mt-out_seg",
-  "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/mt-out_seg",
+  "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mt-out_seg",
   "format": "n5",
   "transform": {
     "axes": [

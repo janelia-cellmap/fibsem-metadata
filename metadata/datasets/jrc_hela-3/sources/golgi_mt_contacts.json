@@ -1,6 +1,6 @@
 {
   "name": "golgi_mt_contacts",
-  "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/golgi_mt_contacts",
+  "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/golgi_mt_contacts",
   "format": "n5",
   "transform": {
     "axes": [
