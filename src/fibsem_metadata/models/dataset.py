@@ -33,6 +33,10 @@ class Sample(BaseModel):
     description: str
     protocol: str
     contributions: str
+    organism: str
+    type: str
+    subtype: str
+    treatment: str
 
 
 class DOI(BaseModel):
