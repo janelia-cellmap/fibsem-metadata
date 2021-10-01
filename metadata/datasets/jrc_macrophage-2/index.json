@@ -1722,7 +1722,7 @@
     },
     {
       "name": "gt",
-      "path": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/gt",
+      "path": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/gt",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2195,7 +2195,7 @@
     },
     {
       "name": "mito_mt_contacts",
-      "path": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/mito_mt_contacts",
+      "path": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mito_mt_contacts",
       "format": "n5",
       "transform": {
         "axes": [

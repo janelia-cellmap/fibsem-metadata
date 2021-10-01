@@ -34,8 +34,8 @@
       "contentType": "em",
       "displaySettings": {
         "contrastLimits": {
-          "start": 0.580392156862745,
-          "end": 0.737254901960784,
+          "start": 0.47,
+          "end": 0.745,
           "min": 0.0,
           "max": 1.0
         },

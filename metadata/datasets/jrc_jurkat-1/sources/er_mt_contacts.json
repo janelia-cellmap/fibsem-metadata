@@ -1,6 +1,6 @@
 {
   "name": "er_mt_contacts",
-  "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/er_mt_contacts",
+  "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/er_mt_contacts",
   "format": "n5",
   "transform": {
     "axes": [

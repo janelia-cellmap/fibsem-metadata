@@ -970,7 +970,7 @@
     },
     {
       "name": "er_mt_contacts",
-      "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/er_mt_contacts",
+      "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/er_mt_contacts",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1518,7 +1518,7 @@
     },
     {
       "name": "golgi_mt_contacts",
-      "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/golgi_mt_contacts",
+      "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/golgi_mt_contacts",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1722,7 +1722,7 @@
     },
     {
       "name": "gt",
-      "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/labels/gt",
+      "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/gt",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2195,7 +2195,7 @@
     },
     {
       "name": "mito_mt_contacts",
-      "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/mito_mt_contacts",
+      "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/mito_mt_contacts",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2485,7 +2485,7 @@
     },
     {
       "name": "mt-out_seg",
-      "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/mt-out_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/mt-out_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2546,9 +2546,9 @@
               0.0
             ],
             "scale": [
-              3.24,
-              4.0,
-              4.0
+              1.0,
+              1.0,
+              1.0
             ]
           },
           "description": "",
@@ -2560,7 +2560,7 @@
     },
     {
       "name": "mt_nucleus_contacts",
-      "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/mt_nucleus_contacts",
+      "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/mt_nucleus_contacts",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2646,7 +2646,7 @@
     },
     {
       "name": "mt_vesicle_contacts",
-      "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/mt_vesicle_contacts",
+      "path": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/mt_vesicle_contacts",
       "format": "n5",
       "transform": {
         "axes": [
