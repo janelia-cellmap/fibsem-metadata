@@ -4,6 +4,7 @@ from pathlib import Path
 import json
 from pydantic import BaseModel
 from typing import Union
+from pathlib import Path
 
 class MultiscaleN5Validity(BaseModel):
     group_meta_exists: bool = False
@@ -35,10 +36,13 @@ def validate_multiscale_n5(path: str) -> MultiscaleN5Validity:
 @click.command()
 @click.argument('source_paths', type=click.Path(exists=True, dir_okay=False), nargs=-1)
 def main(source_paths: str):
-    sources = [json.loads(Path(path).read_text()) for path in source_paths]
-    result = {'results' : []}
-    for s in sources:
-        result['results'].append({'name' : s['name'], 'validate_multiscale_n5' : validate_multiscale_n5(s['path']).dict() })
+    result = {}
+    for path in source_paths:
+        source = json.loads(Path(path).read_text())
+        dataset = Path(path).parent.parent.name
+        if dataset not in result:
+            result[dataset] = []
+        result[dataset].append({'name' : source['name'], 'validate_multiscale_n5' : validate_multiscale_n5(source['path']).dict() })
     result_json = json.dumps(result, indent=2)
     click.echo(result_json)
 
