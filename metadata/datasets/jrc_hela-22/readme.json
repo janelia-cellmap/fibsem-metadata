@@ -2,6 +2,12 @@
   "title": "HeLa cell with RUSH cargo",
   "id": "jrc_hela-22",
   "imaging": {
+    "startDate": "2017-06-15",
+    "duration": 7,
+    "biasVoltage": 600.0,
+    "scanRate": 0.125,
+    "current": 1.0,
+    "primaryEnergy": 1200.0,
     "id": "Cryo_20170412_CS6_Cell25",
     "institution": "Janelia",
     "gridSpacing": {

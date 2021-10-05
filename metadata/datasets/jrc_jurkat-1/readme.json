@@ -2,6 +2,12 @@
   "title": "Immortalized T-Cells (Jurkat)",
   "id": "jrc_jurkat-1",
   "imaging": {
+    "startDate": "2018-08-10",
+    "duration": 19,
+    "biasVoltage": 0.0,
+    "scanRate": 0.2,
+    "current": 0.25,
+    "primaryEnergy": 1000.0,
     "id": "Cryo_2017_FS96_Area1",
     "institution": "Janelia",
     "gridSpacing": {

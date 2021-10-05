@@ -2,6 +2,12 @@
   "title": "Mitotic HeLa cell",
   "id": "jrc_hela-4",
   "imaging": {
+    "startDate": "2019-05-30",
+    "duration": 15,
+    "biasVoltage": 0.0,
+    "scanRate": 0.2,
+    "current": 0.24,
+    "primaryEnergy": 900.0,
     "id": "Cryo_17-7_17_Cell4",
     "institution": "Janelia",
     "gridSpacing": {

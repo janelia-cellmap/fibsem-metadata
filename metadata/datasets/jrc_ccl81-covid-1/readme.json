@@ -1,9 +1,16 @@
 {
   "title": "SARS-COV-2-infected grivet kidney epithelial (Vero) cells",
   "id": "jrc_ccl81-covid-1",
+  
   "imaging": {
     "id": "NIH2020_18A",
     "institution": "Janelia",
+    "startDate": "2020-09-10",
+    "duration": 11,
+    "biasVoltage": 0.0,
+    "scanRate": 0.2,
+    "current": 0.25,
+    "primaryEnergy": 700.0,
     "gridSpacing": {
       "unit": "nm",
       "values": {

@@ -2,6 +2,12 @@
   "title": "Interphase HeLa cell",
   "id": "jrc_hela-1",
   "imaging": {
+    "startDate": "2017-04-05",
+    "duration": 6,
+    "biasVoltage": 600.0,
+    "scanRate": 0.5,
+    "current": 1.0,
+    "primaryEnergy": 600.0,
     "id": "Aubrey_17-7_17_Cell1",
     "institution": "Janelia",
     "gridSpacing": {

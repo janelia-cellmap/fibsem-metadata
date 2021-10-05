@@ -2,6 +2,12 @@
   "title": "Drosophila brain: Fan-shaped body",
   "id": "jrc_fly-fsb-1",
   "imaging": {
+    "startDate": "2019-09-14",
+    "duration": 15,
+    "biasVoltage": 0.0,
+    "scanRate": 1.5,
+    "current": 0.24,
+    "primaryEnergy": 700.0,
     "id": "FB-Z0519-11",
     "institution": "Janelia",
     "gridSpacing": {

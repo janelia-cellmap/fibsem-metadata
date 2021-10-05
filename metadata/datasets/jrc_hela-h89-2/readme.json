@@ -2,6 +2,12 @@
   "title": "H89 treated HeLa cell",
   "id": "jrc_hela-h89-2",
   "imaging": {
+    "startDate": "2020-10-15",
+    "duration": 5,
+    "biasVoltage": 0.0,
+    "scanRate": 0.25,
+    "current": 3.0,
+    "primaryEnergy": 1200.0,
     "id": "CryoLoadID528_ROI7",
     "institution": "Janelia",
     "gridSpacing": {

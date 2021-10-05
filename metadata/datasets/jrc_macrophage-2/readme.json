@@ -2,6 +2,12 @@
   "title": "Macrophage cell",
   "id": "jrc_macrophage-2",
   "imaging": {
+    "startDate": "2018-11-11",
+    "duration": 20,
+    "biasVoltage": 0.0,
+    "scanRate": 0.2,
+    "current": 0.25,
+    "primaryEnergy": 1200.0,
     "id": "Cryo_FS80_Cell2",
     "institution": "Janelia",
     "gridSpacing": {

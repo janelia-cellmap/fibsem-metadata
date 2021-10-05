@@ -2,6 +2,12 @@
   "title": "Isolated murine pancreatic islets",
   "id": "jrc_mus-pancreas-1",
   "imaging": {
+    "startDate": "2019-03-01",
+    "duration": 15,
+    "biasVoltage": 0.0,
+    "scanRate": 0.2,
+    "current": 0.14,
+    "primaryEnergy": 900.0,
     "id": "G64-2-1_HighGlucose",
     "institution": "Janelia",
     "gridSpacing": {

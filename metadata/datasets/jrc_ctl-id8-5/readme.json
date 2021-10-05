@@ -2,6 +2,12 @@
   "title": "Killer T-Cell attacking cancer cell",
   "id": "jrc_ctl-id8-5",
   "imaging": {
+    "startDate": "2020-01-29",
+    "duration": 4,
+    "biasVoltage": 0.0,
+    "scanRate": 0.25,
+    "current": 2.0,
+    "primaryEnergy": 1200.0,
     "id": "Cryo_LoadID494_ROI2",
     "institution": "Janelia",
     "gridSpacing": {
@@ -28,7 +34,7 @@
     "organism": ["Mouse"],
     "type": ["Cell culture"],
     "subtype": ["T-Cell", "ID8 Cell"],
-    "treatment": ""
+    "treatment": ["Overexpression"]
   },
   "institution": [
     "HHMI/Janelia",

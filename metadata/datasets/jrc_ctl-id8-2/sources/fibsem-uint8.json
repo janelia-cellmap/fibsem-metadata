@@ -28,10 +28,11 @@
   "version": "0",
   "tags": [],
   "dataType": "uint8",
+  "sampleType": "scalar",
   "contentType": "em",
   "displaySettings": {
     "contrastLimits": {
-      "start": 0.470,
+      "start": 0.47,
       "end": 0.745,
       "min": 0.0,
       "max": 1.0

@@ -2,6 +2,12 @@
   "title": "Killer T-Cell attacking cancer cell",
   "id": "jrc_ctl-id8-2",
   "imaging": {
+    "startDate": "2019-10-18",
+    "duration": 6,
+    "biasVoltage": 0.0,
+    "scanRate": 0.25,
+    "current": 2.0,
+    "primaryEnergy": 1200.0,
     "id": "Cryo_LoadID410_ROI1",
     "institution": "Janelia",
     "gridSpacing": {

@@ -2,6 +2,12 @@
   "title": "Mouse choroid plexus",
   "id": "jrc_choroid-plexus-2",
   "imaging": {
+    "startDate": "2017-04-05",
+    "duration": 3,
+    "biasVoltage": 400.0,
+    "scanRate": 0.5,
+    "current": 1.0,
+    "primaryEnergy": 1100.0,
     "id": "",
     "institution": "Janelia",
     "gridSpacing": {

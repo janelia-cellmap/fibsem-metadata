@@ -28,6 +28,7 @@
   "version": "0",
   "tags": [],
   "dataType": "uint8",
+  "sampleType": "scalar",
   "contentType": "lm",
   "displaySettings": {
     "contrastLimits": {

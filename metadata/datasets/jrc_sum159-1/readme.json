@@ -2,6 +2,12 @@
   "title": "Immortalized breast cancer cell (SUM159)",
   "id": "jrc_sum159-1",
   "imaging": {
+    "startDate": "2017-11-21",
+    "duration": 18,
+    "biasVoltage": 0.0,
+    "scanRate": 0.2,
+    "current": 0.25,
+    "primaryEnergy": 1200.0,
     "id": "Cryo_20171009_WT45_Cell2",
     "institution": "Janelia",
     "gridSpacing": {

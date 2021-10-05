@@ -2,6 +2,12 @@
   "title": "COS-7 cell overexpressing ER and mitochondria markers for CLEM",
   "id": "jrc_cos7-11",
   "imaging": {
+    "startDate": "2018-04-27",
+    "duration": 10,
+    "biasVoltage": 0.0,
+    "scanRate": 0.5,
+    "current": 2.0,
+    "primaryEnergy": 1200.0,
     "id": "Cryo_LoadID_277_Cell11",
     "institution": "Janelia",
     "gridSpacing": {
