@@ -70,9 +70,9 @@ def main(element_path: str):
 
 
 @click.command()
-@click.argument("element_path", type=click.Path(exists=True, dir_okay=True))
-def main_cli(element_path: str):
-    return main(element_path)
+@click.argument("paths", type=click.Path(exists=True, dir_okay=True), nargs=-1)
+def main_cli(paths: str):
+    return [main(path) for path in paths]
 
 
 if __name__ == "__main__":
