@@ -1,16 +1,9 @@
 {
   "title": "HeLa cell with RUSH cargo",
   "id": "jrc_hela-21",
-  "publications": [
-    "Weigel, Chang, et al., 2021"
-  ],
   "imaging": {
-    "startDate": "2017-04-12",
-    "duration": 3,
-    "biasVoltage": 500.0,
-    "scanRate": 0.125,
-    "current": 1.0,
-    "primaryEnergy": 900.0,
+    "id": "Cryo_20170412_CS6_Cell21",
+    "institution": "Janelia",
     "gridSpacing": {
       "unit": "nm",
       "values": {
@@ -26,14 +19,21 @@
         "y": 10.0,
         "z": 15.58
       }
-    },
-    "id": "Cryo_20170412_CS6_Cell21"
+    }
   },
   "sample": {
     "description": "Interphase HeLa cell (ATCC CCL-2) overexpressing mApple-TNFa-RUSH, frozen 8 min post 50 \u03bcM biotin addition.",
     "protocol": "High pressure freezing, freeze-substitution resin embedding with 1% OsO\u2084 0.1% UA 3% H\u2082O in acetone; resin embedding in Eponate 12.",
-    "contributions": "Sample provided by Aubrey Weigel (HHMI/Janelia), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia)."
+    "contributions": "Sample provided by Aubrey Weigel (HHMI/Janelia), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia).",
+    "organism": ["Human"],
+    "type": ["Cell culture"],
+    "subtype": ["HeLa"],
+    "treatment": ["Overexpression"]
   },
+  "institution": [
+    "HHMI/Janelia"
+  ],
+  "softwareAvailability": "open",
   "DOI": [
     {
       "id": "em",
@@ -43,5 +43,8 @@
       "id": "seg",
       "DOI": ""
     }
+  ],
+  "publications": [
+    "Weigel, Chang, et al., 2021"
   ]
 }

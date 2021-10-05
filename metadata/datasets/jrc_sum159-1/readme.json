@@ -1,17 +1,9 @@
 {
   "title": "Immortalized breast cancer cell (SUM159)",
   "id": "jrc_sum159-1",
-  "publications": [
-    "Xu et al., 2020",
-    "Heinrich et al., 2020"
-  ],
   "imaging": {
-    "startDate": "2017-11-21",
-    "duration": 18,
-    "biasVoltage": 0.0,
-    "scanRate": 0.2,
-    "current": 0.25,
-    "primaryEnergy": 1200.0,
+    "id": "Cryo_20171009_WT45_Cell2",
+    "institution": "Janelia",
     "gridSpacing": {
       "unit": "nm",
       "values": {
@@ -27,14 +19,21 @@
         "y": 11.0,
         "z": 35.0
       }
-    },
-    "id": "Cryo_20171009_WT45_Cell2"
+    }
   },
   "sample": {
     "description": "Wild-type SUM-159 cell, treated with 0.5 mM oleic acid for 45 mins prior to high pressure freezing to induce the formation of lipid droplets.",
     "protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in Acetone, resin embedding in Eponate 12.",
-    "contributions": "Sample provided by Jeeyun Chung, Tobias Walther and Bob Farese (Harvard U.), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia)."
+    "contributions": "Sample provided by Jeeyun Chung, Tobias Walther and Bob Farese (Harvard U.), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia).",
+    "organism": ["Human"],
+    "type": ["Cell culture"],
+    "subtype": ["SUM-159"],
+    "treatment": ["Wild-type", "Oleic acid"]
   },
+  "institution": [
+    "HHMI/Janelia"
+  ],
+  "softwareAvailability": "open",
   "DOI": [
     {
       "id": "em",
@@ -44,5 +43,9 @@
       "id": "seg",
       "DOI": "10.25378/janelia.13118156"
     }
+  ],
+  "publications": [
+    "Xu et al., 2020",
+    "Heinrich et al., 2020"
   ]
 }

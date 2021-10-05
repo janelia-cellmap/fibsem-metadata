@@ -1,16 +1,9 @@
 {
   "title": "Killer T-Cell attacking cancer cell",
   "id": "jrc_ctl-id8-1",
-  "publications": [
-    "Xu et al., 2020"
-  ],
   "imaging": {
-    "startDate": "2020-02-04",
-    "duration": 29,
-    "biasVoltage": 0.0,
-    "scanRate": 0.2,
-    "current": 0.25,
-    "primaryEnergy": 700.0,
+    "id": "Cryo_LoadID496_Atlas1",
+    "institution": "Janelia",
     "gridSpacing": {
       "unit": "nm",
       "values": {
@@ -26,18 +19,29 @@
         "y": 13.0,
         "z": 42.0
       }
-    },
-    "id": "Cryo_LoadID496_Atlas1"
+    }
   },
   "sample": {
     "description": "OT-I mouse cytotoxic T lymphocyte attacking an ID8 cell",
     "protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO\u2084 0.1% UA 3% H\u2082O in acetone; resin embedding in Eponate 12.",
-    "contributions": "Sample provided by Alex Ritter (Genentech), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia)."
+    "contributions": "Sample provided by Alex Ritter (Genentech), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia).",
+    "organism": ["Mouse"],
+    "type": ["Cell culture"],
+    "subtype": ["T-Cell", "ID8 Cell"],
+    "treatment": ["Wild-type"]
   },
+  "institution": [
+    "HHMI/Janelia",
+    "Genentech"
+  ],
+  "softwareAvailability": "open",
   "DOI": [
     {
       "id": "em",
       "DOI": "10.25378/janelia.13114454"
     }
+  ],
+  "publications": [
+    "Xu et al., 2020"
   ]
 }
