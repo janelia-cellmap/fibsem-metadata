@@ -3,7 +3,6 @@ from click.decorators import group
 from pydantic import BaseModel
 from typing import Sequence, Optional, Union
 from pydantic.color import Color
-from fibsem_metadata.models.dataset import Sample
 from fibsem_metadata.models.multiscale.cosem import SpatialTransform
 import fsspec
 import json
@@ -85,7 +84,6 @@ class VolumeSource(DataSource):
     sampleType: SampleTypeEnum = 'scalar'
     contentType: ContentTypeEnum
     displaySettings: DisplaySettings
-
     subsources: Sequence[MeshSource] = []
 
 

@@ -47,7 +47,7 @@ class SampleMetadata(BaseModel):
     organism: List[str]
     type: List[str]
     subtype: List[str]
-    treatment: str
+    treatment: List[str]
 
 
 class DOI(BaseModel):
