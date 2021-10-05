@@ -29,7 +29,7 @@
   },
   "sample": {
     "description": "Wild-type SUM-159 cell, treated with 0.5 mM oleic acid for 45 mins prior to high pressure freezing to induce the formation of lipid droplets.",
-    "protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO<sub>4</sub> 0.1% UA 3% H<sub>2</sub>O in Acetone, resin embedding in Eponate 12.",
+    "protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO\u2084 0.1% UA 3% H\u2082O in acetone, resin embedding in Eponate 12.",
     "contributions": "Sample provided by Jeeyun Chung, Tobias Walther and Bob Farese (Harvard U.), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia).",
     "organism": ["Human"],
     "type": ["Cell culture"],

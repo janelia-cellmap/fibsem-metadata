@@ -28,7 +28,7 @@
     }
   },
   "sample": {
-    "description": "Accessory calyx of a 5 day-old adult male <i>Drosophila</i> (Genome type: iso Canton S G1 x w1118 iso 5905).",
+    "description": "Accessory calyx of a 5 day-old adult male Drosophila (Genome type: iso Canton S G1 x w1118 iso 5905).",
     "protocol": "Chemical Fixation, ORTO-Lead-EPTA staining via progressive lowering of temperature and low temperature staining (PLT-LTS) heavy metal enhancement protocol.",
     "contributions": "Sample provided by Zhiyuan Lu (HHMI/Janelia), and prepared, imaged and post-processed by Song Pang (HHMI/Janelia).",
     "organism": ["Drosophila"],
