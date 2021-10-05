@@ -31,6 +31,7 @@
       "version": "0",
       "tags": [],
       "dataType": "uint16",
+      "sampleType": "scalar",
       "contentType": "em",
       "displaySettings": {
         "contrastLimits": {
