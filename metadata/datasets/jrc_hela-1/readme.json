@@ -34,7 +34,7 @@
     "organism": ["Human"],
     "type": ["Cell culture"],
     "subtype": ["HeLa"],
-    "treatment": ["Wild type"]
+    "treatment": ["Wild-type"]
   },
   "institution": [
     "HHMI/Janelia"

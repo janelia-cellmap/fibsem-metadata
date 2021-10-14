@@ -34,7 +34,7 @@
     "organism": ["Mouse"],
     "type": ["Tissue"],
     "subtype": ["Choroid plexus"],
-    "treatment": ["Wild type"]
+    "treatment": ["Wild-type"]
   },
   "institution": [
     "HHMI/Janelia"
