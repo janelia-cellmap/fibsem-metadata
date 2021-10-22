@@ -2582,7 +2582,7 @@
       "subsources": [
         {
           "name": "mt-out_seg",
-          "path": "s3://janelia-cosem-datasets/jrc_hela-3/mesh/mt-out_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_hela-3/neuroglancer/mesh/mt-out_seg",
           "format": "neuroglancer_legacy_mesh",
           "transform": {
             "axes": [
