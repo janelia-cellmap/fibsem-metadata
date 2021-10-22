@@ -1,9 +1,6 @@
 {
   "title": "Drosophila brain: Fan-shaped body",
   "id": "jrc_fly-fsb-1",
-  "publications": [
-    "Xu et al., 2020"
-  ],
   "imaging": {
     "startDate": "2019-09-14",
     "duration": 15,
@@ -11,6 +8,8 @@
     "scanRate": 1.5,
     "current": 0.24,
     "primaryEnergy": 700.0,
+    "id": "FB-Z0519-11",
+    "institution": "Janelia",
     "gridSpacing": {
       "unit": "nm",
       "values": {
@@ -26,18 +25,28 @@
         "y": 56.0,
         "z": 45.0
       }
-    },
-    "id": "FB-Z0519-11"
+    }
   },
   "sample": {
     "description": "Fan-shaped body of a 5 day-old adult male Drosophila (Genome type: iso Canton S G1 x w1118 iso 5905).",
     "protocol": "Chemical Fixation, ORTO-Lead-EPTA staining via progressive lowering of temperature and low temperature staining (PLT-LTS) heavy metal enhancement protocol.",
-    "contributions": "Sample provided by Zhiyuan Lu (HHMI/Janelia), prepared, imaged and post-processed by Song Pang (HHMI/Janelia), with post-processing by C. Shan Xu (HHMI/Janelia)."
+    "contributions": "Sample provided by Zhiyuan Lu (HHMI/Janelia), prepared, imaged and post-processed by Song Pang (HHMI/Janelia), with post-processing by C. Shan Xu (HHMI/Janelia).",
+    "organism": ["Drosophila"],
+    "type": ["Tissue"],
+    "subtype": ["Brain"],
+    "treatment": ["Wild-type"]
   },
+  "institution": [
+    "HHMI/Janelia"
+  ],
+  "softwareAvailability": "open",
   "DOI": [
     {
       "id": "em",
       "DOI": "10.25378/janelia.13114529"
     }
+  ],
+  "publications": [
+    "Xu et al., 2020"
   ]
 }

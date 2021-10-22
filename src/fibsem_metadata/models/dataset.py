@@ -2,6 +2,12 @@ import click
 from pydantic import BaseModel
 from datetime import date
 from typing import List, Dict
+from enum import Enum
+
+class SoftwareAvailability(str, Enum):
+    open = 'open'
+    partial = 'partially open'
+    closed = 'closed'
 
 
 class UnitfulVector(BaseModel):
@@ -9,7 +15,15 @@ class UnitfulVector(BaseModel):
     values: Dict[str, float]
 
 
-class Imaging(BaseModel):
+class ImagingMetadata(BaseModel):
+    id: str
+    institution: str
+    gridSpacing: UnitfulVector
+    dimensions: UnitfulVector
+    
+
+
+class FIBSEMImagingMetadata(ImagingMetadata):
     """
     Metadata describing the FIB-SEM imaging process.
     """
@@ -20,12 +34,9 @@ class Imaging(BaseModel):
     scanRate: float
     current: float
     primaryEnergy: float
-    gridSpacing: UnitfulVector
-    dimensions: UnitfulVector
-    id: str
 
 
-class Sample(BaseModel):
+class SampleMetadata(BaseModel):
     """
     Metadata describing the sample and sample preparation.
     """
@@ -33,6 +44,10 @@ class Sample(BaseModel):
     description: str
     protocol: str
     contributions: str
+    organism: List[str]
+    type: List[str]
+    subtype: List[str]
+    treatment: List[str]
 
 
 class DOI(BaseModel):
@@ -42,15 +57,17 @@ class DOI(BaseModel):
 
 class Dataset(BaseModel):
     """
-    Metadata for a FIB-SEM dataset.
+    Metadata for a bioimaging dataset.
     """
 
     title: str
     id: str
-    publications: List[str] = []
-    imaging: Imaging
-    sample: Sample
+    imaging: ImagingMetadata
+    sample: SampleMetadata
+    institution: List[str]
+    softwareAvailability: SoftwareAvailability
     DOI: List[DOI]
+    publications: List[str]
 
 
 @click.command()

@@ -28,6 +28,7 @@
   "version": "0",
   "tags": [],
   "dataType": "uint64",
+  "sampleType": "label",
   "contentType": "segmentation",
   "displaySettings": {
     "contrastLimits": {

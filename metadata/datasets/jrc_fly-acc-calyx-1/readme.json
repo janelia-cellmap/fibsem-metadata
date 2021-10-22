@@ -1,9 +1,6 @@
 {
   "title": "Drosophila brain: Accessory calyx",
   "id": "jrc_fly-acc-calyx-1",
-  "publications": [
-    "Xu et al., 2020"
-  ],
   "imaging": {
     "startDate": "2019-12-06",
     "duration": 19,
@@ -11,6 +8,8 @@
     "scanRate": 2.0,
     "current": 0.3,
     "primaryEnergy": 700.0,
+    "id": "Z0519-15",
+    "institution": "Janelia",
     "gridSpacing": {
       "unit": "nm",
       "values": {
@@ -26,18 +25,28 @@
         "y": 40.0,
         "z": 81.0
       }
-    },
-    "id": "Z0519-15"
+    }
   },
   "sample": {
     "description": "Accessory calyx of a 5 day-old adult male Drosophila (Genome type: iso Canton S G1 x w1118 iso 5905).",
     "protocol": "Chemical Fixation, ORTO-Lead-EPTA staining via progressive lowering of temperature and low temperature staining (PLT-LTS) heavy metal enhancement protocol.",
-    "contributions": "Sample provided by Zhiyuan Lu (HHMI/Janelia), and prepared, imaged and post-processed by Song Pang (HHMI/Janelia)."
+    "contributions": "Sample provided by Zhiyuan Lu (HHMI/Janelia), and prepared, imaged and post-processed by Song Pang (HHMI/Janelia).",
+    "organism": ["Drosophila"],
+    "type": ["Tissue"],
+    "subtype": ["Brain"],
+    "treatment": ["Wild-type"]
   },
+  "institution": [
+    "HHMI/Janelia"
+  ],
+  "softwareAvailability": "open",
   "DOI": [
     {
       "id": "em",
       "DOI": "10.25378/janelia.13114514"
     }
+  ],
+  "publications": [
+    "Xu et al., 2020"
   ]
 }

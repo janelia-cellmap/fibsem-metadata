@@ -15,7 +15,7 @@
     ],
     "translate": [
       0.0,
-      11200,
+      11200.0,
       0.0
     ],
     "scale": [
@@ -28,6 +28,7 @@
   "version": "0",
   "tags": [],
   "dataType": "uint64",
+  "sampleType": "label",
   "contentType": "segmentation",
   "displaySettings": {
     "contrastLimits": {

@@ -28,6 +28,7 @@
   "version": "0",
   "tags": [],
   "dataType": "uint16",
+  "sampleType": "label",
   "contentType": "segmentation",
   "displaySettings": {
     "contrastLimits": {
@@ -42,7 +43,7 @@
   "subsources": [
     {
       "name": "mt-out_seg",
-      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/mesh/mt-out_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/mesh/mt-out_seg",
       "format": "neuroglancer_legacy_mesh",
       "transform": {
         "axes": [
