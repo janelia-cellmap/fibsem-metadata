@@ -1,14 +1,9 @@
 from enum import Enum
-from click.decorators import group
-from pydantic import BaseModel
-from typing import Sequence, Optional, Union
+from pydantic import BaseModel, validator
+from typing import Any, Dict, Sequence, Optional
 from pydantic.color import Color
 from fibsem_metadata.models.multiscale.cosem import SpatialTransform
-import fsspec
-import json
 import click
-  
-
 
 
 class MeshTypeEnum(str, Enum):
@@ -94,6 +89,16 @@ class DatasetView(BaseModel):
     scale: Optional[float]
     orientation: Optional[Sequence[float]]
     volumeNames: Sequence[str]
+
+    @validator('orientation')
+    def orientation_must_have_unit_norm(cls, v: Optional[Sequence[float]]):
+        if v is not None:
+            if len(v) != 4:
+                raise ValueError(f'Orientation must have length 4, got {v} with {len(v)}')
+            length = sum([x ** 2 for x in v]) ** .5
+            if length % 1.0 != 0:
+                raise ValueError('Orientation vector does not have a unit length. Got {length}.')
+        return v
 
 
 class DatasetViewCollection(BaseModel):
