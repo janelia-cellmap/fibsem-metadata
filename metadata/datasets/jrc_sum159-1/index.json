@@ -35,10 +35,10 @@
       "contentType": "em",
       "displaySettings": {
         "contrastLimits": {
-          "start": 0.241,
-          "end": 0.334,
-          "min": 0.0,
-          "max": 1.0
+          "start": 15793,
+          "end": 21888,
+          "min": 0,
+          "max": 65535
         },
         "color": "white",
         "invertLUT": true
@@ -79,10 +79,10 @@
       "contentType": "em",
       "displaySettings": {
         "contrastLimits": {
-          "start": 0.706,
-          "end": 0.864,
-          "min": 0.0,
-          "max": 1.0
+          "start": 180,
+          "end": 220,
+          "min": 0,
+          "max": 255
         },
         "color": "white",
         "invertLUT": false
@@ -123,10 +123,10 @@
       "contentType": "segmentation",
       "displaySettings": {
         "contrastLimits": {
-          "start": 0.0,
-          "end": 1.0,
-          "min": 0.0,
-          "max": 1.0
+          "start": 0,
+          "end": 1,
+          "min": 0,
+          "max": 1
         },
         "color": "white",
         "invertLUT": false
