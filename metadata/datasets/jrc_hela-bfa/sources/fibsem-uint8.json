@@ -32,10 +32,10 @@
   "contentType": "em",
   "displaySettings": {
     "contrastLimits": {
-      "start": 0.647058823529412,
-      "end": 0.756862745098039,
-      "min": 0.0,
-      "max": 1.0
+      "start": 165,
+      "end": 192,
+      "min": 0,
+      "max": 255
     },
     "color": "white",
     "invertLUT": false
