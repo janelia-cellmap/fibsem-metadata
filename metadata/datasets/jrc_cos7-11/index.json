@@ -66,9 +66,9 @@
           0.0
         ],
         "scale": [
-          8.0,
-          8.0,
-          8.0
+          4.0,
+          4.0,
+          4.0
         ]
       },
       "description": "Endoplasmic Reticulum",
@@ -242,9 +242,9 @@
           0.0
         ],
         "scale": [
-          8.0,
-          8.0,
-          8.0
+          4.0,
+          4.0,
+          4.0
         ]
       },
       "description": "Mitochondria",
