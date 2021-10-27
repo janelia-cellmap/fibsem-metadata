@@ -49,7 +49,7 @@ class DisplaySettings(BaseModel):
     Metadata for display settings
     """
 
-    contrastLimits: ContrastLimits = ContrastLimits()
+    contrastLimits: ContrastLimits
     color: Optional[Color] = "white"
     invertLUT: bool = False
 
