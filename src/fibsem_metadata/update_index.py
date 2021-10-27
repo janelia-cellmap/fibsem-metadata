@@ -9,7 +9,7 @@ from typing import Union, Any, Dict
 
 
 def find_index(element_path: str) -> str:
-    return os.path.join(*element_path.split(os.path.sep)[:-1], 'index.json') 
+    return os.path.join(*element_path.rstrip(os.path.sep).split(os.path.sep)[:-1], 'index.json') 
 
 
 def materialize_element(path: str) -> Union[VolumeSource, DatasetViewCollection]:
