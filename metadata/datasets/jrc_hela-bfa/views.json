@@ -14,6 +14,25 @@
         "volumeNames": [
           "fibsem-uint8"
         ]
-      }
+      },
+      {
+      "name": "Refined, whole-cell predictions",
+      "description": "Renderings of refined predictions for multiple organelles",
+      "position": null,
+      "scale": null,
+      "orientation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "volumeNames": [
+        "endo_seg",
+        "er_seg",
+        "mito_seg",
+        "vesicle_seg",
+        "fibsem-uint16"
+      ]
+    }
     ]
   }
