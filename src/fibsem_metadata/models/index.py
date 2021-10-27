@@ -38,14 +38,10 @@ class SampleTypeEnum(str, Enum):
 
 
 class ContrastLimits(BaseModel):
-    """
-    Metadata for contrast limits. Currently these values are in normalized units, i.e. drawn from the interval [0,1]
-    """
-
-    start: float = 0.0
-    end: float = 1.0
-    min: float = 0.0
-    max: float = 1.0
+    start: int
+    end: int
+    min: int
+    max: int
 
 
 class DisplaySettings(BaseModel):
@@ -53,7 +49,7 @@ class DisplaySettings(BaseModel):
     Metadata for display settings
     """
 
-    contrastLimits: ContrastLimits = ContrastLimits()
+    contrastLimits: ContrastLimits
     color: Optional[Color] = "white"
     invertLUT: bool = False
 

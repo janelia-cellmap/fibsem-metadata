@@ -35,10 +35,10 @@
       "contentType": "prediction",
       "displaySettings": {
         "contrastLimits": {
-          "start": 0.0,
-          "end": 1.0,
-          "min": 0.0,
-          "max": 1.0
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
         },
         "color": "magenta",
         "invertLUT": false
@@ -79,10 +79,10 @@
       "contentType": "segmentation",
       "displaySettings": {
         "contrastLimits": {
-          "start": 0.0,
-          "end": 1.0,
-          "min": 0.0,
-          "max": 1.0
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
         },
         "color": "magenta",
         "invertLUT": false
@@ -123,10 +123,10 @@
       "contentType": "prediction",
       "displaySettings": {
         "contrastLimits": {
-          "start": 0.0,
-          "end": 1.0,
-          "min": 0.0,
-          "max": 1.0
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
         },
         "color": "blue",
         "invertLUT": false
@@ -167,10 +167,10 @@
       "contentType": "segmentation",
       "displaySettings": {
         "contrastLimits": {
-          "start": 0.0,
-          "end": 1.0,
-          "min": 0.0,
-          "max": 1.0
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
         },
         "color": "blue",
         "invertLUT": false
@@ -211,10 +211,10 @@
       "contentType": "em",
       "displaySettings": {
         "contrastLimits": {
-          "start": 0.62,
-          "end": 0.73,
-          "min": 0.0,
-          "max": 1.0
+          "start": 158,
+          "end": 186,
+          "min": 0,
+          "max": 255
         },
         "color": "white",
         "invertLUT": false
@@ -255,10 +255,10 @@
       "contentType": "prediction",
       "displaySettings": {
         "contrastLimits": {
-          "start": 0.0,
-          "end": 1.0,
-          "min": 0.0,
-          "max": 1.0
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
         },
         "color": "green",
         "invertLUT": false
@@ -299,10 +299,10 @@
       "contentType": "segmentation",
       "displaySettings": {
         "contrastLimits": {
-          "start": 0.0,
-          "end": 1.0,
-          "min": 0.0,
-          "max": 1.0
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
         },
         "color": "green",
         "invertLUT": false
@@ -343,10 +343,10 @@
       "contentType": "prediction",
       "displaySettings": {
         "contrastLimits": {
-          "start": 0.0,
-          "end": 1.0,
-          "min": 0.0,
-          "max": 1.0
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
         },
         "color": "red",
         "invertLUT": false
@@ -387,10 +387,10 @@
       "contentType": "segmentation",
       "displaySettings": {
         "contrastLimits": {
-          "start": 0.0,
-          "end": 1.0,
-          "min": 0.0,
-          "max": 1.0
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
         },
         "color": "red",
         "invertLUT": false
@@ -431,10 +431,10 @@
       "contentType": "prediction",
       "displaySettings": {
         "contrastLimits": {
-          "start": 0.0,
-          "end": 1.0,
-          "min": 0.0,
-          "max": 1.0
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
         },
         "color": "orange",
         "invertLUT": false
@@ -475,10 +475,10 @@
       "contentType": "segmentation",
       "displaySettings": {
         "contrastLimits": {
-          "start": 0.0,
-          "end": 1.0,
-          "min": 0.0,
-          "max": 1.0
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
         },
         "color": "orange",
         "invertLUT": false
@@ -519,10 +519,10 @@
       "contentType": "prediction",
       "displaySettings": {
         "contrastLimits": {
-          "start": 0.0,
-          "end": 1.0,
-          "min": 0.0,
-          "max": 1.0
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
         },
         "color": "red",
         "invertLUT": false
@@ -563,10 +563,10 @@
       "contentType": "segmentation",
       "displaySettings": {
         "contrastLimits": {
-          "start": 0.0,
-          "end": 1.0,
-          "min": 0.0,
-          "max": 1.0
+          "start": 0,
+          "end": 4294967295,
+          "min": 0,
+          "max": 4294967295
         },
         "color": "red",
         "invertLUT": false

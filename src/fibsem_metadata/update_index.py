@@ -9,7 +9,7 @@ from typing import Union, Any, Dict
 
 
 def find_index(element_path: str) -> str:
-    return os.path.join(*element_path.split(os.path.sep)[:-1], 'index.json') 
+    return os.path.join(*element_path.rstrip(os.path.sep).split(os.path.sep)[:-1], 'index.json') 
 
 
 def materialize_element(path: str) -> Union[VolumeSource, DatasetViewCollection]:
@@ -45,7 +45,7 @@ def sync_elements(index: DatasetIndex, element_path: str) -> DatasetIndex:
     return DatasetIndex(**new_index)
 
 
-def main(element_path: str):
+def update_index(element_path: str):
     index_path = find_index(element_path)
     name = index_path.split(os.path.sep)[-2]
     if os.path.exists(index_path):
@@ -71,9 +71,9 @@ def main(element_path: str):
 
 @click.command()
 @click.argument("paths", type=click.Path(exists=True, dir_okay=True), nargs=-1)
-def main_cli(paths: str):
-    return [main(path) for path in paths]
+def main(paths: str):
+    return [update_index(path) for path in paths]
 
 
 if __name__ == "__main__":
-    main_cli()
+    main()
