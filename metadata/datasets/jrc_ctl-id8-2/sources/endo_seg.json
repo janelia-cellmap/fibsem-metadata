@@ -1,5 +1,5 @@
 {
-    "name": "endo_seg",
+    "name": "golgi_seg",
     "path": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/endo_seg",
     "format": "n5",
     "transform": {
@@ -24,7 +24,7 @@
         8.0
       ]
     },
-    "description": "Endosomal Network (Ariadne)",
+    "description": "Golgi (Ariadne)",
     "version": "0",
     "tags": [],
     "dataType": "uint8",
@@ -37,7 +37,7 @@
         "min": 0,
         "max": 255
       },
-      "color": "magenta",
+      "color": "cyan",
       "invertLUT": false
     },
     "subsources": []
