@@ -31,7 +31,7 @@
         "er_seg",
         "mito_seg",
         "vesicle_seg",
-        "fibsem-uint16"
+        "fibsem-uint8"
       ]
     }
     ]
