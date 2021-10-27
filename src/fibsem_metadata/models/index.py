@@ -54,7 +54,7 @@ class DisplaySettings(BaseModel):
     """
 
     contrastLimits: ContrastLimits = ContrastLimits()
-    color: Color = "white"
+    color: Optional[Color] = "white"
     invertLUT: bool = False
 
 
