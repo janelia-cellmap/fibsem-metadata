@@ -1,6 +1,6 @@
 {
   "name": "endo_seg",
-  "path": "s3://janelia-cosem/jrc_hela-bfa/jrc_hela-bfa.n5/labels/endo_seg",
+  "path": "s3://janelia-cosem-datasets/jrc_hela-bfa/jrc_hela-bfa.n5/labels/endo_seg",
   "format": "n5",
   "transform": {
     "axes": [
@@ -19,7 +19,7 @@
       0.0
     ],
     "scale": [
-      5.24,
+      4.0,
       4.0,
       4.0
     ]

@@ -1,6 +1,6 @@
 {
   "name": "mito_seg",
-  "path": "s3://janelia-cosem/jrc_hela-bfa/jrc_hela-bfa.n5/labels/mito_seg",
+  "path": "s3://janelia-cosem-datasets/jrc_hela-bfa/jrc_hela-bfa.n5/labels/mito_seg",
   "format": "n5",
   "transform": {
     "axes": [
