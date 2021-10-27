@@ -4,10 +4,11 @@ from datetime import date
 from typing import List, Dict
 from enum import Enum
 
+
 class SoftwareAvailability(str, Enum):
-    open = 'open'
-    partial = 'partially open'
-    closed = 'closed'
+    open = "open"
+    partial = "partially open"
+    closed = "closed"
 
 
 class UnitfulVector(BaseModel):
@@ -20,7 +21,6 @@ class ImagingMetadata(BaseModel):
     institution: str
     gridSpacing: UnitfulVector
     dimensions: UnitfulVector
-    
 
 
 class FIBSEMImagingMetadata(ImagingMetadata):
@@ -55,7 +55,7 @@ class DOI(BaseModel):
     DOI: str
 
 
-class Dataset(BaseModel):
+class DatasetMetadata(BaseModel):
     """
     Metadata for a bioimaging dataset.
     """
@@ -72,7 +72,7 @@ class Dataset(BaseModel):
 
 @click.command()
 def main() -> None:
-    print(Dataset.schema_json(indent=2))
+    print(DatasetMetadata.schema_json(indent=2))
 
 
 if __name__ == "__main__":
