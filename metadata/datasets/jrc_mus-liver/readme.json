@@ -1,0 +1,45 @@
+{
+  "title": "",
+  "id": "jrc_mus-liver",
+  "imaging": {
+    "startDate": "0000-00-00",
+    "duration": 0,
+    "biasVoltage": 0,
+    "scanRate": 0,
+    "current": 0,
+    "primaryEnergy": 0,
+    "id": "",
+    "institution": "Janelia",
+    "gridSpacing": {
+      "unit": "nm",
+      "values": {
+        "x": 8.0,
+        "y": 8.0,
+        "z": 8.0
+      }
+    },
+    "dimensions": {
+      "unit": "\u00b5m",
+      "values": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    }
+  },
+  "sample": {
+    "description": "",
+    "protocol": "",
+    "contributions": "",
+    "organism": ["Mouse"],
+    "type": ["Tissue"],
+    "subtype": ["Liver"],
+    "treatment": ["Wild-type"]
+  },
+  "institution": [
+    "HHMI/Janelia"
+  ],
+  "softwareAvailability": "open",
+  "DOI": [],
+  "publications": []
+}
