@@ -49,13 +49,13 @@ class DisplaySettings(BaseModel):
     """
 
     contrastLimits: ContrastLimits
-    color: Optional[Color] = "white"
-    invertLUT: bool = False
+    color: Optional[Color]
+    invertLUT: bool
 
 
 class DataSource(BaseModel):
     name: str
-    description: str = ""
+    description: str
     URI: str
     format: str
     transform: SpatialTransform
@@ -68,8 +68,7 @@ class MeshSource(DataSource):
 
 class VolumeSource(DataSource):
     format: ArrayContainerTypeEnum
-    dataType: str
-    sampleType: SampleTypeEnum = "scalar"
+    sampleType: SampleTypeEnum
     contentType: ContentTypeEnum
     displaySettings: DisplaySettings
     subsources: Sequence[MeshSource] = []
