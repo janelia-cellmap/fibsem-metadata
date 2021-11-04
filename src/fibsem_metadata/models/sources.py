@@ -55,12 +55,10 @@ class DisplaySettings(BaseModel):
 
 class DataSource(BaseModel):
     name: str
-    path: str
+    description: str = ""
+    URI: str
     format: str
     transform: SpatialTransform
-    description: str = ""
-    version: str = "0"
-    tags: Sequence[str] = []
 
 
 class MeshSource(DataSource):
