@@ -63,7 +63,8 @@
   "volumes": [
     {
       "name": "fibsem-uint8",
-      "path": "s3://janelia-cosem-datasets/jrc_ctl-id8-5/jrc_ctl-id8-5.n5/em/fibsem-uint8",
+      "description": "FIB-SEM Data (compressed)",
+      "URI": "s3://janelia-cosem-datasets/jrc_ctl-id8-5/jrc_ctl-id8-5.n5/em/fibsem-uint8",
       "format": "n5",
       "transform": {
         "axes": [
@@ -87,10 +88,6 @@
           8.0
         ]
       },
-      "description": "FIB-SEM Data (compressed)",
-      "version": "0",
-      "tags": [],
-      "dataType": "uint8",
       "sampleType": "scalar",
       "contentType": "em",
       "displaySettings": {
@@ -107,7 +104,8 @@
     },
     {
       "name": "cell_seg",
-      "path": "s3://janelia-cosem-datasets/jrc_ctl-id8-5/jrc_ctl-id8-5.n5/labels/ariadne/cell_seg",
+      "description": "Whole-cell segmentation (Ariadne)",
+      "URI": "s3://janelia-cosem-datasets/jrc_ctl-id8-5/jrc_ctl-id8-5.n5/labels/ariadne/cell_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -131,10 +129,6 @@
           8.0
         ]
       },
-      "description": "Whole-cell segmentation (Ariadne)",
-      "version": "0",
-      "tags": [],
-      "dataType": "uint8",
       "sampleType": "label",
       "contentType": "segmentation",
       "displaySettings": {

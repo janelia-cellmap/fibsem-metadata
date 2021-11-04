@@ -1,6 +1,5 @@
 {
   "name": "mito_seg",
-  "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mito_seg",
   "format": "n5",
   "transform": {
     "axes": [
@@ -43,7 +42,6 @@
   "subsources": [
     {
       "name": "mito_seg",
-      "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/mesh/mito_seg",
       "format": "neuroglancer_legacy_mesh",
       "transform": {
         "axes": [
@@ -70,7 +68,9 @@
       "description": "",
       "version": "0",
       "tags": [],
-      "ids": []
+      "ids": [],
+      "URI": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/mesh/mito_seg"
     }
-  ]
+  ],
+  "URI": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mito_seg"
 }

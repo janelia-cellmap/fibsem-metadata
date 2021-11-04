@@ -1,6 +1,5 @@
 {
   "name": "endo-mem_pred",
-  "path": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/endo-mem_pred",
   "format": "n5",
   "transform": {
     "axes": [
@@ -40,5 +39,6 @@
     "color": "magenta",
     "invertLUT": false
   },
-  "subsources": []
+  "subsources": [],
+  "URI": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/endo-mem_pred"
 }

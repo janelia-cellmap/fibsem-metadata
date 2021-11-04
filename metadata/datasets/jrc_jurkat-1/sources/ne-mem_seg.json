@@ -1,6 +1,5 @@
 {
   "name": "ne-mem_seg",
-  "path": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ne-mem_seg",
   "format": "n5",
   "transform": {
     "axes": [
@@ -40,5 +39,6 @@
     "color": "white",
     "invertLUT": false
   },
-  "subsources": []
+  "subsources": [],
+  "URI": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ne-mem_seg"
 }

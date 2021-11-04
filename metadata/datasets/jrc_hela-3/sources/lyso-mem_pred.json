@@ -1,6 +1,5 @@
 {
   "name": "lyso-mem_pred",
-  "path": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/labels/lyso-mem_pred",
   "format": "n5",
   "transform": {
     "axes": [
@@ -40,5 +39,6 @@
     "color": "white",
     "invertLUT": false
   },
-  "subsources": []
+  "subsources": [],
+  "URI": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/labels/lyso-mem_pred"
 }

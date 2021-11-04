@@ -1,6 +1,5 @@
 {
   "name": "endo_seg",
-  "path": "s3://janelia-cosem-datasets/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/labels/endo_seg",
   "format": "n5",
   "transform": {
     "axes": [
@@ -40,5 +39,6 @@
     "color": "magenta",
     "invertLUT": false
   },
-  "subsources": []
+  "subsources": [],
+  "URI": "s3://janelia-cosem-datasets/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/labels/endo_seg"
 }

@@ -1,6 +1,5 @@
 {
   "name": "eres_pred",
-  "path": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/eres_pred",
   "format": "n5",
   "transform": {
     "axes": [
@@ -40,5 +39,6 @@
     "color": "white",
     "invertLUT": false
   },
-  "subsources": []
+  "subsources": [],
+  "URI": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/eres_pred"
 }

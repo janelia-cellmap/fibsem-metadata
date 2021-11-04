@@ -62,7 +62,8 @@
   "volumes": [
     {
       "name": "fibsem-uint16",
-      "path": "s3://janelia-cosem-datasets/jrc_hela-h89-1/jrc_hela-h89-1.n5/em/fibsem-uint16",
+      "description": "FIB-SEM Data (uncompressed)",
+      "URI": "s3://janelia-cosem-datasets/jrc_hela-h89-1/jrc_hela-h89-1.n5/em/fibsem-uint16",
       "format": "n5",
       "transform": {
         "axes": [
@@ -86,10 +87,6 @@
           8.0
         ]
       },
-      "description": "FIB-SEM Data (uncompressed)",
-      "version": "0",
-      "tags": [],
-      "dataType": "uint16",
       "sampleType": "scalar",
       "contentType": "em",
       "displaySettings": {
