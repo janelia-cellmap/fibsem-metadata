@@ -1,4 +1,5 @@
 # update index.json
+from fibsem_metadata.models.index import Index
 from fibsem_metadata.utils import materialize_element
 import click
 from pathlib import Path
@@ -45,9 +46,13 @@ def build_manifest(dataset_path: str):
 @click.command()
 @click.argument('root', type=click.Path(exists=True, file_okay=False))
 def main(root: str):
-    paths = filter(lambda v: v.is_dir(), Path(root).glob('*'))
-    return [build_manifest(path) for path in paths]
-
+    paths = tuple(filter(lambda v: v.is_dir(), Path(root).glob('*')))
+    # generate the manifest
+    [build_manifest(path) for path in paths]
+    # generate the index 
+    index = Index(datasets=tuple(map(str, paths)))
+    with open(Path(root) / 'index.json', mode='w') as fh:
+        fh.write(index.json())
 
 if __name__ == "__main__":
     main()
