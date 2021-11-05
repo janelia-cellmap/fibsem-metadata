@@ -1,4 +1,4 @@
-# update index.json
+from typing import Union
 from fibsem_metadata.models.index import Index
 from fibsem_metadata.utils import materialize_element
 import click
@@ -9,7 +9,7 @@ from fibsem_metadata.models.views import DatasetViews
 from fibsem_metadata.models.sources import VolumeSource
 
 
-def validate_tree(root: str):
+def validate_tree(root: str) -> None:
     """
     root must be a string naming a directory tree that contains a
     directory called "datasets" populated with directories with variable
@@ -25,7 +25,7 @@ def validate_tree(root: str):
             raise FileNotFoundError(f"Could not find {str(manifest_file)}")
 
 
-def build_manifest(dataset_path: str):
+def build_manifest(dataset_path: Union[Path, str]) -> int:
     root = Path(dataset_path)
     manifest_path = root / "manifest.json"
     source_paths = (root / "sources").glob("*.json")
@@ -40,12 +40,12 @@ def build_manifest(dataset_path: str):
         name=name, metadata=metadata, volumes=volumes, views=views.views
     )
     manifest_path.write_text(manifest.json(indent=2))
-    return 1
+    return 0
 
 
 @click.command()
 @click.argument("root", type=click.Path(exists=True, file_okay=False))
-def main(root: str):
+def main(root: str) -> int:
     paths = tuple(filter(lambda v: v.is_dir(), Path(root).glob("*")))
     # generate the manifest
     [build_manifest(path) for path in paths]
@@ -53,6 +53,7 @@ def main(root: str):
     index = Index(datasets=tuple(map(str, paths)))
     with open(Path(root) / "index.json", mode="w") as fh:
         fh.write(index.json())
+    return 0
 
 
 if __name__ == "__main__":

@@ -72,7 +72,7 @@ class DatasetMetadata(BaseModel):
 
 @click.command()
 def main() -> None:
-    print(DatasetMetadata.schema_json(indent=2))
+    click.echo(DatasetMetadata.schema_json(indent=2))
 
 
 if __name__ == "__main__":

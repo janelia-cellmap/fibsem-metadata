@@ -11,7 +11,9 @@ class DatasetView(BaseModel):
     volumeNames: Sequence[str]
 
     @validator("orientation")
-    def orientation_must_have_unit_norm(cls, v: Optional[Sequence[float]]):
+    def orientation_must_have_unit_norm(
+        cls, v: Optional[Sequence[float]]
+    ) -> Optional[Sequence[float]]:
         if v is not None:
             if len(v) != 4:
                 raise ValueError(

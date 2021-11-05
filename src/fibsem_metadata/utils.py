@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import Type, Union, TypeVar
+from typing import Any, Type, Union, TypeVar
 import json
 
 C = TypeVar("C")

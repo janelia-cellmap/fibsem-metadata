@@ -15,7 +15,7 @@ class DatasetManifest(BaseModel):
 
 @click.command()
 def main() -> None:
-    print(DatasetManifest.schema_json(indent=2))
+    click.echo(DatasetManifest.schema_json(indent=2))
 
 
 if __name__ == "__main__":
