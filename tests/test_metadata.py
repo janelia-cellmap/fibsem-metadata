@@ -6,8 +6,8 @@ from typing import Any, Dict
 from fibsem_metadata.models.views import DatasetViews
 from fibsem_metadata.models.sources import VolumeSource
 
-volume_sources = glob('metadata/datasets/*/sources/*')
-views = glob('metadata/datasets/*/views.json')
+volume_sources = glob('metadata/*/sources/*')
+views = glob('metadata/*/views.json')
 
 def exists_fsspec(path: str) -> bool:
     return fsspec.get_mapper(path).fs.exists(path)
