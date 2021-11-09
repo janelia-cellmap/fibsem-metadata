@@ -5,7 +5,7 @@
     "startDate": "2021-04-19",
     "duration": 8,
     "biasVoltage": 0,
-    "scanRate": 3,
+    "scanRate": 6,
     "current": 3,
     "primaryEnergy": 1200,
     "id": "",
@@ -41,6 +41,6 @@
   ],
   "softwareAvailability": "open",
   "DOI": [{"id": "em", 
-   "DOI": "10.25378/janelia.16913047"}],
+   "DOI": "10.25378/janelia.16913035"}],
   "publications": []
 }
