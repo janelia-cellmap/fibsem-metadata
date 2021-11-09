@@ -24,9 +24,6 @@
     ]
   },
   "description": "Chromatin",
-  "version": "0",
-  "tags": [],
-  "dataType": "uint32",
   "sampleType": "label",
   "contentType": "segmentation",
   "displaySettings": {

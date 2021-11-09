@@ -1,12 +1,12 @@
 import click
 from typing import Sequence
+from fibsem_metadata.models.base import StrictBaseModel
 from fibsem_metadata.models.metadata import DatasetMetadata
 from fibsem_metadata.models.sources import VolumeSource
 from fibsem_metadata.models.views import DatasetView
-from pydantic import BaseModel
 
 
-class DatasetManifest(BaseModel):
+class DatasetManifest(StrictBaseModel):
     name: str
     metadata: DatasetMetadata
     volumes: Sequence[VolumeSource]

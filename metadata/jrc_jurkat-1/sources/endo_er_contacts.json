@@ -24,9 +24,6 @@
     ]
   },
   "description": "Endosome - ER Contact Sites",
-  "version": "0",
-  "tags": [],
-  "dataType": "uint16",
   "sampleType": "label",
   "contentType": "analysis",
   "displaySettings": {

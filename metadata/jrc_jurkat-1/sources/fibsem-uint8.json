@@ -24,9 +24,6 @@
     ]
   },
   "description": "FIB-SEM Data (compressed)",
-  "version": "0",
-  "tags": [],
-  "dataType": "uint8",
   "sampleType": "scalar",
   "contentType": "em",
   "displaySettings": {

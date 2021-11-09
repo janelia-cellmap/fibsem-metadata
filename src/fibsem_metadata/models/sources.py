@@ -1,7 +1,7 @@
 from typing import Optional, Sequence
 from enum import Enum
-from pydantic import BaseModel
 from pydantic.color import Color
+from fibsem_metadata.models.base import StrictBaseModel
 from fibsem_metadata.models.multiscale.cosem import SpatialTransform
 
 
@@ -36,14 +36,14 @@ class SampleTypeEnum(str, Enum):
     label = "label"
 
 
-class ContrastLimits(BaseModel):
+class ContrastLimits(StrictBaseModel):
     start: int
     end: int
     min: int
     max: int
 
 
-class DisplaySettings(BaseModel):
+class DisplaySettings(StrictBaseModel):
     """
     Metadata for display settings
     """
@@ -53,7 +53,7 @@ class DisplaySettings(BaseModel):
     invertLUT: bool
 
 
-class DataSource(BaseModel):
+class DataSource(StrictBaseModel):
     name: str
     description: str
     URI: str

@@ -24,9 +24,6 @@
     ]
   },
   "description": "Nuclear Pore",
-  "version": "0",
-  "tags": [],
-  "dataType": "uint16",
   "sampleType": "label",
   "contentType": "segmentation",
   "displaySettings": {

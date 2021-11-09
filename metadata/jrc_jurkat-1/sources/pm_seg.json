@@ -24,9 +24,6 @@
     ]
   },
   "description": "Plasma Membrane",
-  "version": "0",
-  "tags": [],
-  "dataType": "uint8",
   "sampleType": "label",
   "contentType": "segmentation",
   "displaySettings": {
@@ -66,8 +63,6 @@
         ]
       },
       "description": "",
-      "version": "0",
-      "tags": [],
       "ids": [],
       "URI": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/mesh/pm_seg"
     }

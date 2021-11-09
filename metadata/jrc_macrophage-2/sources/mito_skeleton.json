@@ -24,9 +24,6 @@
     ]
   },
   "description": "Mitochrondria Skeletons",
-  "version": "0",
-  "tags": [],
-  "dataType": "uint16",
   "sampleType": "label",
   "contentType": "analysis",
   "displaySettings": {

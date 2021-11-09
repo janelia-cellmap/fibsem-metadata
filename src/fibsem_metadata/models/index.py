@@ -1,6 +1,7 @@
-from pydantic import BaseModel
 from typing import Sequence
 
+from fibsem_metadata.models.base import StrictBaseModel
 
-class Index(BaseModel):
+
+class Index(StrictBaseModel):
     datasets: Sequence[str]

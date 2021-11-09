@@ -24,9 +24,6 @@
     ]
   },
   "description": "ER - Mito Contact Sites",
-  "version": "0",
-  "tags": [],
-  "dataType": "uint16",
   "sampleType": "label",
   "contentType": "analysis",
   "displaySettings": {
@@ -66,8 +63,6 @@
         ]
       },
       "description": "",
-      "version": "0",
-      "tags": [],
       "ids": [],
       "URI": "s3://janelia-cosem-datasets/jrc_hela-2/neuroglancer/mesh/er_mito_contacts"
     }

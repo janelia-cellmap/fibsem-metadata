@@ -16,6 +16,12 @@ def migrate_source(path: str) -> int:
         blob["subsources"] = subsources
     except KeyError:
         pass
+    for extra_key in ('dataType', 'tags', 'version'):
+        if extra_key in blob:
+            blob.pop(extra_key)
+        for subsource in blob['subsources']:
+            if extra_key in subsource:
+                subsource.pop(extra_key)
     with open(path, mode="w") as fh:
         json.dump(blob, fh, indent=2)
 

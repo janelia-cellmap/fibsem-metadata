@@ -1,8 +1,9 @@
 import click
-from pydantic import BaseModel
 from datetime import date
 from typing import List, Dict
 from enum import Enum
+
+from fibsem_metadata.models.base import StrictBaseModel
 
 
 class SoftwareAvailability(str, Enum):
@@ -11,12 +12,12 @@ class SoftwareAvailability(str, Enum):
     closed = "closed"
 
 
-class UnitfulVector(BaseModel):
+class UnitfulVector(StrictBaseModel):
     unit: str
     values: Dict[str, float]
 
 
-class ImagingMetadata(BaseModel):
+class ImagingMetadata(StrictBaseModel):
     id: str
     institution: str
     gridSpacing: UnitfulVector
@@ -36,7 +37,7 @@ class FIBSEMImagingMetadata(ImagingMetadata):
     primaryEnergy: float
 
 
-class SampleMetadata(BaseModel):
+class SampleMetadata(StrictBaseModel):
     """
     Metadata describing the sample and sample preparation.
     """
@@ -50,19 +51,19 @@ class SampleMetadata(BaseModel):
     treatment: List[str]
 
 
-class DOI(BaseModel):
+class DOI(StrictBaseModel):
     id: str
     DOI: str
 
 
-class DatasetMetadata(BaseModel):
+class DatasetMetadata(StrictBaseModel):
     """
     Metadata for a bioimaging dataset.
     """
 
     title: str
     id: str
-    imaging: ImagingMetadata
+    imaging: FIBSEMImagingMetadata
     sample: SampleMetadata
     institution: List[str]
     softwareAvailability: SoftwareAvailability
