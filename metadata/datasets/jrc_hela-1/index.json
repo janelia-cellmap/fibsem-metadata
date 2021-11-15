@@ -375,7 +375,7 @@
         {
           "name": "mito_seg",
           "path": "s3://janelia-cosem-datasets/jrc_hela-1/neuroglancer/mesh/mito_seg",
-          "format": "neuroglancer_legacy_mesh",
+          "format": "neuroglancer_multilod_draco",
           "transform": {
             "axes": [
               "z",
@@ -393,9 +393,9 @@
               0.0
             ],
             "scale": [
-              1.0,
-              1.0,
-              1.0
+              4.0,
+              4.0,
+              4.0
             ]
           },
           "description": "",
@@ -731,39 +731,7 @@
         "color": "red",
         "invertLUT": false
       },
-      "subsources": [
-        {
-          "name": "vesicle_seg",
-          "path": "s3://janelia-cosem-datasets/jrc_hela-1/neuroglancer/mesh/vesicle_seg",
-          "format": "neuroglancer_legacy_mesh",
-          "transform": {
-            "axes": [
-              "z",
-              "y",
-              "x"
-            ],
-            "units": [
-              "nm",
-              "nm",
-              "nm"
-            ],
-            "translate": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "scale": [
-              1.0,
-              1.0,
-              1.0
-            ]
-          },
-          "description": "",
-          "version": "0",
-          "tags": [],
-          "ids": []
-        }
-      ]
+      "subsources": []
     }
   ],
   "views": [
