@@ -43,7 +43,39 @@
         "color": null,
         "invertLUT": false
       },
-      "subsources": []
+      "subsources": [
+        {
+          "name": "cell_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/cell_seg",
+          "format": "neuroglancer_multilod_draco",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "description": "",
+          "version": "0",
+          "tags": [],
+          "ids": []
+        }
+      ]
     },
     {
       "name": "cent_seg",
@@ -87,7 +119,39 @@
         "color": "white",
         "invertLUT": false
       },
-      "subsources": []
+      "subsources": [
+        {
+          "name": "cent_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/cent_seg",
+          "format": "neuroglancer_multilod_draco",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "description": "",
+          "version": "0",
+          "tags": [],
+          "ids": []
+        }
+      ]
     },
     {
       "name": "er_seg",
@@ -131,7 +195,39 @@
         "color": "blue",
         "invertLUT": false
       },
-      "subsources": []
+      "subsources": [
+        {
+          "name": "er_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/er_seg",
+          "format": "neuroglancer_multilod_draco",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "description": "",
+          "version": "0",
+          "tags": [],
+          "ids": []
+        }
+      ]
     },
     {
       "name": "fibsem-uint8",
@@ -179,7 +275,7 @@
     },
     {
       "name": "golgi_seg",
-      "path": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/endo_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/golgi_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -219,7 +315,39 @@
         "color": "cyan",
         "invertLUT": false
       },
-      "subsources": []
+      "subsources": [
+        {
+          "name": "golgi_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/golgi_seg",
+          "format": "neuroglancer_multilod_draco",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "description": "",
+          "version": "0",
+          "tags": [],
+          "ids": []
+        }
+      ]
     },
     {
       "name": "lyso_seg",
@@ -263,7 +391,39 @@
         "color": "yellow",
         "invertLUT": false
       },
-      "subsources": []
+      "subsources": [
+        {
+          "name": "lyso_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/lyso_seg",
+          "format": "neuroglancer_multilod_draco",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "description": "",
+          "version": "0",
+          "tags": [],
+          "ids": []
+        }
+      ]
     },
     {
       "name": "mito_seg",
@@ -307,7 +467,39 @@
         "color": "green",
         "invertLUT": false
       },
-      "subsources": []
+      "subsources": [
+        {
+          "name": "mito_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/mito_seg",
+          "format": "neuroglancer_multilod_draco",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "description": "",
+          "version": "0",
+          "tags": [],
+          "ids": []
+        }
+      ]
     },
     {
       "name": "nucleus_seg",
@@ -351,7 +543,39 @@
         "color": "red",
         "invertLUT": false
       },
-      "subsources": []
+      "subsources": [
+        {
+          "name": "nucleus_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/nucleus_seg",
+          "format": "neuroglancer_multilod_draco",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "description": "",
+          "version": "0",
+          "tags": [],
+          "ids": []
+        }
+      ]
     }
   ],
   "views": [
