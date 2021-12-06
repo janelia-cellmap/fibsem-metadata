@@ -3,7 +3,7 @@
     {
       "name": "Default view",
       "description": "The default view of the data.",
-      "position": null,
+      "position": [36341, 13908, 4388],
       "scale": null,
       "orientation": [
         0.0,

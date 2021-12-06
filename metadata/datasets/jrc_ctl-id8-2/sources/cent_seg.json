@@ -40,5 +40,37 @@
       "color": "white",
       "invertLUT": false
     },
-    "subsources": []
+    "subsources": [
+      {
+        "name": "cent_seg",
+        "path": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/cent_seg",
+        "format": "neuroglancer_multilod_draco",
+        "transform": {
+          "axes": [
+            "z",
+            "y",
+            "x"
+          ],
+          "units": [
+            "nm",
+            "nm",
+            "nm"
+          ],
+          "translate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "description": "",
+        "version": "0",
+        "tags": [],
+        "ids": []
+      }
+    ]
   }
