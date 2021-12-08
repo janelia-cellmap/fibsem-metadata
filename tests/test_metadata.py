@@ -5,8 +5,7 @@ import fsspec
 from typing import Any, Dict
 from fibsem_metadata.models.index import (
     DatasetViewCollection,
-    VolumeSource,
-    DatasetView,
+    VolumeSource
 )
 
 volume_sources = glob("metadata/datasets/*/sources/*")
