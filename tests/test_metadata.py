@@ -10,7 +10,7 @@ views = glob('metadata/datasets/*/views.json')
 
 
 def exists_fsspec(path: str) -> bool:
-    return fsspec.get_mapper(path).fs.exists(path)
+    return fsspec.get_mapper(path, anon=True).fs.exists(path)
 
 
 def get_json_blob(path: str) -> Dict[str, Any]:
