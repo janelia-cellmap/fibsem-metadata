@@ -10,6 +10,7 @@ build
 _build
 .cache
 *.so
+api/*
 
 # Installer logs
 pip-log.txt
