@@ -10,7 +10,7 @@ jobs:
     timeout-minutes: 10
 
     steps:
-       - name: Check out repository code
+      - name: Check out repository code
         uses: actions/checkout@v2
 
       # Setup Python (faster than using Python container)
@@ -41,9 +41,11 @@ jobs:
       - name: Install library
         run: |
           poetry install --no-interaction
+
       - name: Build API
           run: |
             python src/fibsem_metadata/generate_endpoints.py .
+
       - name: Push API
           uses: EndBug/add-and-commit@v7
             with:
