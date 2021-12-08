@@ -43,7 +43,7 @@ jobs:
           poetry install --no-interaction
 
       - name: Build API
-          run: |
+        run: |
             python src/fibsem_metadata/generate_endpoints.py .
 
       - name: Push API
