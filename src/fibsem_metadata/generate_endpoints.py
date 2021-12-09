@@ -1,3 +1,4 @@
+import shutil
 from typing import Union
 from fibsem_metadata.models.index import Index
 from fibsem_metadata.utils import materialize_element
@@ -7,7 +8,7 @@ from fibsem_metadata.models.manifest import DatasetManifest
 from fibsem_metadata.models.metadata import DatasetMetadata
 from fibsem_metadata.models.views import DatasetViews
 from fibsem_metadata.models.sources import VolumeSource
-from shutil import copyfile
+from shutil import copyfile, rmtree
 
 def validate_tree(root: str) -> None:
     """
@@ -57,6 +58,8 @@ def main(root: str='.') -> int:
     api_dir = Path("api")
     if not api_dir.exists():
         api_dir.mkdir()
+    else:
+        rmtree(api_dir)
     # generate the manifest
     api_paths = [api_dir / path.name for path in metadata_paths]
     [build_manifest(meta_source, meta_target) for meta_source, meta_target in zip(metadata_paths, api_paths)]
