@@ -53,8 +53,12 @@ def build_manifest(dataset_path: Union[Path, str], output_dir: Union[Path, str])
 @click.argument("root", type=click.Path(exists=True, file_okay=False))
 def main(root: str='.') -> int:
     metadata_paths = tuple(filter(lambda v: v.is_dir(), Path(root).glob("metadata/*")))
+    # prepare default output
+    api_dir = Path("api")
+    if not api_dir.exists():
+        api_dir.mkdir()
     # generate the manifest
-    [build_manifest(path, Path("api") / path.name) for path in metadata_paths]
+    [build_manifest(path, api_dir / path.name) for path in metadata_paths]
     # generate the index
     index = Index(datasets=tuple(map(str, metadata_paths)))
     with open(Path(root) / "api/index.json", mode="w") as fh:
