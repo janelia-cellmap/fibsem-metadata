@@ -59,7 +59,7 @@ def main(root: str='.') -> int:
     if not api_dir.exists():
         api_dir.mkdir()
     else:
-        rmtree(api_dir)
+        [rmtree(subdir) for subdir in api_dir.glob('*')]
     # generate the manifest
     api_paths = [api_dir / path.name for path in metadata_paths]
     [build_manifest(meta_source, meta_target) for meta_source, meta_target in zip(metadata_paths, api_paths)]
