@@ -44,7 +44,7 @@ jobs:
 
       - name: Build API
         run: |
-            python src/fibsem_metadata/generate_endpoints.py .
+            poetry run python src/fibsem_metadata/generate_endpoints.py .
 
       - name: Push API
         uses: EndBug/add-and-commit@v7
