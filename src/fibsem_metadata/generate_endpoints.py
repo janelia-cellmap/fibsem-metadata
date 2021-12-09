@@ -58,7 +58,8 @@ def main(root: str='.') -> int:
     if not api_dir.exists():
         api_dir.mkdir()
     # generate the manifest
-    [build_manifest(path, api_dir / path.name) for path in metadata_paths]
+    api_paths = [api_dir / path.name for path in metadata_paths]
+    [build_manifest(meta_source, meta_target) for meta_source, meta_target in zip(metadata_paths, api_paths)]
     # generate the index
     index = Index(datasets=tuple(map(str, metadata_paths)))
     with open(Path(root) / "api/index.json", mode="w") as fh:
