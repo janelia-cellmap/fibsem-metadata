@@ -1,3 +1,4 @@
+from os import remove
 import shutil
 from typing import Union
 from fibsem_metadata.models.index import Index
@@ -59,7 +60,11 @@ def main(root: str='.') -> int:
     if not api_dir.exists():
         api_dir.mkdir()
     else:
-        [rmtree(subdir) for subdir in api_dir.glob('*')]
+        for child in api_dir.glob('*'):
+            if child.is_dir():
+                rmtree(child)
+            else:
+                remove(child)
     # generate the manifest
     api_paths = [api_dir / path.name for path in metadata_paths]
     [build_manifest(meta_source, meta_target) for meta_source, meta_target in zip(metadata_paths, api_paths)]
