@@ -1,11 +1,13 @@
-from pydantic import BaseModel, PositiveInt
+from pydantic import PositiveInt
+from ..base import StrictBaseModel
 from typing import Sequence
 import click
 
 
-class PixelResolution(BaseModel):
+class PixelResolution(StrictBaseModel):
     """
-    PixelResolution attribute used by the saalfeld lab. The dimensions attribute contains a list of scales that define the
+    PixelResolution attribute used by the saalfeld lab.
+    The dimensions attribute contains a list of scales that define the
     grid spacing of the data, in F-order.
     """
 
@@ -14,11 +16,12 @@ class PixelResolution(BaseModel):
 
 
 # todo: validate argument lengths
-class NeuroglancerN5GroupMetadata(BaseModel):
+class NeuroglancerN5GroupMetadata(StrictBaseModel):
     """
-    Metadata to enable displaying an N5 group containing several datasets as a multiresolution dataset in neuroglancer.
-    see https://github.com/google/neuroglancer/issues/176#issuecomment-553027775
-    Axis properties will be indexed in the opposite order of C-contiguous axis indexing.
+    Metadata to enable displaying an N5 group containing several datasets
+    as a multiresolution dataset in neuroglancer. See
+    https://github.com/google/neuroglancer/issues/176#issuecomment-553027775
+    Axis properties are in F-order.
     """
 
     axes: Sequence[str]

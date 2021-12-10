@@ -1,9 +1,10 @@
-from pydantic import BaseModel, root_validator
-from typing import Collection, List, Sequence, Union, Dict
+from pydantic import root_validator
+from ..base import StrictBaseModel
+from typing import List, Sequence, Union, Dict
 import click
 
 
-class SpatialTransform(BaseModel):
+class SpatialTransform(StrictBaseModel):
     """
     Representation of an N-dimensional scaling + translation transform for labelled axes with units.
     """
@@ -28,16 +29,16 @@ class SpatialTransform(BaseModel):
         return values
 
 
-class ScaleMeta(BaseModel):
+class ScaleMeta(StrictBaseModel):
     path: str
     transform: SpatialTransform
 
 
-class MultiscaleMeta(BaseModel):
+class MultiscaleMeta(StrictBaseModel):
     datasets: Sequence[ScaleMeta]
 
 
-class COSEMGroupMetadata(BaseModel):
+class COSEMGroupMetadata(StrictBaseModel):
     """
     Multiscale metadata used by COSEM for multiscale datasets saved in N5/Zarr groups.
     """

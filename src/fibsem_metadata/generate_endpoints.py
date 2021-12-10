@@ -11,6 +11,7 @@ from fibsem_metadata.models.views import DatasetViews
 from fibsem_metadata.models.sources import VolumeSource
 from shutil import copyfile, rmtree
 
+
 def validate_tree(root: str) -> None:
     """
     root must be a string naming a directory tree that contains a
@@ -42,7 +43,7 @@ def build_manifest(dataset_path: Union[Path, str], output_dir: Union[Path, str])
     manifest = DatasetManifest(
         name=name, metadata=metadata, volumes=volumes, views=views.views
     )
-    
+
     if not output_dir.exists():
         output_dir.mkdir()
     # write manifest and thumbnail to API destination
@@ -53,21 +54,24 @@ def build_manifest(dataset_path: Union[Path, str], output_dir: Union[Path, str])
 
 @click.command()
 @click.argument("root", type=click.Path(exists=True, file_okay=False))
-def main(root: str='.') -> int:
+def main(root: str = ".") -> int:
     metadata_paths = tuple(filter(lambda v: v.is_dir(), Path(root).glob("metadata/*")))
     # prepare default output
     api_dir = Path("api")
     if not api_dir.exists():
         api_dir.mkdir()
     else:
-        for child in api_dir.glob('*'):
+        for child in api_dir.glob("*"):
             if child.is_dir():
                 rmtree(child)
             else:
                 remove(child)
     # generate the manifest
     api_paths = [api_dir / path.name for path in metadata_paths]
-    [build_manifest(meta_source, meta_target) for meta_source, meta_target in zip(metadata_paths, api_paths)]
+    [
+        build_manifest(meta_source, meta_target)
+        for meta_source, meta_target in zip(metadata_paths, api_paths)
+    ]
     # generate the index
     index = Index(datasets=tuple(map(str, api_paths)))
     with open(Path(root) / "api/index.json", mode="w") as fh:
