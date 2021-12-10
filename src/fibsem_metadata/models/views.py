@@ -1,8 +1,10 @@
 from typing import Optional, Sequence
-from pydantic import BaseModel, validator
+from pydantic import validator
+
+from fibsem_metadata.models.base import StrictBaseModel
 
 
-class DatasetView(BaseModel):
+class DatasetView(StrictBaseModel):
     name: str
     description: str
     position: Optional[Sequence[float]]
@@ -27,5 +29,5 @@ class DatasetView(BaseModel):
         return v
 
 
-class DatasetViews(BaseModel):
+class DatasetViews(StrictBaseModel):
     views: Sequence[DatasetView]
