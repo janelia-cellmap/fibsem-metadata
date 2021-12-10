@@ -4,4 +4,4 @@ from fibsem_metadata.models.base import StrictBaseModel
 
 
 class Index(StrictBaseModel):
-    datasets: Sequence[str]
+    index: Sequence[str]

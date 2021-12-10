@@ -56,7 +56,7 @@ class DisplaySettings(StrictBaseModel):
 class DataSource(StrictBaseModel):
     name: str
     description: str
-    URI: str
+    url: str
     format: str
     transform: SpatialTransform
 
