@@ -73,7 +73,7 @@ def main(root: str = ".") -> int:
         for meta_source, meta_target in zip(metadata_paths, api_paths)
     ]
     # generate the index
-    index = Index(datasets=tuple(map(str, api_paths)))
+    index = Index(datasets={p.name : str(p) for p in api_paths})
     with open(Path(root) / "api/index.json", mode="w") as fh:
         fh.write(index.json())
     return 0

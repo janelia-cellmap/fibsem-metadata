@@ -37,5 +37,5 @@
     "invertLUT": false
   },
   "subsources": [],
-  "URI": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/endo_pred"
+  "url": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/endo_pred"
 }

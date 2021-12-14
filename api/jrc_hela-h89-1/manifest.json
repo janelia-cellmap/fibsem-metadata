@@ -69,7 +69,7 @@
     {
       "name": "fibsem-uint16",
       "description": "FIB-SEM Data (uncompressed)",
-      "URI": "s3://janelia-cosem-datasets/jrc_hela-h89-1/jrc_hela-h89-1.n5/em/fibsem-uint16",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-h89-1/jrc_hela-h89-1.n5/em/fibsem-uint16",
       "format": "n5",
       "transform": {
         "axes": [

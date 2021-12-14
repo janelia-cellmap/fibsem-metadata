@@ -37,5 +37,5 @@
     "invertLUT": false
   },
   "subsources": [],
-  "URI": "s3://janelia-cosem-datasets/jrc_ctl-id8-3/jrc_ctl-id8-3.n5/em/fibsem-uint8"
+  "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-3/jrc_ctl-id8-3.n5/em/fibsem-uint8"
 }

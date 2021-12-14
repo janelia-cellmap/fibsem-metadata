@@ -2,16 +2,17 @@ import json
 from typing import Any, Dict
 import click
 from glob import glob
-
+from fibsem_metadata.models.sources import VolumeSource
+from pydantic import ValidationError
 
 def migrate_source(path: str) -> int:
     with open(path) as fh:
         blob = json.load(fh)
     try:
-        blob["URI"] = blob.pop("path")
+        blob["url"] = blob.pop("URI")
         subsources = []
         for subsource in blob["subsources"]:
-            subsource["URI"] = subsource.pop("path")
+            subsource["url"] = subsource.pop("URI")
             subsources.append(subsource)
         blob["subsources"] = subsources
     except KeyError:
@@ -22,6 +23,11 @@ def migrate_source(path: str) -> int:
         for subsource in blob["subsources"]:
             if extra_key in subsource:
                 subsource.pop(extra_key)
+    # validate
+    try:
+        v = VolumeSource(**blob)
+    except ValidationError as e:
+        raise e
     with open(path, mode="w") as fh:
         json.dump(blob, fh, indent=2)
 

@@ -69,7 +69,7 @@
     {
       "name": "fibsem-uint8",
       "description": "FIB-SEM Data (compressed)",
-      "URI": "s3://janelia-cosem-datasets/jrc_hela-bfa/jrc_hela-bfa.n5/em/fibsem-uint8",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-bfa/jrc_hela-bfa.n5/em/fibsem-uint8",
       "format": "n5",
       "transform": {
         "axes": [

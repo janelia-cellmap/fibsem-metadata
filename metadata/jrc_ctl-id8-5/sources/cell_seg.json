@@ -37,5 +37,5 @@
     "invertLUT": false
   },
   "subsources": [],
-  "URI": "s3://janelia-cosem-datasets/jrc_ctl-id8-5/jrc_ctl-id8-5.n5/labels/ariadne/cell_seg"
+  "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-5/jrc_ctl-id8-5.n5/labels/ariadne/cell_seg"
 }

@@ -67,7 +67,7 @@
     {
       "name": "fibsem-uint8",
       "description": "FIB-SEM Data (compressed)",
-      "URI": "s3://janelia-cosem-datasets/jrc_mus-pancreas-1/neuroglancer/em/fibsem-uint8.precomputed",
+      "url": "s3://janelia-cosem-datasets/jrc_mus-pancreas-1/neuroglancer/em/fibsem-uint8.precomputed",
       "format": "precomputed",
       "transform": {
         "axes": [
@@ -108,7 +108,7 @@
     {
       "name": "fibsem-uint16",
       "description": "FIB-SEM Data (uncompressed)",
-      "URI": "s3://janelia-cosem-datasets/jrc_mus-pancreas-1/jrc_mus-pancreas-1.n5/em/fibsem-uint16",
+      "url": "s3://janelia-cosem-datasets/jrc_mus-pancreas-1/jrc_mus-pancreas-1.n5/em/fibsem-uint16",
       "format": "n5",
       "transform": {
         "axes": [

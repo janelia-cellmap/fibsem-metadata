@@ -37,5 +37,5 @@
     "invertLUT": false
   },
   "subsources": [],
-  "URI": "s3://janelia-cosem-datasets/jrc_hela-bfa/jrc_hela-bfa.n5/em/fibsem-uint8"
+  "url": "s3://janelia-cosem-datasets/jrc_hela-bfa/jrc_hela-bfa.n5/em/fibsem-uint8"
 }

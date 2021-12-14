@@ -64,8 +64,8 @@
       },
       "description": "",
       "ids": [],
-      "URI": "s3://janelia-cosem-datasets/jrc_hela-3/neuroglancer/mesh/er_seg"
+      "url": "s3://janelia-cosem-datasets/jrc_hela-3/neuroglancer/mesh/er_seg"
     }
   ],
-  "URI": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/er_seg"
+  "url": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/er_seg"
 }

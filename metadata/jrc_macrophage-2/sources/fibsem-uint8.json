@@ -37,5 +37,5 @@
     "invertLUT": false
   },
   "subsources": [],
-  "URI": "s3://janelia-cosem-datasets/jrc_macrophage-2/neuroglancer/em/fibsem-uint8.precomputed"
+  "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/neuroglancer/em/fibsem-uint8.precomputed"
 }

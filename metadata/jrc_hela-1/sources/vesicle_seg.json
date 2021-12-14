@@ -64,8 +64,8 @@
       },
       "description": "",
       "ids": [],
-      "URI": "s3://janelia-cosem-datasets/jrc_hela-1/neuroglancer/mesh/vesicle_seg"
+      "url": "s3://janelia-cosem-datasets/jrc_hela-1/neuroglancer/mesh/vesicle_seg"
     }
   ],
-  "URI": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/vesicle_seg"
+  "url": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/vesicle_seg"
 }

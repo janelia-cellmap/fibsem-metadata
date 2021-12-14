@@ -64,8 +64,8 @@
       },
       "description": "",
       "ids": [],
-      "URI": "s3://janelia-cosem-datasets/jrc_macrophage-2/neuroglancer/mesh/er_mito_contacts"
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/neuroglancer/mesh/er_mito_contacts"
     }
   ],
-  "URI": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_mito_contacts"
+  "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_mito_contacts"
 }

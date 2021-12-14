@@ -64,8 +64,8 @@
       },
       "description": "",
       "ids": [],
-      "URI": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/mesh/mt-out_seg"
+      "url": "s3://janelia-cosem-datasets/jrc_jurkat-1/neuroglancer/mesh/mt-out_seg"
     }
   ],
-  "URI": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mt-out_seg"
+  "url": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mt-out_seg"
 }

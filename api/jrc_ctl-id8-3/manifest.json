@@ -70,7 +70,7 @@
     {
       "name": "fibsem-uint8",
       "description": "FIB-SEM Data (compressed)",
-      "URI": "s3://janelia-cosem-datasets/jrc_ctl-id8-3/jrc_ctl-id8-3.n5/em/fibsem-uint8",
+      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-3/jrc_ctl-id8-3.n5/em/fibsem-uint8",
       "format": "n5",
       "transform": {
         "axes": [
@@ -111,7 +111,7 @@
     {
       "name": "cell_seg",
       "description": "Whole-cell segmentation (Ariadne)",
-      "URI": "s3://janelia-cosem-datasets/jrc_ctl-id8-3/jrc_ctl-id8-3.n5/labels/ariadne/cell_seg",
+      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-3/jrc_ctl-id8-3.n5/labels/ariadne/cell_seg",
       "format": "n5",
       "transform": {
         "axes": [

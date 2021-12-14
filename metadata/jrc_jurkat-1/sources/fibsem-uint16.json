@@ -37,5 +37,5 @@
     "invertLUT": true
   },
   "subsources": [],
-  "URI": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/em/fibsem-uint16"
+  "url": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/em/fibsem-uint16"
 }

@@ -37,5 +37,5 @@
     "invertLUT": false
   },
   "subsources": [],
-  "URI": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/mt_nucleus_contacts"
+  "url": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/mt_nucleus_contacts"
 }
