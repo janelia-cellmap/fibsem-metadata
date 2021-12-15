@@ -3,7 +3,7 @@
       {
         "name": "Default view",
         "description": "The default view of the data.",
-        "position": null,
+        "position": [41225, 2891, 18730],
         "scale": null,
         "orientation": [
           0.0,
@@ -18,7 +18,7 @@
       {
       "name": "Refined, whole-cell predictions",
       "description": "Renderings of refined predictions for multiple organelles",
-      "position": null,
+      "position": [41225, 2891, 18730],
       "scale": null,
       "orientation": [
         0.0,
