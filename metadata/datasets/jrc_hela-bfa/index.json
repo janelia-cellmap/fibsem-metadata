@@ -87,7 +87,39 @@
         "color": "magenta",
         "invertLUT": false
       },
-      "subsources": []
+      "subsources": [
+        {
+          "name": "endo_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_hela-bfa/neuroglancer/mesh/endo_seg",
+          "format": "neuroglancer_multilod_draco",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "description": "",
+          "version": "0",
+          "tags": [],
+          "ids": []
+        }
+      ]
     },
     {
       "name": "er_pred",
@@ -175,7 +207,39 @@
         "color": "blue",
         "invertLUT": false
       },
-      "subsources": []
+      "subsources": [
+        {
+          "name": "er_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_hela-bfa/neuroglancer/mesh/er_seg",
+          "format": "neuroglancer_multilod_draco",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "description": "",
+          "version": "0",
+          "tags": [],
+          "ids": []
+        }
+      ]
     },
     {
       "name": "fibsem-uint8",
@@ -307,7 +371,39 @@
         "color": "green",
         "invertLUT": false
       },
-      "subsources": []
+      "subsources": [
+        {
+          "name": "mito_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_hela-bfa/neuroglancer/mesh/mito_seg",
+          "format": "neuroglancer_multilod_draco",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "description": "",
+          "version": "0",
+          "tags": [],
+          "ids": []
+        }
+      ]
     },
     {
       "name": "vesicle_pred",
@@ -351,7 +447,39 @@
         "color": "red",
         "invertLUT": false
       },
-      "subsources": []
+      "subsources": [
+        {
+          "name": "vesicle_seg",
+          "path": "s3://janelia-cosem-datasets/jrc_hela-bfa/neuroglancer/mesh/vesicle_seg",
+          "format": "neuroglancer_multilod_draco",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "description": "",
+          "version": "0",
+          "tags": [],
+          "ids": []
+        }
+      ]
     },
     {
       "name": "vesicle_seg",
@@ -402,7 +530,11 @@
     {
       "name": "Default view",
       "description": "The default view of the data.",
-      "position": null,
+      "position": [
+        41225.0,
+        2891.0,
+        18730.0
+      ],
       "scale": null,
       "orientation": [
         0.0,
@@ -417,7 +549,11 @@
     {
       "name": "Refined, whole-cell predictions",
       "description": "Renderings of refined predictions for multiple organelles",
-      "position": null,
+      "position": [
+        41225.0,
+        2891.0,
+        18730.0
+      ],
       "scale": null,
       "orientation": [
         0.0,
