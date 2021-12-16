@@ -67,214 +67,9 @@
   },
   "volumes": [
     {
-      "name": "er-mem_pred",
-      "description": "Endoplasmic Reticulum membrane",
-      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/er-mem_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          6400.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          -4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "blue",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "endo-mem_pred",
-      "description": "Endosome membrane",
-      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/endo-mem_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          6400.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          -4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "magenta",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "fibsem-uint8",
-      "description": "FIB-SEM Data (compressed)",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/neuroglancer/em/fibsem-uint8.precomputed",
-      "format": "precomputed",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          6400.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          -4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "em",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 105,
-          "end": 182,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "fibsem-uint16",
-      "description": "FIB-SEM Data (uncompressed)",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/em/fibsem-uint16",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "em",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 24444,
-          "end": 34078,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "white",
-        "invertLUT": true
-      },
-      "subsources": []
-    },
-    {
-      "name": "ribo_pred",
-      "description": "Ribosome",
-      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/ribo_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          6400.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          -4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "yellow",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "ne-mem_seg",
-      "description": "Nuclear Envelope membrane",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/ne-mem_seg",
+      "name": "mt_pm_contacts",
+      "description": "Microtubule - Plasma Membrane Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/mt_pm_contacts",
       "format": "n5",
       "transform": {
         "axes": [
@@ -299,7 +94,7 @@
         ]
       },
       "sampleType": "label",
-      "contentType": "segmentation",
+      "contentType": "analysis",
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
@@ -313,9 +108,9 @@
       "subsources": []
     },
     {
-      "name": "eres_seg",
-      "description": "Endoplasmic Reticulum Exit Sites",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/eres_seg",
+      "name": "mt-out_seg",
+      "description": "Microtubule outer",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/mt-out_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -347,6 +142,312 @@
           "end": 65535,
           "min": 0,
           "max": 65535
+        },
+        "color": "orange",
+        "invertLUT": false
+      },
+      "subsources": [
+        {
+          "name": "mt-out_seg",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_hela-2/neuroglancer/mesh/mt-out_seg",
+          "format": "neuroglancer_legacy_mesh",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "ids": []
+        }
+      ]
+    },
+    {
+      "name": "chrom_seg",
+      "description": "Chromatin",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/chrom_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "golgi-mem_seg",
+      "description": "Golgi membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/golgi-mem_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "cyan",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "er_mito_contacts",
+      "description": "ER - Mito Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/er_mito_contacts",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": [
+        {
+          "name": "er_mito_contacts",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_hela-2/neuroglancer/mesh/er_mito_contacts",
+          "format": "neuroglancer_legacy_mesh",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "ids": []
+        }
+      ]
+    },
+    {
+      "name": "ld_pred",
+      "description": "Lipid Droplet",
+      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/ld_pred",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          6400.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          -4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "prediction",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "ribo_classified",
+      "description": "Ribosomes classified by contact surface",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/ribo_classified",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "er_curvature",
+      "description": "Reconstructed ER from Medial Surface with Curvature",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/er_curvature",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
         },
         "color": "white",
         "invertLUT": false
@@ -395,9 +496,91 @@
       "subsources": []
     },
     {
-      "name": "mito_skeleton",
-      "description": "Mitochrondria Skeletons",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/mito_skeleton",
+      "name": "np_seg",
+      "description": "Nuclear Pore",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/np_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "mito-mem_pred",
+      "description": "Mitochondria membrane",
+      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/mito-mem_pred",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          6400.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          -4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "prediction",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "green",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "er_vesicle_contacts",
+      "description": "ER - Vesicle Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/er_vesicle_contacts",
       "format": "n5",
       "transform": {
         "axes": [
@@ -436,9 +619,949 @@
       "subsources": []
     },
     {
-      "name": "ne_seg",
-      "description": "Nuclear Envelope",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/ne_seg",
+      "name": "mito_mt_contacts",
+      "description": "Mitochondria - Microtubule Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/mito_mt_contacts",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "mt_nucleus_contacts",
+      "description": "Microtubule - Nucleus Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/mt_nucleus_contacts",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "golgi_mt_contacts",
+      "description": "Golgi - Microtubule Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/golgi_mt_contacts",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "mito_skeleton-lsp",
+      "description": "Mitochrondria Skeletons: Longest Shortest Path",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/mito_skeleton-lsp",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "lyso_seg",
+      "description": "Lysosome",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/lyso_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "endo_seg",
+      "description": "Endosomal Network",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/endo_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "magenta",
+        "invertLUT": false
+      },
+      "subsources": [
+        {
+          "name": "endo_seg",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_hela-2/neuroglancer/mesh/endo_seg",
+          "format": "neuroglancer_legacy_mesh",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "ids": []
+        }
+      ]
+    },
+    {
+      "name": "vesicle_seg",
+      "description": "Vesicle",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/vesicle_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "red",
+        "invertLUT": false
+      },
+      "subsources": [
+        {
+          "name": "vesicle_seg",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_hela-2/neuroglancer/mesh/vesicle_seg",
+          "format": "neuroglancer_legacy_mesh",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "ids": []
+        }
+      ]
+    },
+    {
+      "name": "nhchrom_seg",
+      "description": "Nucleoulus associated Heterochromatin",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/nhchrom_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "pm_pred",
+      "description": "Plasma Membrane",
+      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/pm_pred",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          6400.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          -4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "prediction",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "orange",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "pm_seg",
+      "description": "Plasma Membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/pm_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "orange",
+        "invertLUT": false
+      },
+      "subsources": [
+        {
+          "name": "pm_seg",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_hela-2/neuroglancer/mesh/pm_seg",
+          "format": "neuroglancer_legacy_mesh",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "ids": []
+        }
+      ]
+    },
+    {
+      "name": "lyso-mem_seg",
+      "description": "Lysosome membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/lyso-mem_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "ne-mem_pred",
+      "description": "Nuclear Envelope membrane",
+      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/ne-mem_pred",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          6400.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          -4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "prediction",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "lyso_pred",
+      "description": "Lysosome",
+      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/lyso_pred",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          6400.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          -4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "prediction",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "endo-mem_seg",
+      "description": "Endosome membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/endo-mem_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "magenta",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "fibsem-uint8",
+      "description": "FIB-SEM Data (compressed)",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/neuroglancer/em/fibsem-uint8.precomputed",
+      "format": "precomputed",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          6400.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          -4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "em",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 105,
+          "end": 182,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "mt_vesicle_contacts",
+      "description": "Microtubule - Vesicle Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/mt_vesicle_contacts",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "er_mt_contacts",
+      "description": "ER - Microtubule Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/er_mt_contacts",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "ribo_pred",
+      "description": "Ribosome",
+      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/ribo_pred",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          6400.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          -4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "prediction",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "yellow",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "ecs_pred",
+      "description": "Extracellular Space",
+      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/ecs_pred",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          6400.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          -4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "prediction",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "mito_seg",
+      "description": "Mitochondria",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/mito_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "green",
+        "invertLUT": false
+      },
+      "subsources": [
+        {
+          "name": "mito_seg",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_hela-2/neuroglancer/mesh/mito_seg",
+          "format": "neuroglancer_legacy_mesh",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "ids": []
+        }
+      ]
+    },
+    {
+      "name": "cent_seg",
+      "description": "Centrosome",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/cent_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -475,6 +1598,476 @@
         "invertLUT": false
       },
       "subsources": []
+    },
+    {
+      "name": "endo_mt_contacts",
+      "description": "Endosome - Microtubule Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/endo_mt_contacts",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "nucleus_seg",
+      "description": "Nucleus",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/nucleus_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "red",
+        "invertLUT": false
+      },
+      "subsources": [
+        {
+          "name": "nucleus_seg",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_hela-2/neuroglancer/mesh/nucleus_seg",
+          "format": "neuroglancer_legacy_mesh",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "ids": []
+        }
+      ]
+    },
+    {
+      "name": "ribo_seg",
+      "description": "Ribosome",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/ribo_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 4294967295,
+          "min": 0,
+          "max": 4294967295
+        },
+        "color": "yellow",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "ld-mem_seg",
+      "description": "Lipid Droplet membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/ld-mem_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "vesicle-mem_seg",
+      "description": "Vesicle membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/vesicle-mem_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "red",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "nucleolus_pred",
+      "description": "Nucleoulus",
+      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/nucleolus_pred",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          6400.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          -4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "prediction",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "ne_pred",
+      "description": "Nuclear Envelope",
+      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/ne_pred",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          6400.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          -4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "prediction",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "er_pm_contacts",
+      "description": "ER - Plasma Membrane Contat Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/er_pm_contacts",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "golgi_vesicle_contacts",
+      "description": "Golgi - Vesicle Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/golgi_vesicle_contacts",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": null,
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "golgi_seg",
+      "description": "Golgi",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/golgi_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "cyan",
+        "invertLUT": false
+      },
+      "subsources": [
+        {
+          "name": "golgi_seg",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_hela-2/neuroglancer/mesh/golgi_seg",
+          "format": "neuroglancer_legacy_mesh",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "ids": []
+        }
+      ]
     },
     {
       "name": "er-mem_seg",
@@ -559,9 +2152,91 @@
       "subsources": []
     },
     {
-      "name": "ld-mem_pred",
-      "description": "Lipid Droplet membrane",
-      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/ld-mem_pred",
+      "name": "ld_seg",
+      "description": "Lipid Droplet",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/ld_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "endo_golgi_contacts",
+      "description": "Endosome - Golgi Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/endo_golgi_contacts",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "endo-mem_pred",
+      "description": "Endosome membrane",
+      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/endo-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -594,15 +2269,15 @@
           "min": 0,
           "max": 255
         },
-        "color": "white",
+        "color": "magenta",
         "invertLUT": false
       },
       "subsources": []
     },
     {
-      "name": "mito_mt_contacts",
-      "description": "Mitochondria - Microtubule Contact Sites",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/mito_mt_contacts",
+      "name": "er_medial-surface",
+      "description": "ER Medial Surface",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/er_medial-surface",
       "format": "n5",
       "transform": {
         "axes": [
@@ -628,687 +2303,12 @@
       },
       "sampleType": "label",
       "contentType": "analysis",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "mito-mem_seg",
-      "description": "Mitochondria membrane",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/mito-mem_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "green",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "lyso_pred",
-      "description": "Lysosome",
-      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/lyso_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          6400.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          -4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
           "end": 255,
           "min": 0,
           "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "np_seg",
-      "description": "Nuclear Pore",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/np_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "er_mito_contacts",
-      "description": "ER - Mito Contact Sites",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/er_mito_contacts",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "analysis",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": [
-        {
-          "name": "er_mito_contacts",
-          "description": "",
-          "url": "s3://janelia-cosem-datasets/jrc_hela-2/neuroglancer/mesh/er_mito_contacts",
-          "format": "neuroglancer_legacy_mesh",
-          "transform": {
-            "axes": [
-              "z",
-              "y",
-              "x"
-            ],
-            "units": [
-              "nm",
-              "nm",
-              "nm"
-            ],
-            "translate": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "scale": [
-              1.0,
-              1.0,
-              1.0
-            ]
-          },
-          "ids": []
-        }
-      ]
-    },
-    {
-      "name": "endo_mt_contacts",
-      "description": "Endosome - Microtubule Contact Sites",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/endo_mt_contacts",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "analysis",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "vesicle-mem_seg",
-      "description": "Vesicle membrane",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/vesicle-mem_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "red",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "mito_pm_contacts",
-      "description": "Mito - Plasma Membrane Contact Sites",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/mito_pm_contacts",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "analysis",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "vesicle-mem_pred",
-      "description": "Vesicle membrane",
-      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/vesicle-mem_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          6400.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          -4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "red",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "mito-mem_pred",
-      "description": "Mitochondria membrane",
-      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/mito-mem_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          6400.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          -4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "green",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "er_golgi_contacts",
-      "description": "ER - Golgi Contact Sites",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/er_golgi_contacts",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "analysis",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "chrom_pred",
-      "description": "Chromatin",
-      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/chrom_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          6400.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          -4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "mt_nucleus_contacts",
-      "description": "Microtubule - Nucleus Contact Sites",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/mt_nucleus_contacts",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "analysis",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "mt-out_seg",
-      "description": "Microtubule outer",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/mt-out_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "orange",
-        "invertLUT": false
-      },
-      "subsources": [
-        {
-          "name": "mt-out_seg",
-          "description": "",
-          "url": "s3://janelia-cosem-datasets/jrc_hela-2/neuroglancer/mesh/mt-out_seg",
-          "format": "neuroglancer_legacy_mesh",
-          "transform": {
-            "axes": [
-              "z",
-              "y",
-              "x"
-            ],
-            "units": [
-              "nm",
-              "nm",
-              "nm"
-            ],
-            "translate": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "scale": [
-              1.0,
-              1.0,
-              1.0
-            ]
-          },
-          "ids": []
-        }
-      ]
-    },
-    {
-      "name": "golgi-mem_seg",
-      "description": "Golgi membrane",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/golgi-mem_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "cyan",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "nucleolus_seg",
-      "description": "Nucleoulus",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/nucleolus_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
         },
         "color": "white",
         "invertLUT": false
@@ -1357,9 +2357,9 @@
       "subsources": []
     },
     {
-      "name": "mito_skeleton-lsp",
-      "description": "Mitochrondria Skeletons: Longest Shortest Path",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/mito_skeleton-lsp",
+      "name": "fibsem-uint16",
+      "description": "FIB-SEM Data (uncompressed)",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/em/fibsem-uint16",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1380,221 +2380,27 @@
         "scale": [
           5.24,
           4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "analysis",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "pm_pred",
-      "description": "Plasma Membrane",
-      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/pm_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          6400.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          -4.0,
           4.0
         ]
       },
       "sampleType": "scalar",
-      "contentType": "prediction",
+      "contentType": "em",
       "displaySettings": {
         "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "orange",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "vesicle_seg",
-      "description": "Vesicle",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/vesicle_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "red",
-        "invertLUT": false
-      },
-      "subsources": [
-        {
-          "name": "vesicle_seg",
-          "description": "",
-          "url": "s3://janelia-cosem-datasets/jrc_hela-2/neuroglancer/mesh/vesicle_seg",
-          "format": "neuroglancer_legacy_mesh",
-          "transform": {
-            "axes": [
-              "z",
-              "y",
-              "x"
-            ],
-            "units": [
-              "nm",
-              "nm",
-              "nm"
-            ],
-            "translate": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "scale": [
-              1.0,
-              1.0,
-              1.0
-            ]
-          },
-          "ids": []
-        }
-      ]
-    },
-    {
-      "name": "ribo_seg",
-      "description": "Ribosome",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/ribo_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 4294967295,
-          "min": 0,
-          "max": 4294967295
-        },
-        "color": "yellow",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "er_mt_contacts",
-      "description": "ER - Microtubule Contact Sites",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/er_mt_contacts",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "analysis",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
+          "start": 24444,
+          "end": 34078,
           "min": 0,
           "max": 65535
         },
         "color": "white",
-        "invertLUT": false
+        "invertLUT": true
       },
       "subsources": []
     },
     {
-      "name": "pm_seg",
-      "description": "Plasma Membrane",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/pm_seg",
+      "name": "cent-dapp_seg",
+      "description": "Centrosome Distal Appendage",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/cent-dapp_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1620,77 +2426,6 @@
       },
       "sampleType": "label",
       "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "orange",
-        "invertLUT": false
-      },
-      "subsources": [
-        {
-          "name": "pm_seg",
-          "description": "",
-          "url": "s3://janelia-cosem-datasets/jrc_hela-2/neuroglancer/mesh/pm_seg",
-          "format": "neuroglancer_legacy_mesh",
-          "transform": {
-            "axes": [
-              "z",
-              "y",
-              "x"
-            ],
-            "units": [
-              "nm",
-              "nm",
-              "nm"
-            ],
-            "translate": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "scale": [
-              1.0,
-              1.0,
-              1.0
-            ]
-          },
-          "ids": []
-        }
-      ]
-    },
-    {
-      "name": "mt_pm_contacts",
-      "description": "Microtubule - Plasma Membrane Contact Sites",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/mt_pm_contacts",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "analysis",
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
@@ -1704,80 +2439,9 @@
       "subsources": []
     },
     {
-      "name": "endo_seg",
-      "description": "Endosomal Network",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/endo_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "magenta",
-        "invertLUT": false
-      },
-      "subsources": [
-        {
-          "name": "endo_seg",
-          "description": "",
-          "url": "s3://janelia-cosem-datasets/jrc_hela-2/neuroglancer/mesh/endo_seg",
-          "format": "neuroglancer_legacy_mesh",
-          "transform": {
-            "axes": [
-              "z",
-              "y",
-              "x"
-            ],
-            "units": [
-              "nm",
-              "nm",
-              "nm"
-            ],
-            "translate": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "scale": [
-              1.0,
-              1.0,
-              1.0
-            ]
-          },
-          "ids": []
-        }
-      ]
-    },
-    {
-      "name": "ne-mem_pred",
-      "description": "Nuclear Envelope membrane",
-      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/ne-mem_pred",
+      "name": "chrom_pred",
+      "description": "Chromatin",
+      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/chrom_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1816,121 +2480,9 @@
       "subsources": []
     },
     {
-      "name": "ecs_pred",
-      "description": "Extracellular Space",
-      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/ecs_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          6400.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          -4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "nucleus_seg",
-      "description": "Nucleus",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/nucleus_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "red",
-        "invertLUT": false
-      },
-      "subsources": [
-        {
-          "name": "nucleus_seg",
-          "description": "",
-          "url": "s3://janelia-cosem-datasets/jrc_hela-2/neuroglancer/mesh/nucleus_seg",
-          "format": "neuroglancer_legacy_mesh",
-          "transform": {
-            "axes": [
-              "z",
-              "y",
-              "x"
-            ],
-            "units": [
-              "nm",
-              "nm",
-              "nm"
-            ],
-            "translate": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "scale": [
-              1.0,
-              1.0,
-              1.0
-            ]
-          },
-          "ids": []
-        }
-      ]
-    },
-    {
-      "name": "endo_golgi_contacts",
-      "description": "Endosome - Golgi Contact Sites",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/endo_golgi_contacts",
+      "name": "er_golgi_contacts",
+      "description": "ER - Golgi Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/er_golgi_contacts",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1969,9 +2521,9 @@
       "subsources": []
     },
     {
-      "name": "er_medial-surface",
-      "description": "ER Medial Surface",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/er_medial-surface",
+      "name": "ld-mem_pred",
+      "description": "Lipid Droplet membrane",
+      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/ld-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1986,17 +2538,17 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          6400.0,
           0.0
         ],
         "scale": [
           5.24,
-          4.0,
+          -4.0,
           4.0
         ]
       },
-      "sampleType": "label",
-      "contentType": "analysis",
+      "sampleType": "scalar",
+      "contentType": "prediction",
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
@@ -2010,9 +2562,9 @@
       "subsources": []
     },
     {
-      "name": "cent_seg",
-      "description": "Centrosome",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/cent_seg",
+      "name": "eres_pred",
+      "description": "Endoplasmic Reticulum Exit Sites",
+      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/eres_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2027,17 +2579,17 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          6400.0,
           0.0
         ],
         "scale": [
           5.24,
-          4.0,
+          -4.0,
           4.0
         ]
       },
-      "sampleType": "label",
-      "contentType": "segmentation",
+      "sampleType": "scalar",
+      "contentType": "prediction",
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
@@ -2051,91 +2603,50 @@
       "subsources": []
     },
     {
-      "name": "ne_pred",
+      "name": "er_pred",
+      "description": "Endoplasmic Reticulum",
+      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/er_pred",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          6400.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          -4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "prediction",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "blue",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "ne_seg",
       "description": "Nuclear Envelope",
-      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/ne_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          6400.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          -4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "endo_er_contacts",
-      "description": "Endosome - ER Contact Sites",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/endo_er_contacts",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "analysis",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "lyso_seg",
-      "description": "Lysosome",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/lyso_seg",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/ne_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2161,47 +2672,6 @@
       },
       "sampleType": "label",
       "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "ld_pred",
-      "description": "Lipid Droplet",
-      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/ld_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          6400.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          -4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
@@ -2256,50 +2726,9 @@
       "subsources": []
     },
     {
-      "name": "nhchrom_seg",
-      "description": "Nucleoulus associated Heterochromatin",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/nhchrom_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "er_vesicle_contacts",
-      "description": "ER - Vesicle Contact Sites",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/er_vesicle_contacts",
+      "name": "mito_skeleton",
+      "description": "Mitochrondria Skeletons",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/mito_skeleton",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2338,50 +2767,9 @@
       "subsources": []
     },
     {
-      "name": "ld_seg",
-      "description": "Lipid Droplet",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/ld_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "np_pred",
-      "description": "Nuclear Pore",
-      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/np_pred",
+      "name": "er-mem_pred",
+      "description": "Endoplasmic Reticulum membrane",
+      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/er-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2414,15 +2802,15 @@
           "min": 0,
           "max": 255
         },
-        "color": "white",
+        "color": "blue",
         "invertLUT": false
       },
       "subsources": []
     },
     {
-      "name": "nucleolus_pred",
-      "description": "Nucleoulus",
-      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/nucleolus_pred",
+      "name": "vesicle-mem_pred",
+      "description": "Vesicle membrane",
+      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/vesicle-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2455,130 +2843,7 @@
           "min": 0,
           "max": 255
         },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "ribo_classified",
-      "description": "Ribosomes classified by contact surface",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/ribo_classified",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "analysis",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "endo_pred",
-      "description": "Endosomal Network",
-      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/endo_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          6400.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          -4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "magenta",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "mt_vesicle_contacts",
-      "description": "Microtubule - Vesicle Contact Sites",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/mt_vesicle_contacts",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "analysis",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "white",
+        "color": "red",
         "invertLUT": false
       },
       "subsources": []
@@ -2655,118 +2920,6 @@
       ]
     },
     {
-      "name": "mito_seg",
-      "description": "Mitochondria",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/mito_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "green",
-        "invertLUT": false
-      },
-      "subsources": [
-        {
-          "name": "mito_seg",
-          "description": "",
-          "url": "s3://janelia-cosem-datasets/jrc_hela-2/neuroglancer/mesh/mito_seg",
-          "format": "neuroglancer_legacy_mesh",
-          "transform": {
-            "axes": [
-              "z",
-              "y",
-              "x"
-            ],
-            "units": [
-              "nm",
-              "nm",
-              "nm"
-            ],
-            "translate": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "scale": [
-              1.0,
-              1.0,
-              1.0
-            ]
-          },
-          "ids": []
-        }
-      ]
-    },
-    {
-      "name": "eres_pred",
-      "description": "Endoplasmic Reticulum Exit Sites",
-      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/eres_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          6400.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          -4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
       "name": "cent-dapp_pred",
       "description": "Centrosome Distal Appendage",
       "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/cent-dapp_pred",
@@ -2808,9 +2961,9 @@
       "subsources": []
     },
     {
-      "name": "chrom_seg",
-      "description": "Chromatin",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/chrom_seg",
+      "name": "eres_seg",
+      "description": "Endoplasmic Reticulum Exit Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/eres_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2849,132 +3002,9 @@
       "subsources": []
     },
     {
-      "name": "er_curvature",
-      "description": "Reconstructed ER from Medial Surface with Curvature",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/er_curvature",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "analysis",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "golgi_mt_contacts",
-      "description": "Golgi - Microtubule Contact Sites",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/golgi_mt_contacts",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "analysis",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "er_pred",
-      "description": "Endoplasmic Reticulum",
-      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/er_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          6400.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          -4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "blue",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "lyso-mem_seg",
-      "description": "Lysosome membrane",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/lyso-mem_seg",
+      "name": "mito-mem_seg",
+      "description": "Mitochondria membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/mito-mem_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -3007,201 +3037,7 @@
           "min": 0,
           "max": 65535
         },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "er_ribo_contacts",
-      "description": "ER - Ribosome Contact Sites",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/er_ribo_contacts",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "analysis",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 4294967295,
-          "min": 0,
-          "max": 4294967295
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "golgi_seg",
-      "description": "Golgi",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/golgi_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "cyan",
-        "invertLUT": false
-      },
-      "subsources": [
-        {
-          "name": "golgi_seg",
-          "description": "",
-          "url": "s3://janelia-cosem-datasets/jrc_hela-2/neuroglancer/mesh/golgi_seg",
-          "format": "neuroglancer_legacy_mesh",
-          "transform": {
-            "axes": [
-              "z",
-              "y",
-              "x"
-            ],
-            "units": [
-              "nm",
-              "nm",
-              "nm"
-            ],
-            "translate": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "scale": [
-              1.0,
-              1.0,
-              1.0
-            ]
-          },
-          "ids": []
-        }
-      ]
-    },
-    {
-      "name": "endo-mem_seg",
-      "description": "Endosome membrane",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/endo-mem_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "magenta",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    {
-      "name": "cent-dapp_seg",
-      "description": "Centrosome Distal Appendage",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/cent-dapp_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          5.24,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
+        "color": "green",
         "invertLUT": false
       },
       "subsources": []
@@ -3248,9 +3084,50 @@
       "subsources": []
     },
     {
-      "name": "golgi_vesicle_contacts",
-      "description": "Golgi - Vesicle Contact Sites",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/golgi_vesicle_contacts",
+      "name": "np_pred",
+      "description": "Nuclear Pore",
+      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/np_pred",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          6400.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          -4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "prediction",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "mito_pm_contacts",
+      "description": "Mito - Plasma Membrane Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/mito_pm_contacts",
       "format": "n5",
       "transform": {
         "axes": [
@@ -3283,15 +3160,138 @@
           "min": 0,
           "max": 65535
         },
-        "color": null,
+        "color": "white",
         "invertLUT": false
       },
       "subsources": []
     },
     {
-      "name": "er_pm_contacts",
-      "description": "ER - Plasma Membrane Contat Sites",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/er_pm_contacts",
+      "name": "nucleolus_seg",
+      "description": "Nucleoulus",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/nucleolus_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "endo_pred",
+      "description": "Endosomal Network",
+      "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/endo_pred",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          6400.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          -4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "prediction",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "magenta",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "ne-mem_seg",
+      "description": "Nuclear Envelope membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/ne-mem_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          5.24,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "endo_er_contacts",
+      "description": "Endosome - ER Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/endo_er_contacts",
       "format": "n5",
       "transform": {
         "axes": [
@@ -3371,9 +3371,9 @@
       "subsources": []
     },
     {
-      "name": "ld-mem_seg",
-      "description": "Lipid Droplet membrane",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/ld-mem_seg",
+      "name": "er_ribo_contacts",
+      "description": "ER - Ribosome Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/er_ribo_contacts",
       "format": "n5",
       "transform": {
         "axes": [
@@ -3398,13 +3398,13 @@
         ]
       },
       "sampleType": "label",
-      "contentType": "segmentation",
+      "contentType": "analysis",
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
-          "end": 65535,
+          "end": 4294967295,
           "min": 0,
-          "max": 65535
+          "max": 4294967295
         },
         "color": "white",
         "invertLUT": false

@@ -66,47 +66,6 @@
   },
   "volumes": [
     {
-      "name": "fibsem-uint8",
-      "description": "FIB-SEM Data (compressed)",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-1/neuroglancer/em/fibsem-uint8.precomputed",
-      "format": "precomputed",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          8000.0,
-          0.0
-        ],
-        "scale": [
-          8.0,
-          -8.0,
-          8.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "em",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 99,
-          "end": 142,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
-        "invertLUT": true
-      },
-      "subsources": []
-    },
-    {
       "name": "nucleus_pred",
       "description": "Nucleus",
       "url": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/nucleus_pred",
@@ -146,6 +105,148 @@
         "invertLUT": false
       },
       "subsources": []
+    },
+    {
+      "name": "endo_seg",
+      "description": "Endosomal Network",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/endo_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          4.0,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "magenta",
+        "invertLUT": false
+      },
+      "subsources": [
+        {
+          "name": "endo_seg",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_hela-1/neuroglancer/mesh/endo_seg",
+          "format": "neuroglancer_legacy_mesh",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "ids": []
+        }
+      ]
+    },
+    {
+      "name": "vesicle_seg",
+      "description": "Vesicle",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/vesicle_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          4.0,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 4294967295,
+          "min": 0,
+          "max": 4294967295
+        },
+        "color": "red",
+        "invertLUT": false
+      },
+      "subsources": [
+        {
+          "name": "vesicle_seg",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_hela-1/neuroglancer/mesh/vesicle_seg",
+          "format": "neuroglancer_legacy_mesh",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "ids": []
+        }
+      ]
     },
     {
       "name": "mito_pred",
@@ -230,77 +331,6 @@
       "subsources": []
     },
     {
-      "name": "vesicle_seg",
-      "description": "Vesicle",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/vesicle_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          4.0,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 4294967295,
-          "min": 0,
-          "max": 4294967295
-        },
-        "color": "red",
-        "invertLUT": false
-      },
-      "subsources": [
-        {
-          "name": "vesicle_seg",
-          "description": "",
-          "url": "s3://janelia-cosem-datasets/jrc_hela-1/neuroglancer/mesh/vesicle_seg",
-          "format": "neuroglancer_legacy_mesh",
-          "transform": {
-            "axes": [
-              "z",
-              "y",
-              "x"
-            ],
-            "units": [
-              "nm",
-              "nm",
-              "nm"
-            ],
-            "translate": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "scale": [
-              1.0,
-              1.0,
-              1.0
-            ]
-          },
-          "ids": []
-        }
-      ]
-    },
-    {
       "name": "pm_seg",
       "description": "Plasma Membrane",
       "url": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/pm_seg",
@@ -372,9 +402,50 @@
       ]
     },
     {
-      "name": "endo_seg",
-      "description": "Endosomal Network",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/endo_seg",
+      "name": "fibsem-uint8",
+      "description": "FIB-SEM Data (compressed)",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-1/neuroglancer/em/fibsem-uint8.precomputed",
+      "format": "precomputed",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          8000.0,
+          0.0
+        ],
+        "scale": [
+          8.0,
+          -8.0,
+          8.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "em",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 99,
+          "end": 142,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": true
+      },
+      "subsources": []
+    },
+    {
+      "name": "mito_seg",
+      "description": "Mitochondria",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/mito_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -407,14 +478,14 @@
           "min": 0,
           "max": 65535
         },
-        "color": "magenta",
+        "color": "green",
         "invertLUT": false
       },
       "subsources": [
         {
-          "name": "endo_seg",
+          "name": "mito_seg",
           "description": "",
-          "url": "s3://janelia-cosem-datasets/jrc_hela-1/neuroglancer/mesh/endo_seg",
+          "url": "s3://janelia-cosem-datasets/jrc_hela-1/neuroglancer/mesh/mito_seg",
           "format": "neuroglancer_legacy_mesh",
           "transform": {
             "axes": [
@@ -441,47 +512,6 @@
           "ids": []
         }
       ]
-    },
-    {
-      "name": "vesicle_pred",
-      "description": "Vesicle",
-      "url": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/vesicle_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          4.0,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "red",
-        "invertLUT": false
-      },
-      "subsources": []
     },
     {
       "name": "nucleus_seg",
@@ -555,9 +585,9 @@
       ]
     },
     {
-      "name": "endo_pred",
-      "description": "Endosomal Network",
-      "url": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/endo_pred",
+      "name": "er_pred",
+      "description": "Endoplasmic Reticulum",
+      "url": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/er_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -590,7 +620,48 @@
           "min": 0,
           "max": 255
         },
-        "color": "magenta",
+        "color": "blue",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    {
+      "name": "vesicle_pred",
+      "description": "Vesicle",
+      "url": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/vesicle_pred",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          4.0,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "prediction",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "red",
         "invertLUT": false
       },
       "subsources": []
@@ -667,80 +738,9 @@
       ]
     },
     {
-      "name": "mito_seg",
-      "description": "Mitochondria",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/mito_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          4.0,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "green",
-        "invertLUT": false
-      },
-      "subsources": [
-        {
-          "name": "mito_seg",
-          "description": "",
-          "url": "s3://janelia-cosem-datasets/jrc_hela-1/neuroglancer/mesh/mito_seg",
-          "format": "neuroglancer_legacy_mesh",
-          "transform": {
-            "axes": [
-              "z",
-              "y",
-              "x"
-            ],
-            "units": [
-              "nm",
-              "nm",
-              "nm"
-            ],
-            "translate": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "scale": [
-              1.0,
-              1.0,
-              1.0
-            ]
-          },
-          "ids": []
-        }
-      ]
-    },
-    {
-      "name": "er_pred",
-      "description": "Endoplasmic Reticulum",
-      "url": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/er_pred",
+      "name": "endo_pred",
+      "description": "Endosomal Network",
+      "url": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/endo_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -773,7 +773,7 @@
           "min": 0,
           "max": 255
         },
-        "color": "blue",
+        "color": "magenta",
         "invertLUT": false
       },
       "subsources": []
