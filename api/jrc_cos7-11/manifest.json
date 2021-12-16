@@ -65,8 +65,8 @@
       "Heinrich et al., 2020"
     ]
   },
-  "volumes": [
-    {
+  "sources": {
+    "mito_pred": {
       "name": "mito_pred",
       "description": "Mitochondria",
       "url": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/labels/mito_pred",
@@ -107,7 +107,7 @@
       },
       "subsources": []
     },
-    {
+    "er_sim": {
       "name": "er_sim",
       "description": "Light Microscopy (SIM) of the ER",
       "url": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/lm/er_sim",
@@ -148,7 +148,7 @@
       },
       "subsources": []
     },
-    {
+    "mito_palm": {
       "name": "mito_palm",
       "description": "Light Microscopy (PALM) of Mitochondria",
       "url": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/lm/mito_palm",
@@ -189,7 +189,7 @@
       },
       "subsources": []
     },
-    {
+    "fibsem-uint16": {
       "name": "fibsem-uint16",
       "description": "FIB-SEM Data (uncompressed)",
       "url": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/em/fibsem-uint16",
@@ -230,7 +230,7 @@
       },
       "subsources": []
     },
-    {
+    "er_pred": {
       "name": "er_pred",
       "description": "Endoplasmic Reticulum",
       "url": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/labels/er_pred",
@@ -271,7 +271,7 @@
       },
       "subsources": []
     },
-    {
+    "mito_sim": {
       "name": "mito_sim",
       "description": "Light Microscopy (SIM) of Mitochondria",
       "url": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/lm/mito_sim",
@@ -312,7 +312,7 @@
       },
       "subsources": []
     },
-    {
+    "er_palm": {
       "name": "er_palm",
       "description": "Light Microscopy (PALM) of ER",
       "url": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/lm/er_palm",
@@ -353,7 +353,7 @@
       },
       "subsources": []
     }
-  ],
+  },
   "views": [
     {
       "name": "Default view",

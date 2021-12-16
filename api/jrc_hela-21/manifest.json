@@ -64,8 +64,8 @@
       "Weigel, Chang, et al., 2021"
     ]
   },
-  "volumes": [
-    {
+  "sources": {
+    "fibsem-uint8": {
       "name": "fibsem-uint8",
       "description": "FIB-SEM Data (compressed)",
       "url": "s3://janelia-cosem-datasets/jrc_hela-21/jrc_hela-21.n5/em/fibsem-uint8",
@@ -106,7 +106,7 @@
       },
       "subsources": []
     }
-  ],
+  },
   "views": [
     {
       "name": "Default view",

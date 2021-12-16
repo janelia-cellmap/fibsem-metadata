@@ -66,8 +66,8 @@
       "Heinrich et al., 2020"
     ]
   },
-  "volumes": [
-    {
+  "sources": {
+    "fibsem-uint8": {
       "name": "fibsem-uint8",
       "description": "FIB-SEM Data (compressed)",
       "url": "s3://janelia-cosem-datasets/jrc_sum159-1/neuroglancer/em/fibsem-uint8.precomputed",
@@ -108,7 +108,7 @@
       },
       "subsources": []
     },
-    {
+    "fibsem-uint16": {
       "name": "fibsem-uint16",
       "description": "FIB-SEM Data (uncompressed)",
       "url": "s3://janelia-cosem-datasets/jrc_sum159-1/jrc_sum159-1.n5/em/fibsem-uint16",
@@ -149,7 +149,7 @@
       },
       "subsources": []
     },
-    {
+    "gt": {
       "name": "gt",
       "description": "Ground truth",
       "url": "s3://janelia-cosem-datasets/jrc_sum159-1/jrc_sum159-1.n5/labels/gt",
@@ -190,7 +190,7 @@
       },
       "subsources": []
     }
-  ],
+  },
   "views": [
     {
       "name": "Default view",

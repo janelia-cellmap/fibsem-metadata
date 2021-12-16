@@ -66,8 +66,8 @@
       "Ritter et al., 2021"
     ]
   },
-  "volumes": [
-    {
+  "sources": {
+    "fibsem-uint8": {
       "name": "fibsem-uint8",
       "description": "FIB-SEM Data (compressed)",
       "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-3/jrc_ctl-id8-3.n5/em/fibsem-uint8",
@@ -108,7 +108,7 @@
       },
       "subsources": []
     },
-    {
+    "cell_seg": {
       "name": "cell_seg",
       "description": "Whole-cell segmentation (Ariadne)",
       "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-3/jrc_ctl-id8-3.n5/labels/ariadne/cell_seg",
@@ -149,7 +149,7 @@
       },
       "subsources": []
     }
-  ],
+  },
   "views": [
     {
       "name": "Default view",
