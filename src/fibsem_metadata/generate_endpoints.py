@@ -37,11 +37,12 @@ def build_manifest(dataset_path: Union[Path, str], output_dir: Union[Path, str])
     views_path = root / "views.json"
     thumbnail_path = root / "thumbnail.jpg"
 
-    volumes = [materialize_element(path, VolumeSource) for path in source_paths]
+    sources = [materialize_element(path, VolumeSource) for path in source_paths]
+    sources_dict = {s.name: s for s in sources}
     views = materialize_element(views_path, DatasetViews)
     metadata = materialize_element(metadata_path, DatasetMetadata)
     manifest = DatasetManifest(
-        name=name, metadata=metadata, volumes=volumes, views=views.views
+        name=name, metadata=metadata, sources=sources_dict, views=views.views
     )
 
     if not output_dir.exists():

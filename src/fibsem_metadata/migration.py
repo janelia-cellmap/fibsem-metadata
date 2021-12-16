@@ -9,20 +9,11 @@ def migrate_source(path: str) -> int:
     with open(path) as fh:
         blob = json.load(fh)
     try:
-        blob["url"] = blob.pop("URI")
-        subsources = []
-        for subsource in blob["subsources"]:
-            subsource["url"] = subsource.pop("URI")
-            subsources.append(subsource)
-        blob["subsources"] = subsources
+        sources = blob['volumes']
+        blob['sources'] = {s.name: s for s in sources}
     except KeyError:
         pass
-    for extra_key in ("dataType", "tags", "version"):
-        if extra_key in blob:
-            blob.pop(extra_key)
-        for subsource in blob["subsources"]:
-            if extra_key in subsource:
-                subsource.pop(extra_key)
+
     # validate
     try:
         v = VolumeSource(**blob)
