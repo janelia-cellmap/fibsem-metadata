@@ -60,8 +60,8 @@
       "Xu et al., 2020"
     ]
   },
-  "volumes": [
-    {
+  "sources": {
+    "fibsem-uint16": {
       "name": "fibsem-uint16",
       "description": "FIB-SEM Data (uncompressed)",
       "url": "s3://janelia-cosem-datasets/jrc_fly-fsb-1/jrc_fly-fsb-1.n5/em/fibsem-uint16",
@@ -102,7 +102,7 @@
       },
       "subsources": []
     }
-  ],
+  },
   "views": [
     {
       "name": "Default view",

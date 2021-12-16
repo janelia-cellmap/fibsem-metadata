@@ -66,8 +66,8 @@
       "Ritter et al., 2021"
     ]
   },
-  "volumes": [
-    {
+  "sources": {
+    "lyso_seg": {
       "name": "lyso_seg",
       "description": "Lysosome (Ariadne)",
       "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/lyso_seg",
@@ -108,7 +108,7 @@
       },
       "subsources": []
     },
-    {
+    "endo_seg": {
       "name": "endo_seg",
       "description": "Endosomal Network (Ariadne)",
       "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/endo_seg",
@@ -149,7 +149,7 @@
       },
       "subsources": []
     },
-    {
+    "fibsem-uint8": {
       "name": "fibsem-uint8",
       "description": "FIB-SEM Data (compressed)",
       "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/em/fibsem-uint8",
@@ -190,7 +190,7 @@
       },
       "subsources": []
     },
-    {
+    "mito_seg": {
       "name": "mito_seg",
       "description": "Mitochondria (Ariadne)",
       "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/mito_seg",
@@ -231,7 +231,7 @@
       },
       "subsources": []
     },
-    {
+    "cent_seg": {
       "name": "cent_seg",
       "description": "Centrosome (Ariadne)",
       "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/cent_seg",
@@ -272,7 +272,7 @@
       },
       "subsources": []
     },
-    {
+    "nucleus_seg": {
       "name": "nucleus_seg",
       "description": "Nucleus (Ariadne)",
       "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/nucleus_seg",
@@ -313,7 +313,7 @@
       },
       "subsources": []
     },
-    {
+    "cell_seg": {
       "name": "cell_seg",
       "description": "Whole-cell segmentation (Ariadne)",
       "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/cell_seg",
@@ -354,7 +354,7 @@
       },
       "subsources": []
     },
-    {
+    "er_seg": {
       "name": "er_seg",
       "description": "Endoplasmic Reticulum (Ariadne)",
       "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/er_seg",
@@ -395,7 +395,7 @@
       },
       "subsources": []
     }
-  ],
+  },
   "views": [
     {
       "name": "Default view",

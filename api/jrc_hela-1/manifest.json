@@ -64,8 +64,8 @@
       "Heinrich et al., 2020"
     ]
   },
-  "volumes": [
-    {
+  "sources": {
+    "nucleus_pred": {
       "name": "nucleus_pred",
       "description": "Nucleus",
       "url": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/nucleus_pred",
@@ -106,7 +106,7 @@
       },
       "subsources": []
     },
-    {
+    "endo_seg": {
       "name": "endo_seg",
       "description": "Endosomal Network",
       "url": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/endo_seg",
@@ -177,7 +177,7 @@
         }
       ]
     },
-    {
+    "vesicle_seg": {
       "name": "vesicle_seg",
       "description": "Vesicle",
       "url": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/vesicle_seg",
@@ -248,7 +248,7 @@
         }
       ]
     },
-    {
+    "mito_pred": {
       "name": "mito_pred",
       "description": "Mitochondria",
       "url": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/mito_pred",
@@ -289,7 +289,7 @@
       },
       "subsources": []
     },
-    {
+    "pm_pred": {
       "name": "pm_pred",
       "description": "Plasma Membrane",
       "url": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/pm_pred",
@@ -330,7 +330,7 @@
       },
       "subsources": []
     },
-    {
+    "pm_seg": {
       "name": "pm_seg",
       "description": "Plasma Membrane",
       "url": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/pm_seg",
@@ -401,7 +401,7 @@
         }
       ]
     },
-    {
+    "fibsem-uint8": {
       "name": "fibsem-uint8",
       "description": "FIB-SEM Data (compressed)",
       "url": "s3://janelia-cosem-datasets/jrc_hela-1/neuroglancer/em/fibsem-uint8.precomputed",
@@ -442,7 +442,7 @@
       },
       "subsources": []
     },
-    {
+    "mito_seg": {
       "name": "mito_seg",
       "description": "Mitochondria",
       "url": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/mito_seg",
@@ -513,7 +513,7 @@
         }
       ]
     },
-    {
+    "nucleus_seg": {
       "name": "nucleus_seg",
       "description": "Nucleus",
       "url": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/nucleus_seg",
@@ -584,7 +584,7 @@
         }
       ]
     },
-    {
+    "er_pred": {
       "name": "er_pred",
       "description": "Endoplasmic Reticulum",
       "url": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/er_pred",
@@ -625,7 +625,7 @@
       },
       "subsources": []
     },
-    {
+    "vesicle_pred": {
       "name": "vesicle_pred",
       "description": "Vesicle",
       "url": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/vesicle_pred",
@@ -666,7 +666,7 @@
       },
       "subsources": []
     },
-    {
+    "er_seg": {
       "name": "er_seg",
       "description": "Endoplasmic Reticulum",
       "url": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/er_seg",
@@ -737,7 +737,7 @@
         }
       ]
     },
-    {
+    "endo_pred": {
       "name": "endo_pred",
       "description": "Endosomal Network",
       "url": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/endo_pred",
@@ -778,7 +778,7 @@
       },
       "subsources": []
     }
-  ],
+  },
   "views": [
     {
       "name": "Default view",
