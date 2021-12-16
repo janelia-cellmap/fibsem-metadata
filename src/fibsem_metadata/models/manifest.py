@@ -1,15 +1,15 @@
 import click
-from typing import Sequence, Dict
+from typing import Sequence, Dict, Union
 from fibsem_metadata.models.base import StrictBaseModel
 from fibsem_metadata.models.metadata import DatasetMetadata
-from fibsem_metadata.models.sources import DataSource
+from fibsem_metadata.models.sources import MeshSource, VolumeSource
 from fibsem_metadata.models.views import DatasetView
 
 
 class DatasetManifest(StrictBaseModel):
     name: str
     metadata: DatasetMetadata
-    sources: Dict[str, DataSource]
+    sources: Dict[str, VolumeSource]
     views: Sequence[DatasetView]
 
 

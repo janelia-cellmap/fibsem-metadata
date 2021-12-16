@@ -18,10 +18,6 @@ class ArrayContainerTypeEnum(str, Enum):
     n5 = "n5"
     zarr = "zarr"
     precomputed = "precomputed"
-    mrc = "mrc"
-    hdf5 = "hdf5"
-    tif = "tif"
-
 
 class ContentTypeEnum(str, Enum):
     em = "em"
@@ -71,4 +67,4 @@ class VolumeSource(DataSource):
     sampleType: SampleTypeEnum
     contentType: ContentTypeEnum
     displaySettings: DisplaySettings
-    subsources: Sequence[MeshSource] = []
+    subsources: Sequence[MeshSource]
