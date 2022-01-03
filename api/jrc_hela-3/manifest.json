@@ -3580,6 +3580,9 @@
     {
       "name": "Default view",
       "description": "The default view of the data.",
+      "sources": [
+        "fibsem-uint8"
+      ],
       "position": null,
       "scale": null,
       "orientation": [
@@ -3587,14 +3590,14 @@
         0.0,
         0.0,
         0.0
-      ],
-      "volumeNames": [
-        "fibsem-uint8"
       ]
     },
     {
       "name": "Centrosome",
       "description": "Centrosome of a wild-type HeLa cell, as described in Fig. 2b of Xu et al. 2020c.",
+      "sources": [
+        "fibsem-uint16"
+      ],
       "position": [
         28441.0,
         817.0,
@@ -3606,14 +3609,14 @@
         0.0,
         0.0,
         0.0
-      ],
-      "volumeNames": [
-        "fibsem-uint16"
       ]
     },
     {
       "name": "Golgi Stack",
       "description": "Golgi Stack of a wild-type HeLa cell, as described in Fig. 2c of Xu et al. 2020c.",
+      "sources": [
+        "fibsem-uint16"
+      ],
       "position": [
         30305.0,
         1456.0,
@@ -3625,14 +3628,14 @@
         0.0,
         0.0,
         0.0
-      ],
-      "volumeNames": [
-        "fibsem-uint16"
       ]
     },
     {
       "name": "Nuclear envelope with polyribosomes",
       "description": "Nuclear envelope with polyribosomes of a wild-type HeLa cell, as described in Fig. 2d of Xu et al. 2020c.",
+      "sources": [
+        "fibsem-uint16"
+      ],
       "position": [
         24219.0,
         3171.0,
@@ -3644,23 +3647,12 @@
         0.0,
         0.0,
         0.0
-      ],
-      "volumeNames": [
-        "fibsem-uint16"
       ]
     },
     {
       "name": "Refined, whole-cell predictions",
       "description": "Renderings of refined predictions for multiple organelles, as presented in Fig. 2e of Heinrich et al., 2020",
-      "position": null,
-      "scale": null,
-      "orientation": [
-        1.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volumeNames": [
+      "sources": [
         "endo_seg",
         "er_seg",
         "golgi_seg",
@@ -3669,11 +3661,30 @@
         "pm_seg",
         "vesicle_seg",
         "fibsem-uint8"
+      ],
+      "position": null,
+      "scale": null,
+      "orientation": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
       ]
     },
     {
       "name": "Holdout block used for evaluation",
       "description": "Manually annotated block used for evaluation of machine learning classifiers along with corresponding predictions, as described in Supplementary Data 2 of Heinrich et al., 2020.",
+      "sources": [
+        "gt",
+        "endo_pred",
+        "er_pred",
+        "lyso_pred",
+        "mito_pred",
+        "mt-out_pred",
+        "nucleus_pred",
+        "vesicle_pred",
+        "fibsem-uint8"
+      ],
       "position": [
         29736.0,
         774.0,
@@ -3685,22 +3696,18 @@
         0.0,
         0.0,
         0.0
-      ],
-      "volumeNames": [
-        "gt",
-        "endo_pred",
-        "er_pred",
-        "lyso_pred",
-        "mito_pred",
-        "mt-out_pred",
-        "nucleus_pred",
-        "vesicle_pred",
-        "fibsem-uint8"
       ]
     },
     {
       "name": "Plasma membrane and nucleus size filtering",
       "description": "A number of refinements were made to the initial machine learning predictions. A description of each type of refinement can be found in Heinrich et al., 2020. In the nucles and plasma membrane segmentations displayed here, every voxel is assigned a label based on whether it is background or part of an organelle. Background voxels are assigned a value of 0, and organelle voxels are assigned IDs that are unique to each individual organelle. A minimum size filter was applicated to the connected components in order to eliminate small false positives. The size of the filter was conservavatue based on the expected organelle size.",
+      "sources": [
+        "nucleus_pred",
+        "nucleus_seg",
+        "pm_pred",
+        "pm_seg",
+        "fibsem-uint8"
+      ],
       "position": null,
       "scale": null,
       "orientation": [
@@ -3708,13 +3715,6 @@
         0.0,
         0.0,
         0.0
-      ],
-      "volumeNames": [
-        "nucleus_pred",
-        "nucleus_seg",
-        "pm_pred",
-        "pm_seg",
-        "fibsem-uint8"
       ]
     }
   ]

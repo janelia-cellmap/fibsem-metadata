@@ -783,6 +783,9 @@
     {
       "name": "Default view",
       "description": "The default view of the data.",
+      "sources": [
+        "fibsem-uint8"
+      ],
       "position": null,
       "scale": null,
       "orientation": [
@@ -790,23 +793,12 @@
         0.0,
         0.0,
         0.0
-      ],
-      "volumeNames": [
-        "fibsem-uint8"
       ]
     },
     {
       "name": "Refined, whole-cell predictions",
       "description": "Renderings of refined predictions for multiple organelles, as presented in Fig. 4a of Heinrich et al., 2020",
-      "position": null,
-      "scale": null,
-      "orientation": [
-        1.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volumeNames": [
+      "sources": [
         "endo_seg",
         "er_seg",
         "mito_seg",
@@ -814,6 +806,14 @@
         "pm_seg",
         "vesicle_seg",
         "fibsem-uint8"
+      ],
+      "position": null,
+      "scale": null,
+      "orientation": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
       ]
     }
   ]

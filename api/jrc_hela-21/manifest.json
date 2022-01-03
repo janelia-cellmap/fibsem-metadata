@@ -111,6 +111,9 @@
     {
       "name": "Default view",
       "description": "The default view of the data.",
+      "sources": [
+        "fibsem-uint8"
+      ],
       "position": null,
       "scale": null,
       "orientation": [
@@ -118,9 +121,6 @@
         0.0,
         0.0,
         0.0
-      ],
-      "volumeNames": [
-        "fibsem-uint8"
       ]
     }
   ]
