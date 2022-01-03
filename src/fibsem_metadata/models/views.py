@@ -7,10 +7,10 @@ from fibsem_metadata.models.base import StrictBaseModel
 class DatasetView(StrictBaseModel):
     name: str
     description: str
+    sources: Sequence[str]
     position: Optional[Sequence[float]]
     scale: Optional[float]
     orientation: Optional[Sequence[float]]
-    volumeNames: Sequence[str]
 
     @validator("orientation")
     def orientation_must_have_unit_norm(

@@ -1,5 +1,7 @@
 {
   "name": "ribo_classified",
+  "description": "Ribosomes classified by contact surface",
+  "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ribo_classified",
   "format": "n5",
   "transform": {
     "axes": [
@@ -23,7 +25,6 @@
       4.0
     ]
   },
-  "description": "Ribosomes classified by contact surface",
   "sampleType": "label",
   "contentType": "analysis",
   "displaySettings": {
@@ -36,6 +37,5 @@
     "color": "white",
     "invertLUT": false
   },
-  "subsources": [],
-  "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ribo_classified"
+  "subsources": []
 }

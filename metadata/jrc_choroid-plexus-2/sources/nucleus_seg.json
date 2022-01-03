@@ -1,5 +1,7 @@
 {
   "name": "nucleus_seg",
+  "description": "Nucleus",
+  "url": "s3://janelia-cosem-datasets/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/labels/nucleus_seg",
   "format": "n5",
   "transform": {
     "axes": [
@@ -23,7 +25,6 @@
       4.0
     ]
   },
-  "description": "Nucleus",
   "sampleType": "label",
   "contentType": "segmentation",
   "displaySettings": {
@@ -36,6 +37,5 @@
     "color": "red",
     "invertLUT": false
   },
-  "subsources": [],
-  "url": "s3://janelia-cosem-datasets/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/labels/nucleus_seg"
+  "subsources": []
 }

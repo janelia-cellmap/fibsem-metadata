@@ -1,5 +1,7 @@
 {
   "name": "eres_seg",
+  "description": "Endoplasmic Reticulum Exit Sites",
+  "url": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/eres_seg",
   "format": "n5",
   "transform": {
     "axes": [
@@ -23,7 +25,6 @@
       4.0
     ]
   },
-  "description": "Endoplasmic Reticulum Exit Sites",
   "sampleType": "label",
   "contentType": "segmentation",
   "displaySettings": {
@@ -36,6 +37,5 @@
     "color": "white",
     "invertLUT": false
   },
-  "subsources": [],
-  "url": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/eres_seg"
+  "subsources": []
 }

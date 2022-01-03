@@ -1,5 +1,7 @@
 {
   "name": "ne_seg",
+  "description": "Nuclear Envelope",
+  "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/ne_seg",
   "format": "n5",
   "transform": {
     "axes": [
@@ -23,7 +25,6 @@
       4.0
     ]
   },
-  "description": "Nuclear Envelope",
   "sampleType": "label",
   "contentType": "segmentation",
   "displaySettings": {
@@ -36,6 +37,5 @@
     "color": "white",
     "invertLUT": false
   },
-  "subsources": [],
-  "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/ne_seg"
+  "subsources": []
 }

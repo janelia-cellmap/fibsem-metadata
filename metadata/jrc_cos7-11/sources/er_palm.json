@@ -1,5 +1,7 @@
 {
   "name": "er_palm",
+  "description": "Light Microscopy (PALM) of ER",
+  "url": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/lm/er_palm",
   "format": "n5",
   "transform": {
     "axes": [
@@ -23,7 +25,6 @@
       26.0
     ]
   },
-  "description": "Light Microscopy (PALM) of ER",
   "sampleType": "scalar",
   "contentType": "lm",
   "displaySettings": {
@@ -36,6 +37,5 @@
     "color": "white",
     "invertLUT": false
   },
-  "subsources": [],
-  "url": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/lm/er_palm"
+  "subsources": []
 }

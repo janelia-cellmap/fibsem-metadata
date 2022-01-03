@@ -19,6 +19,7 @@ class ArrayContainerTypeEnum(str, Enum):
     zarr = "zarr"
     precomputed = "precomputed"
 
+
 class ContentTypeEnum(str, Enum):
     em = "em"
     lm = "lm"

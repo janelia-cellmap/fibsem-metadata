@@ -3,6 +3,9 @@
     {
       "name": "Default view",
       "description": "The default view of the data.",
+      "sources": [
+        "fibsem-uint16"
+      ],
       "position": null,
       "scale": null,
       "orientation": [
@@ -10,14 +13,15 @@
         0.0,
         0.0,
         0.0
-      ],
-      "volumeNames": [
-        "fibsem-uint16"
       ]
     },
     {
       "name": "Densely annotated training data",
       "description": "Fifteen manually annotated regions used for training machine learning networks, as described in Fig. 1a of Heinrich et al., 2020.",
+      "sources": [
+        "gt",
+        "fibsem-uint16"
+      ],
       "position": [
         25042.0,
         1205.0,
@@ -29,15 +33,16 @@
         0.0,
         0.0,
         0.0
-      ],
-      "volumeNames": [
-        "gt",
-        "fibsem-uint16"
       ]
     },
     {
       "name": "Microtubule predictions",
       "description": "Area used for validating microtubule renderings, as described in Fig. 2c of Heinrich et al., 2020",
+      "sources": [
+        "mt-out_pred",
+        "mt-out_seg",
+        "fibsem-uint16"
+      ],
       "position": [
         28300.0,
         2288.0,
@@ -49,16 +54,21 @@
         0.0,
         0.0,
         0.0
-      ],
-      "volumeNames": [
-        "mt-out_pred",
-        "mt-out_seg",
-        "fibsem-uint16"
       ]
     },
     {
       "name": "Refined, whole-cell predictions",
       "description": "Renderings of refined predictions for multiple organelles, as presented in Fig. 2e of Heinrich et al., 2020",
+      "sources": [
+        "endo_seg",
+        "er_seg",
+        "golgi_seg",
+        "mito_seg",
+        "nucleus_seg",
+        "pm_seg",
+        "vesicle_seg",
+        "fibsem-uint16"
+      ],
       "position": [
         24000.5,
         3199.5,
@@ -70,34 +80,12 @@
         0.0,
         0.0,
         0.0
-      ],
-      "volumeNames": [
-        "endo_seg",
-        "er_seg",
-        "golgi_seg",
-        "mito_seg",
-        "nucleus_seg",
-        "pm_seg",
-        "vesicle_seg",
-        "fibsem-uint16"
       ]
     },
     {
       "name": "Microtubule, multi-organelle contact sites",
       "description": "Example of a microtubule interacting with five different organelles, including endosomes, the endoplasmic reticulum, Golgi, nucleus, and vesicles. A description can be found in Fig. 3b of Heinrich et al., 2020.",
-      "position": [
-        23240.0,
-        1109.0,
-        10662.0
-      ],
-      "scale": 1.47,
-      "orientation": [
-        1.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volumeNames": [
+      "sources": [
         "mt-out_seg",
         "endo_seg",
         "er_seg",
@@ -112,11 +100,31 @@
         "mt_nucleus_contacts",
         "mt_vesicle_contacts",
         "fibsem-uint16"
+      ],
+      "position": [
+        23240.0,
+        1109.0,
+        10662.0
+      ],
+      "scale": 1.47,
+      "orientation": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
       ]
     },
     {
       "name": "Endoplasmic reticulum curvature and mitochondria contact sites",
       "description": "Example of planar regions of endoplasmic reticulum supported by mitochondria, as described in Heinrich et al., 2020",
+      "sources": [
+        "er_seg",
+        "er_medial-surface",
+        "er_curvature",
+        "mito_seg",
+        "er_mito_contacts",
+        "fibsem-uint16"
+      ],
       "position": [
         30273.0,
         2009.0,
@@ -128,19 +136,16 @@
         0.0,
         0.0,
         0.0
-      ],
-      "volumeNames": [
-        "er_seg",
-        "er_medial-surface",
-        "er_curvature",
-        "mito_seg",
-        "er_mito_contacts",
-        "fibsem-uint16"
       ]
     },
     {
       "name": "Endoplasmic reticulum curvature and ribosome contact sites",
       "description": "Ribosomes classified according to surface they are bound to, including the Nucleus, planar or tubular regions of the endoplasmic reticulum, or unbound in the cytosol. A description can be found in Fig. 3g of Heinrich et al., 2020.",
+      "sources": [
+        "er_seg",
+        "ribo_classified",
+        "fibsem-uint16"
+      ],
       "position": [
         25976.0,
         1812.0,
@@ -152,16 +157,16 @@
         0.0,
         0.0,
         0.0
-      ],
-      "volumeNames": [
-        "er_seg",
-        "ribo_classified",
-        "fibsem-uint16"
       ]
     },
     {
       "name": "Mitochondria refinement",
       "description": "Machine learning predictions for organelles such as mitochondria are oftern merged. To prevent overmerging, a combinated of watershed segmentation and agglomeration was applied to correctly \"split\" mitochondria. A detailed description can be found in Heinrich et al., 2020.",
+      "sources": [
+        "mito_pred",
+        "mito_seg",
+        "fibsem-uint16"
+      ],
       "position": [
         42000.0,
         2000.0,
@@ -173,16 +178,17 @@
         0.0,
         0.0,
         0.0
-      ],
-      "volumeNames": [
-        "mito_pred",
-        "mito_seg",
-        "fibsem-uint16"
       ]
     },
     {
       "name": "Mitochondria skeletons",
       "description": "Topological thinning of mitochondria segmentations produces skeletons that can then be used for subsequent analysis such as length and diameter, as described in Supplmentatry Data 8 of Heinrich et al., 2020.",
+      "sources": [
+        "mito_skeleton",
+        "mito_skeleton-lsp",
+        "mito_seg",
+        "fibsem-uint16"
+      ],
       "position": [
         11634.0,
         1146.0,
@@ -194,17 +200,17 @@
         0.0,
         0.0,
         0.0
-      ],
-      "volumeNames": [
-        "mito_skeleton",
-        "mito_skeleton-lsp",
-        "mito_seg",
-        "fibsem-uint16"
       ]
     },
     {
       "name": "Endoplasmic reticulum and mitochondria contact sites",
       "description": "There is often interesting biology that occurs when two organelles are in contact with one another. Here, ER and mitochondria segmentations are used to calculate ER-mitochondria contact sites as described in Supplementary Data 9 of Heinrich et al., 2020.",
+      "sources": [
+        "mito_seg",
+        "er_seg",
+        "er_mito_contacts",
+        "fibsem-uint16"
+      ],
       "position": [
         10568.0,
         1836.0,
@@ -216,17 +222,17 @@
         0.0,
         0.0,
         0.0
-      ],
-      "volumeNames": [
-        "mito_seg",
-        "er_seg",
-        "er_mito_contacts",
-        "fibsem-uint16"
       ]
     },
     {
       "name": "Endoplasmic reticulum medial surface and curvature",
       "description": "The morphology of the endoplasmic reticulum segmentations was measured by first applying an iterative thinning procedure. This produced a medial surface, from which a planar metric could be calculated at each voxel. These planar metric values are then used to reconstruct the endoplasmic reticulum with curvature information. For a more detailed description see Supplementary Methods: Quantification of Heinrich et al., 2020.",
+      "sources": [
+        "er_seg",
+        "er_medial-surface",
+        "er_curvature",
+        "fibsem-uint16"
+      ],
       "position": [
         25976.0,
         1812.0,
@@ -238,12 +244,6 @@
         0.0,
         0.0,
         0.0
-      ],
-      "volumeNames": [
-        "er_seg",
-        "er_medial-surface",
-        "er_curvature",
-        "fibsem-uint16"
       ]
     }
   ]

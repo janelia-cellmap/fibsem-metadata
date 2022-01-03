@@ -1,5 +1,7 @@
 {
   "name": "gt",
+  "description": "Ground truth",
+  "url": "s3://janelia-cosem-datasets/jrc_sum159-1/jrc_sum159-1.n5/labels/gt",
   "format": "n5",
   "transform": {
     "axes": [
@@ -23,7 +25,6 @@
       2.0
     ]
   },
-  "description": "Ground truth",
   "sampleType": "label",
   "contentType": "segmentation",
   "displaySettings": {
@@ -36,6 +37,5 @@
     "color": null,
     "invertLUT": false
   },
-  "subsources": [],
-  "url": "s3://janelia-cosem-datasets/jrc_sum159-1/jrc_sum159-1.n5/labels/gt"
+  "subsources": []
 }

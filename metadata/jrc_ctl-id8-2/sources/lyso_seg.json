@@ -1,5 +1,7 @@
 {
   "name": "lyso_seg",
+  "description": "Lysosome (Ariadne)",
+  "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/lyso_seg",
   "format": "n5",
   "transform": {
     "axes": [
@@ -23,7 +25,6 @@
       8.0
     ]
   },
-  "description": "Lysosome (Ariadne)",
   "sampleType": "label",
   "contentType": "segmentation",
   "displaySettings": {
@@ -36,6 +37,5 @@
     "color": "yellow",
     "invertLUT": false
   },
-  "subsources": [],
-  "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/lyso_seg"
+  "subsources": []
 }

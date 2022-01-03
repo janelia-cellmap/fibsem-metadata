@@ -1,5 +1,7 @@
 {
   "name": "fibsem-uint8",
+  "description": "FIB-SEM Data (compressed)",
+  "url": "s3://janelia-cosem-datasets/jrc_choroid-plexus-2/neuroglancer/em/fibsem-uint8.precomputed",
   "format": "precomputed",
   "transform": {
     "axes": [
@@ -23,7 +25,6 @@
       8.0
     ]
   },
-  "description": "FIB-SEM Data (compressed)",
   "sampleType": "scalar",
   "contentType": "em",
   "displaySettings": {
@@ -36,6 +37,5 @@
     "color": "white",
     "invertLUT": false
   },
-  "subsources": [],
-  "url": "s3://janelia-cosem-datasets/jrc_choroid-plexus-2/neuroglancer/em/fibsem-uint8.precomputed"
+  "subsources": []
 }

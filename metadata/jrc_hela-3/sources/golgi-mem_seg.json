@@ -1,5 +1,7 @@
 {
   "name": "golgi-mem_seg",
+  "description": "Golgi membrane",
+  "url": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/golgi-mem_seg",
   "format": "n5",
   "transform": {
     "axes": [
@@ -23,7 +25,6 @@
       4.0
     ]
   },
-  "description": "Golgi membrane",
   "sampleType": "label",
   "contentType": "segmentation",
   "displaySettings": {
@@ -36,6 +37,5 @@
     "color": "cyan",
     "invertLUT": false
   },
-  "subsources": [],
-  "url": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/golgi-mem_seg"
+  "subsources": []
 }

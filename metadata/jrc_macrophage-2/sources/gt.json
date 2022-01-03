@@ -1,5 +1,7 @@
 {
   "name": "gt",
+  "description": "Ground truth",
+  "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/gt",
   "format": "n5",
   "transform": {
     "axes": [
@@ -23,7 +25,6 @@
       2.0
     ]
   },
-  "description": "Ground truth",
   "sampleType": "label",
   "contentType": "segmentation",
   "displaySettings": {
@@ -36,6 +37,5 @@
     "color": "white",
     "invertLUT": false
   },
-  "subsources": [],
-  "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/gt"
+  "subsources": []
 }

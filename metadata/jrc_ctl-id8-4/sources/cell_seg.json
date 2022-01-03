@@ -1,5 +1,7 @@
 {
   "name": "cell_seg",
+  "description": "Whole-cell segmentation (Ariadne)",
+  "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-4/jrc_ctl-id8-4.n5/labels/ariadne/cell_seg",
   "format": "n5",
   "transform": {
     "axes": [
@@ -23,7 +25,6 @@
       8.0
     ]
   },
-  "description": "Whole-cell segmentation (Ariadne)",
   "sampleType": "label",
   "contentType": "segmentation",
   "displaySettings": {
@@ -36,6 +37,5 @@
     "color": null,
     "invertLUT": false
   },
-  "subsources": [],
-  "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-4/jrc_ctl-id8-4.n5/labels/ariadne/cell_seg"
+  "subsources": []
 }

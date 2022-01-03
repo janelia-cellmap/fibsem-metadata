@@ -1,5 +1,7 @@
 {
   "name": "mito_seg",
+  "description": "Mitochondria",
+  "url": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/mito_seg",
   "format": "n5",
   "transform": {
     "axes": [
@@ -23,7 +25,6 @@
       4.0
     ]
   },
-  "description": "Mitochondria",
   "sampleType": "label",
   "contentType": "segmentation",
   "displaySettings": {
@@ -39,6 +40,8 @@
   "subsources": [
     {
       "name": "mito_seg",
+      "description": "",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-1/neuroglancer/mesh/mito_seg",
       "format": "neuroglancer_legacy_mesh",
       "transform": {
         "axes": [
@@ -62,10 +65,7 @@
           1.0
         ]
       },
-      "description": "",
-      "ids": [],
-      "url": "s3://janelia-cosem-datasets/jrc_hela-1/neuroglancer/mesh/mito_seg"
+      "ids": []
     }
-  ],
-  "url": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/mito_seg"
+  ]
 }

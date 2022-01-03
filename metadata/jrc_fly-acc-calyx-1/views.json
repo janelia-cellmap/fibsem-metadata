@@ -3,6 +3,9 @@
     {
       "name": "Default view",
       "description": "The default view of the data.",
+      "sources": [
+        "fibsem-uint16"
+      ],
       "position": null,
       "scale": null,
       "orientation": [
@@ -10,14 +13,14 @@
         1.0,
         0.0,
         0.0
-      ],
-      "volumeNames": [
-        "fibsem-uint16"
       ]
     },
     {
       "name": "Presynaptic T-bar in accessory calyx",
       "description": "Presynaptic T-bar in accessory calyx of a five-day-old adult Drosophila brain, as presented in Xu et al. 2020c.",
+      "sources": [
+        "fibsem-uint16"
+      ],
       "position": [
         11210.0,
         25140.0,
@@ -29,14 +32,14 @@
         1.0,
         0.0,
         0.0
-      ],
-      "volumeNames": [
-        "fibsem-uint16"
       ]
     },
     {
       "name": "Output sites of a projection neuron",
       "description": "Output sites of a projection neuron in accessory calyx of a five-day-old adult Drosophilabrain, as presented in Xu et al. 2020c.",
+      "sources": [
+        "fibsem-uint16"
+      ],
       "position": [
         27959.0,
         26953.0,
@@ -48,9 +51,6 @@
         1.0,
         0.0,
         0.0
-      ],
-      "volumeNames": [
-        "fibsem-uint16"
       ]
     }
   ]

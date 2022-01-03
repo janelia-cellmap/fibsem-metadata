@@ -9,6 +9,7 @@ from fibsem_metadata.models.sources import VolumeSource
 volume_sources = glob('metadata/*/sources/*')
 views = glob('metadata/*/views.json')
 
+
 def exists_fsspec(path: str) -> bool:
     return fsspec.get_mapper(path).fs.exists(path)
 
@@ -23,12 +24,13 @@ def get_json_blob(path: str) -> Dict[str, Any]:
 def test_volume_source(path: str):
     blob = get_json_blob(path)
     vsource = VolumeSource(**blob)
-    assert exists_fsspec(vsource.URI)
+    assert exists_fsspec(vsource.url)
 
     for subsource in vsource.subsources:
-        assert exists_fsspec(subsource.URI)
+        assert exists_fsspec(subsource.url)
+
 
 @pytest.mark.parametrize('views_path', views)
-def test_view(views_path):
+def test_view(views_path: str):
     blob = get_json_blob(views_path)
-    views = DatasetViews(**blob)        
+    views = DatasetViews(**blob)

@@ -1,5 +1,7 @@
 {
   "name": "endo-mem_pred",
+  "description": "Endosome membrane",
+  "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/endo-mem_pred",
   "format": "n5",
   "transform": {
     "axes": [
@@ -23,7 +25,6 @@
       4.0
     ]
   },
-  "description": "Endosome membrane",
   "sampleType": "scalar",
   "contentType": "prediction",
   "displaySettings": {
@@ -36,6 +37,5 @@
     "color": "magenta",
     "invertLUT": false
   },
-  "subsources": [],
-  "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/endo-mem_pred"
+  "subsources": []
 }

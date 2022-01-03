@@ -1,5 +1,7 @@
 {
   "name": "mito_skeleton-lsp",
+  "description": "Mitochrondria Skeletons: Longest Shortest Path",
+  "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/mito_skeleton-lsp",
   "format": "n5",
   "transform": {
     "axes": [
@@ -23,7 +25,6 @@
       4.0
     ]
   },
-  "description": "Mitochrondria Skeletons: Longest Shortest Path",
   "sampleType": "label",
   "contentType": "analysis",
   "displaySettings": {
@@ -36,6 +37,5 @@
     "color": "white",
     "invertLUT": false
   },
-  "subsources": [],
-  "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/mito_skeleton-lsp"
+  "subsources": []
 }

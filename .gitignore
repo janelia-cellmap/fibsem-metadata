@@ -12,7 +12,7 @@ _build
 *.so
 
 # API
-api/*
+api/**
 
 # Installer logs
 pip-log.txt

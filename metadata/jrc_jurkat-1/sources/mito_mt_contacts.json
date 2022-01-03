@@ -1,5 +1,7 @@
 {
   "name": "mito_mt_contacts",
+  "description": "Mitochondria - Microtubule Contact Sites",
+  "url": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mito_mt_contacts",
   "format": "n5",
   "transform": {
     "axes": [
@@ -23,7 +25,6 @@
       4.0
     ]
   },
-  "description": "Mitochondria - Microtubule Contact Sites",
   "sampleType": "label",
   "contentType": "analysis",
   "displaySettings": {
@@ -36,6 +37,5 @@
     "color": "white",
     "invertLUT": false
   },
-  "subsources": [],
-  "url": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/mito_mt_contacts"
+  "subsources": []
 }
