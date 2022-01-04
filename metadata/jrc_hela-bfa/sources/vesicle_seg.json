@@ -1,7 +1,6 @@
 {
-  "name": "mito_pred",
-  "description": "Mitochondria",
-  "url": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/labels/mito_pred",
+  "name": "vesicle_seg",
+  "path": "s3://janelia-cosem-datasets/jrc_hela-bfa/jrc_hela-bfa.n5/labels/vesicle_seg",
   "format": "n5",
   "transform": {
     "axes": [
@@ -25,16 +24,20 @@
       4.0
     ]
   },
-  "sampleType": "scalar",
-  "contentType": "prediction",
+  "description": "Vesicle",
+  "version": "0",
+  "tags": [],
+  "dataType": "uint32",
+  "sampleType": "label",
+  "contentType": "segmentation",
   "displaySettings": {
     "contrastLimits": {
       "start": 0,
-      "end": 255,
+      "end": 4294967295,
       "min": 0,
-      "max": 255
+      "max": 4294967295
     },
-    "color": "green",
+    "color": "red",
     "invertLUT": false
   },
   "subsources": []

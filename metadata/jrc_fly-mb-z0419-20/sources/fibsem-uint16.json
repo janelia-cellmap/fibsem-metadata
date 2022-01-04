@@ -1,7 +1,6 @@
 {
-  "name": "mito_pred",
-  "description": "Mitochondria",
-  "url": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/labels/mito_pred",
+  "name": "fibsem-uint16",
+  "url": "s3://janelia-cosem-datasets/jrc_fly-mb-z0419-20/jrc_fly-mb-z0419-20.n5/em/fibsem-uint16",
   "format": "n5",
   "transform": {
     "axes": [
@@ -25,17 +24,21 @@
       4.0
     ]
   },
+  "description": "FIB-SEM Data (uncompressed)",
+  "version": "0",
+  "tags": [],
+  "dataType": "uint16",
   "sampleType": "scalar",
-  "contentType": "prediction",
+  "contentType": "em",
   "displaySettings": {
     "contrastLimits": {
       "start": 0,
-      "end": 255,
+      "end": 2512,
       "min": 0,
-      "max": 255
+      "max": 3200
     },
-    "color": "green",
-    "invertLUT": false
+    "color": "white",
+    "invertLUT": true
   },
   "subsources": []
 }

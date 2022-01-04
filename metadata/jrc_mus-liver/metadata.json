@@ -1,0 +1,48 @@
+{
+  "title": "Mouse Liver",
+  "id": "jrc_mus-liver",
+  "imaging": {
+    "startDate": "2021-03-19",
+    "duration": 8,
+    "biasVoltage": 0,
+    "scanRate": 3,
+    "current": 3,
+    "primaryEnergy": 1200,
+    "id": "",
+    "institution": "Janelia",
+    "gridSpacing": {
+      "unit": "nm",
+      "values": {
+        "x": 8.0,
+        "y": 8.0,
+        "z": 8.0
+      }
+    },
+    "dimensions": {
+      "unit": "\u00b5m",
+      "values": {
+        "x": 102.0,
+        "y": 101.8,
+        "z": 71.5
+      }
+    }
+  },
+  "sample": {
+    "description": "Wild-type, 8 week old mouse, strain: C57BL/6 from Jackson Lab",
+    "protocol": "Perfusion fixation with glutaraldehyde and vibratome section followed by room temperature reducing OTO staining. After dehydration and infiltration with graded ethanol and Durcupan resin, polymerize the sample in 60°C oven.",
+    "contributions": "Sample provided by Wei-Ping Li (HHMI/Janelia), prepared for imaging by Song Pang (HHMI/Janelia), with imaging by Song Pang (HHMI/Janelia) and C. Shan Xu (HHMI/Janelia), and post-processing by Eric Trautman and Stephan Preibisch (HHMI/Janelia).",
+    "organism": ["Mouse"],
+    "type": ["Tissue"],
+    "subtype": ["Liver"],
+    "treatment": ["Wild-type"]
+  },
+  "institution": [
+    "HHMI/Janelia"
+  ],
+  "softwareAvailability": "open",
+  "DOI": [{
+    "id": "em",
+    "DOI": "10.25378/janelia.16913047"
+  }],
+  "publications": []
+}

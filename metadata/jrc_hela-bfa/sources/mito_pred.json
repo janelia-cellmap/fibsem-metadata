@@ -1,7 +1,6 @@
 {
   "name": "mito_pred",
-  "description": "Mitochondria",
-  "url": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/labels/mito_pred",
+  "path": "s3://janelia-cosem-datasets/jrc_hela-bfa/jrc_hela-bfa.n5/labels/mito_pred",
   "format": "n5",
   "transform": {
     "axes": [
@@ -25,6 +24,10 @@
       4.0
     ]
   },
+  "description": "Mitochondria",
+  "version": "0",
+  "tags": [],
+  "dataType": "uint8",
   "sampleType": "scalar",
   "contentType": "prediction",
   "displaySettings": {

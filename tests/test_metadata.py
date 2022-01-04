@@ -11,16 +11,16 @@ views = glob('metadata/*/views.json')
 
 
 def exists_fsspec(path: str) -> bool:
-    return fsspec.get_mapper(path).fs.exists(path)
+    return fsspec.get_mapper(path, anon=True).fs.exists(path)
 
 
 def get_json_blob(path: str) -> Dict[str, Any]:
-    with open(path, mode='r') as fh:
+    with open(path, mode="r") as fh:
         blob = json.load(fh)
     return blob
 
 
-@pytest.mark.parametrize('path', volume_sources)
+@pytest.mark.parametrize("path", volume_sources)
 def test_volume_source(path: str):
     blob = get_json_blob(path)
     vsource = VolumeSource(**blob)

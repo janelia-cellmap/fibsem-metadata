@@ -11,8 +11,8 @@
         0.0,
         0.0
       ],
-      "sources": [
-        "fibsem-uint16"
+      "volumeNames": [
+        "fibsem-uint8"
       ]
     }
   ]

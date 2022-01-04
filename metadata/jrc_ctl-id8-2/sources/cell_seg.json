@@ -37,5 +37,37 @@
     "color": null,
     "invertLUT": false
   },
-  "subsources": []
+  "subsources": [
+    {
+      "name": "cell_seg",
+      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/cell_seg",
+      "format": "neuroglancer_multilod_draco",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "description": "",
+      "version": "0",
+      "tags": [],
+      "ids": []
+    }
+  ]
 }

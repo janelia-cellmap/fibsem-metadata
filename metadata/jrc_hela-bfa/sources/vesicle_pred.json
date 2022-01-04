@@ -1,7 +1,6 @@
 {
-  "name": "cent_seg",
-  "description": "Centrosome (Ariadne)",
-  "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/cent_seg",
+  "name": "vesicle_pred",
+  "path": "s3://janelia-cosem-datasets/jrc_hela-bfa/jrc_hela-bfa.n5/labels/vesicle_pred",
   "format": "n5",
   "transform": {
     "axes": [
@@ -20,13 +19,17 @@
       0.0
     ],
     "scale": [
-      8.0,
-      8.0,
-      8.0
+      4.0,
+      4.0,
+      4.0
     ]
   },
-  "sampleType": "label",
-  "contentType": "segmentation",
+  "description": "Vesicle",
+  "version": "0",
+  "tags": [],
+  "dataType": "uint8",
+  "sampleType": "scalar",
+  "contentType": "prediction",
   "displaySettings": {
     "contrastLimits": {
       "start": 0,
@@ -34,13 +37,13 @@
       "min": 0,
       "max": 255
     },
-    "color": "white",
+    "color": "red",
     "invertLUT": false
   },
   "subsources": [
     {
-      "name": "cent_seg",
-      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/cent_seg",
+      "name": "vesicle_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_hela-bfa/neuroglancer/mesh/vesicle_seg",
       "format": "neuroglancer_multilod_draco",
       "transform": {
         "axes": [

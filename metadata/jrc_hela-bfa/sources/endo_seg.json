@@ -1,7 +1,6 @@
 {
-  "name": "cent_seg",
-  "description": "Centrosome (Ariadne)",
-  "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/cent_seg",
+  "name": "endo_seg",
+  "path": "s3://janelia-cosem-datasets/jrc_hela-bfa/jrc_hela-bfa.n5/labels/endo_seg",
   "format": "n5",
   "transform": {
     "axes": [
@@ -20,27 +19,31 @@
       0.0
     ],
     "scale": [
-      8.0,
-      8.0,
-      8.0
+      4.0,
+      4.0,
+      4.0
     ]
   },
+  "description": "Endosomal Network",
+  "version": "0",
+  "tags": [],
+  "dataType": "uint16",
   "sampleType": "label",
   "contentType": "segmentation",
   "displaySettings": {
     "contrastLimits": {
       "start": 0,
-      "end": 255,
+      "end": 65535,
       "min": 0,
-      "max": 255
+      "max": 65535
     },
-    "color": "white",
+    "color": "magenta",
     "invertLUT": false
   },
   "subsources": [
     {
-      "name": "cent_seg",
-      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/cent_seg",
+      "name": "endo_seg",
+      "path": "s3://janelia-cosem-datasets/jrc_hela-bfa/neuroglancer/mesh/endo_seg",
       "format": "neuroglancer_multilod_draco",
       "transform": {
         "axes": [
