@@ -1,0 +1,121 @@
+{
+  "name": "jrc_mus-kidney",
+  "metadata": {
+    "title": "Mouse Kidney",
+    "id": "jrc_mus-kidney",
+    "imaging": {
+      "id": "",
+      "institution": "Janelia",
+      "gridSpacing": {
+        "unit": "nm",
+        "values": {
+          "x": 8.0,
+          "y": 8.0,
+          "z": 8.0
+        }
+      },
+      "dimensions": {
+        "unit": "\u00b5m",
+        "values": {
+          "x": 98.3,
+          "y": 63.6,
+          "z": 177.6
+        }
+      },
+      "startDate": "2021-04-19",
+      "duration": 8,
+      "biasVoltage": 0.0,
+      "scanRate": 6.0,
+      "current": 3.0,
+      "primaryEnergy": 1200.0
+    },
+    "sample": {
+      "description": "Wild-type, 8 week old mouse, strain: C57BL/6 from Jackson Lab",
+      "protocol": "Perfusion fixation with glutaraldehyde and vibratome section followed by room temperature reducing OTO staining. After dehydration and infiltration with graded ethanol and Durcupan resin, polymerize the sample in 60\u00b0C oven.",
+      "contributions": "Region of Interest (ROI) and biology description provided by Michael J Caplan (Yale School of Medicine), sample provided by Wei-Ping Li (HHMI/Janelia), prepared for imaging by Song Pang (HHMI/Janelia), with imaging by Song Pang (HHMI/Janelia) and C. Shan Xu (HHMI/Janelia), post-processing by Eric Trautman and Stephan Preibisch (HHMI/Janelia).",
+      "organism": [
+        "Mouse"
+      ],
+      "type": [
+        "Tissue"
+      ],
+      "subtype": [
+        "Kidney"
+      ],
+      "treatment": [
+        "Wild-type"
+      ]
+    },
+    "institution": [
+      "HHMI/Janelia"
+    ],
+    "softwareAvailability": "open",
+    "DOI": [
+      {
+        "id": "em",
+        "DOI": "10.25378/janelia.16913035"
+      }
+    ],
+    "publications": []
+  },
+  "sources": {
+    "fibsem-uint8": {
+      "name": "fibsem-uint8",
+      "description": "FIB-SEM Data (compressed)",
+      "url": "s3://janelia-cosem-datasets/jrc_mus-kidney/jrc_mus-kidney.n5/em/fibsem-uint8",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "em",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 105,
+          "end": 182,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    }
+  },
+  "views": [
+    {
+      "name": "Default view",
+      "description": "The default view of the data.",
+      "sources": [
+        "fibsem-uint8"
+      ],
+      "position": null,
+      "scale": null,
+      "orientation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

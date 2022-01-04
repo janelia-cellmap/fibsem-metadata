@@ -150,7 +150,7 @@
           "name": "endo_seg",
           "description": "",
           "url": "s3://janelia-cosem-datasets/jrc_hela-1/neuroglancer/mesh/endo_seg",
-          "format": "neuroglancer_legacy_mesh",
+          "format": "neuroglancer_multilod_draco",
           "transform": {
             "axes": [
               "z",
@@ -168,9 +168,9 @@
               0.0
             ],
             "scale": [
-              1.0,
-              1.0,
-              1.0
+              4.0,
+              4.0,
+              4.0
             ]
           },
           "ids": []
@@ -216,37 +216,7 @@
         "color": "red",
         "invertLUT": false
       },
-      "subsources": [
-        {
-          "name": "vesicle_seg",
-          "description": "",
-          "url": "s3://janelia-cosem-datasets/jrc_hela-1/neuroglancer/mesh/vesicle_seg",
-          "format": "neuroglancer_legacy_mesh",
-          "transform": {
-            "axes": [
-              "z",
-              "y",
-              "x"
-            ],
-            "units": [
-              "nm",
-              "nm",
-              "nm"
-            ],
-            "translate": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "scale": [
-              1.0,
-              1.0,
-              1.0
-            ]
-          },
-          "ids": []
-        }
-      ]
+      "subsources": []
     },
     "mito_pred": {
       "name": "mito_pred",
@@ -374,7 +344,7 @@
           "name": "pm_seg",
           "description": "",
           "url": "s3://janelia-cosem-datasets/jrc_hela-1/neuroglancer/mesh/pm_seg",
-          "format": "neuroglancer_legacy_mesh",
+          "format": "neuroglancer_multilod_draco",
           "transform": {
             "axes": [
               "z",
@@ -392,9 +362,9 @@
               0.0
             ],
             "scale": [
-              1.0,
-              1.0,
-              1.0
+              4.0,
+              4.0,
+              4.0
             ]
           },
           "ids": []
@@ -486,7 +456,7 @@
           "name": "mito_seg",
           "description": "",
           "url": "s3://janelia-cosem-datasets/jrc_hela-1/neuroglancer/mesh/mito_seg",
-          "format": "neuroglancer_legacy_mesh",
+          "format": "neuroglancer_multilod_draco",
           "transform": {
             "axes": [
               "z",
@@ -504,9 +474,9 @@
               0.0
             ],
             "scale": [
-              1.0,
-              1.0,
-              1.0
+              4.0,
+              4.0,
+              4.0
             ]
           },
           "ids": []
@@ -557,7 +527,7 @@
           "name": "nucleus_seg",
           "description": "",
           "url": "s3://janelia-cosem-datasets/jrc_hela-1/neuroglancer/mesh/nucleus_seg",
-          "format": "neuroglancer_legacy_mesh",
+          "format": "neuroglancer_multilod_draco",
           "transform": {
             "axes": [
               "z",
@@ -575,9 +545,9 @@
               0.0
             ],
             "scale": [
-              1.0,
-              1.0,
-              1.0
+              4.0,
+              4.0,
+              4.0
             ]
           },
           "ids": []
@@ -710,7 +680,7 @@
           "name": "er_seg",
           "description": "",
           "url": "s3://janelia-cosem-datasets/jrc_hela-1/neuroglancer/mesh/er_seg",
-          "format": "neuroglancer_legacy_mesh",
+          "format": "neuroglancer_multilod_draco",
           "transform": {
             "axes": [
               "z",
@@ -728,9 +698,9 @@
               0.0
             ],
             "scale": [
-              1.0,
-              1.0,
-              1.0
+              4.0,
+              4.0,
+              4.0
             ]
           },
           "ids": []

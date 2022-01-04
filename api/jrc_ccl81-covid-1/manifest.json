@@ -113,7 +113,7 @@
       "name": "Default view",
       "description": "The default view of the data.",
       "sources": [
-        "fibsem-uint8"
+        "fibsem-uint16"
       ],
       "position": null,
       "scale": null,
