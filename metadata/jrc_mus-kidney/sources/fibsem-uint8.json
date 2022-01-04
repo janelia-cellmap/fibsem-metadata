@@ -1,44 +1,41 @@
 {
-    "name": "fibsem-uint8",
-    "path": "s3://janelia-cosem-datasets/jrc_mus-kidney/jrc_mus-kidney.n5/em/fibsem-uint8",
-    "format": "n5",
-    "transform": {
-      "axes": [
-        "z",
-        "y",
-        "x"
-      ],
-      "units": [
-        "nm",
-        "nm",
-        "nm"
-      ],
-      "translate": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "scale": [
-        8.0,
-        8.0,
-        8.0
-      ]
+  "name": "fibsem-uint8",
+  "description": "FIB-SEM Data (compressed)",
+  "url": "s3://janelia-cosem-datasets/jrc_mus-kidney/jrc_mus-kidney.n5/em/fibsem-uint8",
+  "format": "n5",
+  "transform": {
+    "axes": [
+      "z",
+      "y",
+      "x"
+    ],
+    "units": [
+      "nm",
+      "nm",
+      "nm"
+    ],
+    "translate": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      8.0,
+      8.0,
+      8.0
+    ]
+  },
+  "sampleType": "scalar",
+  "contentType": "em",
+  "displaySettings": {
+    "contrastLimits": {
+      "start": 105,
+      "end": 182,
+      "min": 0,
+      "max": 255
     },
-    "description": "FIB-SEM Data (compressed)",
-    "version": "0",
-    "tags": [],
-    "dataType": "uint8",
-    "sampleType": "scalar",
-    "contentType": "em",
-    "displaySettings": {
-      "contrastLimits": {
-        "start": 105,
-        "end": 182,
-        "min": 0,
-        "max": 255
-      },
-      "color": "white",
-      "invertLUT": false
-    },
-    "subsources": []
-  }
+    "color": "white",
+    "invertLUT": false
+  },
+  "subsources": []
+}

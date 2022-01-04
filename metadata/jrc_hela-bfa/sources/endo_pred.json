@@ -1,5 +1,6 @@
 {
   "name": "endo_pred",
+  "description": "Endosomal Network",
   "url": "s3://janelia-cosem-datasets/jrc_hela-bfa/jrc_hela-bfa.n5/labels/endo_pred",
   "format": "n5",
   "transform": {
@@ -24,10 +25,6 @@
       4.0
     ]
   },
-  "description": "Endosomal Network",
-  "version": "0",
-  "tags": [],
-  "dataType": "uint8",
   "sampleType": "scalar",
   "contentType": "prediction",
   "displaySettings": {

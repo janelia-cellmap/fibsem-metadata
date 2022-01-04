@@ -3,14 +3,14 @@
     {
       "name": "Default view",
       "description": "The default view of the data.",
-<<<<<<< HEAD:metadata/jrc_ctl-id8-3/views.json
       "sources": [
         "fibsem-uint8"
       ],
-      "position": null,
-=======
-      "position": [36341, 13908, 4388],
->>>>>>> 94955fe486556a725db0ab6f544f651930c2f02a:metadata/datasets/jrc_ctl-id8-3/views.json
+      "position": [
+        36341.0,
+        13908.0,
+        4388.0
+      ],
       "scale": null,
       "orientation": [
         0.0,

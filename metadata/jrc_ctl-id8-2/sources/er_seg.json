@@ -40,6 +40,7 @@
   "subsources": [
     {
       "name": "er_seg",
+      "description": "",
       "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/er_seg",
       "format": "neuroglancer_multilod_draco",
       "transform": {
@@ -64,9 +65,6 @@
           1.0
         ]
       },
-      "description": "",
-      "version": "0",
-      "tags": [],
       "ids": []
     }
   ]

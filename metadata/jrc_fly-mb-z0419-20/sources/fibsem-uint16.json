@@ -1,5 +1,6 @@
 {
   "name": "fibsem-uint16",
+  "description": "FIB-SEM Data (uncompressed)",
   "url": "s3://janelia-cosem-datasets/jrc_fly-mb-z0419-20/jrc_fly-mb-z0419-20.n5/em/fibsem-uint16",
   "format": "n5",
   "transform": {
@@ -24,10 +25,6 @@
       4.0
     ]
   },
-  "description": "FIB-SEM Data (uncompressed)",
-  "version": "0",
-  "tags": [],
-  "dataType": "uint16",
   "sampleType": "scalar",
   "contentType": "em",
   "displaySettings": {

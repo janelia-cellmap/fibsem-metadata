@@ -3,36 +3,44 @@
     {
       "name": "Default view",
       "description": "The default view of the data.",
-      "position": [41225, 2891, 18730],
+      "sources": [
+        "fibsem-uint8"
+      ],
+      "position": [
+        41225.0,
+        2891.0,
+        18730.0
+      ],
       "scale": null,
       "orientation": [
         0.0,
         1.0,
         0.0,
         0.0
-      ],
-      "sources": [
-        "fibsem-uint8"
       ]
     },
     {
-    "name": "Refined, whole-cell predictions",
-    "description": "Renderings of refined predictions for multiple organelles",
-    "position": [41225, 2891, 18730],
-    "scale": null,
-    "orientation": [
-      0.0,
-      1.0,
-      0.0,
-      0.0
-    ],
-    "sources": [
-      "endo_seg",
-      "er_seg",
-      "mito_seg",
-      "vesicle_seg",
-      "fibsem-uint8"
-    ]
-  }
+      "name": "Refined, whole-cell predictions",
+      "description": "Renderings of refined predictions for multiple organelles",
+      "sources": [
+        "endo_seg",
+        "er_seg",
+        "mito_seg",
+        "vesicle_seg",
+        "fibsem-uint8"
+      ],
+      "position": [
+        41225.0,
+        2891.0,
+        18730.0
+      ],
+      "scale": null,
+      "orientation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    }
   ]
 }

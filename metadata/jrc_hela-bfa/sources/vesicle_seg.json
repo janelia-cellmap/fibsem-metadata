@@ -1,6 +1,7 @@
 {
   "name": "vesicle_seg",
-  "path": "s3://janelia-cosem-datasets/jrc_hela-bfa/jrc_hela-bfa.n5/labels/vesicle_seg",
+  "description": "Vesicle",
+  "url": "s3://janelia-cosem-datasets/jrc_hela-bfa/jrc_hela-bfa.n5/labels/vesicle_seg",
   "format": "n5",
   "transform": {
     "axes": [
@@ -24,10 +25,6 @@
       4.0
     ]
   },
-  "description": "Vesicle",
-  "version": "0",
-  "tags": [],
-  "dataType": "uint32",
   "sampleType": "label",
   "contentType": "segmentation",
   "displaySettings": {

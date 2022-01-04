@@ -1,11 +1,15 @@
 import json
 from typing import Any, Dict
 import click
-from glob import glob
 
 from fibsem_metadata.models.sources import VolumeSource
 from fibsem_metadata.models.views import DatasetViews
 from pydantic import ValidationError
+import logging
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+logger.addHandler(logging.StreamHandler())
 
 
 def is_view(path: str) -> bool:
@@ -15,12 +19,30 @@ def is_view(path: str) -> bool:
         return False
 
 
+def clean_datasource(blob: Dict[str, Any]) -> Dict[str, Any]:
+    remap = {"tags": None,
+             "version": None,
+             "dataType": None,
+             "URI": "url",
+             "path": "url"}
+    for key, value in remap.items():
+        if key in blob:
+            if value is not None:
+                blob[value] = blob.pop(key)
+            else:
+                blob.pop(key)
+    return blob
+
+
 def migrate_source(blob: Dict[str, Any]) -> VolumeSource:
     try:
         return VolumeSource(**blob)
     except ValidationError:
-        uri = blob.pop("URI")
-        blob['url'] = uri
+        blob = clean_datasource(blob)
+        if "subsources" in blob:
+            for idx, mesh in enumerate(blob["subsources"]):
+                blob["subsources"][idx] = clean_datasource(mesh)
+
         return VolumeSource(**blob)
 
 
@@ -29,12 +51,13 @@ def migrate_views(blob: Dict[str, Any]) -> DatasetViews:
         return DatasetViews(**blob)
     except ValidationError:
         for element in blob["views"]:
-            sources = element.pop("volumeNames")
-            element["sources"] = sources
+            if "volumeNames" in element:
+                element["sources"] = element.pop("volumeNames")
         return DatasetViews(**blob)
 
 
 def migrate_element(path: str) -> int:
+    logger.info(f"Preparing {path}")
     with open(path) as fh:
         blob = json.load(fh)
 

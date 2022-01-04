@@ -1,19 +1,19 @@
 {
-    "views": [
-      {
-        "name": "Default view",
-        "description": "The default view of the data.",
-        "position": null,
-        "scale": null,
-        "orientation": [
-          0.0,
-          1.0,
-          0.0,
-          0.0
-        ],
-        "volumeNames": [
-          "fibsem-uint16"
-        ]
-      }
-    ]
-  }
+  "views": [
+    {
+      "name": "Default view",
+      "description": "The default view of the data.",
+      "sources": [
+        "fibsem-uint16"
+      ],
+      "position": null,
+      "scale": null,
+      "orientation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}
