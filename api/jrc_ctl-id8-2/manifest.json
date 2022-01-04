@@ -1,0 +1,416 @@
+{
+  "name": "jrc_ctl-id8-2",
+  "metadata": {
+    "title": "Killer T-Cell attacking cancer cell",
+    "id": "jrc_ctl-id8-2",
+    "imaging": {
+      "id": "Cryo_LoadID410_ROI1",
+      "institution": "Janelia",
+      "gridSpacing": {
+        "unit": "nm",
+        "values": {
+          "x": 8.0,
+          "y": 8.0,
+          "z": 8.0
+        }
+      },
+      "dimensions": {
+        "unit": "\u00b5m",
+        "values": {
+          "x": 50.0,
+          "y": 9.0,
+          "z": 62.9
+        }
+      },
+      "startDate": "2019-10-18",
+      "duration": 6,
+      "biasVoltage": 0.0,
+      "scanRate": 0.25,
+      "current": 2.0,
+      "primaryEnergy": 1200.0
+    },
+    "sample": {
+      "description": "OT-I mouse cytotoxic T lymphocyte attacking an ID8 ovarian cancer cell;  fixed and imaged moments after the release of perforin/granzyme from lytic granules. The ID8 murine ovarian cancer cell is stably expressing mEmerald-Chmp4b and TOMM20-SNAP.",
+      "protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO\u2084 0.1% UA 3% H\u2082O in acetone; resin embedding in Eponate 12.",
+      "contributions": "Sample provided by Alex Ritter (Genentech) and prepared for imaging by Gleb Shtengel and Nirmala Iyer (HHMI/Janelia). LM imaging by Nensi Alivodej, Gleb Shtengel, and David Hoffman (HHMI/Janelia). EM imaging and post-processing by C. Shan Xu (HHMI/Janelia).",
+      "organism": [
+        "Mouse"
+      ],
+      "type": [
+        "Cell culture"
+      ],
+      "subtype": [
+        "T-Cell",
+        "ID8 Cell"
+      ],
+      "treatment": [
+        "Overexpression"
+      ]
+    },
+    "institution": [
+      "HHMI/Janelia",
+      "Genentech"
+    ],
+    "softwareAvailability": "open",
+    "DOI": [
+      {
+        "id": "em",
+        "DOI": "10.6084/m9.figshare.14447541"
+      },
+      {
+        "id": "seg",
+        "DOI": ""
+      }
+    ],
+    "publications": [
+      "Ritter et al., 2021"
+    ]
+  },
+  "sources": {
+    "lyso_seg": {
+      "name": "lyso_seg",
+      "description": "Lysosome (Ariadne)",
+      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/lyso_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "yellow",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "endo_seg": {
+      "name": "endo_seg",
+      "description": "Endosomal Network (Ariadne)",
+      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/endo_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "magenta",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "fibsem-uint8": {
+      "name": "fibsem-uint8",
+      "description": "FIB-SEM Data (compressed)",
+      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/em/fibsem-uint8",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "em",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 119,
+          "end": 189,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "mito_seg": {
+      "name": "mito_seg",
+      "description": "Mitochondria (Ariadne)",
+      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/mito_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "green",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "cent_seg": {
+      "name": "cent_seg",
+      "description": "Centrosome (Ariadne)",
+      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/cent_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "nucleus_seg": {
+      "name": "nucleus_seg",
+      "description": "Nucleus (Ariadne)",
+      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/nucleus_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "red",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "cell_seg": {
+      "name": "cell_seg",
+      "description": "Whole-cell segmentation (Ariadne)",
+      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/cell_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": null,
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "er_seg": {
+      "name": "er_seg",
+      "description": "Endoplasmic Reticulum (Ariadne)",
+      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/er_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "blue",
+        "invertLUT": false
+      },
+      "subsources": []
+    }
+  },
+  "views": [
+    {
+      "name": "Default view",
+      "description": "The default view of the data.",
+      "sources": [
+        "fibsem-uint8"
+      ],
+      "position": null,
+      "scale": null,
+      "orientation": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}
