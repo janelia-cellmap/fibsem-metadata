@@ -110,7 +110,7 @@
     "golgi-mem_pred": {
       "name": "golgi-mem_pred",
       "description": "Golgi membrane",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/golgi-mem_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/golgi-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -375,7 +375,7 @@
     "ld_pred": {
       "name": "ld_pred",
       "description": "Lipid Droplet",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ld_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ld_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -498,7 +498,7 @@
     "nucleus_pred": {
       "name": "nucleus_pred",
       "description": "Nucleus",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/nucleus_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/nucleus_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -580,7 +580,7 @@
     "mito-mem_pred": {
       "name": "mito-mem_pred",
       "description": "Mitochondria membrane",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mito-mem_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mito-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1050,7 +1050,7 @@
     "mito_pred": {
       "name": "mito_pred",
       "description": "Mitochondria",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mito_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mito_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1091,7 +1091,7 @@
     "pm_pred": {
       "name": "pm_pred",
       "description": "Plasma Membrane",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/pm_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/pm_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1244,7 +1244,7 @@
     "ne-mem_pred": {
       "name": "ne-mem_pred",
       "description": "Nuclear Envelope membrane",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ne-mem_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ne-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1285,7 +1285,7 @@
     "lyso_pred": {
       "name": "lyso_pred",
       "description": "Lysosome",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/lyso_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/lyso_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1490,7 +1490,7 @@
     "ribo_pred": {
       "name": "ribo_pred",
       "description": "Ribosome",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ribo_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ribo_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1531,7 +1531,7 @@
     "ecs_pred": {
       "name": "ecs_pred",
       "description": "Extracellular Space",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ecs_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ecs_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1919,7 +1919,7 @@
     "nucleolus_pred": {
       "name": "nucleolus_pred",
       "description": "Nucleoulus",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/nucleolus_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/nucleolus_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1960,7 +1960,7 @@
     "ne_pred": {
       "name": "ne_pred",
       "description": "Nuclear Envelope",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ne_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ne_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2042,7 +2042,7 @@
     "golgi_pred": {
       "name": "golgi_pred",
       "description": "Golgi",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/golgi_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/golgi_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2236,7 +2236,7 @@
     "mt-in_pred": {
       "name": "mt-in_pred",
       "description": "Microtubule inner",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mt-in_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mt-in_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2277,7 +2277,7 @@
     "nhchrom_pred": {
       "name": "nhchrom_pred",
       "description": "Nucleoulus associated Heterochromatin",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/nhchrom_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/nhchrom_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2400,7 +2400,7 @@
     "endo-mem_pred": {
       "name": "endo-mem_pred",
       "description": "Endosome membrane",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/endo-mem_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/endo-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2605,7 +2605,7 @@
     "chrom_pred": {
       "name": "chrom_pred",
       "description": "Chromatin",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/chrom_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/chrom_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2687,7 +2687,7 @@
     "ld-mem_pred": {
       "name": "ld-mem_pred",
       "description": "Lipid Droplet membrane",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ld-mem_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ld-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2728,7 +2728,7 @@
     "eres_pred": {
       "name": "eres_pred",
       "description": "Endoplasmic Reticulum Exit Sites",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/eres_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/eres_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2769,7 +2769,7 @@
     "er_pred": {
       "name": "er_pred",
       "description": "Endoplasmic Reticulum",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2933,7 +2933,7 @@
     "vesicle_pred": {
       "name": "vesicle_pred",
       "description": "Vesicle",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/vesicle_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/vesicle_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -2974,7 +2974,7 @@
     "er-mem_pred": {
       "name": "er-mem_pred",
       "description": "Endoplasmic Reticulum membrane",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er-mem_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -3015,7 +3015,7 @@
     "vesicle-mem_pred": {
       "name": "vesicle-mem_pred",
       "description": "Vesicle membrane",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/vesicle-mem_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/vesicle-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -3127,7 +3127,7 @@
     "cent-dapp_pred": {
       "name": "cent-dapp_pred",
       "description": "Centrosome Distal Appendage",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/cent-dapp_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/cent-dapp_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -3250,7 +3250,7 @@
     "cent_pred": {
       "name": "cent_pred",
       "description": "Centrosome",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/cent_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/cent_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -3291,7 +3291,7 @@
     "np_pred": {
       "name": "np_pred",
       "description": "Nuclear Pore",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/np_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/np_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -3414,7 +3414,7 @@
     "endo_pred": {
       "name": "endo_pred",
       "description": "Endosomal Network",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/endo_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/endo_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -3537,7 +3537,7 @@
     "lyso-mem_pred": {
       "name": "lyso-mem_pred",
       "description": "Lysosome membrane",
-      "url": "s3://janelia-cosem/jrc_macrophage-2/jrc_macrophage-2.n5/labels/lyso-mem_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/lyso-mem_pred",
       "format": "n5",
       "transform": {
         "axes": [

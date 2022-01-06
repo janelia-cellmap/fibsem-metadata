@@ -68,7 +68,7 @@
     "nucleus_pred": {
       "name": "nucleus_pred",
       "description": "Nucleus",
-      "url": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/nucleus_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/nucleus_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -221,7 +221,7 @@
     "mito_pred": {
       "name": "mito_pred",
       "description": "Mitochondria",
-      "url": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/mito_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/mito_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -262,7 +262,7 @@
     "pm_pred": {
       "name": "pm_pred",
       "description": "Plasma Membrane",
-      "url": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/pm_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/pm_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -557,7 +557,7 @@
     "er_pred": {
       "name": "er_pred",
       "description": "Endoplasmic Reticulum",
-      "url": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/er_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/er_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -598,7 +598,7 @@
     "vesicle_pred": {
       "name": "vesicle_pred",
       "description": "Vesicle",
-      "url": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/vesicle_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/vesicle_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -710,7 +710,7 @@
     "endo_pred": {
       "name": "endo_pred",
       "description": "Endosomal Network",
-      "url": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/endo_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/endo_pred",
       "format": "n5",
       "transform": {
         "axes": [
