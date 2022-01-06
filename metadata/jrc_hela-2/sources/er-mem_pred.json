@@ -1,7 +1,7 @@
 {
   "name": "er-mem_pred",
   "description": "Endoplasmic Reticulum membrane",
-  "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/er-mem_pred",
+  "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/er-mem_pred",
   "format": "n5",
   "transform": {
     "axes": [

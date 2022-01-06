@@ -1,7 +1,7 @@
 {
   "name": "ld-mem_pred",
   "description": "Lipid Droplet membrane",
-  "url": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ld-mem_pred",
+  "url": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/ld-mem_pred",
   "format": "n5",
   "transform": {
     "axes": [

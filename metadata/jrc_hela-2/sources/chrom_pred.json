@@ -1,7 +1,7 @@
 {
   "name": "chrom_pred",
   "description": "Chromatin",
-  "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/chrom_pred",
+  "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/chrom_pred",
   "format": "n5",
   "transform": {
     "axes": [

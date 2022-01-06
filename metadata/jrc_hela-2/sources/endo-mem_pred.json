@@ -1,7 +1,7 @@
 {
   "name": "endo-mem_pred",
   "description": "Endosome membrane",
-  "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/endo-mem_pred",
+  "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/endo-mem_pred",
   "format": "n5",
   "transform": {
     "axes": [

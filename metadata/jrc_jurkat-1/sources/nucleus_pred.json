@@ -1,7 +1,7 @@
 {
   "name": "nucleus_pred",
   "description": "Nucleus",
-  "url": "s3://janelia-cosem/jrc_jurkat-1/jrc_jurkat-1.n5/labels/nucleus_pred",
+  "url": "s3://janelia-cosem-datasets/jrc_jurkat-1/jrc_jurkat-1.n5/labels/nucleus_pred",
   "format": "n5",
   "transform": {
     "axes": [

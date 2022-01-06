@@ -1,7 +1,7 @@
 {
   "name": "vesicle_pred",
   "description": "Vesicle",
-  "url": "s3://janelia-cosem/jrc_hela-1/jrc_hela-1.n5/labels/vesicle_pred",
+  "url": "s3://janelia-cosem-datasets/jrc_hela-1/jrc_hela-1.n5/labels/vesicle_pred",
   "format": "n5",
   "transform": {
     "axes": [

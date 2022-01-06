@@ -1,7 +1,7 @@
 {
   "name": "nucleolus_pred",
   "description": "Nucleoulus",
-  "url": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/labels/nucleolus_pred",
+  "url": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/nucleolus_pred",
   "format": "n5",
   "transform": {
     "axes": [

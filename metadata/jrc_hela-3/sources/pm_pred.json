@@ -1,7 +1,7 @@
 {
   "name": "pm_pred",
   "description": "Plasma Membrane",
-  "url": "s3://janelia-cosem/jrc_hela-3/jrc_hela-3.n5/labels/pm_pred",
+  "url": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/pm_pred",
   "format": "n5",
   "transform": {
     "axes": [

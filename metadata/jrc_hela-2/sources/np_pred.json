@@ -1,7 +1,7 @@
 {
   "name": "np_pred",
   "description": "Nuclear Pore",
-  "url": "s3://janelia-cosem/jrc_hela-2/jrc_hela-2.n5/labels/np_pred",
+  "url": "s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/labels/np_pred",
   "format": "n5",
   "transform": {
     "axes": [
