@@ -1,0 +1,41 @@
+{
+  "name": "mito_pred",
+  "description": "Mitochondria",
+  "url": "s3://janelia-cosem-datasets/jrc_hela-bfa/jrc_hela-bfa.n5/labels/mito_pred",
+  "format": "n5",
+  "transform": {
+    "axes": [
+      "z",
+      "y",
+      "x"
+    ],
+    "units": [
+      "nm",
+      "nm",
+      "nm"
+    ],
+    "translate": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      4.0,
+      4.0,
+      4.0
+    ]
+  },
+  "sampleType": "scalar",
+  "contentType": "prediction",
+  "displaySettings": {
+    "contrastLimits": {
+      "start": 0,
+      "end": 255,
+      "min": 0,
+      "max": 255
+    },
+    "color": "green",
+    "invertLUT": false
+  },
+  "subsources": []
+}

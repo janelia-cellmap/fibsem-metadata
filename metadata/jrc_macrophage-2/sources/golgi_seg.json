@@ -1,0 +1,71 @@
+{
+  "name": "golgi_seg",
+  "description": "Golgi",
+  "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/golgi_seg",
+  "format": "n5",
+  "transform": {
+    "axes": [
+      "z",
+      "y",
+      "x"
+    ],
+    "units": [
+      "nm",
+      "nm",
+      "nm"
+    ],
+    "translate": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      3.36,
+      4.0,
+      4.0
+    ]
+  },
+  "sampleType": "label",
+  "contentType": "segmentation",
+  "displaySettings": {
+    "contrastLimits": {
+      "start": 0,
+      "end": 255,
+      "min": 0,
+      "max": 255
+    },
+    "color": "cyan",
+    "invertLUT": false
+  },
+  "subsources": [
+    {
+      "name": "golgi_seg",
+      "description": "",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/neuroglancer/mesh/golgi_seg",
+      "format": "neuroglancer_legacy_mesh",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "ids": []
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "views": [
+    {
+      "name": "Default view",
+      "description": "The default view of the data.",
+      "sources": [
+        "fibsem-uint16"
+      ],
+      "position": null,
+      "scale": null,
+      "orientation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Dense-core vesicles (DCVs)",
+      "description": "Dense-core vesicles (DCVs) of different sizes in fan-shaped body of a five-day-old adult Drosophilabrain, as described in Fig. 4h of Xu et al. 2020c.",
+      "sources": [
+        "fibsem-uint16"
+      ],
+      "position": [
+        14435.0,
+        25983.0,
+        20643.0
+      ],
+      "scale": 7.5,
+      "orientation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Multiple synaptic sites (T-bars)",
+      "description": "Multiple synaptic sites (T-bars) viewed from the side in fan-shaped body of a five-day-old adult Drosophilabrain, as described in Fig. 4i of Xu et al. 2020c.",
+      "sources": [
+        "fibsem-uint16"
+      ],
+      "position": [
+        7120.0,
+        42124.0,
+        20805.0
+      ],
+      "scale": 7.5,
+      "orientation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Presynaptic sites (T-bars)",
+      "description": "A presynaptic T-bar viewed from the top in fan-shaped body of a five-day-old adult Drosophilabrain, as described in Fig. 4j of Xu et al. 2020c.",
+      "sources": [
+        "fibsem-uint16"
+      ],
+      "position": [
+        23880.0,
+        33640.0,
+        20816.0
+      ],
+      "scale": 7.5,
+      "orientation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Microtubules",
+      "description": "A longitudinal-section view of microtubules in fan-shaped body of a five-day-old adult Drosophilabrain, as described in Fig. 4k of Xu et al. 2020c.",
+      "sources": [
+        "fibsem-uint16"
+      ],
+      "position": [
+        4660.0,
+        26716.0,
+        30828.0
+      ],
+      "scale": 7.5,
+      "orientation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Microtubule arrays",
+      "description": "A cross-section view of microtubule arrays in fan-shaped body of a five-day-old adult Drosophilabrain, as described in Fig. 4l of Xu et al. 2020c.",
+      "sources": [
+        "fibsem-uint16"
+      ],
+      "position": [
+        20720.0,
+        30198.0,
+        36566.0
+      ],
+      "scale": 3.75,
+      "orientation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

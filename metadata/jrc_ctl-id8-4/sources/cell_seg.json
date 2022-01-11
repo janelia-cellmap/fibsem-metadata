@@ -1,0 +1,71 @@
+{
+  "name": "cell_seg",
+  "description": "Whole-cell segmentation (Ariadne)",
+  "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-4/jrc_ctl-id8-4.n5/labels/ariadne/cell_seg",
+  "format": "n5",
+  "transform": {
+    "axes": [
+      "z",
+      "y",
+      "x"
+    ],
+    "units": [
+      "nm",
+      "nm",
+      "nm"
+    ],
+    "translate": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      8.0,
+      8.0,
+      8.0
+    ]
+  },
+  "sampleType": "label",
+  "contentType": "segmentation",
+  "displaySettings": {
+    "contrastLimits": {
+      "start": 0,
+      "end": 255,
+      "min": 0,
+      "max": 255
+    },
+    "color": null,
+    "invertLUT": false
+  },
+  "subsources": [
+    {
+      "name": "cell_seg",
+      "description": "",
+      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-4/neuroglancer/mesh/cell_seg",
+      "format": "neuroglancer_multilod_draco",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "ids": []
+    }
+  ]
+}

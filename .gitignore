@@ -11,6 +11,9 @@ _build
 .cache
 *.so
 
+# API
+api/**
+
 # Installer logs
 pip-log.txt
 

@@ -1,7 +1,8 @@
 from enum import Enum
-from pydantic import BaseModel
 from typing import Dict, Sequence
 import click
+
+from fibsem_metadata.models.base import StrictBaseModel
 
 
 class ContentTypeEnum(str, Enum):
@@ -82,13 +83,13 @@ class ClassNameEnum(str, Enum):
     ribo_classified = "ribo_classified"
 
 
-class ClassMetadata(BaseModel):
+class ClassMetadata(StrictBaseModel):
     description: str
     contentTypes: Sequence[ContentTypeEnum]
     color: str
 
 
-class ClassMetadataCollection(BaseModel):
+class ClassMetadataCollection(StrictBaseModel):
     classes: Dict[ClassNameEnum, ClassMetadata]
 
 

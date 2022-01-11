@@ -1,0 +1,63 @@
+{
+  "views": [
+    {
+      "name": "Default view",
+      "description": "The default view of the data.",
+      "sources": [
+        "fibsem-uint8"
+      ],
+      "position": null,
+      "scale": null,
+      "orientation": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Refined, whole-cell predictions",
+      "description": "Renderings of refined predictions for multiple organelles, as presented in Fig. 2e of Heinrich et al., 2020",
+      "sources": [
+        "endo_seg",
+        "er_seg",
+        "golgi_seg",
+        "mito_seg",
+        "nucleus_seg",
+        "pm_seg",
+        "vesicle_seg",
+        "fibsem-uint8"
+      ],
+      "position": null,
+      "scale": null,
+      "orientation": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Stacked, helicoidal endoplasmic reticulum",
+      "description": "Example of helicoidal, stacked planar regions of endoplasmic reticulum. Curvature of endoplasmic membrane calculated as described in Heinrich et al., 2020.",
+      "sources": [
+        "er_seg",
+        "er_medial-surface",
+        "er_curvature",
+        "fibsem-uint8"
+      ],
+      "position": [
+        25040.0,
+        2256.0,
+        8232.0
+      ],
+      "scale": 4.35,
+      "orientation": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

@@ -1,9 +1,10 @@
-from pydantic import BaseModel, root_validator
-from typing import Sequence, Union, Dict, List
+from pydantic import root_validator
+from ..base import StrictBaseModel
+from typing import List, Sequence, Union, Dict
 import click
 
 
-class SpatialTransform(BaseModel):
+class SpatialTransform(StrictBaseModel):
     """
     Representation of an N-dimensional scaling + translation transform for labelled axes with units.
     """
@@ -15,12 +16,12 @@ class SpatialTransform(BaseModel):
 
     @root_validator
     def validate_argument_length(
-        cls, values: Dict[str, Union[Sequence[str], Sequence[float]]]
-    ):
-        scale = values.get("scale")
-        axes = values.get("axes")
-        units = values.get("units")
-        translate = values.get("translate")
+        cls: "SpatialTransform", values: Dict[str, Union[List[str], List[float]]]
+    ) -> Dict[str, Union[List[str], List[float]]]:
+        scale = values["scale"]
+        axes = values["axes"]
+        units = values["units"]
+        translate = values["translate"]
         if not len(axes) == len(units) == len(translate) == len(scale):
             raise ValueError(
                 f"The length of all arguments must match. {len(axes) = },  {len(units) = }, {len(translate) = }, {len(scale) = }"
@@ -28,16 +29,16 @@ class SpatialTransform(BaseModel):
         return values
 
 
-class ScaleMeta(BaseModel):
+class ScaleMeta(StrictBaseModel):
     path: str
     transform: SpatialTransform
 
 
-class MultiscaleMeta(BaseModel):
+class MultiscaleMeta(StrictBaseModel):
     datasets: Sequence[ScaleMeta]
 
 
-class COSEMGroupMetadata(BaseModel):
+class COSEMGroupMetadata(StrictBaseModel):
     """
     Multiscale metadata used by COSEM for multiscale datasets saved in N5/Zarr groups.
     """

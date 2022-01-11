@@ -1,0 +1,41 @@
+{
+  "name": "endo_mt_contacts",
+  "description": "Endosome - Microtubule Contact Sites",
+  "url": "s3://janelia-cosem-datasets/jrc_hela-3/jrc_hela-3.n5/labels/endo_mt_contacts",
+  "format": "n5",
+  "transform": {
+    "axes": [
+      "z",
+      "y",
+      "x"
+    ],
+    "units": [
+      "nm",
+      "nm",
+      "nm"
+    ],
+    "translate": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      3.24,
+      4.0,
+      4.0
+    ]
+  },
+  "sampleType": "label",
+  "contentType": "analysis",
+  "displaySettings": {
+    "contrastLimits": {
+      "start": 0,
+      "end": 65535,
+      "min": 0,
+      "max": 65535
+    },
+    "color": "white",
+    "invertLUT": false
+  },
+  "subsources": []
+}

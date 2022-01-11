@@ -1,0 +1,161 @@
+{
+  "name": "jrc_fly-acc-calyx-1",
+  "metadata": {
+    "title": "Drosophila brain: Accessory calyx",
+    "id": "jrc_fly-acc-calyx-1",
+    "imaging": {
+      "id": "Z0519-15",
+      "institution": "Janelia",
+      "gridSpacing": {
+        "unit": "nm",
+        "values": {
+          "x": 4.0,
+          "y": 4.0,
+          "z": 3.72
+        }
+      },
+      "dimensions": {
+        "unit": "\u00b5m",
+        "values": {
+          "x": 50.0,
+          "y": 40.0,
+          "z": 81.0
+        }
+      },
+      "startDate": "2019-12-06",
+      "duration": 19,
+      "biasVoltage": 0.0,
+      "scanRate": 2.0,
+      "current": 0.3,
+      "primaryEnergy": 700.0
+    },
+    "sample": {
+      "description": "Accessory calyx of a 5 day-old adult male Drosophila (Genome type: iso Canton S G1 x w1118 iso 5905).",
+      "protocol": "Chemical Fixation, ORTO-Lead-EPTA staining via progressive lowering of temperature and low temperature staining (PLT-LTS) heavy metal enhancement protocol.",
+      "contributions": "Sample provided by Zhiyuan Lu (HHMI/Janelia), and prepared, imaged and post-processed by Song Pang (HHMI/Janelia).",
+      "organism": [
+        "Drosophila"
+      ],
+      "type": [
+        "Tissue"
+      ],
+      "subtype": [
+        "Brain"
+      ],
+      "treatment": [
+        "Wild-type"
+      ]
+    },
+    "institution": [
+      "HHMI/Janelia"
+    ],
+    "softwareAvailability": "open",
+    "DOI": [
+      {
+        "id": "em",
+        "DOI": "10.25378/janelia.13114514"
+      }
+    ],
+    "publications": [
+      "Xu et al., 2020"
+    ]
+  },
+  "sources": {
+    "fibsem-uint16": {
+      "name": "fibsem-uint16",
+      "description": "FIB-SEM Data (uncompressed)",
+      "url": "s3://janelia-cosem-datasets/jrc_fly-acc-calyx-1/jrc_fly-acc-calyx-1.n5/em/fibsem-uint16",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.72,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "em",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 1637,
+          "end": 3272,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": true
+      },
+      "subsources": []
+    }
+  },
+  "views": [
+    {
+      "name": "Default view",
+      "description": "The default view of the data.",
+      "sources": [
+        "fibsem-uint16"
+      ],
+      "position": null,
+      "scale": null,
+      "orientation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Presynaptic T-bar in accessory calyx",
+      "description": "Presynaptic T-bar in accessory calyx of a five-day-old adult Drosophila brain, as presented in Xu et al. 2020c.",
+      "sources": [
+        "fibsem-uint16"
+      ],
+      "position": [
+        11210.0,
+        25140.0,
+        53998.0
+      ],
+      "scale": 8.4,
+      "orientation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Output sites of a projection neuron",
+      "description": "Output sites of a projection neuron in accessory calyx of a five-day-old adult Drosophilabrain, as presented in Xu et al. 2020c.",
+      "sources": [
+        "fibsem-uint16"
+      ],
+      "position": [
+        27959.0,
+        26953.0,
+        46442.0
+      ],
+      "scale": 5.7,
+      "orientation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

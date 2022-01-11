@@ -1,0 +1,41 @@
+{
+  "name": "fibsem-uint8",
+  "description": "FIB-SEM Data (compressed)",
+  "url": "s3://janelia-cosem-datasets/jrc_sum159-1/neuroglancer/em/fibsem-uint8.precomputed",
+  "format": "precomputed",
+  "transform": {
+    "axes": [
+      "z",
+      "y",
+      "x"
+    ],
+    "units": [
+      "nm",
+      "nm",
+      "nm"
+    ],
+    "translate": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      4.56,
+      4.0,
+      4.0
+    ]
+  },
+  "sampleType": "scalar",
+  "contentType": "em",
+  "displaySettings": {
+    "contrastLimits": {
+      "start": 180,
+      "end": 220,
+      "min": 0,
+      "max": 255
+    },
+    "color": "white",
+    "invertLUT": false
+  },
+  "subsources": []
+}

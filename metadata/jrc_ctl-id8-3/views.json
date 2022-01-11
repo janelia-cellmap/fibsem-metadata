@@ -1,0 +1,23 @@
+{
+  "views": [
+    {
+      "name": "Default view",
+      "description": "The default view of the data.",
+      "sources": [
+        "fibsem-uint8"
+      ],
+      "position": [
+        36341.0,
+        13908.0,
+        4388.0
+      ],
+      "scale": null,
+      "orientation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}
