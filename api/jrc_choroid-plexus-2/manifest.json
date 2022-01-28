@@ -66,10 +66,10 @@
     ]
   },
   "sources": {
-    "nucleus_pred": {
-      "name": "nucleus_pred",
-      "description": "Nucleus",
-      "url": "s3://janelia-cosem-datasets/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/labels/nucleus_pred",
+    "vesicle_pred": {
+      "name": "vesicle_pred",
+      "description": "Vesicle",
+      "url": "s3://janelia-cosem-datasets/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/labels/vesicle_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -101,88 +101,6 @@
           "end": 255,
           "min": 0,
           "max": 255
-        },
-        "color": "red",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "endo_seg": {
-      "name": "endo_seg",
-      "description": "Endosomal Network",
-      "url": "s3://janelia-cosem-datasets/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/labels/endo_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          4.0,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "magenta",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "vesicle_seg": {
-      "name": "vesicle_seg",
-      "description": "Vesicle",
-      "url": "s3://janelia-cosem-datasets/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/labels/vesicle_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          4.0,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 4294967295,
-          "min": 0,
-          "max": 4294967295
         },
         "color": "red",
         "invertLUT": false
@@ -230,6 +148,47 @@
       },
       "subsources": []
     },
+    "er_seg": {
+      "name": "er_seg",
+      "description": "Endoplasmic Reticulum",
+      "url": "s3://janelia-cosem-datasets/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/labels/er_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          4.0,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "blue",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
     "pm_pred": {
       "name": "pm_pred",
       "description": "Plasma Membrane",
@@ -271,10 +230,10 @@
       },
       "subsources": []
     },
-    "pm_seg": {
-      "name": "pm_seg",
-      "description": "Plasma Membrane",
-      "url": "s3://janelia-cosem-datasets/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/labels/pm_seg",
+    "nucleus_seg": {
+      "name": "nucleus_seg",
+      "description": "Nucleus",
+      "url": "s3://janelia-cosem-datasets/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/labels/nucleus_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -307,7 +266,7 @@
           "min": 0,
           "max": 255
         },
-        "color": "orange",
+        "color": "red",
         "invertLUT": false
       },
       "subsources": []
@@ -394,92 +353,10 @@
       },
       "subsources": []
     },
-    "nucleus_seg": {
-      "name": "nucleus_seg",
+    "nucleus_pred": {
+      "name": "nucleus_pred",
       "description": "Nucleus",
-      "url": "s3://janelia-cosem-datasets/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/labels/nucleus_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          4.0,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "red",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "er_pred": {
-      "name": "er_pred",
-      "description": "Endoplasmic Reticulum",
-      "url": "s3://janelia-cosem-datasets/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/labels/er_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          4.0,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "blue",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "vesicle_pred": {
-      "name": "vesicle_pred",
-      "description": "Vesicle",
-      "url": "s3://janelia-cosem-datasets/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/labels/vesicle_pred",
+      "url": "s3://janelia-cosem-datasets/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/labels/nucleus_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -513,47 +390,6 @@
           "max": 255
         },
         "color": "red",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "er_seg": {
-      "name": "er_seg",
-      "description": "Endoplasmic Reticulum",
-      "url": "s3://janelia-cosem-datasets/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/labels/er_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          4.0,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "blue",
         "invertLUT": false
       },
       "subsources": []
@@ -595,6 +431,170 @@
           "max": 255
         },
         "color": "magenta",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "endo_seg": {
+      "name": "endo_seg",
+      "description": "Endosomal Network",
+      "url": "s3://janelia-cosem-datasets/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/labels/endo_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          4.0,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "magenta",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "vesicle_seg": {
+      "name": "vesicle_seg",
+      "description": "Vesicle",
+      "url": "s3://janelia-cosem-datasets/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/labels/vesicle_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          4.0,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 4294967295,
+          "min": 0,
+          "max": 4294967295
+        },
+        "color": "red",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "pm_seg": {
+      "name": "pm_seg",
+      "description": "Plasma Membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/labels/pm_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          4.0,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "orange",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "er_pred": {
+      "name": "er_pred",
+      "description": "Endoplasmic Reticulum",
+      "url": "s3://janelia-cosem-datasets/jrc_choroid-plexus-2/jrc_choroid-plexus-2.n5/labels/er_pred",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          4.0,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "prediction",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "blue",
         "invertLUT": false
       },
       "subsources": []
