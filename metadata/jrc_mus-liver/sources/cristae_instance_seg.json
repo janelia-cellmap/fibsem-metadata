@@ -15,14 +15,14 @@
         "nm"
       ],
       "translate": [
-        0.0,
-        0.0,
-        0.0
+        15728,
+        30912,
+        30984
       ],
       "scale": [
-        4.0,
-        4.0,
-        4.0      ]
+        8.0,
+        8.0,
+        8.0      ]
     },
     "sampleType": "label",
     "contentType": "segmentation",
