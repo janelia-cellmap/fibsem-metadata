@@ -35,7 +35,7 @@
       "max": 255
     },
     "color": "white",
-    "invertLUT": true
+    "invertLUT": false
   },
   "subsources": []
 }
