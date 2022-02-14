@@ -42,10 +42,7 @@
   ],
   "softwareAvailability": "open",
   "DOI": [
-    {
-      "id": "em",
-      "DOI": "10.25378/janelia.13114499"
-    }
+    
   ],
   "publications": [
     "Mueller et al., 2020"
