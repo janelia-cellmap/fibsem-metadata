@@ -2,7 +2,7 @@
 name: build_api
 on:
   push:
-    branches: [ manifest_refactor ]
+    branches: [ master ]
 
 jobs:
   build:
