@@ -1,7 +1,7 @@
 {
   "name": "fibsem-uint8",
   "description": "FIB-SEM Data (compressed)",
-  "url": "s3://janelia-cosem-datasets/jrc_mus-pancreas-2/jrc_mus-pancreas-2.n5/em/fibsem-uint16",
+  "url": "s3://janelia-cosem-datasets/jrc_mus-pancreas-2/jrc_mus-pancreas-2.n5/em/fibsem-uint8",
   "format": "n5",
   "transform": {
     "axes": [
