@@ -52,14 +52,8 @@
       "Paul Langerhans Institute Dresden"
     ],
     "softwareAvailability": "open",
-    "DOI": [
-      {
-        "id": "em",
-        "DOI": "10.25378/janelia.13114499"
-      }
-    ],
+    "DOI": [],
     "publications": [
-      "Xu et al., 2020",
       "Mueller et al., 2020"
     ]
   },
