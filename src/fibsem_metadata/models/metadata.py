@@ -4,6 +4,12 @@ from typing import List, Dict
 from enum import Enum
 
 from fibsem_metadata.models.base import StrictBaseModel
+from pydantic import HttpUrl
+
+
+class HyperLink(StrictBaseModel):
+    href: HttpUrl
+    title: str
 
 
 class SoftwareAvailability(str, Enum):
@@ -68,7 +74,7 @@ class DatasetMetadata(StrictBaseModel):
     institution: List[str]
     softwareAvailability: SoftwareAvailability
     DOI: List[DOI]
-    publications: List[str]
+    publications: List[HyperLink]
 
 
 @click.command()
