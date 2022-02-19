@@ -1,16 +1,9 @@
 {
   "title": "SARS-COV-2-infected grivet kidney epithelial (Vero) cells",
   "id": "jrc_ccl81-covid-1",
-  
   "imaging": {
     "id": "NIH2020_18A",
     "institution": "Janelia",
-    "startDate": "2020-09-10",
-    "duration": 11,
-    "biasVoltage": 0.0,
-    "scanRate": 0.2,
-    "current": 0.25,
-    "primaryEnergy": 700.0,
     "gridSpacing": {
       "unit": "nm",
       "values": {
@@ -26,16 +19,30 @@
         "y": 20.0,
         "z": 25.8
       }
-    }
+    },
+    "startDate": "2020-09-10",
+    "duration": 11,
+    "biasVoltage": 0.0,
+    "scanRate": 0.2,
+    "current": 0.25,
+    "primaryEnergy": 700.0
   },
   "sample": {
     "description": "SARS-COV-2-infected grivet kidney epithelial (Vero) cells at the 24-h time point.",
     "protocol": "CCL-81 cells were seeded in a T75 flask at 80% confluency and infected with SARS-CoV-2, at a MOI of 0.01. After 24 hours, the cells were collected from flasks and preserved in 2.5% Glutaraldehyde (E.M. Sciences, Warrington, PA), in Millonig\u2019s Sodium Phosphate Buffer (Tousimis Research, Rockville, MD). After fixation was complete, the cells were washed repeatedly in Millonig\u2019s Buffer, and incubated for two hours in 1.0% Osmium Tetroxide, in the same buffer. Following rinsing steps in Ultrapure Water and en bloc staining with 2.0% Uranyl Acetate, the samples were dehydrated in a series of graded ethanols, and infiltrated and embedded in Spurr\u2019s plastic resin (E.M. Sciences).",
     "contributions": "Sample provided by John Bernbaum and Jens H. Kuhn (NIH/NIAID/DCR/Integrated Research Facility at Fort Detrick), prepared for imaging by Song Pang (HHMI/Janelia), imaging by Song Pang (HHMI/Janelia), and post-processing by C. Shan Xu (HHMI/Janelia)",
-    "organism": ["Monkey"],
-    "type": ["Cell culture"],
-    "subtype": ["Vero"],
-    "treatment": ["SARS-COV-2"]
+    "organism": [
+      "Monkey"
+    ],
+    "type": [
+      "Cell culture"
+    ],
+    "subtype": [
+      "Vero"
+    ],
+    "treatment": [
+      "SARS-COV-2"
+    ]
   },
   "institution": [
     "HHMI/Janelia",
@@ -52,7 +59,5 @@
       "DOI": ""
     }
   ],
-  "publications": [
-    ""
-  ]
+  "publications": []
 }

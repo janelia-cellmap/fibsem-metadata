@@ -2,12 +2,6 @@
   "title": "Isolated murine pancreatic islets",
   "id": "jrc_mus-pancreas-3",
   "imaging": {
-    "startDate": "2018-07-07",
-    "duration": 4,
-    "biasVoltage": 0.0,
-    "scanRate": 0.2,
-    "current": 0.2,
-    "primaryEnergy": 1200.0,
     "id": "G36-2(LowGlucose)",
     "institution": "Janelia",
     "gridSpacing": {
@@ -25,25 +19,42 @@
         "y": 20.0,
         "z": 8.0
       }
-    }
+    },
+    "startDate": "2018-07-07",
+    "duration": 4,
+    "biasVoltage": 0.0,
+    "scanRate": 0.2,
+    "current": 0.2,
+    "primaryEnergy": 1200.0
   },
   "sample": {
     "description": "Wild-type mouse pancreatic islets treated with low glucose.",
     "protocol": "High-pressure freezing and freeze-substitution with 2% OsO\u2084, 1% UA, 0.5% GA, 5% H\u2082O in acetone with 1% methanol, followed by 0.2% TCH in 80% methanol at RT, 2% OsO\u2084 in acetone at RT, 1% UA in acetone + 10% methanol.",
     "contributions": "Sample provided by Andreas Mueller and Michele Solimena (Paul Langerhans Institute, Dresden), prepared for imaging by Song Pang (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia).",
-    "organism": ["Mouse"],
-    "type": ["Tissue"],
-    "subtype": ["Pancreas"],
-    "treatment": ["Wild-type", "Glucose"]
+    "organism": [
+      "Mouse"
+    ],
+    "type": [
+      "Tissue"
+    ],
+    "subtype": [
+      "Pancreas"
+    ],
+    "treatment": [
+      "Wild-type",
+      "Glucose"
+    ]
   },
   "institution": [
     "HHMI/Janelia",
     "Paul Langerhans Institute Dresden"
   ],
   "softwareAvailability": "open",
-  "DOI": [
-  ],
+  "DOI": [],
   "publications": [
-    "Mueller et al., 2020"
+    {
+      "href": "https://doi.org/10.1083/jcb.202010039",
+      "title": "Mueller et al., 2020"
+    }
   ]
 }

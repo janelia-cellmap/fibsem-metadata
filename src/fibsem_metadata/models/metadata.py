@@ -7,7 +7,7 @@ from fibsem_metadata.models.base import StrictBaseModel
 from pydantic import HttpUrl
 
 
-class HyperLink(StrictBaseModel):
+class Hyperlink(StrictBaseModel):
     href: HttpUrl
     title: str
 
@@ -74,7 +74,7 @@ class DatasetMetadata(StrictBaseModel):
     institution: List[str]
     softwareAvailability: SoftwareAvailability
     DOI: List[DOI]
-    publications: List[HyperLink]
+    publications: List[Hyperlink]
 
 
 @click.command()

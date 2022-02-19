@@ -2,12 +2,6 @@
   "title": "Interphase HeLa cell",
   "id": "jrc_hela-3",
   "imaging": {
-    "startDate": "2017-08-09",
-    "duration": 31,
-    "biasVoltage": 0.0,
-    "scanRate": 0.2,
-    "current": 0.24,
-    "primaryEnergy": 1000.0,
     "id": "Aubrey_17-7-17_Cell3",
     "institution": "Janelia",
     "gridSpacing": {
@@ -25,16 +19,30 @@
         "y": 4.0,
         "z": 39.0
       }
-    }
+    },
+    "startDate": "2017-08-09",
+    "duration": 31,
+    "biasVoltage": 0.0,
+    "scanRate": 0.2,
+    "current": 0.24,
+    "primaryEnergy": 1000.0
   },
   "sample": {
     "description": "Wild-type, interphase HeLa cell (ATCC CCL-2).",
     "protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO\u2084 0.1% UA 3% H\u2082O in acetone; resin embedding in Eponate 12.",
     "contributions": "Sample provided by Aubrey Weigel (HHMI/Janelia), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia). Segmentation and analysis by COSEM Project Team (HHMI/Janelia).",
-    "organism": ["Human"],
-    "type": ["Cell culture"],
-    "subtype": ["HeLa"],
-    "treatment": ["Wild-type"]
+    "organism": [
+      "Human"
+    ],
+    "type": [
+      "Cell culture"
+    ],
+    "subtype": [
+      "HeLa"
+    ],
+    "treatment": [
+      "Wild-type"
+    ]
   },
   "institution": [
     "HHMI/Janelia"
@@ -51,7 +59,13 @@
     }
   ],
   "publications": [
-    "Xu et al., 2020",
-    "Heinrich et al., 2020"
+    {
+      "href": "https://doi.org/10.1038/s41586-021-03992-4",
+      "title": "Xu et al., 2021"
+    },
+    {
+      "href": "https://doi.org/10.1038/s41586-021-03977-3",
+      "title": "Heinrich et al., 2021"
+    }
   ]
 }
