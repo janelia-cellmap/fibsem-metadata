@@ -62,7 +62,10 @@
       }
     ],
     "publications": [
-      "Weigel, Chang, et al., 2021"
+      {
+        "href": "https://doi.org/10.1016/j.cell.2021.03.035",
+        "title": "Weigel, Chang, et al., 2021"
+      }
     ]
   },
   "sources": {

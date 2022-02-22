@@ -54,7 +54,10 @@
     "softwareAvailability": "open",
     "DOI": [],
     "publications": [
-      "Mueller et al., 2020"
+      {
+        "href": "https://doi.org/10.1083/jcb.202010039",
+        "title": "Mueller et al., 2020"
+      }
     ]
   },
   "sources": {

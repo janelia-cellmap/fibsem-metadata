@@ -59,8 +59,14 @@
       }
     ],
     "publications": [
-      "Xu et al., 2020",
-      "Mueller et al., 2020"
+      {
+        "href": "https://doi.org/10.1038/s41586-021-03992-4",
+        "title": "Xu et al., 2021"
+      },
+      {
+        "href": "https://doi.org/10.1083/jcb.202010039",
+        "title": "Mueller et al., 2020"
+      }
     ]
   },
   "sources": {

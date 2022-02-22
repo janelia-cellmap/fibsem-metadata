@@ -1,6 +1,6 @@
 import click
 from datetime import date
-from typing import List, Dict
+from typing import List, Dict, Union
 from enum import Enum
 
 from fibsem_metadata.models.base import StrictBaseModel
@@ -74,7 +74,7 @@ class DatasetMetadata(StrictBaseModel):
     institution: List[str]
     softwareAvailability: SoftwareAvailability
     DOI: List[DOI]
-    publications: List[Hyperlink]
+    publications: List[Union[Hyperlink, str]]
 
 
 @click.command()

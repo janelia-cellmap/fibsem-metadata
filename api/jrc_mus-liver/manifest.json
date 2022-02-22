@@ -59,47 +59,6 @@
     "publications": []
   },
   "sources": {
-    "nucleus_seg": {
-      "name": "nucleus_seg",
-      "description": "Nucleus (Ariadne)",
-      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/ariadne/nucleus_instance_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          15728.0,
-          30912.0,
-          30984.0
-        ],
-        "scale": [
-          8.0,
-          8.0,
-          8.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": null,
-        "invertLUT": false
-      },
-      "subsources": []
-    },
     "fibsem-uint8": {
       "name": "fibsem-uint8",
       "description": "FIB-SEM Data (compressed)",
@@ -137,47 +96,6 @@
           "max": 255
         },
         "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "pm_seg": {
-      "name": "pm_seg",
-      "description": "Plasma Membrane (Ariadne)",
-      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/ariadne/pm_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          15728.0,
-          30912.0,
-          30984.0
-        ],
-        "scale": [
-          8.0,
-          8.0,
-          8.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": null,
         "invertLUT": false
       },
       "subsources": []
@@ -223,10 +141,92 @@
       },
       "subsources": []
     },
+    "pm_seg": {
+      "name": "pm_seg",
+      "description": "Plasma Membrane (Ariadne)",
+      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/ariadne/pm_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          15728.0,
+          30912.0,
+          30984.0
+        ],
+        "scale": [
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": null,
+        "invertLUT": false
+      },
+      "subsources": []
+    },
     "cristae_instance_seg": {
       "name": "cristae_instance_seg",
       "description": "Mitochondrial Cristae (Ariadne)",
       "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/ariadne/cristae_instance_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          15728.0,
+          30912.0,
+          30984.0
+        ],
+        "scale": [
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": null,
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "nucleus_seg": {
+      "name": "nucleus_seg",
+      "description": "Nucleus (Ariadne)",
+      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/ariadne/nucleus_instance_seg",
       "format": "n5",
       "transform": {
         "axes": [
