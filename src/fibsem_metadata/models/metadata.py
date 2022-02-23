@@ -73,7 +73,7 @@ class DatasetMetadata(StrictBaseModel):
     sample: SampleMetadata
     institution: List[str]
     softwareAvailability: SoftwareAvailability
-    DOI: List[DOI]
+    DOI: List[Union[Hyperlink, DOI]]
     publications: List[Union[Hyperlink, str]]
 
 

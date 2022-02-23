@@ -1,5 +1,5 @@
 import json
-from typing import Any, Dict
+from typing import Any, Dict, Literal
 import click
 from pydantic import HttpUrl
 
@@ -21,6 +21,20 @@ pub_mapping = {'Xu et al., 2020' : Hyperlink(href=HttpUrl('https://doi.org/10.10
             'Mueller et al., 2020' : Hyperlink(href=HttpUrl('https://doi.org/10.1083/jcb.202010039', scheme='https', host='doi.org'), title='Mueller et al., 2020'),
             'Hoffman et al., 2020' : Hyperlink(href=HttpUrl('https://doi.org/10.1126/science.aaz5357', scheme='https', host='doi.org'), title='Hoffman et al., 2020'),
             'Coulter et al., 2018' : Hyperlink(href=HttpUrl('https://doi.org/10.1016/j.celrep.2018.06.100', scheme='https', host='doi.org'), title='Coulter et al., 2018')}
+
+
+def doi_name_remap(name: str) -> str:
+    result = name
+    if name == 'em':
+        result = 'EM'
+    elif name == 'segmentations':
+        result = 'Segmentations'
+    return result
+
+
+def linkify_doi(doi: Dict[Literal["DOI", "id"], str]) -> Hyperlink:
+    return Hyperlink(href=HttpUrl(doi["DOI"], scheme='https', host='doi.org'), title=doi["id"])
+
 
 def categorize_file(path: str) -> str:
     if path.endswith('views.json'):
@@ -48,15 +62,12 @@ def migrate_source(blob: Dict[str, Any]) -> VolumeSource:
         return VolumeSource(**blob)
 
 def migrate_metadata(blob: Dict[str, Any]) -> DatasetMetadata:
-    publications = blob.pop('publications')
-    new_pubs = []
-    for pub in publications:
-        if pub in pub_mapping:
-            new_pub = pub_mapping[pub]
-            new_pubs.append(new_pub)
-        else:
-            new_pubs.append(pub)
-    blob['publications'] = new_pubs
+    dois = blob.pop('DOI')
+    new_doi = []
+    for doi in dois:
+        doi["id"] = doi_name_remap(doi["id"])
+        new_doi.append(linkify_doi(doi))
+    blob['DOI'] = new_doi
     return DatasetMetadata(**blob)
 
 def migrate_views(blob: Dict[str, Any]) -> DatasetViews:

@@ -3,12 +3,13 @@ from glob import glob
 import json
 import fsspec
 from typing import Any, Dict
+from fibsem_metadata.models.metadata import DatasetMetadata
 from fibsem_metadata.models.views import DatasetViews
 from fibsem_metadata.models.sources import VolumeSource
 
 volume_sources = glob('metadata/*/sources/*')
 views = glob('metadata/*/views.json')
-
+metadata = glob('metadata/*/metadata.json')
 
 def exists_fsspec(path: str) -> bool:
     return fsspec.get_mapper(path, anon=True).fs.exists(path)
@@ -34,3 +35,9 @@ def test_volume_source(path: str):
 def test_view(views_path: str):
     blob = get_json_blob(views_path)
     views = DatasetViews(**blob)
+
+
+@pytest.mark.parametrize('metadata_path', metadata)
+def test_dataset_metadata(metadata_path: str):
+    blob = get_json_blob(metadata_path)
+    meta = DatasetMetadata(**blob)
