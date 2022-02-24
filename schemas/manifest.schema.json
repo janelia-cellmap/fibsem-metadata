@@ -180,25 +180,6 @@
       ],
       "type": "string"
     },
-    "DOI": {
-      "title": "DOI",
-      "type": "object",
-      "properties": {
-        "id": {
-          "title": "Id",
-          "type": "string"
-        },
-        "DOI": {
-          "title": "Doi",
-          "type": "string"
-        }
-      },
-      "required": [
-        "id",
-        "DOI"
-      ],
-      "additionalProperties": false
-    },
     "Hyperlink": {
       "title": "Hyperlink",
       "type": "object",
@@ -218,6 +199,25 @@
       "required": [
         "href",
         "title"
+      ],
+      "additionalProperties": false
+    },
+    "DOI": {
+      "title": "DOI",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "DOI": {
+          "title": "Doi",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "DOI"
       ],
       "additionalProperties": false
     },
@@ -254,7 +254,14 @@
           "title": "Doi",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DOI"
+            "anyOf": [
+              {
+                "$ref": "#/definitions/Hyperlink"
+              },
+              {
+                "$ref": "#/definitions/DOI"
+              }
+            ]
           }
         },
         "publications": {
