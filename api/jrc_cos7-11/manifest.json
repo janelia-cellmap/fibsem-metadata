@@ -52,12 +52,12 @@
     "softwareAvailability": "open",
     "DOI": [
       {
-        "id": "em",
-        "DOI": "10.25378/janelia.13123385"
+        "href": "https://doi.org/10.25378/janelia.13123385",
+        "title": "EM"
       },
       {
-        "id": "seg",
-        "DOI": "10.25378/janelia.13120265"
+        "href": "https://doi.org/10.25378/janelia.13120265",
+        "title": "Segmentations"
       }
     ],
     "publications": [

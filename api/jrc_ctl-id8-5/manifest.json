@@ -52,16 +52,7 @@
       "Genentech"
     ],
     "softwareAvailability": "open",
-    "DOI": [
-      {
-        "id": "em",
-        "DOI": "10.6084/m9.figshare.14447568"
-      },
-      {
-        "id": "seg",
-        "DOI": ""
-      }
-    ],
+    "DOI": [],
     "publications": []
   },
   "sources": {
