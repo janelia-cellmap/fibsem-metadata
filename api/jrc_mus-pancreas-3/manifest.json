@@ -52,12 +52,7 @@
       "Paul Langerhans Institute Dresden"
     ],
     "softwareAvailability": "open",
-    "DOI": [
-      {
-        "id": "em",
-        "DOI": "10.25378/janelia.19196585"
-      }
-    ],
+    "DOI": [],
     "publications": [
       {
         "href": "https://doi.org/10.1083/jcb.202010039",
