@@ -1,5 +1,5 @@
 from os import remove
-import shutil
+import logging
 from typing import Union
 from fibsem_metadata.models.index import Index
 from fibsem_metadata.utils import materialize_element
@@ -11,6 +11,10 @@ from fibsem_metadata.models.views import DatasetViews
 from fibsem_metadata.models.sources import VolumeSource
 from shutil import copyfile, rmtree
 
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+logger.addHandler(logging.StreamHandler())
 
 def validate_tree(root: str) -> None:
     """
@@ -69,10 +73,9 @@ def main(root: str = ".") -> int:
                 remove(child)
     # generate the manifest
     api_paths = [api_dir / path.name for path in metadata_paths]
-    [
+    for meta_source, meta_target in zip(metadata_paths, api_paths):
+        logger.info(f'Building manifest from {meta_source} to {meta_target}')
         build_manifest(meta_source, meta_target)
-        for meta_source, meta_target in zip(metadata_paths, api_paths)
-    ]
     # generate the index
     index = Index(datasets={p.name : str(p) for p in api_paths})
     with open(Path(root) / "api/index.json", mode="w") as fh:

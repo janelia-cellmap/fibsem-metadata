@@ -52,8 +52,8 @@
     "softwareAvailability": "open",
     "DOI": [
       {
-        "id": "em",
-        "DOI": "10.25378/janelia.16913035"
+        "href": "https://doi.org/10.25378/janelia.16913035",
+        "title": "EM"
       }
     ],
     "publications": []

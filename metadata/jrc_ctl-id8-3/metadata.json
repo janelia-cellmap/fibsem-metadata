@@ -2,12 +2,6 @@
   "title": "Killer T-Cell attacking cancer cell",
   "id": "jrc_ctl-id8-3",
   "imaging": {
-    "startDate": "2020-02-12",
-    "duration": 5,
-    "biasVoltage": 0.0,
-    "scanRate": 0.25,
-    "current": 2.0,
-    "primaryEnergy": 1200.0,
     "id": "Cryo_LoadID494_ROI5",
     "institution": "Janelia",
     "gridSpacing": {
@@ -25,7 +19,13 @@
         "y": 12.8,
         "z": 32.24
       }
-    }
+    },
+    "startDate": "2020-02-12",
+    "duration": 5,
+    "biasVoltage": 0.0,
+    "scanRate": 0.25,
+    "current": 2.0,
+    "primaryEnergy": 1200.0
   },
   "sample": {
     "description": "OT-I mouse cytotoxic T lymphocyte attacking an ID8 ovarian cancer cell;  fixed and imaged moments after the release of perforin/granzyme from lytic granules. The ID8 murine ovarian cancer cell is stably expressing mEmerald-Chmp4b and TOMM20-SNAP.",
@@ -41,17 +41,6 @@
     "Genentech"
   ],
   "softwareAvailability": "open",
-  "DOI": [
-    {
-      "id": "em",
-      "DOI": "10.6084/m9.figshare.14447562"
-    },
-    {
-      "id": "seg",
-      "DOI": "10.6084/m9.figshare.19196330"
-    }
-  ],
-  "publications": [
-    "Ritter et al., 2021"
-  ]
+  "DOI": [],
+  "publications": []
 }

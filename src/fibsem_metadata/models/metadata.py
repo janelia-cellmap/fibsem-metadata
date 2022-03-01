@@ -1,9 +1,15 @@
 import click
 from datetime import date
-from typing import List, Dict
+from typing import List, Dict, Union
 from enum import Enum
 
 from fibsem_metadata.models.base import StrictBaseModel
+from pydantic import HttpUrl
+
+
+class Hyperlink(StrictBaseModel):
+    href: HttpUrl
+    title: str
 
 
 class SoftwareAvailability(str, Enum):
@@ -67,8 +73,8 @@ class DatasetMetadata(StrictBaseModel):
     sample: SampleMetadata
     institution: List[str]
     softwareAvailability: SoftwareAvailability
-    DOI: List[DOI]
-    publications: List[str]
+    DOI: List[Union[Hyperlink, DOI]]
+    publications: List[Union[Hyperlink, str]]
 
 
 @click.command()

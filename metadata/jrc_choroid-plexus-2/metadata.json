@@ -2,12 +2,6 @@
   "title": "Mouse choroid plexus",
   "id": "jrc_choroid-plexus-2",
   "imaging": {
-    "startDate": "2017-04-05",
-    "duration": 3,
-    "biasVoltage": 400.0,
-    "scanRate": 0.5,
-    "current": 1.0,
-    "primaryEnergy": 1100.0,
     "id": "",
     "institution": "Janelia",
     "gridSpacing": {
@@ -25,16 +19,30 @@
         "y": 40.0,
         "z": 2.0
       }
-    }
+    },
+    "startDate": "2017-04-05",
+    "duration": 3,
+    "biasVoltage": 400.0,
+    "scanRate": 0.5,
+    "current": 1.0,
+    "primaryEnergy": 1100.0
   },
   "sample": {
     "description": "Mouse choroid plexus",
     "protocol": "Postfixed in 1.0% OsO\u2084 in 0.1M cacodylate buffer (pH 7.4) for 1 hour at room temperature. Following postfixation, the samples were rinsed with buffer, dehydrated through a graded series of ethanol, and embedded in durcupan.",
     "contributions": "Sample provided by Michael Coulter & Christopher Walsh (HHMI/Harvard), prepared for imaging by Song Pang (HHMI/Janelia), with imaging by Song Pang and C. Shan Xu and post-processing by C. Shan Xu (HHMI/Janelia). Segmentation and analysis by COSEM Project Team (HHMI/Janelia).",
-    "organism": ["Mouse"],
-    "type": ["Tissue"],
-    "subtype": ["Choroid plexus"],
-    "treatment": ["Wild-type"]
+    "organism": [
+      "Mouse"
+    ],
+    "type": [
+      "Tissue"
+    ],
+    "subtype": [
+      "Choroid plexus"
+    ],
+    "treatment": [
+      "Wild-type"
+    ]
   },
   "institution": [
     "HHMI/Janelia"
@@ -42,16 +50,22 @@
   "softwareAvailability": "open",
   "DOI": [
     {
-      "id": "em",
-      "DOI": "10.25378/janelia.13123427"
+      "href": "https://doi.org/10.25378/janelia.13123427",
+      "title": "EM"
     },
     {
-      "id": "seg",
-      "DOI": "10.25378/janelia.13122509"
+      "href": "https://doi.org/10.25378/janelia.13122509",
+      "title": "Segmentations"
     }
   ],
   "publications": [
-    "Coulter et al., 2018",
-    "Heinrich et al., 2020"
+    {
+      "href": "https://doi.org/10.1016/j.celrep.2018.06.100",
+      "title": "Coulter et al., 2018"
+    },
+    {
+      "href": "https://doi.org/10.1038/s41586-021-03977-3",
+      "title": "Heinrich et al., 2021"
+    }
   ]
 }

@@ -53,90 +53,18 @@
     "softwareAvailability": "open",
     "DOI": [
       {
-        "id": "em",
-        "DOI": "10.25378/janelia.13469814"
-      },
-      {
-        "id": "seg",
-        "DOI": ""
+        "href": "https://doi.org/10.25378/janelia.13469814",
+        "title": "EM"
       }
     ],
     "publications": [
-      "Weigel, Chang, et al., 2021"
+      {
+        "href": "https://doi.org/10.1016/j.cell.2021.03.035",
+        "title": "Weigel, Chang, et al., 2021"
+      }
     ]
   },
   "sources": {
-    "vesicle_pred": {
-      "name": "vesicle_pred",
-      "description": "Vesicle",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-bfa/jrc_hela-bfa.n5/labels/vesicle_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          4.0,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "red",
-        "invertLUT": false
-      },
-      "subsources": [
-        {
-          "name": "vesicle_seg",
-          "description": "",
-          "url": "s3://janelia-cosem-datasets/jrc_hela-bfa/neuroglancer/mesh/vesicle_seg",
-          "format": "neuroglancer_multilod_draco",
-          "transform": {
-            "axes": [
-              "z",
-              "y",
-              "x"
-            ],
-            "units": [
-              "nm",
-              "nm",
-              "nm"
-            ],
-            "translate": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "scale": [
-              1.0,
-              1.0,
-              1.0
-            ]
-          },
-          "ids": []
-        }
-      ]
-    },
     "endo_pred": {
       "name": "endo_pred",
       "description": "Endosomal Network",
@@ -290,47 +218,6 @@
         }
       ]
     },
-    "er_pred": {
-      "name": "er_pred",
-      "description": "Endoplasmic Reticulum",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-bfa/jrc_hela-bfa.n5/labels/er_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          4.0,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "blue",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
     "er_seg": {
       "name": "er_seg",
       "description": "Endoplasmic Reticulum",
@@ -375,6 +262,77 @@
           "name": "er_seg",
           "description": "",
           "url": "s3://janelia-cosem-datasets/jrc_hela-bfa/neuroglancer/mesh/er_seg",
+          "format": "neuroglancer_multilod_draco",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "ids": []
+        }
+      ]
+    },
+    "vesicle_pred": {
+      "name": "vesicle_pred",
+      "description": "Vesicle",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-bfa/jrc_hela-bfa.n5/labels/vesicle_pred",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          4.0,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "prediction",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "red",
+        "invertLUT": false
+      },
+      "subsources": [
+        {
+          "name": "vesicle_seg",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_hela-bfa/neuroglancer/mesh/vesicle_seg",
           "format": "neuroglancer_multilod_draco",
           "transform": {
             "axes": [
@@ -513,6 +471,47 @@
           "ids": []
         }
       ]
+    },
+    "er_pred": {
+      "name": "er_pred",
+      "description": "Endoplasmic Reticulum",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-bfa/jrc_hela-bfa.n5/labels/er_pred",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          4.0,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "prediction",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "blue",
+        "invertLUT": false
+      },
+      "subsources": []
     },
     "vesicle_seg": {
       "name": "vesicle_seg",
