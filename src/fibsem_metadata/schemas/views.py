@@ -1,7 +1,7 @@
 from typing import Optional, Sequence
 from pydantic import validator
 
-from fibsem_metadata.models.base import StrictBaseModel
+from .base import StrictBaseModel
 
 
 class DatasetView(StrictBaseModel):

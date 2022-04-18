@@ -1,8 +1,8 @@
 from typing import Optional, Sequence
 from enum import Enum
 from pydantic.color import Color
-from fibsem_metadata.models.base import StrictBaseModel
-from fibsem_metadata.models.multiscale.cosem import SpatialTransform
+from .base import StrictBaseModel
+from .multiscale.cosem import SpatialTransform
 
 
 class MeshTypeEnum(str, Enum):
@@ -51,6 +51,10 @@ class DisplaySettings(StrictBaseModel):
 
 
 class DataSource(StrictBaseModel):
+    """
+    An abstract data source. Volume and mesh source metadata are
+    derived from this interface.
+    """
     name: str
     description: str
     url: str

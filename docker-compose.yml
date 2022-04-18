@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    ports:
+      -  5432:5432
+    volumes:
+      - ./data/db:/var/lib/postgres
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_DB=fibsem_metadata
+      - POSTGRES_PASSWORD=admin

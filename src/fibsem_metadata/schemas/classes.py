@@ -1,16 +1,8 @@
 from enum import Enum
 from typing import Dict, Sequence
-import click
 
-from fibsem_metadata.models.base import StrictBaseModel
-
-
-class ContentTypeEnum(str, Enum):
-    em = "em"
-    lm = "lm"
-    prediction = "prediction"
-    segmentationm = "segmentation"
-    analysis = "analysis"
+from .base import StrictBaseModel
+from .sources import ContentTypeEnum
 
 
 class ClassNameEnum(str, Enum):
@@ -428,16 +420,3 @@ class_info = ClassMetadataCollection(
         ),
     }
 )
-
-
-@click.command()
-@click.option("-s", "--schema", required=False, type=bool, is_flag=True)
-def main(schema: bool) -> None:
-    if schema:
-        print(class_info.schema_json(indent=2))
-    else:
-        print(class_info.json(indent=2))
-
-
-if __name__ == "__main__":
-    main()

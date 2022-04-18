@@ -1,6 +1,7 @@
 from pydantic import root_validator
+from pydantic import validator
 from ..base import StrictBaseModel
-from typing import List, Sequence, Union, Dict
+from typing import List, Sequence, Union, Dict, Literal
 import click
 
 
@@ -27,6 +28,24 @@ class SpatialTransform(StrictBaseModel):
                 f"The length of all arguments must match. {len(axes) = },  {len(units) = }, {len(translate) = }, {len(scale) = }"
             )
         return values
+
+
+class OffsetTransform(SpatialTransform):
+    """
+    A transform representing the intrinsic array-indexing-based space of
+    N-dimensional arrays. For each axis, the axis name must be a the string
+    representation of an integer starting from 0, the unit must be 'indices',
+    the scale must be 1, and the offset must be an integer.
+    """
+    units: Sequence[Literal['indices']]
+    translate: Sequence[int]
+    scale: Sequence[Literal[1]]
+
+    @validator('axes')
+    def axes_must_be_stringed_ints(cls, v: Sequence[str]):
+        for idx, element in enumerate(v):
+            if element != str(idx):
+                raise ValueError(f'Invalid axis name. Got {element}, expected "{str(idx)}"')
 
 
 class ScaleMeta(StrictBaseModel):

@@ -1,9 +1,8 @@
-import click
 from datetime import date
 from typing import List, Dict, Union
 from enum import Enum
 
-from fibsem_metadata.models.base import StrictBaseModel
+from .base import StrictBaseModel
 from pydantic import HttpUrl
 
 
@@ -23,14 +22,14 @@ class UnitfulVector(StrictBaseModel):
     values: Dict[str, float]
 
 
-class ImagingMetadata(StrictBaseModel):
-    id: str
+class ImageAcquisition(StrictBaseModel):
+    name: str
     institution: str
     gridSpacing: UnitfulVector
     dimensions: UnitfulVector
 
 
-class FIBSEMImagingMetadata(ImagingMetadata):
+class FIBSEMAcquisition(ImageAcquisition):
     """
     Metadata describing the FIB-SEM imaging process.
     """
@@ -43,7 +42,7 @@ class FIBSEMImagingMetadata(ImagingMetadata):
     primaryEnergy: float
 
 
-class SampleMetadata(StrictBaseModel):
+class Sample(StrictBaseModel):
     """
     Metadata describing the sample and sample preparation.
     """
@@ -58,29 +57,20 @@ class SampleMetadata(StrictBaseModel):
 
 
 class DOI(StrictBaseModel):
-    id: str
-    DOI: str
+    name: str
+    doi: str
 
 
-class DatasetMetadata(StrictBaseModel):
+class Dataset(StrictBaseModel):
     """
     Metadata for a bioimaging dataset.
     """
 
     title: str
     id: str
-    imaging: FIBSEMImagingMetadata
-    sample: SampleMetadata
+    imaging: FIBSEMAcquisition
+    sample: Sample
     institution: List[str]
     softwareAvailability: SoftwareAvailability
-    DOI: List[Union[Hyperlink, DOI]]
+    doi: List[Union[Hyperlink, DOI]]
     publications: List[Union[Hyperlink, str]]
-
-
-@click.command()
-def main() -> None:
-    click.echo(DatasetMetadata.schema_json(indent=2))
-
-
-if __name__ == "__main__":
-    main()
