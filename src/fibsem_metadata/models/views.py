@@ -1,21 +1,24 @@
-from typing import Optional, Sequence
+from typing import TYPE_CHECKING
 from pydantic import validator
+from sqlmodel import SQLModel, Field, Relationship
 
-from .base import StrictBaseModel
+if TYPE_CHECKING:
+    from .metadata import Dataset
 
-
-class DatasetView(StrictBaseModel):
+class View(SQLModel, table=True):
+    id: int | None = Field()
     name: str
     description: str
-    sources: Sequence[str]
-    position: Optional[Sequence[float]]
-    scale: Optional[float]
-    orientation: Optional[Sequence[float]]
+    dataset: Dataset = Relationship(back_populates="views")
+    sources: list[str]
+    position: list[str] | None
+    scale: float | None
+    orientation: list[float] | None
 
     @validator("orientation")
     def orientation_must_have_unit_norm(
-        cls, v: Optional[Sequence[float]]
-    ) -> Optional[Sequence[float]]:
+        cls, v: list[float] | None
+    ) -> list[float] | None:
         if v is not None:
             if len(v) != 4:
                 raise ValueError(
@@ -27,7 +30,3 @@ class DatasetView(StrictBaseModel):
                     "Orientation vector does not have a unit length. Got {length}."
                 )
         return v
-
-
-class DatasetViews(StrictBaseModel):
-    views: Sequence[DatasetView]

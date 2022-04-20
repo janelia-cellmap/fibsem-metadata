@@ -1,7 +1,7 @@
 from typing import Optional, Sequence
 from enum import Enum
 from pydantic.color import Color
-from .base import StrictBaseModel
+from sqlmodel import SQLModel
 from .multiscale.cosem import SpatialTransform
 
 
@@ -33,24 +33,24 @@ class SampleTypeEnum(str, Enum):
     label = "label"
 
 
-class ContrastLimits(StrictBaseModel):
+class ContrastLimits(SQLModel):
     start: int
     end: int
     min: int
     max: int
 
 
-class DisplaySettings(StrictBaseModel):
+class DisplaySettings(SQLModel):
     """
     Metadata for display settings
     """
 
     contrastLimits: ContrastLimits
-    color: Optional[Color]
+    color: Color | None
     invertLUT: bool
 
 
-class DataSource(StrictBaseModel):
+class DataSource(SQLModel):
     """
     An abstract data source. Volume and mesh source metadata are
     derived from this interface.
@@ -62,14 +62,14 @@ class DataSource(StrictBaseModel):
     transform: SpatialTransform
 
 
-class MeshSource(DataSource):
+class MeshSource(DataSource, table=True):
     format: MeshTypeEnum
-    ids: Sequence[int]
+    ids: list[int]
 
 
-class VolumeSource(DataSource):
+class VolumeSource(DataSource, table=True):
     format: ArrayContainerTypeEnum
     sampleType: SampleTypeEnum
     contentType: ContentTypeEnum
     displaySettings: DisplaySettings
-    subsources: Sequence[MeshSource]
+    subsources: list[MeshSource]
