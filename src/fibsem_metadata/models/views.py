@@ -3,17 +3,17 @@ from pydantic import validator
 from sqlmodel import SQLModel, Field, Relationship
 
 if TYPE_CHECKING:
-    from .metadata import Dataset
+    from .dataset import Dataset
 
-class View(SQLModel, table=True):
-    id: int | None = Field()
+
+class ViewBase(SQLModel):
     name: str
     description: str
-    dataset: Dataset = Relationship(back_populates="views")
+    dataset: "Dataset"
     sources: list[str]
     position: list[str] | None
     scale: float | None
-    orientation: list[float] | None
+    orientation: list[float] | None = [1, 0, 0, 0]
 
     @validator("orientation")
     def orientation_must_have_unit_norm(
@@ -27,6 +27,11 @@ class View(SQLModel, table=True):
             length = sum([x ** 2 for x in v]) ** 0.5
             if length % 1.0 != 0:
                 raise ValueError(
-                    "Orientation vector does not have a unit length. Got {length}."
+                    "Orientation vector does not have a unit norm. Got {length}."
                 )
         return v
+
+
+class View(ViewBase, table=True):
+    id: int | None = Field(default=None, primary_key=True)
+    dataset: Dataset = Relationship(back_populates="views")

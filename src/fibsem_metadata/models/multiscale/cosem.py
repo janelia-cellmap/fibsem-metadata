@@ -11,7 +11,7 @@ class ScaleTranslate(SQLModel):
 
     @root_validator
     def validate_argument_length(
-        cls: "ScaleTranslate", values: dict[str, list[str] | list[float]]]
+        cls: "ScaleTranslate", values: dict[str, list[str] | list[float]]
     ) -> dict[str, list[str] | list[float]]:
         scale = values["scale"]
         axes = values["axes"]
@@ -31,16 +31,18 @@ class OffsetTransform(ScaleTranslate):
     representation of an integer starting from 0, the unit must be 'indices',
     the scale must be 1, and the offset must be an integer.
     """
-    units: list[Literal['indices']]
+
+    units: list[Literal["indices"]]
     translate: list[int]
     scale: list[Literal[1]]
 
-    @validator('axes')
+    @validator("axes")
     def axes_must_be_stringed_ints(cls, v: list[str]):
         for idx, element in enumerate(v):
             if element != str(idx):
-                raise ValueError(f'Invalid axis name. Got {element}, expected "{str(idx)}"')
-
+                raise ValueError(
+                    f'Invalid axis name. Got {element}, expected "{str(idx)}"'
+                )
 
 
 class SpatialTransform(ScaleTranslate):

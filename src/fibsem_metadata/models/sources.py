@@ -1,9 +1,9 @@
 from typing import Optional, Sequence
 from enum import Enum
 from pydantic.color import Color
-from sqlmodel import SQLModel
+from sqlmodel import Relationship, SQLModel, Field
 from .multiscale.cosem import SpatialTransform
-
+from .dataset import Dataset
 
 class MeshTypeEnum(str, Enum):
     """
@@ -60,16 +60,27 @@ class DataSource(SQLModel):
     url: str
     format: str
     transform: SpatialTransform
+    dataset: Dataset
 
 
-class MeshSource(DataSource, table=True):
+class MeshBase(DataSource):
     format: MeshTypeEnum
     ids: list[int]
 
 
-class VolumeSource(DataSource, table=True):
+class Mesh(MeshBase, table=True):
+    id: int | None = Field(default=None, primary_key=True)
+    dataset: Dataset = Relationship(back_populates="sources")
+
+
+class VolumeBase(DataSource):
     format: ArrayContainerTypeEnum
     sampleType: SampleTypeEnum
     contentType: ContentTypeEnum
     displaySettings: DisplaySettings
-    subsources: list[MeshSource]
+    subsources: list[Mesh]
+
+
+class Volume(VolumeBase, table=True):
+    id: int | None = Field(default=None, primary_key=True)
+    dataset: Dataset = Relationship(back_populates="sources")
