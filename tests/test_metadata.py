@@ -4,7 +4,7 @@ import json
 import fsspec
 import requests
 from typing import Any, Dict
-from fibsem_metadata.models.metadata import DatasetMetadata
+from fibsem_metadata.models.dataset import DatasetMetadata
 from fibsem_metadata.models.views import DatasetViews
 from fibsem_metadata.models.sources import VolumeSource
 from itertools import chain
