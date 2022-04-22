@@ -1,9 +1,9 @@
-from typing import Optional, Sequence
 from enum import Enum
 from pydantic.color import Color
-from sqlmodel import Relationship, SQLModel, Field
+from sqlmodel import Relationship, SQLModel, Field, Column
 from .multiscale.cosem import SpatialTransform
 from .dataset import Dataset
+from sqlalchemy.dialects import postgresql
 
 class MeshTypeEnum(str, Enum):
     """
@@ -78,9 +78,9 @@ class VolumeBase(DataSource):
     sampleType: SampleTypeEnum
     contentType: ContentTypeEnum
     displaySettings: DisplaySettings
-    subsources: list[Mesh]
+    #subsources: list[Mesh]
 
 
 class Volume(VolumeBase, table=True):
     id: int | None = Field(default=None, primary_key=True)
-    dataset: Dataset = Relationship(back_populates="sources")
+    displaySettings: DisplaySettings = Field(sa_column=Column(postgresql.JSONB))

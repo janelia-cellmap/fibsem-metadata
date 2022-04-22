@@ -5,9 +5,7 @@ from datetime import date
 from typing import TYPE_CHECKING, Any
 from enum import Enum
 from pydantic import HttpUrl
-
-if TYPE_CHECKING:
-    from .views import View
+from .views import View
 
 
 class SoftwareAvailability(str, Enum):
@@ -55,11 +53,6 @@ class FIBSEMAcquisition(FIBSEMAcquisitionBase, table=True):
     gridSpacing: dict[str, Any] = Field(sa_column=Column(JSON))
     dimensions: dict[str, Any] = Field(sa_column=Column(JSON))
 
-class DummyChild(SQLModel, table=True):
-    id: int | None = Field(default=None, primary_key=True)
-    acquistion_id: int | None = Field(foreign_key="fibsemacquisition.id")
-    acquisition: FIBSEMAcquisition | None = Relationship()
-
 class SampleBase(SQLModel):
     """
     Metadata describing the sample and sample preparation.
@@ -91,9 +84,9 @@ class DatasetBase(SQLModel):
 
     name: str
     description: str
-    #acquisition: FIBSEMAcquisition | None
-    #sample: Sample
-    views: list["View"] = Relationship(back_populates="dataset")
+    acquisition: FIBSEMAcquisition | None
+    sample: Sample
+    views: list[View]
     institution: list[str]
     softwareAvailability: SoftwareAvailability
     doi: list[Hyperlink | DOI]
@@ -103,7 +96,9 @@ class DatasetBase(SQLModel):
 class Dataset(DatasetBase, table=True):
     id: int | None = Field(default=None, primary_key=True)
     institution: list[str] = Field(sa_column=Column(postgresql.ARRAY(String)))
-    #acquisition_id: int | None = Field(default=None, foreign_key="FIBSEMAcquisition.id")
-    #acquisition: FIBSEMAcquisition | None = Relationship()
+    acquisition_id: int | None = Field(default=None, foreign_key="fibsemacquisition.id")
+    acquisition: FIBSEMAcquisition | None = Relationship()
+    sample_id: int | None = Field(default=None, foreign_key='sample.id')
+    sample: Sample = Relationship()
     doi: list[Hyperlink | DOI] = Field(sa_column=Column(postgresql.JSONB))
     publications: list[Hyperlink] = Field(sa_column=Column(postgresql.JSONB))

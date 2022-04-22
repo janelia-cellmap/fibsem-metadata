@@ -1,7 +1,22 @@
 from sqlmodel import Session, select
 from fibsem_metadata.database import create_db_and_tables, engine
+from fibsem_metadata.models.sources import Volume
+from fibsem_metadata.models.dataset import Dataset, FIBSEMAcquisition, Sample, UnitfulVector
+from fibsem_metadata.models.views import View, ViewBase
 
-from fibsem_metadata.models.dataset import Dataset, DummyChild, FIBSEMAcquisition, SampleBase, UnitfulVector
+def create_view():
+    with Session(engine) as session:
+        source = Volume()
+        viewb = ViewBase(name='default view',
+                    description='hello',
+                    sources = ['fibsem-uint8'],
+                    position=[3.0,3.0,3.0],
+                    orientation=[1,0,0,0],
+                    scale=1.0)
+        view  = View.from_orm(viewb)
+        create_db_and_tables()
+        session.add(view)
+        session.commit()
 
 def create_dataset():
     with Session(engine) as session:
@@ -17,43 +32,35 @@ def create_dataset():
                                     scanRate=None,
                                     current=None,
                                     primaryEnergy=None)
-        create_db_and_tables()
-        session.add(acquisition)
-        session.commit()
 
-        child = DummyChild(acquisition=acquisition, acquistion_id=acquisition.id)
-        session.add(child)
-        session.commit()
-
-        query = select(DummyChild)
-        result = session.exec(query)
-        for r in result:
-            print(r)
+        sample = Sample(description='the sample',
+                                protocol='protocol',
+                                contributions='contributions',
+                                organism=['organism'],
+                                type=[],
+                                subtype=[],
+                                treatment=[],
+                                institution=[])
 
 
-if __name__ == '__main__':
-    create_dataset()
-
-def foo():
-    sample = SampleBase(description='the sample',
-                            protocol='protocol',
-                            contributions='contributions',
-                            organism=['organism'],
-                            type=[],
-                            subtype=[],
-                            treatment=[],
-                            institution=[])
-
-    dataset = Dataset(name='foo',
+        dataset = Dataset(name='foo',
                         description='bar',
-                        acquisition_id=None,
                         acquisition=acquisition,
                         sample=sample, 
-                        views=[],
+                        views=[view],
                         institution=[],
                         softwareAvailability="open",
                         doi=[],
                         publications=[])
-    create_db_and_tables()
-    session.add(acquisition)
-    session.commit()
+
+        create_db_and_tables()
+        session.add(acquisition)
+        session.commit()
+        session.add(sample)
+        session.commit()
+        session.add(dataset)
+        session.commit()
+
+
+if __name__ == '__main__':
+    create_view()
