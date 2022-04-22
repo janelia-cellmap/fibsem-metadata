@@ -2,8 +2,8 @@ from enum import Enum
 from pydantic.color import Color
 from sqlmodel import Relationship, SQLModel, Field, Column
 from .multiscale.cosem import SpatialTransform
-from .dataset import Dataset
 from sqlalchemy.dialects import postgresql
+from typing import Any
 
 class MeshTypeEnum(str, Enum):
     """
@@ -60,7 +60,6 @@ class DataSource(SQLModel):
     url: str
     format: str
     transform: SpatialTransform
-    dataset: Dataset
 
 
 class MeshBase(DataSource):
@@ -70,8 +69,7 @@ class MeshBase(DataSource):
 
 class Mesh(MeshBase, table=True):
     id: int | None = Field(default=None, primary_key=True)
-    dataset: Dataset = Relationship(back_populates="sources")
-
+    transform: dict[Any, Any] = Field(sa_column=Column(postgresql.JSONB))
 
 class VolumeBase(DataSource):
     format: ArrayContainerTypeEnum
@@ -83,4 +81,5 @@ class VolumeBase(DataSource):
 
 class Volume(VolumeBase, table=True):
     id: int | None = Field(default=None, primary_key=True)
-    displaySettings: DisplaySettings = Field(sa_column=Column(postgresql.JSONB))
+    displaySettings: dict[Any, Any] = Field(sa_column=Column(postgresql.JSONB))
+    transform: dict[Any, Any] = Field(sa_column=Column(postgresql.JSONB))

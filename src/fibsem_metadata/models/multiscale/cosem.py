@@ -5,6 +5,7 @@ from typing import Literal, Any
 
 
 class ScaleTranslate(SQLModel):
+    axes: list[str]
     units: list[Any]
     translate: list[Any]
     scale: list[Any]
@@ -50,25 +51,6 @@ class SpatialTransform(ScaleTranslate):
     Representation of an N-dimensional scaling + translation transform for labelled axes with units.
     """
 
-    axes: list[str]
     units: list[str]
     translate: list[float]
     scale: list[float]
-
-
-class ScaleMeta(SQLModel):
-    path: str
-    transform: SpatialTransform
-
-
-class MultiscaleMeta(SQLModel):
-    datasets: list[ScaleMeta]
-
-
-class COSEMGroupMetadata(SQLModel):
-    """
-    Multiscale metadata used by COSEM for multiscale datasets saved in N5/Zarr groups.
-    """
-
-    name: str
-    multiscales: list[MultiscaleMeta]
