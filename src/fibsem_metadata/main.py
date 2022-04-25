@@ -1,23 +1,28 @@
 from sqlmodel import Session, select
 from fibsem_metadata.database import create_db_and_tables, engine
-from fibsem_metadata.models.sources import DisplaySettings, Volume, VolumeBase
+from fibsem_metadata.models.sources import DisplaySettings, DisplaySettingsBase, Volume, VolumeBase
 from fibsem_metadata.models.dataset import Dataset, FIBSEMAcquisition, Sample, UnitfulVector
 from fibsem_metadata.models.views import View, ViewBase
 
 def create_view():
     with Session(engine) as session:
-        create_db_and_tables()
-        display = DisplaySettings(contrastLimits={'start': 0, 'end': 10, 'min': 0, 'max': 10}, color='white', invertLUT=False)
-        sourceb = VolumeBase(name='fibsem-uint8',
+        create_db_and_tables(wipe=True)
+        displayb = DisplaySettingsBase(contrastLimits={'start': 0, 'end': 10, 'min': 0, 'max': 10}, color='white', invertLUT=False)
+        display = DisplaySettings.from_orm(displayb)
+        
+        session.add(display)
+        session.commit()
+        
+        sourceb = Volume(name='fibsem-uint8',
                         description='a nice dataset',
                         url='s3://janelia-cosem-datasets/jrc_hela-2/jrc_hela-2.n5/em/fibsem-uint8',
                         sampleType='scalar',
                         contentType='em',
                         format='n5',
                         transform={'axes': ['z','y','x'], 'units': ['nm','nm','nm'], 'scale': [4.0, 4.0, 4.0], 'translate': [0,0,0]},
-                        displaySettings=display)
+                        displaySettings_id=display.id)
         
-        source = Volume.from_orm(sourceb)
+        source = sourceb        
         session.add(source)
         session.commit()
 
@@ -27,6 +32,7 @@ def create_view():
                     position=[3.0,3.0,3.0],
                     orientation=[1,0,0,0],
                     scale=1.0)
+        
         view  = View.from_orm(viewb)
         session.add(view)
         session.commit()

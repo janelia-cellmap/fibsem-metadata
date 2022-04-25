@@ -40,7 +40,7 @@ class ContrastLimits(SQLModel):
     max: int
 
 
-class DisplaySettings(SQLModel):
+class DisplaySettingsBase(SQLModel):
     """
     Metadata for display settings
     """
@@ -49,6 +49,10 @@ class DisplaySettings(SQLModel):
     color: Color | None
     invertLUT: bool
 
+
+class DisplaySettings(SQLModel, table=True):
+    id: int | None = Field(default=None, primary_key=True)
+    contrastLimits: dict[Any, Any] = Field(sa_column=Column(postgresql.JSONB))
 
 class DataSource(SQLModel):
     """
@@ -81,5 +85,6 @@ class VolumeBase(DataSource):
 
 class Volume(VolumeBase, table=True):
     id: int | None = Field(default=None, primary_key=True)
-    displaySettings: dict[Any, Any] = Field(sa_column=Column(postgresql.JSONB))
+    displaySettings_id: int | None = Field(foreign_key='displaysettings.id')
+    displaySettings: DisplaySettings = Relationship()
     transform: dict[Any, Any] = Field(sa_column=Column(postgresql.JSONB))

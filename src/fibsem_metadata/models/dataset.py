@@ -86,7 +86,7 @@ class DatasetBase(SQLModel):
     description: str
     acquisition: FIBSEMAcquisition | None
     sample: Sample
-    views: list[View]
+    #views: list[View]
     institution: list[str]
     softwareAvailability: SoftwareAvailability
     doi: list[Hyperlink | DOI]
