@@ -1,0 +1,189 @@
+{
+  "name": "jrc_ctl-id8-5",
+  "metadata": {
+    "title": "Killer T-Cell attacking cancer cell",
+    "id": "jrc_ctl-id8-5",
+    "imaging": {
+      "id": "Cryo_LoadID494_ROI2",
+      "institution": "Janelia",
+      "gridSpacing": {
+        "unit": "nm",
+        "values": {
+          "x": 8.0,
+          "y": 8.0,
+          "z": 8.0
+        }
+      },
+      "dimensions": {
+        "unit": "\u00b5m",
+        "values": {
+          "x": 41.6,
+          "y": 12.0,
+          "z": 35.17
+        }
+      },
+      "startDate": "2020-01-29",
+      "duration": 4,
+      "biasVoltage": 0.0,
+      "scanRate": 0.25,
+      "current": 2.0,
+      "primaryEnergy": 1200.0
+    },
+    "sample": {
+      "description": "OT-I mouse cytotoxic T lymphocyte attacking an ID8 ovarian cancer cell;  fixed and imaged moments after the release of perforin/granzyme from lytic granules. The ID8 murine ovarian cancer cell is stably expressing mEmerald-Chmp4b and TOMM20-SNAP.",
+      "protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO\u2084 0.1% UA 3% H\u2082O in acetone; resin embedding in Eponate 12.",
+      "contributions": "Sample provided by Alex Ritter (Genentech) and prepared for imaging by Gleb Shtengel and Nirmala Iyer (HHMI/Janelia). LM imaging by Nensi Alivodej, Gleb Shtengel, and David Hoffman (HHMI/Janelia). EM imaging and post-processing by C. Shan Xu (HHMI/Janelia). Segmentations by Ariadne.ai.",
+      "organism": [
+        "Mouse"
+      ],
+      "type": [
+        "Cell culture"
+      ],
+      "subtype": [
+        "T-Cell",
+        "ID8 Cell"
+      ],
+      "treatment": [
+        "Overexpression"
+      ]
+    },
+    "institution": [
+      "HHMI/Janelia",
+      "Genentech"
+    ],
+    "softwareAvailability": "open",
+    "DOI": [],
+    "publications": []
+  },
+  "sources": {
+    "cell_seg": {
+      "name": "cell_seg",
+      "description": "Whole-cell segmentation (Ariadne)",
+      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-5/jrc_ctl-id8-5.n5/labels/ariadne/cell_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": null,
+        "invertLUT": false
+      },
+      "subsources": [
+        {
+          "name": "cell_seg",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-5/neuroglancer/mesh/cell_seg",
+          "format": "neuroglancer_multilod_draco",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "ids": []
+        }
+      ]
+    },
+    "fibsem-uint8": {
+      "name": "fibsem-uint8",
+      "description": "FIB-SEM Data (compressed)",
+      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-5/jrc_ctl-id8-5.n5/em/fibsem-uint8",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "em",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 139,
+          "end": 220,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    }
+  },
+  "views": [
+    {
+      "name": "Default view",
+      "description": "The default view of the data.",
+      "sources": [
+        "fibsem-uint8"
+      ],
+      "position": null,
+      "scale": null,
+      "orientation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "name": "jrc_ctl-id8-1",
+  "metadata": {
+    "title": "Killer T-Cell attacking cancer cell",
+    "id": "jrc_ctl-id8-1",
+    "imaging": {
+      "id": "Cryo_LoadID496_Atlas1",
+      "institution": "Janelia",
+      "gridSpacing": {
+        "unit": "nm",
+        "values": {
+          "x": 4.0,
+          "y": 4.0,
+          "z": 3.48
+        }
+      },
+      "dimensions": {
+        "unit": "\u00b5m",
+        "values": {
+          "x": 74.0,
+          "y": 13.0,
+          "z": 42.0
+        }
+      },
+      "startDate": "2020-02-04",
+      "duration": 29,
+      "biasVoltage": 0.0,
+      "scanRate": 0.2,
+      "current": 0.25,
+      "primaryEnergy": 700.0
+    },
+    "sample": {
+      "description": "OT-I mouse cytotoxic T lymphocyte attacking an ID8 cell",
+      "protocol": "High pressure freezing, freeze-substitution resin embedding with 2% OsO\u2084 0.1% UA 3% H\u2082O in acetone; resin embedding in Eponate 12.",
+      "contributions": "Sample provided by Alex Ritter (Genentech), prepared for imaging by Gleb Shtengel (HHMI/Janelia), with imaging and post-processing by C. Shan Xu (HHMI/Janelia).",
+      "organism": [
+        "Mouse"
+      ],
+      "type": [
+        "Cell culture"
+      ],
+      "subtype": [
+        "T-Cell",
+        "ID8 Cell"
+      ],
+      "treatment": [
+        "Wild-type"
+      ]
+    },
+    "institution": [
+      "HHMI/Janelia",
+      "Genentech"
+    ],
+    "softwareAvailability": "open",
+    "DOI": [
+      {
+        "href": "https://doi.org/10.25378/janelia.13114454",
+        "title": "EM"
+      }
+    ],
+    "publications": [
+      {
+        "href": "https://doi.org/10.1038/s41586-021-03992-4",
+        "title": "Xu et al., 2021"
+      }
+    ]
+  },
+  "sources": {
+    "fibsem-uint16": {
+      "name": "fibsem-uint16",
+      "description": "FIB-SEM Data (uncompressed)",
+      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-1/jrc_ctl-id8-1.n5/em/fibsem-uint16",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.48,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "em",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 10878,
+          "end": 17366,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": true
+      },
+      "subsources": []
+    }
+  },
+  "views": [
+    {
+      "name": "Default view",
+      "description": "The default view of the data.",
+      "sources": [
+        "fibsem-uint16"
+      ],
+      "position": null,
+      "scale": null,
+      "orientation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Cytotoxic T Lymphocytes cupping a cancel cell",
+      "description": "A cytotoxic T Lymphocyte cupping the target ovarian cancer cell, as described in Fig. 3b of Xu et al. 2020c.",
+      "sources": [
+        "fibsem-uint16"
+      ],
+      "position": [
+        41798.0,
+        4354.0,
+        20829.0
+      ],
+      "scale": 13.0,
+      "orientation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Centrosome",
+      "description": "The centrosome of a cytotoxic T Lymphocyte polarized toward the target ovarian cell, as described in Fig. 3c of Xu et al. 2020c.",
+      "sources": [
+        "fibsem-uint16"
+      ],
+      "position": [
+        37911.0,
+        7445.0,
+        19380.0
+      ],
+      "scale": 10.0,
+      "orientation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Lytic granule",
+      "description": "The detailed structure of a lytic granule in a killer immune T cell, as described in Fig. 3d of Xu et al. 2020c.",
+      "sources": [
+        "fibsem-uint16"
+      ],
+      "position": [
+        36975.0,
+        7159.0,
+        14744.0
+      ],
+      "scale": 5.0,
+      "orientation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Membrane interdigitation",
+      "description": "Membrane interdigitation of the interface between a cytotoxic T Lymphocyte and the target ovarian cancer cell, as described in Fig. S16a of Xu et al. 2020c.",
+      "sources": [
+        "fibsem-uint16"
+      ],
+      "position": [
+        37955.0,
+        3708.0,
+        20211.0
+      ],
+      "scale": 3.0,
+      "orientation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Flat membrane apposition",
+      "description": "Flat membrane apposition of the interface between a cytotoxic T Lymphocyte and the target ovarian cancer cell, as described in Fig. S16b of Xu et al. 2020c.",
+      "sources": [
+        "fibsem-uint16"
+      ],
+      "position": [
+        39530.0,
+        3483.0,
+        21345.0
+      ],
+      "scale": 3.2,
+      "orientation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Filopodia of a cancer cell",
+      "description": "Filopodia of the target ovarian cancer cell trapped between a cytotoxic T Lymphocyte and the target cell, as described in Fig. S16c of Xu et al. 2020c.",
+      "sources": [
+        "fibsem-uint16"
+      ],
+      "position": [
+        40872.0,
+        4768.0,
+        20921.0
+      ],
+      "scale": 5.0,
+      "orientation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

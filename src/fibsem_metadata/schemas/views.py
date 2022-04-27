@@ -1,6 +1,6 @@
 from sqlmodel import Relationship
 from .base import Base
-from sqlalchemy import Boolean, Column, Date, ForeignKey, Integer, String, Float
+from sqlalchemy import Boolean, Column, Date, ForeignKey, Integer, String, Float, Table
 from sqlalchemy.orm import relationship
 from sqlalchemy.dialects import postgresql
 
@@ -22,25 +22,22 @@ class ImageAcquisitionMixin:
     sampling_grid_shape = Column(postgresql.ARRAY(Integer))
 
 
-class ViewtoVolume(Base):
-    __tablename__ = 'view_to_volume'
-
-    view_id = Column(ForeignKey('view.id'), primary_key=True)
-    volume_id = Column(ForeignKey('volume.id'), primary_key=True)
-
-
-class DOItoDataset(Base):
-    __tablename__ = 'doi_to_dataset'
-
-    doi_id = Column(ForeignKey('doi.id'), primary_key=True)
-    dataset_id = Column(ForeignKey('dataset.id'), primary_key=True)
+view_to_volume = Table('view_to_volume',
+                        Base.metadata,
+                        Column("view_id", ForeignKey('view.id'), primary_key=True),
+                        Column("volume_id", ForeignKey('volume.id'), primary_key=True))
 
 
-class PublicationtoDataset(Base):
-    __tablename__ = 'publication_to_dataset'
+doi_to_dataset = Table('doi_to_dataset',
+                        Base.metadata,
+                        Column("doi_id", ForeignKey('doi.id'), primary_key=True),
+                        Column("dataset_id", ForeignKey('dataset.id'), primary_key=True))
 
-    publication_id = Column(ForeignKey('publication.id'), primary_key=True)
-    dataset_id = Column(ForeignKey('dataset.id'), primary_key=True)
+
+pub_to_dataset = Table('publication_to_dataset', 
+                        Base.metadata,
+                        Column("publication_id", ForeignKey('publication.id'), primary_key=True),
+                        Column("dataset_id", ForeignKey('dataset.id'), primary_key=True))
 
 
 class DOI(Base):
@@ -49,7 +46,9 @@ class DOI(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String)
     doi = Column(String)
-    datasets = relationship("Dataset", secondary=DOItoDataset)
+    datasets = relationship("Dataset",
+                            secondary=doi_to_dataset,
+                            back_populates="doi")
 
 
 class Publication(Base):
@@ -58,7 +57,9 @@ class Publication(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String)
     url = Column(String)
-    datasets = relationship("Dataset", secondary=PublicationtoDataset)
+    datasets = relationship("Dataset",
+                            secondary=pub_to_dataset,
+                            back_populates="publications")
 
 
 class DisplaySettings(Base):
@@ -78,10 +79,9 @@ class Mesh(Base, DataSourceMixin):
     
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String)
-    dataset_id = Column(Integer, ForeignKey("dataset.id"))
-    dataset = relationship("Dataset", back_populates="volumes")    
+    
     volume_id = Column(Integer, ForeignKey("volume.id"))
-    volume = relationship("Volume", back_populates="volume.subsources")
+    volume = relationship("Volume")
 
 
 class Volume(Base, DataSourceMixin):
@@ -90,9 +90,11 @@ class Volume(Base, DataSourceMixin):
     id = Column(Integer, primary_key=True, autoincrement=True)
     sample_type = Column(String)
     content_type = Column(String)
-    views = relationship("View", secondary="ViewtoVolume", back_populates="sources")
+    views = relationship("View", secondary=view_to_volume, back_populates="sources")
+    
     dataset_id = Column(Integer, ForeignKey("dataset.id"))
     dataset = relationship("Dataset", back_populates="volumes")
+    
     subsources = relationship("Mesh", back_populates="volume")
 
 
@@ -101,7 +103,7 @@ class View(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String, index=True)
-    sources = relationship("Volume", secondary="ViewtoVolume", back_populates="views")
+    sources = relationship("Volume", secondary=view_to_volume, back_populates="views")
     position = Column(postgresql.ARRAY(Float))
     orientation = Column(postgresql.ARRAY(Float))
 
@@ -114,6 +116,7 @@ class LabelClass(Base):
     value = Column(Integer)
     annotation_state = Column(postgresql.JSONB)
     crop_id = Column(Integer, ForeignKey("crop.id"))
+    crop = relationship("Crop")
 
 
 class Crop(Base):
@@ -123,7 +126,7 @@ class Crop(Base):
     name = Column(String, index=True)
     description = Column(String, index=True)
     source_id = Column(ForeignKey('volume.id'))
-    annotations = relationship("LabelClass", back_populates='crop_id')
+    annotations = relationship(LabelClass, back_populates='crop')
     shape = Column(postgresql.ARRAY(Integer))
     completion_stage = Column(String, index=True)
     transform_world = Column(postgresql.JSONB)
@@ -164,15 +167,16 @@ class Dataset(Base):
     institution = Column(postgresql.ARRAY(String))
     software_availability = Column(String)
     
-    volumes = relationship("Volume", back_populates="dataset")
-    meshes = relationship("Mesh", back_populates="dataset")
+    volumes = relationship(Volume, back_populates="dataset")
 
     acquisition_id = Column(Integer, ForeignKey("fibsem_acquisition.id"))
-    acquisition = relationship("FIBSEMAcquisition", back_populates="datasets")
+    acquisition = relationship(FIBSEMAcquisition, back_populates="datasets")
     
     sample_id = Column(Integer, ForeignKey("sample.id"))
-    sample = relationship("Sample", back_populates="datasets")
+    sample = relationship(Sample, back_populates="datasets")
     
-    doi = relationship("DOI", secondary=DOItoDataset)
-    publications = relationship("Publication", secondary=PublicationtoDataset)
+    doi = relationship(DOI, secondary=doi_to_dataset)
+    publications = relationship(Publication,
+                                secondary=pub_to_dataset,
+                                back_populates="datasets")
     
