@@ -1,9 +1,11 @@
 from enum import Enum
 from pydantic.color import Color
 from sqlmodel import Relationship, SQLModel, Field, Column
+
 from .multiscale.cosem import SpatialTransform
 from sqlalchemy.dialects import postgresql
-from typing import Any
+from typing import TYPE_CHECKING, Any
+from fibsem_metadata.models.views import View
 
 class MeshTypeEnum(str, Enum):
     """
@@ -40,7 +42,7 @@ class ContrastLimits(SQLModel):
     max: int
 
 
-class DisplaySettingsBase(SQLModel):
+class DisplaySettings(SQLModel):
     """
     Metadata for display settings
     """
@@ -75,6 +77,7 @@ class Mesh(MeshBase, table=True):
     id: int | None = Field(default=None, primary_key=True)
     transform: dict[Any, Any] = Field(sa_column=Column(postgresql.JSONB))
 
+
 class VolumeBase(DataSource):
     format: ArrayContainerTypeEnum
     sampleType: SampleTypeEnum
@@ -85,6 +88,9 @@ class VolumeBase(DataSource):
 
 class Volume(VolumeBase, table=True):
     id: int | None = Field(default=None, primary_key=True)
+
     displaySettings_id: int | None = Field(foreign_key='displaysettings.id')
     displaySettings: DisplaySettings = Relationship()
+    
     transform: dict[Any, Any] = Field(sa_column=Column(postgresql.JSONB))
+    views: list[View] = Relationship(link_model="ViewtoSource")

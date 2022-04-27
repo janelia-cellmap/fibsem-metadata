@@ -24,7 +24,7 @@ class ImageAcquisitionMixin:
 
 class ViewtoVolume(Base):
     __tablename__ = 'view_to_volume'
-    
+
     view_id = Column(ForeignKey('view.id'), primary_key=True)
     volume_id = Column(ForeignKey('volume.id'), primary_key=True)
 
@@ -46,7 +46,7 @@ class PublicationtoDataset(Base):
 class DOI(Base):
     __tablename__ = "doi"
 
-    id = Column(Integer, primary_key=True) 
+    id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String)
     doi = Column(String)
     datasets = relationship("Dataset", secondary=DOItoDataset)
@@ -55,7 +55,7 @@ class DOI(Base):
 class Publication(Base):
     __tablename__ = "publication"
 
-    id = Column(Integer, primary_key=True) 
+    id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String)
     url = Column(String)
     datasets = relationship("Dataset", secondary=PublicationtoDataset)
@@ -64,7 +64,7 @@ class Publication(Base):
 class DisplaySettings(Base):
     __tablename__ = 'displaysettings'
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement=True)
     color = Column(String)
     invertLUT = Column(Boolean)
     contrast_limits_start = Column(Integer)
@@ -76,10 +76,10 @@ class DisplaySettings(Base):
 class Mesh(Base, DataSourceMixin):
     __tablename__ = 'mesh'
     
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String)
     dataset_id = Column(Integer, ForeignKey("dataset.id"))
-    dataset = relationship(back_populates="volumes")    
+    dataset = relationship("Dataset", back_populates="volumes")    
     volume_id = Column(Integer, ForeignKey("volume.id"))
     volume = relationship("Volume", back_populates="volume.subsources")
 
@@ -87,19 +87,19 @@ class Mesh(Base, DataSourceMixin):
 class Volume(Base, DataSourceMixin):
     __tablename__ = 'volume'
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement=True)
     sample_type = Column(String)
     content_type = Column(String)
     views = relationship("View", secondary="ViewtoVolume", back_populates="sources")
     dataset_id = Column(Integer, ForeignKey("dataset.id"))
-    dataset = relationship(back_populates="volumes")
+    dataset = relationship("Dataset", back_populates="volumes")
     subsources = relationship("Mesh", back_populates="volume")
 
 
 class View(Base):
     __tablename__ = 'view'
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String, index=True)
     sources = relationship("Volume", secondary="ViewtoVolume", back_populates="views")
     position = Column(postgresql.ARRAY(Float))
@@ -109,7 +109,7 @@ class View(Base):
 class LabelClass(Base):
     __tablename__ = "labelclass"
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String, index=True)
     value = Column(Integer)
     annotation_state = Column(postgresql.JSONB)
@@ -119,7 +119,7 @@ class LabelClass(Base):
 class Crop(Base):
     __tablename__ = "crop"
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String, index=True)
     description = Column(String, index=True)
     source_id = Column(ForeignKey('volume.id'))
@@ -133,7 +133,7 @@ class Crop(Base):
 class Sample(Base):
     __tablename__ = "sample"
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement=True)
     organism = Column(postgresql.ARRAY(String))
     type = Column(postgresql.ARRAY(String))
     subtype = Column(postgresql.ARRAY(String))
@@ -145,7 +145,8 @@ class Sample(Base):
 class FIBSEMAcquisition(Base, ImageAcquisitionMixin):
     __tablename__ = 'fibsem_acquisition'
 
-    duration_days = Column(Integer, )
+    id = Column(Integer, primary_key=True, autoincrement=True)    
+    duration_days = Column(Integer)
     bias_voltage = Column(Float)
     scan_rate = Column(Float)
     current = Column(Float)
@@ -156,7 +157,7 @@ class FIBSEMAcquisition(Base, ImageAcquisitionMixin):
 class Dataset(Base):
     __tablename__ = "dataset"
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String)
     description = Column(String)
     

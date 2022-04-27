@@ -1,14 +1,21 @@
-from typing import Any
+from typing import TYPE_CHECKING, Any, List
 from sqlmodel import Float, Relationship, SQLModel, Field, String, Column
 from sqlalchemy.dialects import postgresql
 from pydantic import validator
 
-from fibsem_metadata.models.sources import Volume, VolumeBase
+if TYPE_CHECKING:
+    from fibsem_metadata.models.sources import Volume, VolumeBase
+
+
+class ViewtoSource(SQLModel, table=True):
+    view_id: int = Field(primary_key=True, foreign_key="volume.id")
+    souce_id: int = Field(primary_key=True, foreign_key="view.id")
+
 
 class ViewBase(SQLModel):
     name: str
     description: str
-    sources: list[VolumeBase]
+    sources: list[str]
     position: list[float]
     scale: float
     orientation: list[float]
@@ -38,6 +45,6 @@ class ViewBase(SQLModel):
 class View(ViewBase, table=True):
     id: int | None = Field(default=None, primary_key=True)
     name: str = Field(index=True)
-    sources: list[Volume] = Relationship()
+    sources: List["Volume"] = Relationship(link_model=ViewtoSource)
     position: list[float] = Field(sa_column=Column(postgresql.ARRAY(Float)))
     orientation: list[float] = Field(sa_column=Column(postgresql.ARRAY(Float)))
