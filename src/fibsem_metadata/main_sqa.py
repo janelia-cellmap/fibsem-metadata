@@ -11,6 +11,8 @@ def ingest_dataset(path):
     
     # generate the acquisition table
     acq_model = dmeta.metadata.imaging
+    sample_model = dmeta.metadata.sample
+       
     acq_table = schemas.FIBSEMAcquisition(instrument="",
                                         institution=acq_model.institution,
                                         start_date=acq_model.startDate,
@@ -22,8 +24,37 @@ def ingest_dataset(path):
                                         scan_rate=acq_model.scanRate,
                                         current=acq_model.current,
                                         primary_energy=acq_model.primaryEnergy)
+    
+    sample_table = schemas.Sample(organism=sample_model.organism,
+                                  type=sample_model.type,
+                                  substype=sample_model.subtype,
+                                  treatment=sample_model.treatment,
+                                  contributions=sample_model.contributions)
 
-    return acq_table
+    pub_tables = [schemas.Publication(name=d.title, url=d.href) for d in dmeta.metadata.DOI]
+    pub_tables.extend([schemas.Publication(name=d.title, url=d.href) for d in dmeta.metadata.publications])
+
+    dataset = schemas.Dataset(name=dmeta.metadata.id,
+                              description=dmeta.metadata.title,
+                              institution=dmeta.metadata.institution,
+                              software_availability=dmeta.metadata.softwareAvailability,
+                              acquisition_id = acq_table.id,
+                              sample_id = sample_table.id,
+                              publications=pub_tables)
+
+    volume_tables = []
+    for key, value in dmeta.sources.items():
+        volume_tables.append(schemas.Volume(name=value.name, 
+                                            description=value.description,
+                                            url=value.url,
+                                            format=value.format,
+                                            transform=value.transform,
+                                            sample_type=value.sampleType,
+                                            content_type=value.contentType,
+                                            dataset_id=dataset.id,
+                                            ))
+
+    return acq_table, sample_table, pub_tables, dataset, volume_tables
 
 
 

@@ -28,11 +28,6 @@ view_to_volume = Table('view_to_volume',
                         Column("volume_id", ForeignKey('volume.id'), primary_key=True))
 
 
-doi_to_dataset = Table('doi_to_dataset',
-                        Base.metadata,
-                        Column("doi_id", ForeignKey('doi.id'), primary_key=True),
-                        Column("dataset_id", ForeignKey('dataset.id'), primary_key=True))
-
 
 pub_to_dataset = Table('publication_to_dataset', 
                         Base.metadata,
@@ -40,22 +35,12 @@ pub_to_dataset = Table('publication_to_dataset',
                         Column("dataset_id", ForeignKey('dataset.id'), primary_key=True))
 
 
-class DOI(Base):
-    __tablename__ = "doi"
-
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    name = Column(String)
-    doi = Column(String)
-    datasets = relationship("Dataset",
-                            secondary=doi_to_dataset,
-                            back_populates="doi")
-
-
 class Publication(Base):
     __tablename__ = "publication"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String)
+    type = Column(String)
     url = Column(String)
     datasets = relationship("Dataset",
                             secondary=pub_to_dataset,
@@ -141,7 +126,7 @@ class Sample(Base):
     type = Column(postgresql.ARRAY(String))
     subtype = Column(postgresql.ARRAY(String))
     treatment = Column(postgresql.ARRAY(String))
-    institution = Column(postgresql.ARRAY(String))
+    contributions = Column(String)
     datasets = relationship("Dataset")
 
 
@@ -175,7 +160,6 @@ class Dataset(Base):
     sample_id = Column(Integer, ForeignKey("sample.id"))
     sample = relationship(Sample, back_populates="datasets")
     
-    doi = relationship(DOI, secondary=doi_to_dataset)
     publications = relationship(Publication,
                                 secondary=pub_to_dataset,
                                 back_populates="datasets")
