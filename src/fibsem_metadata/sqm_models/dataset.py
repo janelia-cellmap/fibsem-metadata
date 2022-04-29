@@ -41,6 +41,7 @@ class FIBSEMAcquisitionBase(ImageAcquisition):
     """
     Metadata describing the FIB-SEM imaging process.
     """
+
     duration_days: int | None
     biasVoltage: float | None
     scanRate: float | None
@@ -52,6 +53,7 @@ class FIBSEMAcquisition(FIBSEMAcquisitionBase, table=True):
     id: int | None = Field(default=None, primary_key=True)
     gridSpacing: dict[str, Any] = Field(sa_column=Column(JSON))
     dimensions: dict[str, Any] = Field(sa_column=Column(JSON))
+
 
 class SampleBase(SQLModel):
     """
@@ -86,7 +88,7 @@ class DatasetBase(SQLModel):
     description: str
     acquisition: FIBSEMAcquisition | None
     sample: Sample
-    #views: list[View]
+    # views: list[View]
     institution: list[str]
     softwareAvailability: SoftwareAvailability
     doi: list[Hyperlink | DOI]
@@ -98,7 +100,7 @@ class Dataset(DatasetBase, table=True):
     institution: list[str] = Field(sa_column=Column(postgresql.ARRAY(String)))
     acquisition_id: int | None = Field(default=None, foreign_key="fibsemacquisition.id")
     acquisition: FIBSEMAcquisition | None = Relationship()
-    sample_id: int | None = Field(default=None, foreign_key='sample.id')
+    sample_id: int | None = Field(default=None, foreign_key="sample.id")
     sample: Sample = Relationship()
     doi: list[Hyperlink | DOI] = Field(sa_column=Column(postgresql.JSONB))
     publications: list[Hyperlink] = Field(sa_column=Column(postgresql.JSONB))

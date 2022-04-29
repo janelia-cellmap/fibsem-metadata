@@ -7,6 +7,7 @@ from sqlalchemy.dialects import postgresql
 from typing import TYPE_CHECKING, Any
 from fibsem_metadata.models.views import View
 
+
 class MeshTypeEnum(str, Enum):
     """
     Strings representing supported mesh formats
@@ -56,11 +57,13 @@ class DisplaySettings(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
     contrastLimits: dict[Any, Any] = Field(sa_column=Column(postgresql.JSONB))
 
+
 class DataSource(SQLModel):
     """
     An abstract data source. Volume and mesh source metadata are
     derived from this interface.
     """
+
     name: str
     description: str
     url: str
@@ -83,14 +86,14 @@ class VolumeBase(DataSource):
     sampleType: SampleTypeEnum
     contentType: ContentTypeEnum
     displaySettings: DisplaySettings
-    #subsources: list[Mesh]
+    # subsources: list[Mesh]
 
 
 class Volume(VolumeBase, table=True):
     id: int | None = Field(default=None, primary_key=True)
 
-    displaySettings_id: int | None = Field(foreign_key='displaysettings.id')
+    displaySettings_id: int | None = Field(foreign_key="displaysettings.id")
     displaySettings: DisplaySettings = Relationship()
-    
+
     transform: dict[Any, Any] = Field(sa_column=Column(postgresql.JSONB))
     views: list[View] = Relationship(link_model="ViewtoSource")
