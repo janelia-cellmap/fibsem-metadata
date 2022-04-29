@@ -1,67 +1,114 @@
+from typing import Literal
 from sqlalchemy.orm import Session
 from fibsem_metadata.database_sqa import create_db_and_tables, engine
 import fibsem_metadata.schemas.views as schemas
+from fibsem_metadata.models.metadata import DatasetMetadata, Hyperlink, SampleMetadata, FIBSEMImagingMetadata
 from fibsem_metadata.models.manifest import DatasetManifest
 import json
+from glob import glob
 
-def ingest_dataset(path):
+
+def create_sample(metadata: SampleMetadata) -> schemas.Sample:
+    sample = schemas.Sample(organism=metadata.organism,
+                            type=metadata.type,
+                            subtype=metadata.subtype,
+                            treatment=metadata.treatment,
+                            contributions=metadata.contributions)
+    return sample
+
+
+def create_acquisition(metadata: FIBSEMImagingMetadata,
+                       instrument: str = "",
+                       grid_shape: list[int] = [0, 0, 0],
+                       grid_unit: str = "nm") -> schemas.FIBSEMAcquisition:
+
+    acq = schemas.FIBSEMAcquisition(instrument=instrument,
+                                    institution=metadata.institution,
+                                    start_date=metadata.startDate,
+                                    sampling_grid_unit=grid_unit,
+                                    sampling_grid_spacing=metadata.gridSpacing.values.values(),
+                                    sampling_grid_shape=grid_shape,
+                                    duration_days=metadata.duration,
+                                    bias_voltage=metadata.biasVoltage,
+                                    scan_rate=metadata.scanRate,
+                                    current=metadata.current,
+                                    primary_energy=metadata.primaryEnergy)
+
+    return acq
+
+
+def create_pub(metadata: Hyperlink,
+               type: Literal["DOI","publication"]) -> schemas.Publication:
+
+    pub =  schemas.Publication(name=metadata.title,
+                               url=metadata.href,
+                               type=type)
+    return pub
+
+
+def create_dataset(metadata: DatasetMetadata,
+                   acquisition_id: int | None = None,
+                   sample_id: int | None = None,
+                   pub_tables: list[schemas.Publication] = []) -> schemas.Dataset:
+
+    dataset = schemas.Dataset(name=metadata.id,
+                              description=metadata.title,
+                              institution=metadata.institution,
+                              software_availability=metadata.softwareAvailability,
+                              acquisition_id=acquisition_id,
+                              sample_id=sample_id,
+                              publications=pub_tables)
+    return dataset
+
+
+def ingest_dataset(path, session: Session):
+    results = []
     with open(path) as fh:
         blob = json.load(fh)
     dmeta = DatasetManifest(**blob)
-    
+
     # generate the acquisition table
     acq_model = dmeta.metadata.imaging
     sample_model = dmeta.metadata.sample
-       
-    acq_table = schemas.FIBSEMAcquisition(instrument="",
-                                        institution=acq_model.institution,
-                                        start_date=acq_model.startDate,
-                                        sampling_grid_unit='nm',
-                                        sampling_grid_spacing=acq_model.gridSpacing.values.values(),
-                                        sampling_grid_shape=[10,10,10],
-                                        duration_days=acq_model.duration,
-                                        bias_voltage=acq_model.biasVoltage,
-                                        scan_rate=acq_model.scanRate,
-                                        current=acq_model.current,
-                                        primary_energy=acq_model.primaryEnergy)
-    
-    sample_table = schemas.Sample(organism=sample_model.organism,
-                                  type=sample_model.type,
-                                  substype=sample_model.subtype,
-                                  treatment=sample_model.treatment,
-                                  contributions=sample_model.contributions)
 
-    pub_tables = [schemas.Publication(name=d.title, url=d.href) for d in dmeta.metadata.DOI]
-    pub_tables.extend([schemas.Publication(name=d.title, url=d.href) for d in dmeta.metadata.publications])
+    acq_table = create_acquisition(acq_model)
+    sample_table = create_sample(sample_model)
 
-    dataset = schemas.Dataset(name=dmeta.metadata.id,
-                              description=dmeta.metadata.title,
-                              institution=dmeta.metadata.institution,
-                              software_availability=dmeta.metadata.softwareAvailability,
-                              acquisition_id = acq_table.id,
-                              sample_id = sample_table.id,
-                              publications=pub_tables)
+    pub_tables = [create_pub(d, type="DOI") for d in dmeta.metadata.DOI]
+    pub_tables.extend([create_pub(d, type="paper") for d in dmeta.metadata.publications])
 
+    session.add_all([acq_table, sample_table, *pub_tables])
+    session.commit()
+
+    dataset = create_dataset(dmeta.metadata,
+                             acquisition_id=acq_table.id,
+                             sample_id=sample_table.id,
+                             pub_tables=pub_tables)
+
+    session.add(dataset)
+    session.commit()
     volume_tables = []
-    for key, value in dmeta.sources.items():
-        volume_tables.append(schemas.Volume(name=value.name, 
+    for value in dmeta.sources.values():
+        volume_tables.append(schemas.Volume(name=value.name,
                                             description=value.description,
                                             url=value.url,
                                             format=value.format,
-                                            transform=value.transform,
+                                            transform=value.transform.json(),
                                             sample_type=value.sampleType,
                                             content_type=value.contentType,
                                             dataset_id=dataset.id,
                                             ))
 
-    return acq_table, sample_table, pub_tables, dataset, volume_tables
+    session.add_all(volume_tables)
+    session.commit()
 
+    return acq_table, sample_table, *pub_tables, dataset, *volume_tables
 
 
 if __name__ == '__main__':
     create_db_and_tables(engine, wipe=True)
     with Session(engine) as session:
-        table = ingest_dataset('api/jrc_hela-2/manifest.json')
-        session.add_all([table])
-        session.commit()
+        paths = glob('api/*/manifest.json')
+        for path in paths:
+            tables = ingest_dataset(path, session=session)
 

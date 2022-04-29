@@ -1,12 +1,12 @@
 from sqlmodel import Relationship
 from .base import Base
-from sqlalchemy import Boolean, Column, Date, ForeignKey, Integer, String, Float, Table
+from sqlalchemy import Boolean, Column, Date, ForeignKey, Integer, String, Float, Table, null
 from sqlalchemy.orm import relationship
 from sqlalchemy.dialects import postgresql
 
 
 class DataSourceMixin:
-    name = Column(Integer, index=True)
+    name = Column(String, index=True)
     description = Column(String)
     url = Column(String)
     format = Column(String)
@@ -29,7 +29,7 @@ view_to_volume = Table('view_to_volume',
 
 
 
-pub_to_dataset = Table('publication_to_dataset', 
+pub_to_dataset = Table('publication_to_dataset',
                         Base.metadata,
                         Column("publication_id", ForeignKey('publication.id'), primary_key=True),
                         Column("dataset_id", ForeignKey('dataset.id'), primary_key=True))
@@ -63,8 +63,6 @@ class Mesh(Base, DataSourceMixin):
     __tablename__ = 'mesh'
     
     id = Column(Integer, primary_key=True, autoincrement=True)
-    name = Column(String)
-    
     volume_id = Column(Integer, ForeignKey("volume.id"))
     volume = relationship("Volume")
 
@@ -76,10 +74,8 @@ class Volume(Base, DataSourceMixin):
     sample_type = Column(String)
     content_type = Column(String)
     views = relationship("View", secondary=view_to_volume, back_populates="sources")
-    
-    dataset_id = Column(Integer, ForeignKey("dataset.id"))
+    dataset_id = Column(Integer, ForeignKey("dataset.id"), nullable=False)
     dataset = relationship("Dataset", back_populates="volumes")
-    
     subsources = relationship("Mesh", back_populates="volume")
 
 
@@ -100,7 +96,7 @@ class LabelClass(Base):
     name = Column(String, index=True)
     value = Column(Integer)
     annotation_state = Column(postgresql.JSONB)
-    crop_id = Column(Integer, ForeignKey("crop.id"))
+    crop_id = Column(Integer, ForeignKey("crop.id"), nullable=False)
     crop = relationship("Crop")
 
 
@@ -110,7 +106,7 @@ class Crop(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String, index=True)
     description = Column(String, index=True)
-    source_id = Column(ForeignKey('volume.id'))
+    source_id = Column(ForeignKey('volume.id'), nullable=False)
     annotations = relationship(LabelClass, back_populates='crop')
     shape = Column(postgresql.ARRAY(Integer))
     completion_stage = Column(String, index=True)
@@ -133,7 +129,7 @@ class Sample(Base):
 class FIBSEMAcquisition(Base, ImageAcquisitionMixin):
     __tablename__ = 'fibsem_acquisition'
 
-    id = Column(Integer, primary_key=True, autoincrement=True)    
+    id = Column(Integer, primary_key=True, autoincrement=True)
     duration_days = Column(Integer)
     bias_voltage = Column(Float)
     scan_rate = Column(Float)
@@ -148,19 +144,18 @@ class Dataset(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String)
     description = Column(String)
-    
+
     institution = Column(postgresql.ARRAY(String))
     software_availability = Column(String)
-    
+
     volumes = relationship(Volume, back_populates="dataset")
 
-    acquisition_id = Column(Integer, ForeignKey("fibsem_acquisition.id"))
+    acquisition_id = Column(Integer, ForeignKey("fibsem_acquisition.id"), nullable=False)
     acquisition = relationship(FIBSEMAcquisition, back_populates="datasets")
-    
-    sample_id = Column(Integer, ForeignKey("sample.id"))
+
+    sample_id = Column(Integer, ForeignKey("sample.id"), nullable=False)
     sample = relationship(Sample, back_populates="datasets")
-    
+
     publications = relationship(Publication,
                                 secondary=pub_to_dataset,
                                 back_populates="datasets")
-    
