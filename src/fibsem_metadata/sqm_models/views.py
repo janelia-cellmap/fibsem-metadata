@@ -4,7 +4,7 @@ from sqlalchemy.dialects import postgresql
 from pydantic import validator
 
 if TYPE_CHECKING:
-    from fibsem_metadata.models.sources import Volume, VolumeBase
+    from fibsem_metadata.legacy_models.sources import Volume, VolumeBase
 
 
 class ViewtoSource(SQLModel, table=True):

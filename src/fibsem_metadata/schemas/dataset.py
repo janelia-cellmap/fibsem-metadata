@@ -1,6 +1,6 @@
 from .base import Base
-from .sources import VolumeTable
-from .views import ViewTable
+from .source import VolumeTable
+from .view import ViewTable
 from .acquisition import FIBSEMAcquisitionTable
 from .sample import SampleTable
 from .publication import PublicationTable, pub_to_dataset

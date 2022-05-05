@@ -1,9 +1,9 @@
 import click
 from typing import Sequence, Dict
-from fibsem_metadata.models.base import StrictBaseModel
-from fibsem_metadata.models.metadata import DatasetMetadata
-from fibsem_metadata.models.sources import VolumeSource
-from fibsem_metadata.models.views import DatasetView
+from fibsem_metadata.legacy_models.base import StrictBaseModel
+from fibsem_metadata.legacy_models.metadata import DatasetMetadata
+from fibsem_metadata.legacy_models.sources import VolumeSource
+from fibsem_metadata.legacy_models.views import DatasetView
 
 
 class DatasetManifest(StrictBaseModel):

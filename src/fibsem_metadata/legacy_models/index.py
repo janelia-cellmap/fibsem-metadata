@@ -1,6 +1,6 @@
 from typing import Dict
 
-from fibsem_metadata.models.base import StrictBaseModel
+from fibsem_metadata.legacy_models.base import StrictBaseModel
 
 
 class Index(StrictBaseModel):

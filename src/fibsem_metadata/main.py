@@ -1,18 +1,18 @@
 from sqlmodel import Session, select
 from fibsem_metadata.database import create_db_and_tables, engine
-from fibsem_metadata.models.sources import (
+from fibsem_metadata.legacy_models.sources import (
     DisplaySettings,
     DisplaySettingsBase,
     Volume,
     VolumeBase,
 )
-from fibsem_metadata.models.dataset import (
+from fibsem_metadata.legacy_models.dataset import (
     Dataset,
     FIBSEMAcquisition,
     Sample,
     UnitfulVector,
 )
-from fibsem_metadata.models.views import View, ViewBase
+from fibsem_metadata.legacy_models.views import View, ViewBase
 
 
 def create_view():

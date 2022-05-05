@@ -2,14 +2,14 @@ from turtle import position
 from typing import Literal
 from sqlalchemy.orm import Session
 from fibsem_metadata.database_sqa import create_db_and_tables, engine
-import fibsem_metadata.schemas.views as schemas
-from fibsem_metadata.models.metadata import (
+import fibsem_metadata.schemas.view as schemas
+from fibsem_metadata.legacy_models.metadata import (
     DatasetMetadata,
     Hyperlink,
     SampleMetadata,
     FIBSEMImagingMetadata,
 )
-from fibsem_metadata.models.manifest import DatasetManifest, DatasetView
+from fibsem_metadata.legacy_models.manifest import DatasetManifest, DatasetView
 import json
 from glob import glob
 

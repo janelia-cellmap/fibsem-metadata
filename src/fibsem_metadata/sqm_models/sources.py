@@ -5,7 +5,7 @@ from sqlmodel import Relationship, SQLModel, Field, Column
 from .multiscale.cosem import SpatialTransform
 from sqlalchemy.dialects import postgresql
 from typing import TYPE_CHECKING, Any
-from fibsem_metadata.models.views import View
+from fibsem_metadata.legacy_models.views import View
 
 
 class MeshTypeEnum(str, Enum):
