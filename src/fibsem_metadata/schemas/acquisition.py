@@ -1,4 +1,5 @@
-from sqlalchemy import Column, Integer, relationship, Float, String, Date
+from sqlalchemy import Column, Integer, Float, String, Date
+from sqlalchemy.orm import relationship
 from sqlalchemy.dialects import postgresql
 from .base import Base
 

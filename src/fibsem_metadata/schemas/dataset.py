@@ -4,7 +4,8 @@ from .view import ViewTable
 from .acquisition import FIBSEMAcquisitionTable
 from .sample import SampleTable
 from .publication import PublicationTable, pub_to_dataset
-from sqlalchemy import relationship, Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy.orm import relationship
 from sqlalchemy.dialects import postgresql
 
 

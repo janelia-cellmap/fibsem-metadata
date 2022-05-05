@@ -1,27 +1,15 @@
 from .base import Base
-from datetime import date
 
 
-class UnitfulVector(Base):
-    unit: str
-    values: dict[str, float]
-
-
-class ImagingMetadata(Base):
-    id: str
-    institution: str
-    gridSpacing: UnitfulVector
-    dimensions: UnitfulVector
-
-
-class FIBSEMImagingMetadata(ImagingMetadata):
+class Sample(Base):
     """
-    Metadata describing the FIB-SEM imaging process.
+    Metadata describing the sample and sample preparation.
     """
 
-    startDate: date
-    duration: int
-    biasVoltage: float
-    scanRate: float
-    current: float
-    primaryEnergy: float
+    description: str
+    protocol: str
+    contributions: str
+    organism: list[str]
+    type: list[str]
+    subtype: list[str]
+    treatment: list[str]

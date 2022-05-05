@@ -1,5 +1,6 @@
 from .base import Base
-from sqlalchemy import Column, relationship, String, ForeignKey, Table, Integer
+from sqlalchemy import Column, String, ForeignKey, Table, Integer
+from sqlalchemy.orm import relationship
 
 pub_to_dataset = Table(
     "publication_to_dataset",
@@ -7,6 +8,7 @@ pub_to_dataset = Table(
     Column("publication_id", ForeignKey("publication.id"), primary_key=True),
     Column("dataset_id", ForeignKey("dataset.id"), primary_key=True),
 )
+
 
 class PublicationTable(Base):
     __tablename__ = "publication"

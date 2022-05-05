@@ -1,6 +1,8 @@
 from .base import Base
-from sqlalchemy import Column, Integer, String, relationship, ForeignKey, Boolean
+from sqlalchemy import Column, Integer, String, ForeignKey, Boolean
+from sqlalchemy.orm import relationship
 from sqlalchemy.dialects import postgresql
+
 
 class DataSourceMixin:
     name = Column(String, index=True)
@@ -36,8 +38,9 @@ class VolumeTable(Base, DataSourceMixin):
     id = Column(Integer, primary_key=True, autoincrement=True)
     sample_type = Column(String)
     content_type = Column(String)
-    views = relationship("ViewTable", secondary="view_to_volume", back_populates="sources")
+    views = relationship(
+        "ViewTable", secondary="view_to_volume", back_populates="sources"
+    )
     dataset_id = Column(Integer, ForeignKey("dataset.id"), nullable=False)
     dataset = relationship("DatasetTable", back_populates="volumes")
     subsources = relationship("MeshTable", back_populates="volume")
-

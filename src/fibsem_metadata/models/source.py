@@ -2,8 +2,7 @@ from typing import Optional, Sequence
 from enum import Enum
 from pydantic.color import Color
 from .base import Base
-from .source import Mesh
-from fibsem_metadata.legacy_models.multiscale.cosem import SpatialTransform
+from fibsem_metadata.models.multiscale.cosem import SpatialTransform
 
 
 class MeshTypeEnum(str, Enum):

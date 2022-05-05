@@ -1,21 +1,28 @@
-from turtle import position
 from typing import Literal
 from sqlalchemy.orm import Session
 from fibsem_metadata.database_sqa import create_db_and_tables, engine
-import fibsem_metadata.schemas.view as schemas
-from fibsem_metadata.legacy_models.metadata import (
-    DatasetMetadata,
-    Hyperlink,
-    SampleMetadata,
-    FIBSEMImagingMetadata,
+from fibsem_metadata.models import (
+    Dataset,
+    View,
+    Sample,
+    FIBSEMAcquisition,
 )
-from fibsem_metadata.legacy_models.manifest import DatasetManifest, DatasetView
+from fibsem_metadata.models.publication import Hyperlink
+from fibsem_metadata.legacy_models.manifest import DatasetManifest
 import json
 from glob import glob
+from fibsem_metadata.schemas import (
+    DatasetTable,
+    PublicationTable,
+    VolumeTable,
+    ViewTable,
+    SampleTable,
+    FIBSEMAcquisitionTable,
+)
 
 
-def create_sample(metadata: SampleMetadata) -> schemas.Sample:
-    sample = schemas.Sample(
+def create_sample(metadata: Sample) -> SampleTable:
+    sample = SampleTable(
         organism=metadata.organism,
         type=metadata.type,
         subtype=metadata.subtype,
@@ -26,13 +33,13 @@ def create_sample(metadata: SampleMetadata) -> schemas.Sample:
 
 
 def create_acquisition(
-    metadata: FIBSEMImagingMetadata,
+    metadata: FIBSEMAcquisition,
     instrument: str = "",
     grid_shape: list[int] = [0, 0, 0],
     grid_unit: str = "nm",
-) -> schemas.FIBSEMAcquisition:
+) -> FIBSEMAcquisitionTable:
 
-    acq = schemas.FIBSEMAcquisition(
+    acq = FIBSEMAcquisitionTable(
         instrument=instrument,
         institution=metadata.institution,
         start_date=metadata.startDate,
@@ -51,20 +58,20 @@ def create_acquisition(
 
 def create_pub(
     metadata: Hyperlink, type: Literal["DOI", "publication"]
-) -> schemas.Publication:
+) -> PublicationTable:
 
-    pub = schemas.Publication(name=metadata.title, url=metadata.href, type=type)
+    pub = PublicationTable(name=metadata.title, url=metadata.href, type=type)
     return pub
 
 
 def create_dataset(
-    metadata: DatasetMetadata,
+    metadata: Dataset,
     acquisition_id: int | None = None,
     sample_id: int | None = None,
-    pub_tables: list[schemas.Publication] = [],
-) -> schemas.Dataset:
+    pub_tables: list[PublicationTable] = [],
+) -> DatasetTable:
 
-    dataset = schemas.Dataset(
+    dataset = DatasetTable(
         name=metadata.id,
         description=metadata.title,
         institution=metadata.institution,
@@ -76,14 +83,14 @@ def create_dataset(
     return dataset
 
 
-def create_view(metadata: DatasetView, dataset: schemas.Dataset) -> schemas.View:
+def create_view(metadata: View, dataset: DatasetTable) -> ViewTable:
     sources = []
     names = [d.name for d in dataset.volumes]
     for k in metadata.sources:
         if k in names:
             sources.append(dataset.volumes[names.index(k)])
 
-    view = schemas.View(
+    view = ViewTable(
         name=metadata.name,
         description=metadata.description,
         sources=sources,
@@ -125,10 +132,10 @@ def ingest_dataset(path, session: Session):
 
     session.add(dataset)
     session.commit()
-    volume_tables: dict[str, schemas.Volume] = {}
+    volume_tables: dict[str, VolumeTable] = {}
 
     for value in dmeta.sources.values():
-        volume_tables[value.name] = schemas.Volume(
+        volume_tables[value.name] = VolumeTable(
             name=value.name,
             description=value.description,
             url=value.url,
