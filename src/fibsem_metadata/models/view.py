@@ -1,13 +1,13 @@
 from typing import Optional, Sequence
 from pydantic import validator
+from .sources import Volume
+from .base import Base
 
-from fibsem_metadata.models.base import StrictBaseModel
 
-
-class DatasetView(StrictBaseModel):
+class View(Base):
     name: str
     description: str
-    sources: Sequence[str]
+    sources: Sequence[Volume]
     position: Optional[Sequence[float]]
     scale: Optional[float]
     orientation: Optional[Sequence[float]]
@@ -27,7 +27,3 @@ class DatasetView(StrictBaseModel):
                     "Orientation vector does not have a unit length. Got {length}."
                 )
         return v
-
-
-class DatasetViews(StrictBaseModel):
-    views: Sequence[DatasetView]

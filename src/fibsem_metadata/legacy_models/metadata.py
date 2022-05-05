@@ -1,4 +1,3 @@
-import click
 from datetime import date
 from typing import List, Dict, Union
 from enum import Enum
@@ -6,16 +5,25 @@ from enum import Enum
 from fibsem_metadata.models.base import StrictBaseModel
 from pydantic import HttpUrl
 
+from fibsem_metadata.schemas.views import Sample, Volume
 
-class Hyperlink(StrictBaseModel):
-    href: HttpUrl
-    title: str
 
 
 class SoftwareAvailability(str, Enum):
     open = "open"
     partial = "partially open"
     closed = "closed"
+
+class PublicationTypeEnum(str, Enum):
+    doi = "doi"
+    paper = "paper"
+
+class Hyperlink(StrictBaseModel):
+    href: HttpUrl
+    title: str
+
+class Publication(Hyperlink):
+    type: PublicationTypeEnum
 
 
 class UnitfulVector(StrictBaseModel):
@@ -77,10 +85,13 @@ class DatasetMetadata(StrictBaseModel):
     publications: List[Union[Hyperlink, str]]
 
 
-@click.command()
-def main() -> None:
-    click.echo(DatasetMetadata.schema_json(indent=2))
-
-
-if __name__ == "__main__":
-    main()
+class Dataset(StrictBaseModel):
+    name: str
+    description: str
+    institution: list[str]
+    softwareAvailability: SoftwareAvailability
+    acquisition: FIBSEMImagingMetadata
+    sample: SampleMetadata
+    publications: list[Publication]
+    volumes = list[Volume]
+    views = list[View]
