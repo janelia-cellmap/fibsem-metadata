@@ -2,24 +2,16 @@ from .base import Base
 from enum import Enum
 from pydantic import HttpUrl
 from datetime import date
-from .sources import Volume
-from .views import View
+from .source import Volume
+from .view import View
+from .publication import Publication
+
 
 class SoftwareAvailability(str, Enum):
     open = "open"
     partial = "partially open"
     closed = "closed"
 
-class PublicationTypeEnum(str, Enum):
-    doi = "doi"
-    paper = "paper"
-
-class Hyperlink(Base):
-    href: HttpUrl
-    title: str
-
-class Publication(Hyperlink):
-    type: PublicationTypeEnum
 
 class UnitfulVector(Base):
     unit: str

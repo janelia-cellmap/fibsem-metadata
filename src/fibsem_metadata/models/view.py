@@ -1,6 +1,6 @@
 from typing import Optional, Sequence
 from pydantic import validator
-from .sources import Volume
+from .source import Volume
 from .base import Base
 
 

@@ -1,6 +1,7 @@
 from .base import Base
 from datetime import date
 
+
 class UnitfulVector(Base):
     unit: str
     values: dict[str, float]

@@ -2,11 +2,10 @@ from datetime import date
 from typing import List, Dict, Union
 from enum import Enum
 
-from fibsem_metadata.models.base import StrictBaseModel
+from fibsem_metadata.legacy_models.base import StrictBaseModel
 from pydantic import HttpUrl
-
-from fibsem_metadata.schemas.views import Sample, Volume
-
+from .sources import VolumeSource
+from .views import DatasetView
 
 
 class SoftwareAvailability(str, Enum):
@@ -14,13 +13,16 @@ class SoftwareAvailability(str, Enum):
     partial = "partially open"
     closed = "closed"
 
+
 class PublicationTypeEnum(str, Enum):
     doi = "doi"
     paper = "paper"
 
+
 class Hyperlink(StrictBaseModel):
     href: HttpUrl
     title: str
+
 
 class Publication(Hyperlink):
     type: PublicationTypeEnum
@@ -93,5 +95,5 @@ class Dataset(StrictBaseModel):
     acquisition: FIBSEMImagingMetadata
     sample: SampleMetadata
     publications: list[Publication]
-    volumes = list[Volume]
-    views = list[View]
+    volumes = list[VolumeSource]
+    views = list[DatasetView]
