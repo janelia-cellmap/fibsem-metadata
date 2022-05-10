@@ -8,10 +8,8 @@ class ImageAcquisitionMixin:
     instrument = Column(String)
     institution = Column(String)
     start_date = Column(Date)
-    sampling_grid_unit = Column(String)
-    sampling_grid_spacing = Column(postgresql.ARRAY(Float))
-    sampling_grid_shape = Column(postgresql.ARRAY(Integer))
-
+    grid_spacing = Column(postgresql.JSONB)
+    dimensions = Column(postgresql.JSONB)
 
 class FIBSEMAcquisitionTable(Base, ImageAcquisitionMixin):
     __tablename__ = "fibsem_acquisition"

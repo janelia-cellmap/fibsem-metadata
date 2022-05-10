@@ -1,3 +1,4 @@
+from pydantic import Field
 from .sample import Sample
 from .acquisition import FIBSEMAcquisition
 from .base import Base
@@ -17,10 +18,20 @@ class SoftwareAvailability(str, Enum):
 class Dataset(Base):
     name: str
     description: str
-    institution: list[str]
-    softwareAvailability: SoftwareAvailability
-    acquisition: FIBSEMAcquisition
-    sample: Sample
+    institutions: list[str]
+    software_availability: SoftwareAvailability
+    acquisition: FIBSEMAcquisition | None
+    sample: Sample | None
     publications: list[Publication]
-    volumes = list[Volume]
-    views = list[View]
+    volumes: list[Volume]
+    views: list[View]
+
+
+class DatasetCreate(Dataset):
+    pass
+
+class DatasetRead(Dataset):
+    id: int
+
+class DatasetUpdate(Dataset):
+    pass

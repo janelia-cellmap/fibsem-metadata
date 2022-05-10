@@ -1,4 +1,6 @@
 from datetime import date
+from datetime import date
+from pydantic import Json
 from .base import Base
 
 
@@ -10,7 +12,8 @@ class UnitfulVector(Base):
 class ImageAcquisition(Base):
     id: str
     institution: str
-    gridSpacing: UnitfulVector
+    start_date: date | None
+    grid_spacing: UnitfulVector
     dimensions: UnitfulVector
 
 
@@ -19,9 +22,13 @@ class FIBSEMAcquisition(ImageAcquisition):
     Metadata describing the FIB-SEM imaging process.
     """
 
-    startDate: date
-    duration: int
-    biasVoltage: float
-    scanRate: float
-    current: float
-    primaryEnergy: float
+    start_date: date | None
+    duration_days: int | None
+    bias_voltage: float | None
+    scan_rate: float | None
+    current: float | None
+    primary_energy: float | None
+
+
+class FIBSEMAcquisitionRead(FIBSEMAcquisition):
+    id: int

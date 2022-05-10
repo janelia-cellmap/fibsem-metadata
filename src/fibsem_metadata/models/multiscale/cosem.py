@@ -1,10 +1,9 @@
 from pydantic import root_validator
 from pydantic import validator
-from sqlmodel import SQLModel
 from typing import Literal, Any
+from ..base import Base
 
-
-class ScaleTranslate(SQLModel):
+class ScaleTranslate(Base):
     axes: list[str]
     units: list[Any]
     translate: list[Any]

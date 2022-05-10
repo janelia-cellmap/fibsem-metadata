@@ -1,3 +1,4 @@
+from .base import Base
 from .view import ViewTable
 from .crop import CropTable
 from .publication import PublicationTable

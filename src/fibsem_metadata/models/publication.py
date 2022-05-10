@@ -8,10 +8,11 @@ class PublicationTypeEnum(str, Enum):
     paper = "paper"
 
 
-class Hyperlink(Base):
-    href: HttpUrl
-    title: str
-
-
-class Publication(Hyperlink):
+class Publication(Base):
+    name: str
     type: PublicationTypeEnum
+    url: HttpUrl
+
+
+class PublicationRead(Base):
+    id: int

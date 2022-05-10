@@ -1,13 +1,14 @@
 from typing import Literal
 from sqlalchemy.orm import Session
-from fibsem_metadata.database_sqa import create_db_and_tables, engine
+from fibsem_metadata.session import create_db_and_tables, engine
 from fibsem_metadata.models import (
     Dataset,
     View,
     Sample,
     FIBSEMAcquisition,
 )
-from fibsem_metadata.models.publication import Hyperlink
+from fibsem_metadata.models.acquisition import UnitfulVector
+from fibsem_metadata.models.source import DisplaySettings
 from fibsem_metadata.legacy_models.manifest import DatasetManifest
 import json
 from glob import glob
@@ -28,6 +29,8 @@ def create_sample(metadata: Sample) -> SampleTable:
         subtype=metadata.subtype,
         treatment=metadata.treatment,
         contributions=metadata.contributions,
+        protocol=metadata.protocol,
+        description=metadata.description
     )
     return sample
 
@@ -35,7 +38,7 @@ def create_sample(metadata: Sample) -> SampleTable:
 def create_acquisition(
     metadata: FIBSEMAcquisition,
     instrument: str = "",
-    grid_shape: list[int] = [0, 0, 0],
+    grid_shape: dict[str, int] = {'z' : 0, 'z' :  0, 'x' : 0},
     grid_unit: str = "nm",
 ) -> FIBSEMAcquisitionTable:
 
@@ -43,10 +46,8 @@ def create_acquisition(
         instrument=instrument,
         institution=metadata.institution,
         start_date=metadata.startDate,
-        sampling_grid_unit=grid_unit,
-        sampling_grid_spacing=metadata.gridSpacing.values.values(),
-        sampling_grid_shape=grid_shape,
-        duration_days=metadata.duration,
+        grid_spacing=metadata.gridSpacing.dict(),
+        dimensions=UnitfulVector(unit=grid_unit, values=grid_shape).dict(),
         bias_voltage=metadata.biasVoltage,
         scan_rate=metadata.scanRate,
         current=metadata.current,
@@ -57,10 +58,10 @@ def create_acquisition(
 
 
 def create_pub(
-    metadata: Hyperlink, type: Literal["DOI", "publication"]
+    metadata, type: Literal["DOI", "publication"]
 ) -> PublicationTable:
 
-    pub = PublicationTable(name=metadata.title, url=metadata.href, type=type)
+    pub = PublicationTable(name=metadata.title, url=metadata.href, type=type.lower())
     return pub
 
 
@@ -74,7 +75,7 @@ def create_dataset(
     dataset = DatasetTable(
         name=metadata.id,
         description=metadata.title,
-        institution=metadata.institution,
+        institutions=metadata.institution,
         software_availability=metadata.softwareAvailability,
         acquisition_id=acquisition_id,
         sample_id=sample_id,
@@ -135,12 +136,16 @@ def ingest_dataset(path, session: Session):
     volume_tables: dict[str, VolumeTable] = {}
 
     for value in dmeta.sources.values():
+        display_settings= DisplaySettings(contrast_limits=value.displaySettings.contrastLimits,
+                                          invert_lut=value.displaySettings.invertLUT,
+                                          color=value.displaySettings.color)
         volume_tables[value.name] = VolumeTable(
             name=value.name,
             description=value.description,
             url=value.url,
+            display_settings=display_settings.dict(),
             format=value.format,
-            transform=value.transform.json(),
+            transform=value.transform.dict(),
             sample_type=value.sampleType,
             content_type=value.contentType,
             dataset_id=dataset.id,

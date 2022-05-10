@@ -1,4 +1,3 @@
-from typing import Optional, Sequence
 from pydantic import validator
 from .source import Volume
 from .base import Base
@@ -7,15 +6,15 @@ from .base import Base
 class View(Base):
     name: str
     description: str
-    sources: Sequence[Volume]
-    position: Optional[Sequence[float]]
-    scale: Optional[float]
-    orientation: Optional[Sequence[float]]
+    sources: list[Volume]
+    position: list[float] | None
+    scale: list[float] | None
+    orientation: list[float] | None
 
     @validator("orientation")
     def orientation_must_have_unit_norm(
-        cls, v: Optional[Sequence[float]]
-    ) -> Optional[Sequence[float]]:
+        cls, v: list[float] | None
+    ) -> list[float] | None:
         if v is not None:
             if len(v) != 4:
                 raise ValueError(

@@ -1,5 +1,5 @@
 from .base import Base
-from sqlalchemy import Column, Integer, String, ForeignKey, Boolean
+from sqlalchemy import JSON, Column, Integer, String, ForeignKey, Boolean
 from sqlalchemy.orm import relationship
 from sqlalchemy.dialects import postgresql
 
@@ -18,10 +18,7 @@ class DisplaySettingsTable(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     color = Column(String)
     invertLUT = Column(Boolean)
-    contrast_limits_start = Column(Integer)
-    contrast_limits_end = Column(Integer)
-    contrast_limits_min = Column(Integer)
-    contrast_limits_max = Column(Integer)
+    contrast_limits = Column(postgresql.JSONB)
 
 
 class MeshTable(Base, DataSourceMixin):
@@ -38,6 +35,7 @@ class VolumeTable(Base, DataSourceMixin):
     id = Column(Integer, primary_key=True, autoincrement=True)
     sample_type = Column(String)
     content_type = Column(String)
+    display_settings = Column(postgresql.JSONB)
     views = relationship(
         "ViewTable", secondary="view_to_volume", back_populates="sources"
     )

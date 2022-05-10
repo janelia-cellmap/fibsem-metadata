@@ -16,17 +16,17 @@ class DatasetTable(Base):
     name = Column(String, unique=True)
     description = Column(String)
 
-    institution = Column(postgresql.ARRAY(String))
+    institutions = Column(postgresql.ARRAY(String))
     software_availability = Column(String)
 
     volumes = relationship(VolumeTable, back_populates="dataset")
     views = relationship(ViewTable, back_populates="dataset")
     acquisition_id = Column(
-        Integer, ForeignKey("fibsem_acquisition.id"), nullable=False
+        Integer, ForeignKey("fibsem_acquisition.id"), nullable=True
     )
     acquisition = relationship(FIBSEMAcquisitionTable, back_populates="datasets")
 
-    sample_id = Column(Integer, ForeignKey("sample.id"), nullable=False)
+    sample_id = Column(Integer, ForeignKey("sample.id"), nullable=True)
     sample = relationship(SampleTable, back_populates="datasets")
 
     publications = relationship(
