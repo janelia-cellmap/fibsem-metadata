@@ -43,6 +43,7 @@ def create_acquisition(
 ) -> FIBSEMAcquisitionTable:
 
     acq = FIBSEMAcquisitionTable(
+        name='',
         instrument=instrument,
         institution=metadata.institution,
         start_date=metadata.startDate,

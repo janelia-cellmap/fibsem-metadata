@@ -10,7 +10,7 @@ class UnitfulVector(Base):
 
 
 class ImageAcquisition(Base):
-    id: str
+    name: str
     institution: str
     start_date: date | None
     grid_spacing: UnitfulVector

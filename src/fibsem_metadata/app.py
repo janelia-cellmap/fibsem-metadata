@@ -9,7 +9,7 @@ app = FastAPI(title='FIBSEM Metadata', openapi_url="/openapi.json")
 
 api_router = APIRouter()
 
-@api_router.get('/datasets/', status_code=200, response_model=list[models.dataset.DatasetRead])
+@api_router.get('/datasets/', status_code=200, response_model=list[models.dataset.Dataset])
 def get_datasets(*,
                  limit: int = 1,
                  db: Session = Depends(get_db)) -> list[models.Dataset]:
