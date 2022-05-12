@@ -23,8 +23,6 @@ class Dataset(Base):
     acquisition: FIBSEMAcquisition | None
     sample: Sample | None
     publications: list[Publication]
-    volumes: list[Volume]
-    views: list[View]
 
 
 class DatasetCreate(Dataset):

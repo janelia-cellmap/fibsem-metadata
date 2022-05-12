@@ -12,33 +12,20 @@ class DataSourceMixin:
     transform = Column(postgresql.JSONB)
 
 
-class DisplaySettingsTable(Base):
-    __tablename__ = "displaysettings"
-
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    color = Column(String)
-    invertLUT = Column(Boolean)
-    contrast_limits = Column(postgresql.JSONB)
-
-
 class MeshTable(Base, DataSourceMixin):
     __tablename__ = "mesh"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    volume_id = Column(Integer, ForeignKey("volume.id"))
+    volume_id = Column(Integer, ForeignKey("volume.id"), index=True)
     volume = relationship("VolumeTable")
 
 
 class VolumeTable(Base, DataSourceMixin):
     __tablename__ = "volume"
 
-    id = Column(Integer, primary_key=True, autoincrement=True)
+    id = Column(Integer, primary_key=True, autoincrement=True, index=True)
     sample_type = Column(String)
     content_type = Column(String)
     display_settings = Column(postgresql.JSONB)
-    views = relationship(
-        "ViewTable", secondary="view_to_volume", back_populates="sources"
-    )
-    dataset_id = Column(Integer, ForeignKey("dataset.id"), nullable=False)
-    dataset = relationship("DatasetTable", back_populates="volumes")
+    dataset_name = Column(String, ForeignKey("dataset.name"), nullable=False, index=True)
     subsources = relationship("MeshTable", back_populates="volume")

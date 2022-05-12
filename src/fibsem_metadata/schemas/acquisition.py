@@ -5,6 +5,7 @@ from .base import Base
 
 
 class ImageAcquisitionMixin:
+    name = Column(String)
     instrument = Column(String)
     institution = Column(String)
     start_date = Column(Date)

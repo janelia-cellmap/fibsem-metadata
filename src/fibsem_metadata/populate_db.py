@@ -8,7 +8,7 @@ from fibsem_metadata.models import (
     FIBSEMAcquisition,
 )
 from fibsem_metadata.models.acquisition import UnitfulVector
-from fibsem_metadata.models.source import DisplaySettings
+from fibsem_metadata.models.source import DisplaySettings, Volume
 from fibsem_metadata.legacy_models.manifest import DatasetManifest
 import json
 from glob import glob
@@ -85,12 +85,8 @@ def create_dataset(
     return dataset
 
 
-def create_view(metadata: View, dataset: DatasetTable) -> ViewTable:
-    sources = []
-    names = [d.name for d in dataset.volumes]
-    for k in metadata.sources:
-        if k in names:
-            sources.append(dataset.volumes[names.index(k)])
+def create_view(metadata: View, dataset: DatasetTable, volumes: VolumeTable) -> ViewTable:
+    sources = list(filter(lambda v: v.name in metadata.sources, volumes))
 
     view = ViewTable(
         name=metadata.name,
@@ -98,7 +94,7 @@ def create_view(metadata: View, dataset: DatasetTable) -> ViewTable:
         sources=sources,
         position=metadata.position,
         orientation=metadata.orientation,
-        dataset_id=dataset.id,
+        dataset_name=dataset.name,
         dataset=dataset,
     )
     return view
@@ -149,13 +145,13 @@ def ingest_dataset(path, session: Session):
             transform=value.transform.dict(),
             sample_type=value.sampleType,
             content_type=value.contentType,
-            dataset_id=dataset.id,
+            dataset_name=dataset.name,
         )
 
     session.add_all(list(volume_tables.values()))
     session.commit()
 
-    view_tables = [create_view(v, dataset) for v in dmeta.views]
+    view_tables = [create_view(v, dataset, list(volume_tables.values())) for v in dmeta.views]
     session.add_all(view_tables)
     session.commit()
     return acq_table, sample_table, *pub_tables, dataset, volume_tables, view_tables

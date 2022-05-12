@@ -18,9 +18,9 @@ class ViewTable(Base):
     name = Column(String, index=True)
     description = Column(String)
     sources = relationship(
-        "VolumeTable", secondary=view_to_volume, back_populates="views"
-    )
+        "VolumeTable", secondary=view_to_volume)
     position = Column(postgresql.ARRAY(Float))
     orientation = Column(postgresql.ARRAY(Float))
-    dataset_id = Column(Integer, ForeignKey("dataset.id"), nullable=False)
-    dataset = relationship("DatasetTable", back_populates="views")
+    dataset = relationship("DatasetTable")
+    dataset_name = Column(String, ForeignKey("dataset.name"), nullable=False, index=True)
+    

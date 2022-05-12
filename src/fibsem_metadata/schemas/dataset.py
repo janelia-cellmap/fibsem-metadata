@@ -19,14 +19,13 @@ class DatasetTable(Base):
     institutions = Column(postgresql.ARRAY(String))
     software_availability = Column(String)
 
-    volumes = relationship(VolumeTable, back_populates="dataset")
-    views = relationship(ViewTable, back_populates="dataset")
     acquisition_id = Column(
-        Integer, ForeignKey("fibsem_acquisition.id"), nullable=True
+        Integer, ForeignKey("fibsem_acquisition.id"), nullable=True, index=True
     )
+
     acquisition = relationship(FIBSEMAcquisitionTable, back_populates="datasets")
 
-    sample_id = Column(Integer, ForeignKey("sample.id"), nullable=True)
+    sample_id = Column(Integer, ForeignKey("sample.id"), nullable=True, index=True)
     sample = relationship(SampleTable, back_populates="datasets")
 
     publications = relationship(
