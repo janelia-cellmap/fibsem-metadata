@@ -27,5 +27,7 @@ class VolumeTable(Base, DataSourceMixin):
     sample_type = Column(String)
     content_type = Column(String)
     display_settings = Column(postgresql.JSONB)
-    dataset_name = Column(String, ForeignKey("dataset.name"), nullable=False, index=True)
+    dataset_name = Column(
+        String, ForeignKey("dataset.name"), nullable=False, index=True
+    )
     subsources = relationship("MeshTable", back_populates="volume")

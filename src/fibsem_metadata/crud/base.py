@@ -16,7 +16,7 @@ class Base(Generic[SchemaType, CreateModelType, UpdateModelType]):
         CRUD object with default methods to Create, Read, Update, Delete (CRUD).
         **Parameters**
         * `schema`: A SQLAlchemy table
-        * `model`: A Pydantic model 
+        * `model`: A Pydantic model
         """
         self.model = model
 

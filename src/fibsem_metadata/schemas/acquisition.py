@@ -12,6 +12,7 @@ class ImageAcquisitionMixin:
     grid_spacing = Column(postgresql.JSONB)
     dimensions = Column(postgresql.JSONB)
 
+
 class FIBSEMAcquisitionTable(Base, ImageAcquisitionMixin):
     __tablename__ = "fibsem_acquisition"
 

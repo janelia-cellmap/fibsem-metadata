@@ -6,8 +6,10 @@ from .schemas.base import Base
 from pydantic.json import pydantic_encoder
 import json
 
+
 def json_serializer(*args, **kwargs) -> str:
     return json.dumps(*args, default=pydantic_encoder, **kwargs)
+
 
 db_url = "postgresql://admin:admin@localhost:5432/fibsem_metadata"
 

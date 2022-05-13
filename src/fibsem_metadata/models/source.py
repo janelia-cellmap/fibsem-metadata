@@ -30,6 +30,7 @@ class NeuroglancerN5GroupMetadata(Base):
     scales: list[list[PositiveInt]]
     pixelResolution: PixelResolution
 
+
 class ScaleTranslate(Base):
     axes: list[str]
     units: list[Any]
@@ -138,12 +139,14 @@ class Mesh(DataSource):
     format: MeshTypeEnum
     ids: list[int]
 
+
 class MeshRead(Mesh):
     id: int
 
 
 class MeshCreate(Mesh):
     pass
+
 
 class MeshUpdate(Mesh):
     pass
@@ -156,11 +159,14 @@ class Volume(DataSource):
     display_settings: DisplaySettings
     subsources: list[Mesh]
 
+
 class VolumeRead(Volume):
     id: int
 
+
 class VolumeCreate(Volume):
     pass
+
 
 class VolumeUpdate(Volume):
     pass

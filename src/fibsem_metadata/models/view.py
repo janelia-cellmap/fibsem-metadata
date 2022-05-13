@@ -1,11 +1,13 @@
 from pydantic import validator
-from .source import Volume
+
+from fibsem_metadata.models.source import Volume
 from .base import Base
 
 
 class View(Base):
     name: str
     description: str
+    dataset_name: str
     sources: list[Volume]
     position: list[float] | None
     scale: list[float] | None

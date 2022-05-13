@@ -30,7 +30,7 @@ def create_sample(metadata: Sample) -> SampleTable:
         treatment=metadata.treatment,
         contributions=metadata.contributions,
         protocol=metadata.protocol,
-        description=metadata.description
+        description=metadata.description,
     )
     return sample
 
@@ -38,12 +38,12 @@ def create_sample(metadata: Sample) -> SampleTable:
 def create_acquisition(
     metadata: FIBSEMAcquisition,
     instrument: str = "",
-    grid_shape: dict[str, int] = {'z' : 0, 'z' :  0, 'x' : 0},
+    grid_shape: dict[str, int] = {"z": 0, "z": 0, "x": 0},
     grid_unit: str = "nm",
 ) -> FIBSEMAcquisitionTable:
 
     acq = FIBSEMAcquisitionTable(
-        name='',
+        name="",
         instrument=instrument,
         institution=metadata.institution,
         start_date=metadata.startDate,
@@ -58,9 +58,7 @@ def create_acquisition(
     return acq
 
 
-def create_pub(
-    metadata, type: Literal["DOI", "publication"]
-) -> PublicationTable:
+def create_pub(metadata, type: Literal["DOI", "publication"]) -> PublicationTable:
 
     pub = PublicationTable(name=metadata.title, url=metadata.href, type=type.lower())
     return pub
@@ -85,17 +83,16 @@ def create_dataset(
     return dataset
 
 
-def create_view(metadata: View, dataset: DatasetTable, volumes: VolumeTable) -> ViewTable:
-    sources = list(filter(lambda v: v.name in metadata.sources, volumes))
-
+def create_view(
+    metadata: View, dataset: DatasetTable, volumes: list[VolumeTable]
+) -> ViewTable:
     view = ViewTable(
         name=metadata.name,
+        dataset_name=dataset.name,
         description=metadata.description,
-        sources=sources,
         position=metadata.position,
         orientation=metadata.orientation,
-        dataset_name=dataset.name,
-        dataset=dataset,
+        sources=volumes,
     )
     return view
 
@@ -133,9 +130,11 @@ def ingest_dataset(path, session: Session):
     volume_tables: dict[str, VolumeTable] = {}
 
     for value in dmeta.sources.values():
-        display_settings= DisplaySettings(contrast_limits=value.displaySettings.contrastLimits,
-                                          invert_lut=value.displaySettings.invertLUT,
-                                          color=value.displaySettings.color)
+        display_settings = DisplaySettings(
+            contrast_limits=value.displaySettings.contrastLimits,
+            invert_lut=value.displaySettings.invertLUT,
+            color=value.displaySettings.color,
+        )
         volume_tables[value.name] = VolumeTable(
             name=value.name,
             description=value.description,
@@ -151,7 +150,9 @@ def ingest_dataset(path, session: Session):
     session.add_all(list(volume_tables.values()))
     session.commit()
 
-    view_tables = [create_view(v, dataset, list(volume_tables.values())) for v in dmeta.views]
+    view_tables = [
+        create_view(v, dataset, volumes=list(volume_tables.values())) for v in dmeta.views
+    ]
     session.add_all(view_tables)
     session.commit()
     return acq_table, sample_table, *pub_tables, dataset, volume_tables, view_tables

@@ -1,9 +1,7 @@
-from pydantic import Field
 from .sample import Sample
 from .acquisition import FIBSEMAcquisition
 from .base import Base
 from enum import Enum
-from datetime import date
 from .source import Volume
 from .view import View
 from .publication import Publication
@@ -23,13 +21,17 @@ class Dataset(Base):
     acquisition: FIBSEMAcquisition | None
     sample: Sample | None
     publications: list[Publication]
+    volumes: list[Volume]
+    views: list[View]
 
 
 class DatasetCreate(Dataset):
     pass
 
+
 class DatasetRead(Dataset):
     id: int
+
 
 class DatasetUpdate(Dataset):
     pass

@@ -2,6 +2,7 @@ from .base import Base
 from sqlalchemy import Column, ForeignKey, Integer, String, Float, Table
 from sqlalchemy.orm import relationship
 from sqlalchemy.dialects import postgresql
+from sqlalchemy.ext.associationproxy import association_proxy
 
 view_to_volume = Table(
     "view_to_volume",
@@ -16,11 +17,10 @@ class ViewTable(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String, index=True)
+    dataset_name = Column(
+        String, ForeignKey("dataset.name"), nullable=False, index=True
+    )
     description = Column(String)
-    sources = relationship(
-        "VolumeTable", secondary=view_to_volume)
+    sources = relationship("VolumeTable", secondary=view_to_volume)
     position = Column(postgresql.ARRAY(Float))
     orientation = Column(postgresql.ARRAY(Float))
-    dataset = relationship("DatasetTable")
-    dataset_name = Column(String, ForeignKey("dataset.name"), nullable=False, index=True)
-    

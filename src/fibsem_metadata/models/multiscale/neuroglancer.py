@@ -1,6 +1,7 @@
 from pydantic import PositiveInt
 from ..base import Base
 
+
 class PixelResolution(Base):
     """
     PixelResolution attribute used by the saalfeld lab.

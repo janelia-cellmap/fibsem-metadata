@@ -13,11 +13,14 @@ class DatasetTable(Base):
     __tablename__ = "dataset"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    name = Column(String, unique=True)
+    name = Column(String, unique=True, index=True)
     description = Column(String)
 
     institutions = Column(postgresql.ARRAY(String))
     software_availability = Column(String)
+
+    volumes = relationship(VolumeTable)
+    views = relationship(ViewTable)
 
     acquisition_id = Column(
         Integer, ForeignKey("fibsem_acquisition.id"), nullable=True, index=True
