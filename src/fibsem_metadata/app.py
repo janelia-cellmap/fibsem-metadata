@@ -5,6 +5,7 @@ from fibsem_metadata.session import get_db
 from fibsem_metadata import models, schemas
 from fibsem_metadata.crud import dataset_crud
 from sqlalchemy.orm import joinedload
+from sqlalchemy.dialects import postgresql
 
 app = FastAPI(title="FIBSEM Metadata", openapi_url="/openapi.json")
 
@@ -16,8 +17,8 @@ api_router = APIRouter()
 )
 def get_datasets(
     *,
-    skip: int,
-    limit: int,
+    skip: int = 0,
+    limit: int | None = None,
     db: Session = Depends(get_db)
 ) -> list[schemas.DatasetTable]:
     result = dataset_crud.get_multi(db, skip=skip, limit=limit)
@@ -35,11 +36,12 @@ def get_datasets(
 def get_dataset_by_name(
     *, dataset_name: str, db: Session = Depends(get_db)
 ) -> schemas.DatasetTable:
-    result = (
-        db.query(dataset_crud.model).options(joinedload(dataset_crud.model.volumes))
+    
+    query = (
+        db.query(dataset_crud.model)
         .filter(dataset_crud.model.name == dataset_name)
-        .first()
     )
+    result=query.first()
     if not result:
         raise HTTPException(
             status_code=404, detail=f"Dataset with name {dataset_name} was not found."

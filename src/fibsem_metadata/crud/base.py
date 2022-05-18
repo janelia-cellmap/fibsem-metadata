@@ -3,8 +3,6 @@ from fastapi.encoders import jsonable_encoder
 from pydantic import BaseModel
 import fibsem_metadata.schemas as schemas
 from sqlalchemy.orm import Session
-
-
 SchemaType = TypeVar("SchemaType", bound=schemas.Base)
 CreateModelType = TypeVar("CreateModelType", bound=BaseModel)
 UpdateModelType = TypeVar("UpdateModelType", bound=BaseModel)
@@ -24,7 +22,7 @@ class Base(Generic[SchemaType, CreateModelType, UpdateModelType]):
         return db.query(self.model).filter(self.model.id == id).first()
 
     def get_multi(
-        self, db: Session, *, skip: int = 0, limit: int = 100
+        self, db: Session, *, skip: int = 0, limit: int | None = None
     ) -> list[SchemaType]:
         return db.query(self.model).offset(skip).limit(limit).all()
 

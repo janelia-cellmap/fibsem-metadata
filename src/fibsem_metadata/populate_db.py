@@ -91,6 +91,7 @@ def create_view(
         dataset_name=dataset.name,
         description=metadata.description,
         position=metadata.position,
+        scale=metadata.scale,
         orientation=metadata.orientation,
         sources=volumes,
     )

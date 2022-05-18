@@ -17,8 +17,6 @@ class MeshTable(Base, DataSourceMixin):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     volume_id = Column(Integer, ForeignKey("volume.id"), index=True)
-    volume = relationship("VolumeTable")
-
 
 class VolumeTable(Base, DataSourceMixin):
     __tablename__ = "volume"
@@ -30,4 +28,11 @@ class VolumeTable(Base, DataSourceMixin):
     dataset_name = Column(
         String, ForeignKey("dataset.name"), nullable=False, index=True
     )
-    subsources = relationship("MeshTable", back_populates="volume")
+    subsources = relationship("MeshTable")
+
+
+class ContentTypeTable(Base):
+    __tablename__ = 'content_type'
+    id = Column(Integer, primary_key=True, autoincrement=True, index=True)
+    name = Column(String)
+    description = Column(String)
