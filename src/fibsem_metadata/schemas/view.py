@@ -21,7 +21,7 @@ class ViewTable(Base):
         String, ForeignKey("dataset.name"), nullable=False, index=True
     )
     description = Column(String)
-    sources = relationship("VolumeTable", secondary=view_to_volume, lazy='joined')
+    sources = relationship("VolumeTable", secondary=view_to_volume, lazy="joined")
     source_names = association_proxy("sources", "name")
     position = Column(postgresql.ARRAY(Float))
     scale = Column(Float)

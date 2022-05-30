@@ -152,7 +152,8 @@ def ingest_dataset(path, session: Session):
     session.commit()
 
     view_tables = [
-        create_view(v, dataset, volumes=list(volume_tables.values())) for v in dmeta.views
+        create_view(v, dataset, volumes=list(volume_tables.values()))
+        for v in dmeta.views
     ]
     session.add_all(view_tables)
     session.commit()

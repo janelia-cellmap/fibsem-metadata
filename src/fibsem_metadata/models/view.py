@@ -38,5 +38,6 @@ class View(Base):
                 )
         return v
 
+
 class ViewRead(View):
     id: int

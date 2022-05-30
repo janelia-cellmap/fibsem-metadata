@@ -143,6 +143,7 @@ class Mesh(DataSource):
 class MeshRead(Mesh):
     id: int
 
+
 class MeshCreate(Mesh):
     pass
 
@@ -161,6 +162,7 @@ class Volume(DataSource):
 
 class VolumeRead(Volume):
     id: int
+
 
 class VolumeCreate(Volume):
     pass
