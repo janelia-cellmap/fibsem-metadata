@@ -150,11 +150,11 @@ def ingest_dataset(path, session: Session):
 
     session.add_all(list(volume_tables.values()))
     session.commit()
-
-    view_tables = [
-        create_view(v, dataset, volumes=list(volume_tables.values()))
-        for v in dmeta.views
-    ]
+    view_tables = []
+    for v in dmeta.views:
+        view_volume_names = v.sources
+        view_volumes = [v for k, v in volume_tables.items() if k in view_volume_names]
+        view_tables.append(create_view(v, dataset, volumes=view_volumes))
     session.add_all(view_tables)
     session.commit()
     return acq_table, sample_table, *pub_tables, dataset, volume_tables, view_tables

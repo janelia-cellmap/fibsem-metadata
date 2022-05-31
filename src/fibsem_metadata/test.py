@@ -14,3 +14,4 @@ if __name__ == "__main__":
         .first()
     )
     output = Dataset.from_orm(result)
+    print(output.json(indent=2))
