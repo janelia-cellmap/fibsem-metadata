@@ -1,0 +1,41 @@
+{
+    "name": "fibsem-uint8",
+    "description": "FIB-SEM Data (compressed)",
+    "url": "s3://janelia-cosem-datasets/jrc_mus-sc-zp105a/jrc_mus-sc-zp105a.n5/em/fibsem-uint8",
+    "format": "n5",
+    "transform": {
+      "axes": [
+        "z",
+        "y",
+        "x"
+      ],
+      "units": [
+        "nm",
+        "nm",
+        "nm"
+      ],
+      "translate": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        6.0,
+        6.0,
+        6.0
+      ]
+    },
+    "sampleType": "scalar",
+    "contentType": "em",
+    "displaySettings": {
+      "contrastLimits": {
+        "start": 188,
+        "end": 228,
+        "min": 0,
+        "max": 255
+      },
+      "color": "white",
+      "invertLUT": false
+    },
+    "subsources": []
+  }
