@@ -1,7 +1,7 @@
 {
-    "name": "er_seg",
-    "description": "Endoplasmic Reticulum (Ariadne)",
-    "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/ariadne/er_seg",
+    "name": "pm_seg_ariadne",
+    "description": "Plasma Membrane (Ariadne)",
+    "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/ariadne/pm_seg",
     "format": "n5",
     "transform": {
       "axes": [
