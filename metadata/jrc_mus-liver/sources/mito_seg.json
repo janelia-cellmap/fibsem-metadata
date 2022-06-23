@@ -1,7 +1,7 @@
 {
-    "name": "pm_seg",
-    "description": "Plasma Membrane",
-    "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/pm_seg/",
+    "name": "mito_seg",
+    "description": "Mitochondria",
+    "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/mito_seg/",
     "format": "n5",
     "transform": {
       "axes": [
@@ -20,18 +20,18 @@
         0
       ],
       "scale": [
-        4.0,
-        4.0,
-        4.0      ]
+        16.0,
+        16.0,
+        16.0      ]
     },
     "sampleType": "label",
     "contentType": "segmentation",
     "displaySettings": {
       "contrastLimits": {
         "start": 0,
-        "end": 255,
+        "end": 4294967295,
         "min": 0,
-        "max": 255
+        "max": 4294967295
       },
       "color": null,
       "invertLUT": false
