@@ -4,7 +4,7 @@
       "name": "Default view",
       "description": "The default view of the data.",
       "sources": [
-        "fibsem-uint16"
+        "fibsem-uint8"
       ],
       "position": null,
       "scale": null,
