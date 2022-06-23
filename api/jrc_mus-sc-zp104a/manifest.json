@@ -57,7 +57,10 @@
       }
     ],
     "publications": [
-      "Zhu et al., Transverse endoplasmic reticulum expansion in hereditary spastic paraplegia corticospinal axons, Human Molecular Genetics (2022)."
+      {
+        "href": "https://doi.org/10.1093/hmg/ddac072",
+        "title": "Zhu et al., 2022"
+      }
     ]
   },
   "sources": {
