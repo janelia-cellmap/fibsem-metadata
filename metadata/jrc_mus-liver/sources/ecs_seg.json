@@ -1,7 +1,7 @@
 {
-    "name": "cristae_instance_seg",
-    "description": "Mitochondrial Cristae (Ariadne)",
-    "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/ariadne/cristae_instance_seg",
+    "name": "ecs_seg",
+    "description": "Extracellular Space",
+    "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/ecs_seg/",
     "format": "n5",
     "transform": {
       "axes": [
@@ -15,14 +15,14 @@
         "nm"
       ],
       "translate": [
-        15728,
-        30912,
-        30984
+        0,
+        0,
+        0
       ],
       "scale": [
-        8.0,
-        8.0,
-        8.0      ]
+        4.0,
+        4.0,
+        4.0      ]
     },
     "sampleType": "label",
     "contentType": "segmentation",
