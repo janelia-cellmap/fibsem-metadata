@@ -1,15 +1,26 @@
+
+import logging
+from sqlalchemy.orm import Session
+
+from app import crud, schemas
+from app.db import base  # noqa: F401
+from app.core.config import settings
+
+
 from typing import Literal
 from sqlalchemy.orm import Session
-from fibsem_metadata.db.session import SessionLocal, engine
-
+from fibsem_metadata.db.session import SessionLocal, create_db_and_tables, engine
+from fibsem_metadata.models import (
+    Dataset,
+    View,
+    Sample,
+    FIBSEMAcquisition,
+)
 from fibsem_metadata.models.acquisition import UnitfulVector
-from fibsem_metadata.models.source import ContrastLimits, DisplaySettings, Volume
+from fibsem_metadata.models.source import DisplaySettings, Volume
 from fibsem_metadata.legacy_models.manifest import DatasetManifest
-from fibsem_metadata.legacy_models.metadata import DatasetMetadata as LegacyDatasetMetadata
-from fibsem_metadata.legacy_models.metadata import SampleMetadata as LegacySample
-from fibsem_metadata.legacy_models.metadata import FIBSEMImagingMetadata as LegacyFIBSEMAcquisition
-from fibsem_metadata.legacy_models.metadata import Publication as LegacyPublication
-from fibsem_metadata.legacy_models.metadata import DatasetView as LegacyView
+from fibsem_metadata.legacy_models.manifest import DatasetMetadata as LegacyDataset
+from fibsem_metadata.legacy_models.
 
 import json
 from glob import glob
@@ -21,9 +32,10 @@ from fibsem_metadata.schemas import (
     SampleTable,
     FIBSEMAcquisitionTable,
 )
+logger = logging.getLogger(__name__)
 
 
-def legacy_create_sample(metadata: LegacySample) -> SampleTable:
+def create_sample(metadata: Sample) -> SampleTable:
     sample = SampleTable(
         organism=metadata.organism,
         type=metadata.type,
@@ -36,8 +48,8 @@ def legacy_create_sample(metadata: LegacySample) -> SampleTable:
     return sample
 
 
-def legacy_create_acquisition(
-    metadata: LegacyFIBSEMAcquisition,
+def create_acquisition(
+    metadata: FIBSEMAcquisition,
     instrument: str = "",
     grid_shape: dict[str, int] = {"z": 0, "z": 0, "x": 0},
     grid_unit: str = "nm",
@@ -59,17 +71,14 @@ def legacy_create_acquisition(
     return acq
 
 
-def legacy_create_pub(metadata: LegacyPublication,
-               type: Literal["DOI", "publication"]) -> PublicationTable:
+def create_pub(metadata, type: Literal["DOI", "publication"]) -> PublicationTable:
 
-    pub = PublicationTable(name=metadata.title,
-                          url=metadata.href,
-                          type=type.lower())
+    pub = PublicationTable(name=metadata.title, url=metadata.href, type=type.lower())
     return pub
 
 
-def legacy_create_dataset(
-    metadata: LegacyDatasetMetadata,
+def create_dataset(
+    metadata: Dataset,
     acquisition_id: int | None = None,
     sample_id: int | None = None,
     pub_tables: list[PublicationTable] = [],
@@ -87,8 +96,8 @@ def legacy_create_dataset(
     return dataset
 
 
-def legacy_create_view(
-    metadata: LegacyView, dataset: DatasetTable, volumes: list[VolumeTable]
+def create_view(
+    metadata: View, dataset: DatasetTable, volumes: list[VolumeTable]
 ) -> ViewTable:
     view = ViewTable(
         name=metadata.name,
@@ -102,8 +111,8 @@ def legacy_create_view(
     return view
 
 
-def ingest_dataset(path: str, session: Session):
-
+def ingest_dataset(path, session: Session):
+    results = []
     with open(path) as fh:
         blob = json.load(fh)
     dmeta = DatasetManifest(**blob)
@@ -112,18 +121,18 @@ def ingest_dataset(path: str, session: Session):
     acq_model = dmeta.metadata.imaging
     sample_model = dmeta.metadata.sample
 
-    acq_table = legacy_create_acquisition(acq_model)
-    sample_table = legacy_create_sample(sample_model)
+    acq_table = create_acquisition(acq_model)
+    sample_table = create_sample(sample_model)
 
-    pub_tables = [legacy_create_pub(d, type="DOI") for d in dmeta.metadata.DOI]
+    pub_tables = [create_pub(d, type="DOI") for d in dmeta.metadata.DOI]
     pub_tables.extend(
-        [legacy_create_pub(d, type="paper") for d in dmeta.metadata.publications]
+        [create_pub(d, type="paper") for d in dmeta.metadata.publications]
     )
 
     session.add_all([acq_table, sample_table, *pub_tables])
     session.commit()
 
-    dataset = legacy_create_dataset(
+    dataset = create_dataset(
         dmeta.metadata,
         acquisition_id=acq_table.id,
         sample_id=sample_table.id,
@@ -136,7 +145,7 @@ def ingest_dataset(path: str, session: Session):
 
     for value in dmeta.sources.values():
         display_settings = DisplaySettings(
-            contrast_limits=ContrastLimits(**value.displaySettings.contrastLimits.dict()),
+            contrast_limits=value.displaySettings.contrastLimits,
             invert_lut=value.displaySettings.invertLUT,
             color=value.displaySettings.color,
         )
@@ -158,23 +167,14 @@ def ingest_dataset(path: str, session: Session):
     for v in dmeta.views:
         view_volume_names = v.sources
         view_volumes = [v for k, v in volume_tables.items() if k in view_volume_names]
-        view_tables.append(legacy_create_view(v, dataset, volumes=view_volumes))
+        view_tables.append(create_view(v, dataset, volumes=view_volumes))
     session.add_all(view_tables)
     session.commit()
-    return (acq_table,
-           sample_table,
-           *pub_tables,
-           dataset,
-           volume_tables,
-           view_tables)
+    return acq_table, sample_table, *pub_tables, dataset, volume_tables, view_tables
 
 
-def main(SessionLocal):
-    with SessionLocal() as session:
+def init_db() -> None:
+    with SessionLocal as session:
         paths = glob("api/*/manifest.json")
         for path in paths:
-            tables = ingest_dataset(path, session=session)
-
-
-if __name__ == "__main__":
-    main()
+            ingest_dataset(path, session=session)

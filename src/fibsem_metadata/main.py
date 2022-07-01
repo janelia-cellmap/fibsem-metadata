@@ -1,17 +1,20 @@
 from sqlalchemy.orm import Session
-from fastapi import FastAPI, APIRouter, Depends, Query, HTTPException
-from fibsem_metadata.session import get_db
+from fastapi import FastAPI, APIRouter, Depends, HTTPException
+from fibsem_metadata.db.session import get_db
 from fibsem_metadata import models, schemas
 from fibsem_metadata.crud import dataset_crud
-from sqlalchemy.orm import joinedload
 from fastapi.middleware.cors import CORSMiddleware
+import click
+import uvicorn
 
-app = FastAPI(title="FIBSEM Metadata", openapi_url="/openapi.json")
+app = FastAPI(title="Cellmap", openapi_url="/openapi.json")
 
 origins = ["*"]
 
-app.add_middleware(
-    CORSMiddleware, allow_origins=origins, allow_methods=["*"], allow_headers=["*"]
+app.add_middleware(CORSMiddleware,
+                   allow_origins=origins,
+                   allow_methods=["*"],
+                   allow_headers=["*"]
 )
 
 api_router = APIRouter()
@@ -29,7 +32,8 @@ def get_datasets(
     result = dataset_crud.get_multi(db, skip=skip, limit=limit)
 
     if not result:
-        raise HTTPException(status_code=404, detail=f"Error retrieving datasets.")
+        raise HTTPException(status_code=404,
+                            detail="Error retrieving datasets.")
     return result
 
 
@@ -51,7 +55,23 @@ def get_dataset_by_name(
 
 app.include_router(api_router)
 
-if __name__ == "__main__":
-    import uvicorn
 
-    uvicorn.run(app, host="0.0.0.0", port=8001, log_level="debug")
+@click.command()
+@click.option('--host', default='0.0.0.0', help='Host for the uvicorn server')
+@click.option('--port', default=8001, help='Port for the uvicorn server')
+@click.option('--log_level', default='debug', help='Logging level')
+@click.option('--reload', default=False, help='enable auto-reload')
+def main_cli(host: str,
+             port: int,
+             log_level: str,
+             reload: bool):
+
+    uvicorn.run(app,
+                host=host,
+                port=port,
+                log_level=log_level,
+                reload=reload)
+
+
+if __name__ == "__main__":
+    main_cli()

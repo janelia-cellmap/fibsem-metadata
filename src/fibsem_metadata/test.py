@@ -1,6 +1,6 @@
 from fibsem_metadata.models.dataset import Dataset, DatasetRead
 from fibsem_metadata.schemas.dataset import DatasetTable
-from fibsem_metadata.session import SessionLocal
+from fibsem_metadata.db.session import SessionLocal
 from fibsem_metadata.crud import dataset_crud
 from sqlalchemy.orm import joinedload
 

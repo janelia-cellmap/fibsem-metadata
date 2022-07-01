@@ -1,0 +1,126 @@
+{
+  "name": "jrc_mus-sc-zp104a",
+  "metadata": {
+    "title": "Mouse Spinal Cord",
+    "id": "jrc_mus-sc-zp104a",
+    "imaging": {
+      "id": "",
+      "institution": "Janelia",
+      "gridSpacing": {
+        "unit": "nm",
+        "values": {
+          "x": 6.0,
+          "y": 6.0,
+          "z": 6.0
+        }
+      },
+      "dimensions": {
+        "unit": "\u00b5m",
+        "values": {
+          "x": 40.0,
+          "y": 30.0,
+          "z": 75.0
+        }
+      },
+      "startDate": "2018-10-29",
+      "duration": 14,
+      "biasVoltage": 400.0,
+      "scanRate": 0.5,
+      "current": 1.0,
+      "primaryEnergy": 1500.0
+    },
+    "sample": {
+      "description": "Wild-type, female, 6-month-old mouse dorsal corticospinal tract tissue",
+      "protocol": "Mouse was anesthetized and transcardially perfused with 1\u00d7 PBS followed by freshly made EM fixative (2% glutaraldehyde and 2% paraformaldehyde in 0.1 N cacodylate buffer). Spinal cords was removed and post-fixed in EM fixative overnight. Vibratome slices were treated with 0.2% OsO4 in phosphate buffer for 30 min, mordanted en bloc with 0.25% uranyl acetate overnight at 40\u00b0C, dehydrated with ethanol and embedded in Durcupan resin.",
+      "contributions": "Sample provided by Craig Blackstone Lab (NINDS/NIH, currently at Harvard Medical School), prepared for imaging by Song Pang (HHMI/Janelia, currently at Yale School of Medicine), with imaging and post-processing by C. Shan Xu (HHMI/Janelia, currently at Yale School of Medicine).",
+      "organism": [
+        "Mouse"
+      ],
+      "type": [
+        "Tissue"
+      ],
+      "subtype": [
+        "Spinal Cord"
+      ],
+      "treatment": [
+        "Wild-type"
+      ]
+    },
+    "institution": [
+      "HHMI/Janelia"
+    ],
+    "softwareAvailability": "open",
+    "DOI": [
+      {
+        "href": "https://doi.org/10.25378/janelia.20134574",
+        "title": "EM"
+      }
+    ],
+    "publications": [
+      {
+        "href": "https://doi.org/10.1093/hmg/ddac072",
+        "title": "Zhu et al., 2022"
+      }
+    ]
+  },
+  "sources": {
+    "fibsem-uint8": {
+      "name": "fibsem-uint8",
+      "description": "FIB-SEM Data (compressed)",
+      "url": "s3://janelia-cosem-datasets/jrc_mus-sc-zp104a/jrc_mus-sc-zp104a.n5/em/fibsem-uint8",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          6.0,
+          6.0,
+          6.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "em",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 143,
+          "end": 204,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    }
+  },
+  "views": [
+    {
+      "name": "Default view",
+      "description": "The default view of the data.",
+      "sources": [
+        "fibsem-uint8"
+      ],
+      "position": null,
+      "scale": null,
+      "orientation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}
