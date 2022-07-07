@@ -177,4 +177,4 @@ def main(SessionLocal):
 
 
 if __name__ == "__main__":
-    main()
+    main(SessionLocal)
