@@ -17,6 +17,7 @@ psycopg2 = "^2.9.3"
 fastapi = "^0.76.0"
 uvicorn = "^0.17.6"
 alembic = "^1.8.0"
+mangum = "^0.15.0"
 
 [tool.poetry.dev-dependencies]
 black = "^22.3.0"
