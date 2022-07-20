@@ -18,7 +18,7 @@ handler = Mangum(app, lifespan='off')
 @click.option('--port', default=80, help='Port for the uvicorn server')
 @click.option('--log_level', default='debug', help='Logging level')
 @click.option('--reload', default=False, help='enable auto-reload')
-def main_cli(host: str,
+def main(host: str,
              port: int,
              log_level: str,
              reload: bool):
@@ -31,4 +31,4 @@ def main_cli(host: str,
 
 
 if __name__ == "__main__":
-    main_cli()
+    main()
