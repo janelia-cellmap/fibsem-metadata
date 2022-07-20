@@ -2,6 +2,7 @@ import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import * as rds from 'aws-cdk-lib/aws-rds';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import * as cdk from 'aws-cdk-lib';
+import * as path from 'path';
 
 export class CellmapAPIStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
@@ -90,11 +91,5 @@ export class CellmapAPIStack extends cdk.Stack {
       // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
       value: dbInstance.secret?.secretName!,
     });
-    // create lambda function
-  const fastAPILambda = new lambda.Function(this, 
-                                            "FastAPILambda",
-                                            {code: lambda.Code.fromAsset(''),
-                                             runtime: lambda.Runtime.PYTHON_3_9, 
-                                             handler: "app.handler"})
   }
 }
