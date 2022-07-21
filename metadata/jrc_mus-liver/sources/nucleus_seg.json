@@ -22,7 +22,8 @@
       "scale": [
         16.0,
         16.0,
-        16.0      ]
+        16.0 
+      ]
     },
     "sampleType": "label",
     "contentType": "segmentation",
@@ -33,7 +34,7 @@
         "min": 0,
         "max": 255
       },
-      "color": null,
+      "color": "red",
       "invertLUT": false
     },
     "subsources": []

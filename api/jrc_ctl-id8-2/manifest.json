@@ -56,10 +56,10 @@
     "publications": []
   },
   "sources": {
-    "nucleus_seg": {
-      "name": "nucleus_seg",
-      "description": "Nucleus (Ariadne)",
-      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/nucleus_seg",
+    "mito_seg": {
+      "name": "mito_seg",
+      "description": "Mitochondria (Ariadne)",
+      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/mito_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -92,156 +92,14 @@
           "min": 0,
           "max": 255
         },
-        "color": "red",
+        "color": "green",
         "invertLUT": false
       },
       "subsources": [
         {
-          "name": "nucleus_seg",
+          "name": "mito_seg",
           "description": "",
-          "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/nucleus_seg",
-          "format": "neuroglancer_multilod_draco",
-          "transform": {
-            "axes": [
-              "z",
-              "y",
-              "x"
-            ],
-            "units": [
-              "nm",
-              "nm",
-              "nm"
-            ],
-            "translate": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "scale": [
-              1.0,
-              1.0,
-              1.0
-            ]
-          },
-          "ids": []
-        }
-      ]
-    },
-    "cent_seg": {
-      "name": "cent_seg",
-      "description": "Centrosome (Ariadne)",
-      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/cent_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          8.0,
-          8.0,
-          8.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": [
-        {
-          "name": "cent_seg",
-          "description": "",
-          "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/cent_seg",
-          "format": "neuroglancer_multilod_draco",
-          "transform": {
-            "axes": [
-              "z",
-              "y",
-              "x"
-            ],
-            "units": [
-              "nm",
-              "nm",
-              "nm"
-            ],
-            "translate": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "scale": [
-              1.0,
-              1.0,
-              1.0
-            ]
-          },
-          "ids": []
-        }
-      ]
-    },
-    "cell_seg": {
-      "name": "cell_seg",
-      "description": "Whole-cell segmentation (Ariadne)",
-      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/cell_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          8.0,
-          8.0,
-          8.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": null,
-        "invertLUT": false
-      },
-      "subsources": [
-        {
-          "name": "cell_seg",
-          "description": "",
-          "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/cell_seg",
+          "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/mito_seg",
           "format": "neuroglancer_multilod_draco",
           "transform": {
             "axes": [
@@ -310,6 +168,77 @@
       },
       "subsources": []
     },
+    "golgi_seg": {
+      "name": "golgi_seg",
+      "description": "Golgi (Ariadne)",
+      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/golgi_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "cyan",
+        "invertLUT": false
+      },
+      "subsources": [
+        {
+          "name": "golgi_seg",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/golgi_seg",
+          "format": "neuroglancer_multilod_draco",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "ids": []
+        }
+      ]
+    },
     "er_seg": {
       "name": "er_seg",
       "description": "Endoplasmic Reticulum (Ariadne)",
@@ -354,6 +283,77 @@
           "name": "er_seg",
           "description": "",
           "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/er_seg",
+          "format": "neuroglancer_multilod_draco",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "ids": []
+        }
+      ]
+    },
+    "nucleus_seg": {
+      "name": "nucleus_seg",
+      "description": "Nucleus (Ariadne)",
+      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/nucleus_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "red",
+        "invertLUT": false
+      },
+      "subsources": [
+        {
+          "name": "nucleus_seg",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/nucleus_seg",
           "format": "neuroglancer_multilod_draco",
           "transform": {
             "axes": [
@@ -452,10 +452,10 @@
         }
       ]
     },
-    "golgi_seg": {
-      "name": "golgi_seg",
-      "description": "Golgi (Ariadne)",
-      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/golgi_seg",
+    "cell_seg": {
+      "name": "cell_seg",
+      "description": "Whole-cell segmentation (Ariadne)",
+      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/cell_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -488,14 +488,14 @@
           "min": 0,
           "max": 255
         },
-        "color": "cyan",
+        "color": null,
         "invertLUT": false
       },
       "subsources": [
         {
-          "name": "golgi_seg",
+          "name": "cell_seg",
           "description": "",
-          "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/golgi_seg",
+          "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/cell_seg",
           "format": "neuroglancer_multilod_draco",
           "transform": {
             "axes": [
@@ -523,10 +523,10 @@
         }
       ]
     },
-    "mito_seg": {
-      "name": "mito_seg",
-      "description": "Mitochondria (Ariadne)",
-      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/mito_seg",
+    "cent_seg": {
+      "name": "cent_seg",
+      "description": "Centrosome (Ariadne)",
+      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/cent_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -559,14 +559,14 @@
           "min": 0,
           "max": 255
         },
-        "color": "green",
+        "color": "white",
         "invertLUT": false
       },
       "subsources": [
         {
-          "name": "mito_seg",
+          "name": "cent_seg",
           "description": "",
-          "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/mito_seg",
+          "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/cent_seg",
           "format": "neuroglancer_multilod_draco",
           "transform": {
             "axes": [

@@ -72,10 +72,10 @@
     ]
   },
   "sources": {
-    "er_pred": {
-      "name": "er_pred",
-      "description": "Endoplasmic Reticulum",
-      "url": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/labels/er_pred",
+    "mito_pred": {
+      "name": "mito_pred",
+      "description": "Mitochondria",
+      "url": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/labels/mito_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -108,7 +108,48 @@
           "min": 0,
           "max": 255
         },
-        "color": "blue",
+        "color": "green",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "mito_palm": {
+      "name": "mito_palm",
+      "description": "Light Microscopy (PALM) of Mitochondria",
+      "url": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/lm/mito_palm",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          26.0,
+          52.0,
+          26.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "lm",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
         "invertLUT": false
       },
       "subsources": []
@@ -146,6 +187,47 @@
         "contrastLimits": {
           "start": 0,
           "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "fibsem-uint16": {
+      "name": "fibsem-uint16",
+      "description": "FIB-SEM Data (uncompressed)",
+      "url": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/em/fibsem-uint16",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "em",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 456,
           "min": 0,
           "max": 65535
         },
@@ -195,10 +277,10 @@
       },
       "subsources": []
     },
-    "mito_pred": {
-      "name": "mito_pred",
-      "description": "Mitochondria",
-      "url": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/labels/mito_pred",
+    "er_pred": {
+      "name": "er_pred",
+      "description": "Endoplasmic Reticulum",
+      "url": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/labels/er_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -231,48 +313,7 @@
           "min": 0,
           "max": 255
         },
-        "color": "green",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "fibsem-uint16": {
-      "name": "fibsem-uint16",
-      "description": "FIB-SEM Data (uncompressed)",
-      "url": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/em/fibsem-uint16",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          8.0,
-          8.0,
-          8.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "em",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 456,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "white",
+        "color": "blue",
         "invertLUT": false
       },
       "subsources": []
@@ -312,47 +353,6 @@
           "end": 255,
           "min": 0,
           "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "mito_palm": {
-      "name": "mito_palm",
-      "description": "Light Microscopy (PALM) of Mitochondria",
-      "url": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/lm/mito_palm",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          26.0,
-          52.0,
-          26.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "lm",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
         },
         "color": "white",
         "invertLUT": false

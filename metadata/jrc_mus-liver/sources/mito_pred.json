@@ -1,7 +1,7 @@
 {
-    "name": "mito_seg",
-    "description": "Mitochondria",
-    "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/mito_seg/",
+    "name": "mito_pred",
+    "description": "Mitochrondria",
+    "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/mito_pred",
     "format": "n5",
     "transform": {
       "axes": [
@@ -24,17 +24,18 @@
         16.0,
         16.0      ]
     },
-    "sampleType": "label",
-    "contentType": "segmentation",
+    "sampleType": "scalar",
+    "contentType": "prediction",
     "displaySettings": {
       "contrastLimits": {
         "start": 0,
-        "end": 4294967295,
+        "end": 255,
         "min": 0,
-        "max": 4294967295
+        "max": 255
       },
       "color": "green",
       "invertLUT": false
     },
     "subsources": []
   }
+  
