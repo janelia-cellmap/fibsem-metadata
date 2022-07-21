@@ -1,7 +1,7 @@
 {
-    "name": "pm_seg",
+    "name": "pm_pred",
     "description": "Plasma Membrane",
-    "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/pm_seg/",
+    "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/pm_pred/",
     "format": "n5",
     "transform": {
       "axes": [
@@ -24,8 +24,8 @@
         4.0,
         4.0      ]
     },
-    "sampleType": "label",
-    "contentType": "segmentation",
+    "sampleType": "scalar",
+    "contentType": "prediction",
     "displaySettings": {
       "contrastLimits": {
         "start": 0,

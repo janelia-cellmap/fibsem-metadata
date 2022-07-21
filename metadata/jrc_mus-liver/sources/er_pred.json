@@ -25,7 +25,7 @@
         4.0      ]
     },
     "sampleType": "scalar",
-    "contentType": "em",
+    "contentType": "prediction",
     "displaySettings": {
       "contrastLimits": {
         "start": 0,
@@ -33,7 +33,7 @@
         "min": 0,
         "max": 255
       },
-      "color": null,
+      "color": "blue",
       "invertLUT": false
     },
     "subsources": []

@@ -33,7 +33,7 @@
         "min": 0,
         "max": 4294967295
       },
-      "color": null,
+      "color": "green",
       "invertLUT": false
     },
     "subsources": []

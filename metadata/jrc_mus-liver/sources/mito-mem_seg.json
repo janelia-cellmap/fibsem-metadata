@@ -1,6 +1,6 @@
 {
     "name": "mito-mem_seg",
-    "description": "Mitochondrial Membrane",
+    "description": "Mitochondria Membrane",
     "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/mito-mem_seg/",
     "format": "n5",
     "transform": {
@@ -33,7 +33,7 @@
         "min": 0,
         "max": 4294967295
       },
-      "color": null,
+      "color": "green",
       "invertLUT": false
     },
     "subsources": []
