@@ -1,9 +1,9 @@
 {
     "title": "C. Elegans dauer-phase larva",
-    "id": "mdc_dauer-larva",
+    "id": "jrc_dauer-larva",
     "imaging": {
       "id": "",
-      "institution": "Max Delbrück Center",
+      "institution": "HHMI/Janelia",
       "gridSpacing": {
         "unit": "nm",
         "values": {
@@ -20,7 +20,7 @@
           "z": 40.6
         }
       },
-      "startDate": "unknown",
+      "startDate": "2012-01-01",
       "duration": 0,
       "biasVoltage": 0,
       "scanRate": 0,
@@ -29,7 +29,7 @@
     },
     "sample": {
       "description": "Dauer phase c elegans larva",
-      "protocol": "unknown",
+      "protocol": "Freeze substitution",
       "contributions": "unknown",
       "organism": [
         "C. Elegans"
@@ -48,5 +48,6 @@
       "HHMI/Janelia", "Max Delbrück Center"
     ],
     "softwareAvailability": "open",
-    "DOI": []
+    "DOI": [],
+    "publications": []
   }

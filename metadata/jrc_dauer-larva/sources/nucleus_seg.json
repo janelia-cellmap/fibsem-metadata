@@ -1,7 +1,7 @@
 {
     "name": "nucleus_seg",
     "description": "Nucleus",
-    "url": "s3://janelia-cosem-datasets/mdc_dauer-larva/mdc_dauer-larva.n5/labels/nucleus_seg",
+    "url": "s3://janelia-cosem-datasets/jrc_dauer-larva/jrc_dauer-larva.n5/labels/nucleus_seg",
     "format": "n5",
     "transform": {
       "axes": [
