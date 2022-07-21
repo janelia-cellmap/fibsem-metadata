@@ -2,7 +2,7 @@
     "name": "tem-uint8",
     "description": "TEM Data",
     "url": "s3://janelia-cosem-datasets/mdc_dauer-larva/mdc_dauer-larva.n5/em/tem-uint8",
-    "format": "precomputed",
+    "format": "n5",
     "transform": {
       "axes": [
         "z",
