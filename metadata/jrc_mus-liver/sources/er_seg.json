@@ -1,7 +1,7 @@
 {
-    "name": "mito_seg",
-    "description": "Mitochondria",
-    "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/mito_seg/",
+    "name": "er_seg",
+    "description": "Endoplasmic Reticulum",
+    "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/er_seg",
     "format": "n5",
     "transform": {
       "axes": [
@@ -20,21 +20,22 @@
         0
       ],
       "scale": [
-        16.0,
-        16.0,
-        16.0      ]
+        4.0,
+        4.0,
+        4.0      ]
     },
     "sampleType": "label",
     "contentType": "segmentation",
     "displaySettings": {
       "contrastLimits": {
         "start": 0,
-        "end": 4294967295,
+        "end": 255,
         "min": 0,
-        "max": 4294967295
+        "max": 255
       },
-      "color": "green",
+      "color": "blue",
       "invertLUT": false
     },
     "subsources": []
   }
+  
