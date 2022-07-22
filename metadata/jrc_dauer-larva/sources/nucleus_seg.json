@@ -1,0 +1,41 @@
+{
+    "name": "nucleus_seg",
+    "description": "Nucleus",
+    "url": "s3://janelia-cosem-datasets/jrc_dauer-larva/jrc_dauer-larva.n5/labels/nucleus_seg",
+    "format": "n5",
+    "transform": {
+      "axes": [
+        "z",
+        "y",
+        "x"
+      ],
+      "units": [
+        "nm",
+        "nm",
+        "nm"
+      ],
+      "translate": [
+        -70.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        70.0,
+        40.0,
+        40.0
+      ]
+    },
+    "sampleType": "label",
+    "contentType": "segmentation",
+    "displaySettings": {
+      "contrastLimits": {
+        "start": 0,
+        "end": 255,
+        "min": 0,
+        "max": 255
+      },
+      "color": "red",
+      "invertLUT": false
+    },
+    "subsources": []
+  }

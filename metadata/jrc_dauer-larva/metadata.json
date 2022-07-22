@@ -1,0 +1,53 @@
+{
+    "title": "C. Elegans dauer-phase larva",
+    "id": "jrc_dauer-larva",
+    "imaging": {
+      "id": "",
+      "institution": "HHMI/Janelia",
+      "gridSpacing": {
+        "unit": "nm",
+        "values": {
+          "x": 4.0,
+          "y": 4.0,
+          "z": 70
+        }
+      },
+      "dimensions": {
+        "unit": "\u00b5m",
+        "values": {
+          "x": 560.7,
+          "y": 88.1,
+          "z": 40.6
+        }
+      },
+      "startDate": "2012-01-01",
+      "duration": 0,
+      "biasVoltage": 0,
+      "scanRate": 0,
+      "current": 0,
+      "primaryEnergy": 0
+    },
+    "sample": {
+      "description": "Dauer phase c elegans larva",
+      "protocol": "Freeze substitution",
+      "contributions": "unknown",
+      "organism": [
+        "C. Elegans"
+      ],
+      "type": [
+        "Whole organism"
+      ],
+      "subtype": [
+        "C Elegans"
+      ],
+      "treatment": [
+        "Wild-type"
+      ]
+    },
+    "institution": [
+      "HHMI/Janelia", "Max Delbrück Center"
+    ],
+    "softwareAvailability": "open",
+    "DOI": [],
+    "publications": []
+  }

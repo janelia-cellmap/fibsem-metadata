@@ -1,0 +1,158 @@
+{
+  "name": "jrc_dauer-larva",
+  "metadata": {
+    "title": "C. Elegans dauer-phase larva",
+    "id": "jrc_dauer-larva",
+    "imaging": {
+      "id": "",
+      "institution": "HHMI/Janelia",
+      "gridSpacing": {
+        "unit": "nm",
+        "values": {
+          "x": 4.0,
+          "y": 4.0,
+          "z": 70.0
+        }
+      },
+      "dimensions": {
+        "unit": "\u00b5m",
+        "values": {
+          "x": 560.7,
+          "y": 88.1,
+          "z": 40.6
+        }
+      },
+      "startDate": "2012-01-01",
+      "duration": 0,
+      "biasVoltage": 0.0,
+      "scanRate": 0.0,
+      "current": 0.0,
+      "primaryEnergy": 0.0
+    },
+    "sample": {
+      "description": "Dauer phase c elegans larva",
+      "protocol": "Freeze substitution",
+      "contributions": "unknown",
+      "organism": [
+        "C. Elegans"
+      ],
+      "type": [
+        "Whole organism"
+      ],
+      "subtype": [
+        "C Elegans"
+      ],
+      "treatment": [
+        "Wild-type"
+      ]
+    },
+    "institution": [
+      "HHMI/Janelia",
+      "Max Delbr\u00fcck Center"
+    ],
+    "softwareAvailability": "open",
+    "DOI": [],
+    "publications": []
+  },
+  "sources": {
+    "nucleus_seg": {
+      "name": "nucleus_seg",
+      "description": "Nucleus",
+      "url": "s3://janelia-cosem-datasets/jrc_dauer-larva/jrc_dauer-larva.n5/labels/nucleus_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          -70.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          70.0,
+          40.0,
+          40.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "red",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "tem-uint8": {
+      "name": "tem-uint8",
+      "description": "TEM Data",
+      "url": "s3://janelia-cosem-datasets/jrc_dauer-larva/jrc_dauer-larva.n5/em/tem-uint8",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          70.0,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "em",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    }
+  },
+  "views": [
+    {
+      "name": "Default view",
+      "description": "The default view of the data.",
+      "sources": [
+        "tem-uint8"
+      ],
+      "position": null,
+      "scale": null,
+      "orientation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

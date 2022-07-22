@@ -1,0 +1,41 @@
+{
+    "name": "tem-uint8",
+    "description": "TEM Data",
+    "url": "s3://janelia-cosem-datasets/jrc_dauer-larva/jrc_dauer-larva.n5/em/tem-uint8",
+    "format": "n5",
+    "transform": {
+      "axes": [
+        "z",
+        "y",
+        "x"
+      ],
+      "units": [
+        "nm",
+        "nm",
+        "nm"
+      ],
+      "translate": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        70.0,
+        4.0,
+        4.0
+      ]
+    },
+    "sampleType": "scalar",
+    "contentType": "em",
+    "displaySettings": {
+      "contrastLimits": {
+        "start": 0,
+        "end": 255,
+        "min": 0,
+        "max": 255
+      },
+      "color": "white",
+      "invertLUT": false
+    },
+    "subsources": []
+  }
