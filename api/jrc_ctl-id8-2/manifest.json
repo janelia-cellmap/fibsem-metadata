@@ -56,118 +56,6 @@
     "publications": []
   },
   "sources": {
-    "fibsem-uint8": {
-      "name": "fibsem-uint8",
-      "description": "FIB-SEM Data (compressed)",
-      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/em/fibsem-uint8",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          8.0,
-          8.0,
-          8.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "em",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 119,
-          "end": 189,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "lyso_seg": {
-      "name": "lyso_seg",
-      "description": "Lysosome (Ariadne)",
-      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/lyso_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          8.0,
-          8.0,
-          8.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "yellow",
-        "invertLUT": false
-      },
-      "subsources": [
-        {
-          "name": "lyso_seg",
-          "description": "",
-          "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/lyso_seg",
-          "format": "neuroglancer_multilod_draco",
-          "transform": {
-            "axes": [
-              "z",
-              "y",
-              "x"
-            ],
-            "units": [
-              "nm",
-              "nm",
-              "nm"
-            ],
-            "translate": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "scale": [
-              1.0,
-              1.0,
-              1.0
-            ]
-          },
-          "ids": []
-        }
-      ]
-    },
     "mito_seg": {
       "name": "mito_seg",
       "description": "Mitochondria (Ariadne)",
@@ -239,10 +127,10 @@
         }
       ]
     },
-    "cent_seg": {
-      "name": "cent_seg",
-      "description": "Centrosome (Ariadne)",
-      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/cent_seg",
+    "fibsem-uint8": {
+      "name": "fibsem-uint8",
+      "description": "FIB-SEM Data (compressed)",
+      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/em/fibsem-uint8",
       "format": "n5",
       "transform": {
         "axes": [
@@ -266,49 +154,19 @@
           8.0
         ]
       },
-      "sampleType": "label",
-      "contentType": "segmentation",
+      "sampleType": "scalar",
+      "contentType": "em",
       "displaySettings": {
         "contrastLimits": {
-          "start": 0,
-          "end": 255,
+          "start": 119,
+          "end": 189,
           "min": 0,
           "max": 255
         },
         "color": "white",
         "invertLUT": false
       },
-      "subsources": [
-        {
-          "name": "cent_seg",
-          "description": "",
-          "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/cent_seg",
-          "format": "neuroglancer_multilod_draco",
-          "transform": {
-            "axes": [
-              "z",
-              "y",
-              "x"
-            ],
-            "units": [
-              "nm",
-              "nm",
-              "nm"
-            ],
-            "translate": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "scale": [
-              1.0,
-              1.0,
-              1.0
-            ]
-          },
-          "ids": []
-        }
-      ]
+      "subsources": []
     },
     "golgi_seg": {
       "name": "golgi_seg",
@@ -523,6 +381,77 @@
         }
       ]
     },
+    "lyso_seg": {
+      "name": "lyso_seg",
+      "description": "Lysosome (Ariadne)",
+      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/lyso_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "yellow",
+        "invertLUT": false
+      },
+      "subsources": [
+        {
+          "name": "lyso_seg",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/lyso_seg",
+          "format": "neuroglancer_multilod_draco",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "ids": []
+        }
+      ]
+    },
     "cell_seg": {
       "name": "cell_seg",
       "description": "Whole-cell segmentation (Ariadne)",
@@ -567,6 +496,77 @@
           "name": "cell_seg",
           "description": "",
           "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/cell_seg",
+          "format": "neuroglancer_multilod_draco",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "ids": []
+        }
+      ]
+    },
+    "cent_seg": {
+      "name": "cent_seg",
+      "description": "Centrosome (Ariadne)",
+      "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/jrc_ctl-id8-2.n5/labels/ariadne/cent_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": [
+        {
+          "name": "cent_seg",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_ctl-id8-2/neuroglancer/mesh/cent_seg",
           "format": "neuroglancer_multilod_draco",
           "transform": {
             "axes": [
