@@ -21,16 +21,16 @@
         }
       },
       "startDate": "2012-01-01",
-      "duration": 0,
+      "duration": 160,
       "biasVoltage": 0,
       "scanRate": 0,
       "current": 0,
       "primaryEnergy": 0
     },
     "sample": {
-      "description": "Dauer phase c elegans larva",
+      "description": "C. elegans dauer (e1370)",
       "protocol": "Freeze substitution",
-      "contributions": "unknown",
+      "contributions": "Sample provided by Stephan Preibisch (HHMI/Janelia), prepared and imaged by Mei Sun and Yalin Wang (HHMI/Janelia), reconstructed by Stephan Preibisch (MDC Berlin), segmented by Ella Bahry (MDC Berlin)",
       "organism": [
         "C. Elegans"
       ],
@@ -41,7 +41,7 @@
         "C Elegans"
       ],
       "treatment": [
-        "Wild-type"
+        "e1370 mutation"
       ]
     },
     "institution": [
