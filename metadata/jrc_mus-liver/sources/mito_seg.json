@@ -36,5 +36,34 @@
       "color": "green",
       "invertLUT": false
     },
-    "subsources": []
+    "subsources": [
+      {
+        "name": "mito_seg",
+        "description": "",
+        "url": "s3://janelia-cosem-datasets/jrc_mus-liver/neuroglancer/mesh/mito_seg",
+        "format": "neuroglancer_multilod_draco",
+        "transform": {
+          "axes": [
+            "z",
+            "y",
+            "x"
+          ],
+          "units": [
+            "nm",
+            "nm",
+            "nm"
+          ],
+          "translate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "ids": []
+      }]
   }
