@@ -1,3 +1,4 @@
+from typing import List, Union, Dict
 from pydantic import root_validator
 from pydantic import validator
 from typing import Literal, Any
@@ -5,15 +6,15 @@ from ..base import Base
 
 
 class ScaleTranslate(Base):
-    axes: list[str]
-    units: list[Any]
-    translate: list[Any]
-    scale: list[Any]
+    axes: List[str]
+    units: List[Any]
+    translate: List[Any]
+    scale: List[Any]
 
     @root_validator
     def validate_argument_length(
-        cls: "ScaleTranslate", values: dict[str, list[str] | list[float]]
-    ) -> dict[str, list[str] | list[float]]:
+        cls: "ScaleTranslate", values: Dict[str, Union[List[str], List[float]]]
+    ) -> Dict[str, Union[List[str], List[float]]]:
         scale = values["scale"]
         axes = values["axes"]
         units = values["units"]
@@ -33,12 +34,12 @@ class OffsetTransform(ScaleTranslate):
     the scale must be 1, and the offset must be an integer.
     """
 
-    units: list[Literal["indices"]]
-    translate: list[int]
-    scale: list[Literal[1]]
+    units: List[Literal["indices"]]
+    translate: List[int]
+    scale: List[Literal[1]]
 
     @validator("axes")
-    def axes_must_be_stringed_ints(cls, v: list[str]):
+    def axes_must_be_stringed_ints(cls, v: List[str]):
         for idx, element in enumerate(v):
             if element != str(idx):
                 raise ValueError(
@@ -51,6 +52,6 @@ class SpatialTransform(ScaleTranslate):
     Representation of an N-dimensional scaling + translation transform for labelled axes with units.
     """
 
-    units: list[str]
-    translate: list[float]
-    scale: list[float]
+    units: List[str]
+    translate: List[float]
+    scale: List[float]

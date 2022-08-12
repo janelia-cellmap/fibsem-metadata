@@ -9,7 +9,7 @@ class PixelResolution(Base):
     grid spacing of the data, in F-order.
     """
 
-    dimensions: list[float]
+    dimensions: List[float]
     unit: str
 
 
@@ -22,7 +22,7 @@ class NeuroglancerN5GroupMetadata(Base):
     Axis properties are in F-order.
     """
 
-    axes: list[str]
-    units: list[str]
-    scales: list[list[PositiveInt]]
+    axes: List[str]
+    units: List[str]
+    scales: List[List[PositiveInt]]
     pixelResolution: PixelResolution

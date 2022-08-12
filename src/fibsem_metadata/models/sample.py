@@ -1,3 +1,4 @@
+from typing import List
 from .base import Base
 
 
@@ -9,7 +10,7 @@ class Sample(Base):
     description: str
     protocol: str
     contributions: str
-    organism: list[str]
-    type: list[str]
-    subtype: list[str]
-    treatment: list[str]
+    organism: List[str]
+    type: List[str]
+    subtype: List[str]
+    treatment: List[str]

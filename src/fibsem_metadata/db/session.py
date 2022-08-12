@@ -14,11 +14,11 @@ def json_serializer(*args: Any, **kwargs: Any) -> str:
     return json.dumps(*args, default=pydantic_encoder, **kwargs)
 
 
-engine = create_engine(settings.SQLALCHEMY_DATABASE_URI,
-                       future=True,
-                       echo=True,
-                       json_serializer=json_serializer)
+engine = create_engine(
+    settings.SQLALCHEMY_DATABASE_URI,
+    future=True,
+    echo=True,
+    json_serializer=json_serializer,
+)
 
-SessionLocal = sessionmaker(bind=engine,
-                            autocommit=False,
-                            autoflush=False)
+SessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=False)

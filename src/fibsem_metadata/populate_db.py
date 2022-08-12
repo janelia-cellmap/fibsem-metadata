@@ -1,13 +1,17 @@
-from typing import Literal
+from typing import Literal, List, Dict, Optional
 from sqlalchemy.orm import Session
 from fibsem_metadata.db.session import SessionLocal, engine
 
 from fibsem_metadata.models.acquisition import UnitfulVector
 from fibsem_metadata.models.source import ContrastLimits, DisplaySettings, Volume
 from fibsem_metadata.legacy_models.manifest import DatasetManifest
-from fibsem_metadata.legacy_models.metadata import DatasetMetadata as LegacyDatasetMetadata
+from fibsem_metadata.legacy_models.metadata import (
+    DatasetMetadata as LegacyDatasetMetadata,
+)
 from fibsem_metadata.legacy_models.metadata import SampleMetadata as LegacySample
-from fibsem_metadata.legacy_models.metadata import FIBSEMImagingMetadata as LegacyFIBSEMAcquisition
+from fibsem_metadata.legacy_models.metadata import (
+    FIBSEMImagingMetadata as LegacyFIBSEMAcquisition,
+)
 from fibsem_metadata.legacy_models.metadata import Publication as LegacyPublication
 from fibsem_metadata.legacy_models.metadata import DatasetView as LegacyView
 
@@ -39,7 +43,7 @@ def legacy_create_sample(metadata: LegacySample) -> SampleTable:
 def legacy_create_acquisition(
     metadata: LegacyFIBSEMAcquisition,
     instrument: str = "",
-    grid_shape: dict[str, int] = {"z": 0, "z": 0, "x": 0},
+    grid_shape: Dict[str, int] = {"z": 0, "z": 0, "x": 0},
     grid_unit: str = "nm",
 ) -> FIBSEMAcquisitionTable:
 
@@ -59,20 +63,19 @@ def legacy_create_acquisition(
     return acq
 
 
-def legacy_create_pub(metadata: LegacyPublication,
-               type: Literal["DOI", "publication"]) -> PublicationTable:
+def legacy_create_pub(
+    metadata: LegacyPublication, type: Literal["DOI", "publication"]
+) -> PublicationTable:
 
-    pub = PublicationTable(name=metadata.title,
-                          url=metadata.href,
-                          type=type.lower())
+    pub = PublicationTable(name=metadata.title, url=metadata.href, type=type.lower())
     return pub
 
 
 def legacy_create_dataset(
     metadata: LegacyDatasetMetadata,
-    acquisition_id: int | None = None,
-    sample_id: int | None = None,
-    pub_tables: list[PublicationTable] = [],
+    acquisition_id: Optional[int] = None,
+    sample_id: Optional[int] = None,
+    pub_tables: List[PublicationTable] = [],
 ) -> DatasetTable:
 
     dataset = DatasetTable(
@@ -88,7 +91,7 @@ def legacy_create_dataset(
 
 
 def legacy_create_view(
-    metadata: LegacyView, dataset: DatasetTable, volumes: list[VolumeTable]
+    metadata: LegacyView, dataset: DatasetTable, volumes: List[VolumeTable]
 ) -> ViewTable:
     view = ViewTable(
         name=metadata.name,
@@ -132,11 +135,13 @@ def ingest_dataset(path: str, session: Session):
 
     session.add(dataset)
     session.commit()
-    volume_tables: dict[str, VolumeTable] = {}
+    volume_tables: Dict[str, VolumeTable] = {}
 
     for value in dmeta.sources.values():
         display_settings = DisplaySettings(
-            contrast_limits=ContrastLimits(**value.displaySettings.contrastLimits.dict()),
+            contrast_limits=ContrastLimits(
+                **value.displaySettings.contrastLimits.dict()
+            ),
             invert_lut=value.displaySettings.invertLUT,
             color=value.displaySettings.color,
         )
@@ -161,12 +166,7 @@ def ingest_dataset(path: str, session: Session):
         view_tables.append(legacy_create_view(v, dataset, volumes=view_volumes))
     session.add_all(view_tables)
     session.commit()
-    return (acq_table,
-           sample_table,
-           *pub_tables,
-           dataset,
-           volume_tables,
-           view_tables)
+    return (acq_table, sample_table, *pub_tables, dataset, volume_tables, view_tables)
 
 
 def main(SessionLocal):

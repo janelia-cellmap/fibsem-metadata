@@ -29,7 +29,7 @@ class VolumeTable(Base, DataSourceMixin):
     dataset_name = Column(
         String, ForeignKey("dataset.name"), nullable=False, index=True
     )
-    subsources = relationship("MeshTable", lazy='selectin')
+    subsources = relationship("MeshTable", lazy="selectin")
 
 
 class ContentTypeTable(Base):

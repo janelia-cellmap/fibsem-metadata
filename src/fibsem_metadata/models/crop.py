@@ -1,3 +1,4 @@
+from typing import List
 from .base import Base
 from .source import Volume
 from .multiscale.cosem import SpatialTransform
@@ -74,8 +75,8 @@ class Crop(Base):
     name: str
     description: str
     source: Volume
-    annotations: list[Label]
-    shape: list[int]
+    annotations: List[Label]
+    shape: List[int]
     completion_stage: CompletionStageEnum
     transform_world: SpatialTransform
     transform_source: SpatialTransform

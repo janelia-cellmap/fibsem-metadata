@@ -1,3 +1,4 @@
+from typing import Optional, List
 from .sample import Sample
 from .acquisition import FIBSEMAcquisition
 from .base import Base
@@ -16,13 +17,13 @@ class SoftwareAvailability(str, Enum):
 class Dataset(Base):
     name: str
     description: str
-    institutions: list[str]
+    institutions: List[str]
     software_availability: SoftwareAvailability
-    acquisition: FIBSEMAcquisition | None
-    sample: Sample | None
-    publications: list[Publication]
-    volumes: list[Volume]
-    views: list[View]
+    acquisition: Optional[FIBSEMAcquisition]
+    sample: Optional[Sample]
+    publications: List[Publication]
+    volumes: List[Volume]
+    views: List[View]
 
 
 class DatasetCreate(Dataset):
