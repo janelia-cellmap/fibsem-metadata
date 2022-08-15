@@ -90,10 +90,10 @@ class DatasetMetadata(StrictBaseModel):
 class Dataset(StrictBaseModel):
     name: str
     description: str
-    institution: list[str]
+    institution: List[str]
     softwareAvailability: SoftwareAvailability
     acquisition: FIBSEMImagingMetadata
     sample: SampleMetadata
-    publications: list[Publication]
-    volumes = list[VolumeSource]
-    views = list[DatasetView]
+    publications: List[Publication]
+    volumes: List[VolumeSource]
+    views: List[DatasetView]

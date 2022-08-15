@@ -1,6 +1,6 @@
 from sqlalchemy.ext.associationproxy import _AssociationList
 from pydantic import validator
-
+from typing import List, Optional
 from fibsem_metadata.models.source import Volume
 from .base import Base
 
@@ -8,10 +8,10 @@ from .base import Base
 class View(Base):
     name: str
     description: str
-    source_names: list[str]
-    position: list[float] | None
-    scale: float | None
-    orientation: list[float] | None
+    source_names: List[str]
+    position: Optional[List[float]]
+    scale: Optional[float]
+    orientation: Optional[List[float]]
 
     @validator("source_names", pre=True)
     def listify_association_proxy(cls, v):
@@ -24,8 +24,8 @@ class View(Base):
 
     @validator("orientation")
     def orientation_must_have_unit_norm(
-        cls, v: list[float] | None
-    ) -> list[float] | None:
+        cls, v: Optional[List[float]]
+    ) -> Optional[List[float]]:
         if v is not None:
             if len(v) != 4:
                 raise ValueError(

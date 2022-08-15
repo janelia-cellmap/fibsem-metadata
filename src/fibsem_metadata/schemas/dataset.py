@@ -19,27 +19,20 @@ class DatasetTable(Base):
     institutions = Column(postgresql.ARRAY(String))
     software_availability = Column(String)
 
-    volumes = relationship(VolumeTable, lazy='selectin')
-    views = relationship(ViewTable, lazy='selectin')
+    volumes = relationship(VolumeTable, lazy="selectin")
+    views = relationship(ViewTable, lazy="selectin")
 
-    acquisition_id = Column(Integer,
-                            ForeignKey("fibsem_acquisition.id"),
-                            nullable=True,
-                            index=True
+    acquisition_id = Column(
+        Integer, ForeignKey("fibsem_acquisition.id"), nullable=True, index=True
     )
 
-    acquisition = relationship(FIBSEMAcquisitionTable,
-                               back_populates="datasets",
-                               lazy='selectin')
+    acquisition = relationship(
+        FIBSEMAcquisitionTable, back_populates="datasets", lazy="selectin"
+    )
 
-    sample_id = Column(Integer,
-                       ForeignKey("sample.id"),
-                       nullable=True,
-                       index=True)
-    
-    sample = relationship(SampleTable,
-                          back_populates="datasets",
-                          lazy='selectin')
+    sample_id = Column(Integer, ForeignKey("sample.id"), nullable=True, index=True)
+
+    sample = relationship(SampleTable, back_populates="datasets", lazy="selectin")
 
     publications = relationship(
         PublicationTable, secondary=pub_to_dataset, back_populates="datasets"

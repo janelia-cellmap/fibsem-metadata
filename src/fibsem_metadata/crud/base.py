@@ -1,4 +1,4 @@
-from typing import Generic, Type, TypeVar, Any
+from typing import Generic, Type, TypeVar, Any, List, Optional, Dict, Union
 from fastapi.encoders import jsonable_encoder
 from pydantic import BaseModel
 import fibsem_metadata.schemas as schemas
@@ -19,12 +19,12 @@ class Base(Generic[SchemaType, CreateModelType, UpdateModelType]):
         """
         self.model = model
 
-    def get(self, db: Session, id: int) -> SchemaType | None:
+    def get(self, db: Session, id: int) -> Optional[SchemaType]:
         return db.query(self.model).filter(self.model.id == id).first()
 
     def get_multi(
-        self, db: Session, *, skip: int = 0, limit: int | None = None
-    ) -> list[SchemaType]:
+        self, db: Session, *, skip: int = 0, limit: Optional[int] = None
+    ) -> List[SchemaType]:
         return db.query(self.model).offset(skip).limit(limit).all()
 
     def create(self, db: Session, *, obj_in: CreateModelType) -> SchemaType:
@@ -40,7 +40,7 @@ class Base(Generic[SchemaType, CreateModelType, UpdateModelType]):
         db: Session,
         *,
         db_obj: SchemaType,
-        obj_in: UpdateModelType | dict[str, Any]
+        obj_in: Union[UpdateModelType, Dict[str, Any]]
     ) -> SchemaType:
         obj_data = jsonable_encoder(db_obj)
         if isinstance(obj_in, dict):
@@ -56,7 +56,7 @@ class Base(Generic[SchemaType, CreateModelType, UpdateModelType]):
         return db_obj
 
     def remove(self, db: Session, *, id: int) -> SchemaType:
-        obj = db.query(self.model).get(id)
+        obj: SchemaType = db.query(self.model).get(id)
         db.delete(obj)
         db.commit()
         return obj
