@@ -1,8 +1,9 @@
-from .base import Base
-from sqlalchemy import Column, ForeignKey, Integer, String, Float, Table
-from sqlalchemy.orm import relationship
+from sqlalchemy import Column, Float, ForeignKey, Integer, String, Table
 from sqlalchemy.dialects import postgresql
 from sqlalchemy.ext.associationproxy import association_proxy
+from sqlalchemy.orm import relationship
+
+from .base import Base
 
 view_to_volume = Table(
     "view_to_volume",

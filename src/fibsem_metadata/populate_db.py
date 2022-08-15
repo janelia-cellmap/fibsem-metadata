@@ -1,30 +1,26 @@
-from typing import Literal, Dict, Optional, List
-from sqlalchemy.orm import Session
-from fibsem_metadata.db.session import SessionLocal, engine
-
-from fibsem_metadata.models.acquisition import UnitfulVector
-from fibsem_metadata.models.source import ContrastLimits, DisplaySettings, Volume
-from fibsem_metadata.legacy_models.manifest import DatasetManifest
-from fibsem_metadata.legacy_models.metadata import (
-    DatasetMetadata as LegacyDatasetMetadata,
-)
-from fibsem_metadata.legacy_models.metadata import SampleMetadata as LegacySample
-from fibsem_metadata.legacy_models.metadata import (
-    FIBSEMImagingMetadata as LegacyFIBSEMAcquisition,
-)
-from fibsem_metadata.legacy_models.metadata import Publication as LegacyPublication
-from fibsem_metadata.legacy_models.metadata import DatasetView as LegacyView
-
 import json
 from glob import glob
-from fibsem_metadata.schemas import (
-    DatasetTable,
-    PublicationTable,
-    VolumeTable,
-    ViewTable,
-    SampleTable,
-    FIBSEMAcquisitionTable,
-)
+from typing import Dict, List, Literal, Optional
+
+from sqlalchemy.orm import Session
+
+from fibsem_metadata.db.session import SessionLocal, engine
+from fibsem_metadata.legacy_models.manifest import DatasetManifest
+from fibsem_metadata.legacy_models.metadata import \
+    DatasetMetadata as LegacyDatasetMetadata
+from fibsem_metadata.legacy_models.metadata import DatasetView as LegacyView
+from fibsem_metadata.legacy_models.metadata import \
+    FIBSEMImagingMetadata as LegacyFIBSEMAcquisition
+from fibsem_metadata.legacy_models.metadata import \
+    Publication as LegacyPublication
+from fibsem_metadata.legacy_models.metadata import \
+    SampleMetadata as LegacySample
+from fibsem_metadata.models.acquisition import UnitfulVector
+from fibsem_metadata.models.source import (ContrastLimits, DisplaySettings,
+                                           Volume)
+from fibsem_metadata.schemas import (DatasetTable, FIBSEMAcquisitionTable,
+                                     PublicationTable, SampleTable, ViewTable,
+                                     VolumeTable)
 
 
 def legacy_create_sample(metadata: LegacySample) -> SampleTable:

@@ -1,4 +1,5 @@
 from typing import Optional, Sequence
+
 from pydantic import validator
 
 from fibsem_metadata.legacy_models.base import StrictBaseModel

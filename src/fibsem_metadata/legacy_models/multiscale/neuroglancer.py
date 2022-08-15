@@ -1,7 +1,9 @@
-from pydantic import PositiveInt
-from ..base import StrictBaseModel
 from typing import Sequence
+
 import click
+from pydantic import PositiveInt
+
+from ..base import StrictBaseModel
 
 
 class PixelResolution(StrictBaseModel):

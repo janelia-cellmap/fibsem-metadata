@@ -1,5 +1,7 @@
 from typing import Generator
+
 from sqlalchemy.orm import Session
+
 from fibsem_metadata.db.session import SessionLocal
 
 

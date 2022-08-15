@@ -1,12 +1,13 @@
+from sqlalchemy import Column, ForeignKey, Integer, String
+from sqlalchemy.dialects import postgresql
+from sqlalchemy.orm import relationship
+
+from .acquisition import FIBSEMAcquisitionTable
 from .base import Base
+from .publication import PublicationTable, pub_to_dataset
+from .sample import SampleTable
 from .source import VolumeTable
 from .view import ViewTable
-from .acquisition import FIBSEMAcquisitionTable
-from .sample import SampleTable
-from .publication import PublicationTable, pub_to_dataset
-from sqlalchemy import Column, Integer, String, ForeignKey
-from sqlalchemy.orm import relationship
-from sqlalchemy.dialects import postgresql
 
 
 class DatasetTable(Base):

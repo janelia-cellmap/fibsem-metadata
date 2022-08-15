@@ -1,7 +1,9 @@
-from pydantic import root_validator
-from ..base import StrictBaseModel
-from typing import List, Sequence, Union, Dict
+from typing import Dict, List, Sequence, Union
+
 import click
+from pydantic import root_validator
+
+from ..base import StrictBaseModel
 
 
 class SpatialTransform(StrictBaseModel):

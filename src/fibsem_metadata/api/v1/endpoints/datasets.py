@@ -1,11 +1,12 @@
 from typing import List, Optional
+
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from fibsem_metadata import crud
-from fibsem_metadata.api import deps
 
 import fibsem_metadata.models as models
 import fibsem_metadata.schemas as schemas
+from fibsem_metadata import crud
+from fibsem_metadata.api import deps
 
 router = APIRouter()
 
@@ -17,7 +18,7 @@ router = APIRouter()
     response_model_exclude_none=True,
 )
 def get_datasets(
-    *, skip: int = 0, limit: Optional[int], db: Session = Depends(deps.get_db)
+    *, skip: int = 0, limit: Optional[int] = None, db: Session = Depends(deps.get_db)
 ) -> List[schemas.DatasetTable]:
     result = crud.dataset_crud.get_multi(db, skip=skip, limit=limit)
     if not result:

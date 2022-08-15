@@ -1,5 +1,7 @@
+from typing import Dict, Sequence
+
 import click
-from typing import Sequence, Dict
+
 from fibsem_metadata.legacy_models.base import StrictBaseModel
 from fibsem_metadata.legacy_models.metadata import DatasetMetadata
 from fibsem_metadata.legacy_models.sources import VolumeSource

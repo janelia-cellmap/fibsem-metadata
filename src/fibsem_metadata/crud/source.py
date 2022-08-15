@@ -1,6 +1,7 @@
-from .base import Base
-from fibsem_metadata.schemas.source import VolumeTable
 from fibsem_metadata.models.source import VolumeCreate, VolumeUpdate
+from fibsem_metadata.schemas.source import VolumeTable
+
+from .base import Base
 
 
 class VolumeCRUD(Base[VolumeTable, VolumeCreate, VolumeUpdate]):

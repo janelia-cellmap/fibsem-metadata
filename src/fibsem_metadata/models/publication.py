@@ -1,6 +1,8 @@
-from .base import Base
 from enum import Enum
+
 from pydantic import HttpUrl
+
+from .base import Base
 
 
 class PublicationTypeEnum(str, Enum):

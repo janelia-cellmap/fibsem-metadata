@@ -1,8 +1,10 @@
-from typing import Generic, Type, TypeVar, Any, List, Optional, Dict, Union
+from typing import Any, Dict, Generic, List, Optional, Type, TypeVar, Union
+
 from fastapi.encoders import jsonable_encoder
 from pydantic import BaseModel
-import fibsem_metadata.schemas as schemas
 from sqlalchemy.orm import Session
+
+import fibsem_metadata.schemas as schemas
 
 SchemaType = TypeVar("SchemaType", bound=schemas.Base)
 CreateModelType = TypeVar("CreateModelType", bound=BaseModel)

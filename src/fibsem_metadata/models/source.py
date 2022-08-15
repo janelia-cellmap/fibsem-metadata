@@ -1,8 +1,10 @@
 from enum import Enum
-from pydantic.color import Color
-from .base import Base
-from typing import Dict, Literal, Any, Union, List, Optional
+from typing import Any, Dict, List, Literal, Optional, Union
+
 from pydantic import PositiveInt, root_validator, validator
+from pydantic.color import Color
+
+from .base import Base
 
 
 class PixelResolution(Base):

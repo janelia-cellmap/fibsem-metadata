@@ -1,11 +1,12 @@
+from enum import Enum
 from typing import List, Optional
-from .sample import Sample
+
 from .acquisition import FIBSEMAcquisition
 from .base import Base
-from enum import Enum
+from .publication import Publication
+from .sample import Sample
 from .source import Volume
 from .view import View
-from .publication import Publication
 
 
 class SoftwareAvailability(str, Enum):

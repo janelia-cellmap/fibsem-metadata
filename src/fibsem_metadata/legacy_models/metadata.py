@@ -1,9 +1,11 @@
 from datetime import date
-from typing import List, Dict, Union
 from enum import Enum
+from typing import Dict, List, Union
+
+from pydantic import HttpUrl
 
 from fibsem_metadata.legacy_models.base import StrictBaseModel
-from pydantic import HttpUrl
+
 from .sources import VolumeSource
 from .views import DatasetView
 

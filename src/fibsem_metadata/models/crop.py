@@ -1,8 +1,9 @@
-from .base import Base
-from .source import Volume
-from .multiscale.cosem import SpatialTransform
 from enum import Enum
 from typing import List
+
+from .base import Base
+from .multiscale.cosem import SpatialTransform
+from .source import Volume
 
 
 class CompletionStageEnum(str, Enum):

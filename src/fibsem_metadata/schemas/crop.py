@@ -1,6 +1,7 @@
-from sqlalchemy import Column, Integer, String, ForeignKey
-from sqlalchemy.orm import relationship
+from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.dialects import postgresql
+from sqlalchemy.orm import relationship
+
 from .base import Base
 
 

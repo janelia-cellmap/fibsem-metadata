@@ -1,7 +1,8 @@
-from .base import Base
-from sqlalchemy import JSON, Column, Integer, String, ForeignKey, Boolean
-from sqlalchemy.orm import relationship
+from sqlalchemy import JSON, Boolean, Column, ForeignKey, Integer, String
 from sqlalchemy.dialects import postgresql
+from sqlalchemy.orm import relationship
+
+from .base import Base
 
 
 class DataSourceMixin:

@@ -1,6 +1,7 @@
-from .base import Base
-from sqlalchemy import Column, String, ForeignKey, Table, Integer
+from sqlalchemy import Column, ForeignKey, Integer, String, Table
 from sqlalchemy.orm import relationship
+
+from .base import Base
 
 pub_to_dataset = Table(
     "publication_to_dataset",

@@ -1,8 +1,7 @@
 import pathlib
-
-from pydantic import AnyHttpUrl, BaseSettings, validator
 from typing import Any, List, Union
 
+from pydantic import AnyHttpUrl, BaseSettings, validator
 
 # Project Directories
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -21,7 +20,7 @@ class Settings(BaseSettings):
     @validator("BACKEND_CORS_ORIGINS", pre=True)
     def assemble_cors_origins(
         cls: Any, v: Union[str, List[str]]
-    ) -> Union[str, List[str]]:
+    ) -> Union[List[str], str]:
         if isinstance(v, str) and not v.startswith("["):
             return [i.strip() for i in v.split(",")]
         elif isinstance(v, (list, str)):

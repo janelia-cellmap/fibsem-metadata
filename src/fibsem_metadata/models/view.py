@@ -1,7 +1,8 @@
-from sqlalchemy.ext.associationproxy import _AssociationList
-from pydantic import validator
 from typing import List, Optional
-from fibsem_metadata.models.source import Volume
+
+from pydantic import validator
+from sqlalchemy.ext.associationproxy import _AssociationList
+
 from .base import Base
 
 

@@ -1,9 +1,10 @@
+import click
+import uvicorn
 from fastapi import APIRouter, FastAPI
+from mangum import Mangum
+
 from fibsem_metadata.api.v1.api import api_router
 from fibsem_metadata.core.config import settings
-import click
-from mangum import Mangum
-import uvicorn
 
 app = FastAPI(title="Cellmap")
 root_router = APIRouter()

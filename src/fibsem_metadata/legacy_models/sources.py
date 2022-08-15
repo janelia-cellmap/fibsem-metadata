@@ -1,6 +1,8 @@
-from typing import Optional, Sequence
 from enum import Enum
+from typing import Optional, Sequence
+
 from pydantic.color import Color
+
 from fibsem_metadata.legacy_models.base import StrictBaseModel
 from fibsem_metadata.legacy_models.multiscale.cosem import SpatialTransform
 

@@ -1,6 +1,7 @@
-from pydantic import root_validator
-from pydantic import validator
-from typing import Literal, Any, List, Union, Dict
+from typing import Any, Dict, List, Literal, Union
+
+from pydantic import root_validator, validator
+
 from ..base import Base
 
 

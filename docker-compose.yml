@@ -3,7 +3,7 @@ version: '3'
 services:
   db:
     image: postgres:14.2
-    restart: always
+    restart: "no"
     ports:
       -  5432:5432
     volumes:

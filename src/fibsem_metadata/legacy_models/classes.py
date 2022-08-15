@@ -1,5 +1,6 @@
 from enum import Enum
 from typing import Dict, Sequence
+
 import click
 
 from fibsem_metadata.legacy_models.base import StrictBaseModel
