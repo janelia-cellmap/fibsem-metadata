@@ -10,7 +10,8 @@ build
 _build
 .cache
 *.so
-
+package
+*.zip
 # API
 api/**
 
