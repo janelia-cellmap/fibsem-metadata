@@ -59,10 +59,10 @@
     "publications": []
   },
   "sources": {
-    "mito-mem_seg": {
-      "name": "mito-mem_seg",
-      "description": "Mitochondria Membrane",
-      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/mito-mem_seg/",
+    "pm_seg": {
+      "name": "pm_seg",
+      "description": "Plasma Membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/pm_seg/",
       "format": "n5",
       "transform": {
         "axes": [
@@ -91,19 +91,19 @@
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
-          "end": 4294967295,
+          "end": 255,
           "min": 0,
-          "max": 4294967295
+          "max": 255
         },
-        "color": "green",
+        "color": "orange",
         "invertLUT": false
       },
       "subsources": []
     },
-    "nucleus_seg_ariadne": {
-      "name": "nucleus_seg_ariadne",
-      "description": "Nucleus (Ariadne)",
-      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/ariadne/nucleus_instance_seg",
+    "mito-mem_pred": {
+      "name": "mito-mem_pred",
+      "description": "Mitochondria Membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/mito-mem_pred/",
       "format": "n5",
       "transform": {
         "axes": [
@@ -117,18 +117,18 @@
           "nm"
         ],
         "translate": [
-          15728.0,
-          30912.0,
-          30984.0
+          0.0,
+          0.0,
+          0.0
         ],
         "scale": [
-          8.0,
-          8.0,
-          8.0
+          4.0,
+          4.0,
+          4.0
         ]
       },
-      "sampleType": "label",
-      "contentType": "segmentation",
+      "sampleType": "scalar",
+      "contentType": "prediction",
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
@@ -136,7 +136,7 @@
           "min": 0,
           "max": 255
         },
-        "color": null,
+        "color": "green",
         "invertLUT": false
       },
       "subsources": []
@@ -212,47 +212,6 @@
         }
       ]
     },
-    "er_seg_ariadne": {
-      "name": "er_seg_ariadne",
-      "description": "Endoplasmic Reticulum (Ariadne)",
-      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/ariadne/er_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          15728.0,
-          30912.0,
-          30984.0
-        ],
-        "scale": [
-          8.0,
-          8.0,
-          8.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": null,
-        "invertLUT": false
-      },
-      "subsources": []
-    },
     "nucleus_pred": {
       "name": "nucleus_pred",
       "description": "Nucleus",
@@ -294,10 +253,10 @@
       },
       "subsources": []
     },
-    "fibsem-uint8": {
-      "name": "fibsem-uint8",
-      "description": "FIB-SEM Data (compressed)",
-      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/em/fibsem-uint8",
+    "mito_pred": {
+      "name": "mito_pred",
+      "description": "Mitochrondria",
+      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/mito_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -316,54 +275,13 @@
           0.0
         ],
         "scale": [
-          8.0,
-          8.0,
-          8.0
+          16.0,
+          16.0,
+          16.0
         ]
       },
       "sampleType": "scalar",
-      "contentType": "em",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 105,
-          "end": 182,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "mito_bag_seg": {
-      "name": "mito_bag_seg",
-      "description": "Mitochondrial Bag (Ariadne)",
-      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/ariadne/mito_bag_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          15728.0,
-          30912.0,
-          30984.0
-        ],
-        "scale": [
-          8.0,
-          8.0,
-          8.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
+      "contentType": "prediction",
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
@@ -371,7 +289,7 @@
           "min": 0,
           "max": 255
         },
-        "color": null,
+        "color": "green",
         "invertLUT": false
       },
       "subsources": []
@@ -417,10 +335,133 @@
       },
       "subsources": []
     },
-    "ecs_pred": {
-      "name": "ecs_pred",
-      "description": "Extracellular Space",
-      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/ecs_pred/",
+    "fibsem-uint8": {
+      "name": "fibsem-uint8",
+      "description": "FIB-SEM Data (compressed)",
+      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/em/fibsem-uint8",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "em",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 105,
+          "end": 182,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "nucleus_seg_ariadne": {
+      "name": "nucleus_seg_ariadne",
+      "description": "Nucleus (Ariadne)",
+      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/ariadne/nucleus_instance_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          15728.0,
+          30912.0,
+          30984.0
+        ],
+        "scale": [
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": null,
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "mito_bag_seg": {
+      "name": "mito_bag_seg",
+      "description": "Mitochondrial Bag (Ariadne)",
+      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/ariadne/mito_bag_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          15728.0,
+          30912.0,
+          30984.0
+        ],
+        "scale": [
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": null,
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "er_pred": {
+      "name": "er_pred",
+      "description": "Endoplasmic Reticulum",
+      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/er_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -453,7 +494,7 @@
           "min": 0,
           "max": 255
         },
-        "color": "white",
+        "color": "blue",
         "invertLUT": false
       },
       "subsources": []
@@ -495,6 +536,47 @@
           "max": 255
         },
         "color": "blue",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "ecs_pred": {
+      "name": "ecs_pred",
+      "description": "Extracellular Space",
+      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/ecs_pred/",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          4.0,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "prediction",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
         "invertLUT": false
       },
       "subsources": []
@@ -570,170 +652,6 @@
         }
       ]
     },
-    "mito_pred": {
-      "name": "mito_pred",
-      "description": "Mitochrondria",
-      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/mito_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          16.0,
-          16.0,
-          16.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "green",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "pm_seg": {
-      "name": "pm_seg",
-      "description": "Plasma Membrane",
-      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/pm_seg/",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          4.0,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "orange",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "pm_pred": {
-      "name": "pm_pred",
-      "description": "Plasma Membrane",
-      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/pm_pred/",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          4.0,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "orange",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "mito-mem_pred": {
-      "name": "mito-mem_pred",
-      "description": "Mitochondria Membrane",
-      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/mito-mem_pred/",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          4.0,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "green",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
     "ecs_seg": {
       "name": "ecs_seg",
       "description": "Extracellular Space",
@@ -771,6 +689,47 @@
           "max": 255
         },
         "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "mito-mem_seg": {
+      "name": "mito-mem_seg",
+      "description": "Mitochondria Membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/mito-mem_seg/",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          4.0,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 4294967295,
+          "min": 0,
+          "max": 4294967295
+        },
+        "color": "green",
         "invertLUT": false
       },
       "subsources": []
@@ -816,10 +775,10 @@
       },
       "subsources": []
     },
-    "er_pred": {
-      "name": "er_pred",
-      "description": "Endoplasmic Reticulum",
-      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/er_pred",
+    "pm_pred": {
+      "name": "pm_pred",
+      "description": "Plasma Membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/pm_pred/",
       "format": "n5",
       "transform": {
         "axes": [
@@ -852,7 +811,48 @@
           "min": 0,
           "max": 255
         },
-        "color": "blue",
+        "color": "orange",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "er_seg_ariadne": {
+      "name": "er_seg_ariadne",
+      "description": "Endoplasmic Reticulum (Ariadne)",
+      "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/ariadne/er_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          15728.0,
+          30912.0,
+          30984.0
+        ],
+        "scale": [
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": null,
         "invertLUT": false
       },
       "subsources": []
