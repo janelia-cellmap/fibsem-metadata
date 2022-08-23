@@ -12,8 +12,6 @@ root_router = APIRouter()
 app.include_router(api_router, prefix=settings.API_V1_STR)
 app.include_router(root_router)
 
-handler = Mangum(app, lifespan="off")
-
 
 @click.command()
 @click.option("--host", default="0.0.0.0", help="Host for the uvicorn server")
@@ -21,7 +19,6 @@ handler = Mangum(app, lifespan="off")
 @click.option("--log_level", default="debug", help="Logging level")
 @click.option("--reload", default=False, help="enable auto-reload")
 def main(host: str, port: int, log_level: str, reload: bool):
-
     uvicorn.run(app, host=host, port=port, log_level=log_level, reload=reload)
 
 
