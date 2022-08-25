@@ -1,11 +1,7 @@
-import pathlib
 from typing import Any, List, Union
 
 from pydantic import AnyHttpUrl, BaseSettings, validator
-
-# Project Directories
-ROOT = pathlib.Path(__file__).resolve().parent.parent
-
+from .aws import on_lambda, get_database_secret, AWS_DB_SECRET_NAME
 
 class Settings(BaseSettings):
     API_V1_STR: str = "/api/v1"
@@ -30,12 +26,15 @@ class Settings(BaseSettings):
             return v
         raise ValueError(v)
 
-    SQLALCHEMY_DATABASE_URI: str = (
-        "postgresql://admin:admin@localhost:5432/fibsem_metadata"
-    )
-
     class Config:
         case_sensitive = True
 
 
-settings = Settings()
+if on_lambda():
+    # if running on aws lambda, check for a secret name environment variable
+    db_secret = get_database_secret()
+    if db_secret is None:
+        raise EnvironmentError(f'This program is running in aws lambda, but the required environment variable {AWS_DB_SECRET_NAME} could not be found')
+    settings = Settings(DB_PASSWORD=db_secret['password'])
+else:
+    settings = Settings()

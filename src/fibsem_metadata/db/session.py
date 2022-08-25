@@ -1,5 +1,5 @@
 import json
-from typing import Any, Callable, Generator
+from typing import Any, Callable
 
 from pydantic.json import pydantic_encoder
 from sqlalchemy import create_engine

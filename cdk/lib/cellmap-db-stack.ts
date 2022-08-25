@@ -3,8 +3,6 @@ import * as rds from 'aws-cdk-lib/aws-rds';
 import * as cdk from 'aws-cdk-lib';
 
 
-import * as path from 'path';
-
 export class CellmapDBStack extends cdk.Stack {
   public readonly vpc: ec2.Vpc
   public readonly lambdaToRDSProxyGroup: ec2.SecurityGroup
@@ -17,7 +15,9 @@ export class CellmapDBStack extends cdk.Stack {
     const dbPort = 5432;
     const secretName = `/${id}/rds/creds/${instanceIdentifier}`.toLowerCase();
     const secret = new rds.DatabaseSecret(this,
-    'cellmapRDSCredentials', {secretName: secretName, username: dbUserName});
+      'cellmapRDSCredentials',
+      {secretName: secretName, username: dbUserName}
+      );
 
     const dbName = 'cellmap';
     
@@ -61,7 +61,7 @@ export class CellmapDBStack extends cdk.Stack {
         subnetType: ec2.SubnetType.PRIVATE_ISOLATED,
       },
       engine: rds.DatabaseInstanceEngine.postgres({
-        version: rds.PostgresEngineVersion.VER_14_2,
+        version: rds.PostgresEngineVersion.VER_13_7,
       }),
       instanceType: ec2.InstanceType.of(
         ec2.InstanceClass.BURSTABLE3,
@@ -86,13 +86,11 @@ export class CellmapDBStack extends cdk.Stack {
       debugLogging: true,
       vpc: this.vpc,
       securityGroups: [dbConnectionGroup]
-    })
+    })    
 
-    const dbEndpoint = dbInstance.instanceEndpoint.hostname
-    
-    new cdk.CfnOutput(this, 'dbName', {
-      value: dbName,
-      exportName: 'dbName'
+    new cdk.CfnOutput(this, 'dbProxyEndpoint', {
+      value: proxy.endpoint,
+      exportName: 'dbProxyEndpoint'
     });
 
     new cdk.CfnOutput(this, 'dbPort', {
@@ -100,15 +98,20 @@ export class CellmapDBStack extends cdk.Stack {
       exportName: 'dbPort'
     });
 
-    new cdk.CfnOutput(this, 'proxyEndpoint', {
-      value: proxy.endpoint,
-      exportName: 'proxyEndpoint'
+    new cdk.CfnOutput(this, 'dbName', {
+      value: dbName,
+      exportName: 'dbName'
     });
 
-    new cdk.CfnOutput(this, 'secretName', {
+    new cdk.CfnOutput(this, 'dbUserName', {
+      value: dbUserName,
+      exportName: 'dbUserName'
+    });
+
+    new cdk.CfnOutput(this, 'dbSecretName', {
       // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
       value: dbInstance.secret?.secretName!,
-      exportName: 'secretName'
+      exportName: 'dbSecretName'
     });
 
 
