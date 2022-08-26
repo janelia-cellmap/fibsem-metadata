@@ -7,6 +7,7 @@ from typing import Optional, TypedDict
 AWS_REGION = 'us-east-1'
 AWS_DB_SECRET_NAME = 'AWS_DB_SECRET_NAME'
 
+
 class AwsDatabaseSecret(TypedDict):
     password: str
     username: str
@@ -60,13 +61,11 @@ def _get_secret(secret_name: str,
     return json.loads(secret)
 
 
-def get_database_secret(aws_region=AWS_REGION,
-                        secret_env_var=AWS_DB_SECRET_NAME) -> Optional[AwsDatabaseSecret]:
-
+def get_database_secret(secret_env_var: str = AWS_DB_SECRET_NAME,
+                        aws_region: str = AWS_REGION) -> Optional[AwsDatabaseSecret]:
     database_secret = None
-    secret_string = os.environ.get(secret_env_var)
-
-    if secret_string is not None:
-        database_secret = _get_secret(secret_string, aws_region)
+    secret_name = os.environ.get(secret_env_var)
+    if secret_name is not None:
+        database_secret = _get_secret(secret_name, aws_region)
 
     return database_secret
