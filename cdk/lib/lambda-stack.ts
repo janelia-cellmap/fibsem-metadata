@@ -1,6 +1,7 @@
 import * as cdk from 'aws-cdk-lib';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
+import * as secrets from 'aws-cdk-lib/aws-secretsmanager'
 import apigw = require('@aws-cdk/aws-apigatewayv2-alpha');
 import {HttpLambdaIntegration} from "@aws-cdk/aws-apigatewayv2-integrations-alpha"
 
@@ -18,7 +19,7 @@ export class CellmapAPILambdaStack extends cdk.Stack {
     const dbPort = cdk.Fn.importValue('dbPort');
     const dbUserName = cdk.Fn.importValue('dbUserName');
     const dbProxyEndpoint = cdk.Fn.importValue('dbProxyEndpoint');
-         
+    
     const apiLambda = new lambda.Function(this,
         'api-lambda',
         {
@@ -37,25 +38,9 @@ export class CellmapAPILambdaStack extends cdk.Stack {
         }
     );
 
-
-    /*
-    deployOptions: {
-        stageName: 'dev',
-      },
-      // 👇 enable CORS
-      defaultCorsPreflightOptions: {
-        allowHeaders: [
-          'Content-Type',
-          'X-Amz-Date',
-          'Authorization',
-          'X-Api-Key',
-        ],
-        allowMethods: ['OPTIONS', 'GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
-        allowCredentials: true,
-        allowOrigins: ['http://localhost:3000'],
-      },
-    });
-    */
+    // ensure that the lambda has access to the secret
+    const secret = secrets.Secret.fromSecretNameV2(this, 'dbSecret', dbSecretName);
+    secret.grantRead(apiLambda);
     
     let api = new apigw.HttpApi(this, 'Endpoint', {
       defaultIntegration: new HttpLambdaIntegration("lambda-proxy", apiLambda),
@@ -67,14 +52,8 @@ export class CellmapAPILambdaStack extends cdk.Stack {
           'X-Api-Key',
         ],
         allowMethods: [
-          CorsHttpMethod.OPTIONS,
-          CorsHttpMethod.GET,
-          CorsHttpMethod.POST,
-          CorsHttpMethod.PUT,
-          CorsHttpMethod.PATCH,
-          CorsHttpMethod.DELETE,
+          apigw.CorsHttpMethod.GET,
         ],
-        allowCredentials: true,
         allowOrigins: ['*'],
       },
     },

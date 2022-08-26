@@ -1,6 +1,7 @@
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import * as rds from 'aws-cdk-lib/aws-rds';
 import * as cdk from 'aws-cdk-lib';
+import { CfnOutput } from 'aws-cdk-lib';
 
 
 export class CellmapDBStack extends cdk.Stack {
@@ -42,7 +43,7 @@ export class CellmapDBStack extends cdk.Stack {
 
 
     // We need this security group to allow our proxy to query our MySQL Instance
-    let dbConnectionGroup = new ec2.SecurityGroup(this,
+    const dbConnectionGroup = new ec2.SecurityGroup(this,
       'Proxy to DB Connection', {
       vpc: this.vpc
     });
@@ -52,8 +53,17 @@ export class CellmapDBStack extends cdk.Stack {
       vpc: this.vpc
     });
 
+    const DbAdminInstanceGroup = new ec2.SecurityGroup(this,
+      'Security group for db admin instance', {
+      vpc: this.vpc,
+      allowAllOutbound: true
+    });
+
+    DbAdminInstanceGroup.addIngressRule(ec2.Peer.ipv4('173.67.197.229/32'), ec2.Port.tcp(22), 'ssh access');
+    
     dbConnectionGroup.addIngressRule(dbConnectionGroup, ec2.Port.tcp(dbPort), 'allow db connection');
     dbConnectionGroup.addIngressRule(this.lambdaToRDSProxyGroup, ec2.Port.tcp(dbPort), 'allow lambda connection');
+    dbConnectionGroup.addIngressRule(DbAdminInstanceGroup, ec2.Port.tcp(dbPort), 'allow admin instance connection')
 
     const dbInstance = new rds.DatabaseInstance(this, 'db-instance', {
       vpc: this.vpc,
@@ -88,6 +98,25 @@ export class CellmapDBStack extends cdk.Stack {
       securityGroups: [dbConnectionGroup]
     })    
 
+
+    const DbAdminInstance = new ec2.Instance(this, 'cellmap-db-admin-instance', {
+      instanceType: ec2.InstanceType.of(
+        ec2.InstanceClass.BURSTABLE2,
+        ec2.InstanceSize.MICRO),
+      machineImage: ec2.MachineImage.latestAmazonLinux(),
+      vpc: this.vpc,
+      keyName: 'ec2_bennettd',
+      vpcSubnets: {subnetType: ec2.SubnetType.PUBLIC},
+      securityGroup: DbAdminInstanceGroup
+    }
+    )
+
+    new cdk.CfnOutput(this, 'dbEndpoint', {
+      value: dbInstance.instanceEndpoint.hostname,
+      exportName: 'dbEndpoint'
+    });
+
+
     new cdk.CfnOutput(this, 'dbProxyEndpoint', {
       value: proxy.endpoint,
       exportName: 'dbProxyEndpoint'
@@ -114,6 +143,10 @@ export class CellmapDBStack extends cdk.Stack {
       exportName: 'dbSecretName'
     });
 
+    new CfnOutput(this, 'dbAdminIP', {
+      value: DbAdminInstance.instance.attrPublicIp,
+      exportName: 'dbAdminIP'
+    })
 
   }
 }
