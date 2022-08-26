@@ -21,8 +21,8 @@ from fibsem_metadata.core.config import settings
 from fibsem_metadata.db.base import Base
 
 
-def get_url():
-    return settings.SQLALCHEMY_DATABASE_URI
+def get_url() -> str:
+    return settings.db_uri()
 
 
 target_metadata = Base.metadata

@@ -5,6 +5,7 @@ from .aws import on_lambda, get_database_secret, AWS_DB_SECRET_NAME
 
 class Settings(BaseSettings):
     API_V1_STR: str = "/api/v1"
+    DB_TYPE: str = 'postgresql'
     DB_HOST: str = 'localhost'
     DB_USER: str = 'postgres'
     DB_PORT: int = 5432
@@ -15,6 +16,9 @@ class Settings(BaseSettings):
         "http://openorganelle.org",
         "http://localhost",
     ]
+
+    def db_uri(self) -> str:
+        return f'{self.DB_TYPE}://{self.DB_USER}:{self.DB_PASSWORD}@{self.DB_HOST}:{settings.DB_PORT}/{self.DB_NAME}'
 
     @validator("BACKEND_CORS_ORIGINS", pre=True)
     def assemble_cors_origins(

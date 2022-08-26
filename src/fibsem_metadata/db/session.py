@@ -14,11 +14,8 @@ def json_serializer(*args: Any, **kwargs: Any) -> str:
     return json.dumps(*args, default=pydantic_encoder, **kwargs)
 
 
-db_uri = f'postgresql://{settings.DB_USER}:{settings.DB_PASSWORD}@{settings.DB_HOST}:{settings.DB_PORT}/{settings.DB_NAME}'
-
-
 engine = create_engine(
-    db_uri,
+    settings.db_uri(),
     future=True,
     echo=True,
     json_serializer=json_serializer,
