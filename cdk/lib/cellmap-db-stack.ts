@@ -25,19 +25,22 @@ export class CellmapDBStack extends cdk.Stack {
     // create the VPC
     this.vpc = new ec2.Vpc(this, 'cellmap-db-vpc', {
       cidr: '10.0.0.0/16',
-      natGateways: 0,
+      natGateways: 1,
       maxAzs: 3,
       subnetConfiguration: [
         {
-          name: 'ingress-subnet',
+          name: 'public-subnet',
           subnetType: ec2.SubnetType.PUBLIC,
           cidrMask: 24,
         },
         {
-          name: 'rds-subnet',
+          name: 'private-isolated-subnet',
           subnetType: ec2.SubnetType.PRIVATE_ISOLATED,
-          cidrMask: 28,
+          cidrMask: 24,
         },
+        {name: 'private-subnet',
+        subnetType: ec2.SubnetType.PRIVATE_WITH_NAT,
+        cidrMask: 24}
       ],
     });
 
@@ -53,17 +56,17 @@ export class CellmapDBStack extends cdk.Stack {
       vpc: this.vpc
     });
 
-    const DbAdminInstanceGroup = new ec2.SecurityGroup(this,
+    const DbBastionHostGroup = new ec2.SecurityGroup(this,
       'Security group for db admin instance', {
       vpc: this.vpc,
       allowAllOutbound: true
     });
 
-    DbAdminInstanceGroup.addIngressRule(ec2.Peer.ipv4('173.67.197.229/32'), ec2.Port.tcp(22), 'ssh access');
+    DbBastionHostGroup.addIngressRule(ec2.Peer.ipv4('173.67.197.229/32'), ec2.Port.tcp(22), 'ssh access');
     
     dbConnectionGroup.addIngressRule(dbConnectionGroup, ec2.Port.tcp(dbPort), 'allow db connection');
     dbConnectionGroup.addIngressRule(this.lambdaToRDSProxyGroup, ec2.Port.tcp(dbPort), 'allow lambda connection');
-    dbConnectionGroup.addIngressRule(DbAdminInstanceGroup, ec2.Port.tcp(dbPort), 'allow admin instance connection')
+    dbConnectionGroup.addIngressRule(DbBastionHostGroup, ec2.Port.tcp(dbPort), 'allow admin instance connection')
 
     const dbInstance = new rds.DatabaseInstance(this, 'db-instance', {
       vpc: this.vpc,
@@ -99,7 +102,7 @@ export class CellmapDBStack extends cdk.Stack {
     })    
 
 
-    const DbAdminInstance = new ec2.Instance(this, 'cellmap-db-admin-instance', {
+    const DbBastionHost = new ec2.Instance(this, 'cellmap-db-admin-instance', {
       instanceType: ec2.InstanceType.of(
         ec2.InstanceClass.BURSTABLE2,
         ec2.InstanceSize.MICRO),
@@ -107,7 +110,7 @@ export class CellmapDBStack extends cdk.Stack {
       vpc: this.vpc,
       keyName: 'ec2_bennettd',
       vpcSubnets: {subnetType: ec2.SubnetType.PUBLIC},
-      securityGroup: DbAdminInstanceGroup
+      securityGroup: DbBastionHostGroup
     }
     )
 
@@ -144,7 +147,7 @@ export class CellmapDBStack extends cdk.Stack {
     });
 
     new CfnOutput(this, 'dbAdminIP', {
-      value: DbAdminInstance.instance.attrPublicIp,
+      value: DbBastionHost.instance.attrPublicIp,
       exportName: 'dbAdminIP'
     })
 

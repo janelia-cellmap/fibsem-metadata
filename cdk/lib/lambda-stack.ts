@@ -24,9 +24,10 @@ export class CellmapAPILambdaStack extends cdk.Stack {
         'api-lambda',
         {
           vpc: props.vpc,
+          vpcSubnets: {subnetType: ec2.SubnetType.PRIVATE_WITH_NAT},
           securityGroups: [props.lambdaToRDSProxyGroup],
           runtime: lambda.Runtime.PYTHON_3_9,
-          handler: 'fibsem_metadata/lambda_handler.handler',
+          handler: 'fibsem_metadata/main.handler',
           code: lambda.Code.fromAsset('../artifact.zip'),
           environment: {
             DB_USER: dbUserName,
@@ -34,7 +35,8 @@ export class CellmapAPILambdaStack extends cdk.Stack {
             DB_HOST: dbProxyEndpoint,
             DB_PORT: dbPort,
             DB_NAME: dbName,
-          }
+          },
+          timeout:cdk.Duration.seconds(6)
         }
     );
 
