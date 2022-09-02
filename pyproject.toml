@@ -25,6 +25,7 @@ isort = "^5.10.1"
 pytest = "^7.1.2"
 botocore = "^1.27.57"
 boto3 = "^1.24.57"
+rich = "^12.5.1"
 
 [tool.poetry.scripts]
 cellmap-api = 'fibsem_metadata.main:main'
