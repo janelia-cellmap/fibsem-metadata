@@ -1,6 +1,7 @@
 {
   "title": "Macrophage cell",
   "id": "jrc_macrophage-2",
+  "thumbnailURL": "https://janelia-cosem-datasets.s3.amazonaws.com/jrc_macrophage-2/thumbnail.jpg",
   "imaging": {
     "id": "Cryo_FS80_Cell2",
     "institution": "Janelia",

@@ -1,6 +1,7 @@
 {
   "title": "Mouse Liver",
   "id": "jrc_mus-liver",
+  "thumbnailURL": "https://janelia-cosem-datasets.s3.amazonaws.com/jrc_mus-liver/thumbnail.jpg",
   "imaging": {
     "id": "",
     "institution": "Janelia",

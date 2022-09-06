@@ -1,6 +1,7 @@
 {
   "title": "Killer T-Cell attacking cancer cell",
   "id": "jrc_ctl-id8-1",
+  "thumbnailURL": "https://janelia-cosem-datasets.s3.amazonaws.com/jrc_ctl-id8-1/thumbnail.jpg",
   "imaging": {
     "id": "Cryo_LoadID496_Atlas1",
     "institution": "Janelia",
