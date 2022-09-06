@@ -69,7 +69,7 @@ class DatasetMetadata(StrictBaseModel):
 
     title: str
     id: str
-    thumbnailURL: Optional[str]
+    thumbnailURL: Optional[HttpUrl]
     imaging: FIBSEMImagingMetadata
     sample: SampleMetadata
     institution: List[str]
