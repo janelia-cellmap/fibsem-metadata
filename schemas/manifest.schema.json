@@ -234,6 +234,13 @@
           "title": "Id",
           "type": "string"
         },
+        "thumbnailURL": {
+          "title": "Thumbnailurl",
+          "minLength": 1,
+          "maxLength": 2083,
+          "format": "uri",
+          "type": "string"
+        },
         "imaging": {
           "$ref": "#/definitions/FIBSEMImagingMetadata"
         },

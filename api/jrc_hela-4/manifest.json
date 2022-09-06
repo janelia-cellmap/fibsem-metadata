@@ -3,6 +3,7 @@
   "metadata": {
     "title": "Mitotic HeLa cell",
     "id": "jrc_hela-4",
+    "thumbnailURL": "https://janelia-cosem-datasets.s3.amazonaws.com/jrc_hela-4/thumbnail.jpg",
     "imaging": {
       "id": "Cryo_17-7_17_Cell4",
       "institution": "Janelia",
@@ -64,47 +65,6 @@
     ]
   },
   "sources": {
-    "fibsem-uint8": {
-      "name": "fibsem-uint8",
-      "description": "FIB-SEM Data (compressed)",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-4/neuroglancer/em/fibsem-uint8.precomputed",
-      "format": "precomputed",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          4.28,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "em",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 145,
-          "end": 205,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
     "fibsem-uint16": {
       "name": "fibsem-uint16",
       "description": "FIB-SEM Data (uncompressed)",
@@ -143,6 +103,47 @@
         },
         "color": "white",
         "invertLUT": true
+      },
+      "subsources": []
+    },
+    "fibsem-uint8": {
+      "name": "fibsem-uint8",
+      "description": "FIB-SEM Data (compressed)",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-4/neuroglancer/em/fibsem-uint8.precomputed",
+      "format": "precomputed",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          4.28,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "em",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 145,
+          "end": 205,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
       },
       "subsources": []
     }
