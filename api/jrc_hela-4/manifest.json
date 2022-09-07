@@ -65,47 +65,6 @@
     ]
   },
   "sources": {
-    "fibsem-uint16": {
-      "name": "fibsem-uint16",
-      "description": "FIB-SEM Data (uncompressed)",
-      "url": "s3://janelia-cosem-datasets/jrc_hela-4/jrc_hela-4.n5/em/fibsem-uint16",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          4.28,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "em",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 18022,
-          "end": 23264,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "white",
-        "invertLUT": true
-      },
-      "subsources": []
-    },
     "fibsem-uint8": {
       "name": "fibsem-uint8",
       "description": "FIB-SEM Data (compressed)",
@@ -144,6 +103,47 @@
         },
         "color": "white",
         "invertLUT": false
+      },
+      "subsources": []
+    },
+    "fibsem-uint16": {
+      "name": "fibsem-uint16",
+      "description": "FIB-SEM Data (uncompressed)",
+      "url": "s3://janelia-cosem-datasets/jrc_hela-4/jrc_hela-4.n5/em/fibsem-uint16",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          4.28,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "em",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 18022,
+          "end": 23264,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": true
       },
       "subsources": []
     }
