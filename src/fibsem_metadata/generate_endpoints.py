@@ -39,7 +39,6 @@ def build_manifest(dataset_path: Union[Path, str], output_dir: Union[Path, str])
     source_paths = (root / "sources").glob("*.json")
     metadata_path = root / "metadata.json"
     views_path = root / "views.json"
-    thumbnail_path = root / "thumbnail.jpg"
 
     sources = [materialize_element(path, VolumeSource) for path in source_paths]
     sources_dict = {s.name: s for s in sources}
@@ -53,7 +52,6 @@ def build_manifest(dataset_path: Union[Path, str], output_dir: Union[Path, str])
         output_dir.mkdir()
     # write manifest and thumbnail to API destination
     manifest_path.write_text(manifest.json(indent=2))
-    copyfile(thumbnail_path, output_dir / thumbnail_path.name)
     return 0
 
 

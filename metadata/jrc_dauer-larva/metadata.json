@@ -1,53 +1,55 @@
 {
-    "title": "Entire C. elegans dauer (e1370)",
-    "id": "jrc_dauer-larva",
-    "imaging": {
-      "id": "",
-      "institution": "HHMI/Janelia",
-      "gridSpacing": {
-        "unit": "nm",
-        "values": {
-          "x": 4.0,
-          "y": 4.0,
-          "z": 70
-        }
-      },
-      "dimensions": {
-        "unit": "\u00b5m",
-        "values": {
-          "x": 560.7,
-          "y": 88.1,
-          "z": 40.6
-        }
-      },
-      "startDate": "2012-01-01",
-      "duration": 160,
-      "biasVoltage": 0,
-      "scanRate": 0,
-      "current": 0,
-      "primaryEnergy": 0
+  "title": "Entire C. elegans dauer (e1370)",
+  "id": "jrc_dauer-larva",
+  "thumbnailURL": "https://janelia-cosem-datasets.s3.amazonaws.com/jrc_dauer-larva/thumbnail.jpg",
+  "imaging": {
+    "id": "",
+    "institution": "HHMI/Janelia",
+    "gridSpacing": {
+      "unit": "nm",
+      "values": {
+        "x": 4.0,
+        "y": 4.0,
+        "z": 70.0
+      }
     },
-    "sample": {
-      "description": "C. elegans dauer (e1370)",
-      "protocol": "Freeze substitution",
-      "contributions": "Sample provided by Stephan Preibisch (HHMI/Janelia), prepared and imaged by Mei Sun and Yalin Wang (HHMI/Janelia), reconstructed by Stephan Preibisch (MDC Berlin), segmented by Ella Bahry (MDC Berlin)",
-      "organism": [
-        "C. Elegans"
-      ],
-      "type": [
-        "Whole organism"
-      ],
-      "subtype": [
-        "C Elegans"
-      ],
-      "treatment": [
-        "e1370 mutation"
-      ]
+    "dimensions": {
+      "unit": "\u00b5m",
+      "values": {
+        "x": 560.7,
+        "y": 88.1,
+        "z": 40.6
+      }
     },
-    "institution": [
-      "HHMI/Janelia", "Max Delbrück Center"
+    "startDate": "2012-01-01",
+    "duration": 160,
+    "biasVoltage": 0.0,
+    "scanRate": 0.0,
+    "current": 0.0,
+    "primaryEnergy": 0.0
+  },
+  "sample": {
+    "description": "C. elegans dauer (e1370)",
+    "protocol": "Freeze substitution",
+    "contributions": "Sample provided by Stephan Preibisch (HHMI/Janelia), prepared and imaged by Mei Sun and Yalin Wang (HHMI/Janelia), reconstructed by Stephan Preibisch (MDC Berlin), segmented by Ella Bahry (MDC Berlin)",
+    "organism": [
+      "C. Elegans"
     ],
-    "softwareAvailability": "open",
-    "DOI": [],
-    "publications": []
-  }
+    "type": [
+      "Whole organism"
+    ],
+    "subtype": [
+      "C Elegans"
+    ],
+    "treatment": [
+      "e1370 mutation"
+    ]
+  },
+  "institution": [
+    "HHMI/Janelia",
+    "Max Delbr\u00fcck Center"
+  ],
+  "softwareAvailability": "open",
+  "DOI": [],
+  "publications": []
+}

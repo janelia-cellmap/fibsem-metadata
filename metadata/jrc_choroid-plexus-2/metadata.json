@@ -1,6 +1,7 @@
 {
   "title": "Mouse choroid plexus",
   "id": "jrc_choroid-plexus-2",
+  "thumbnailURL": "https://janelia-cosem-datasets.s3.amazonaws.com/jrc_choroid-plexus-2/thumbnail.jpg",
   "imaging": {
     "id": "",
     "institution": "Janelia",

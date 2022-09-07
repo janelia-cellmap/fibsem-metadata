@@ -1,6 +1,7 @@
 {
   "title": "Interphase HeLa cell",
   "id": "jrc_hela-2",
+  "thumbnailURL": "https://janelia-cosem-datasets.s3.amazonaws.com/jrc_hela-2/thumbnail.jpg",
   "imaging": {
     "id": "Aubrey_17-7-17_Cell2",
     "institution": "Janelia",

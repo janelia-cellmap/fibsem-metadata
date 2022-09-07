@@ -3,6 +3,7 @@
   "metadata": {
     "title": "HeLa cell with RUSH cargo",
     "id": "jrc_hela-22",
+    "thumbnailURL": "https://janelia-cosem-datasets.s3.amazonaws.com/jrc_hela-22/thumbnail.jpg",
     "imaging": {
       "id": "Cryo_20170412_CS6_Cell25",
       "institution": "Janelia",

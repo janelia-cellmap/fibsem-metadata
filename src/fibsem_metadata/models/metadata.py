@@ -1,6 +1,6 @@
 import click
 from datetime import date
-from typing import List, Dict, Union
+from typing import List, Dict, Union, Optional
 from enum import Enum
 
 from fibsem_metadata.models.base import StrictBaseModel
@@ -69,6 +69,7 @@ class DatasetMetadata(StrictBaseModel):
 
     title: str
     id: str
+    thumbnailURL: Optional[HttpUrl]
     imaging: FIBSEMImagingMetadata
     sample: SampleMetadata
     institution: List[str]
