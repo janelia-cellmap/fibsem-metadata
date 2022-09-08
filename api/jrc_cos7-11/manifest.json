@@ -3,6 +3,7 @@
   "metadata": {
     "title": "COS-7 cell overexpressing ER and mitochondria markers for CLEM",
     "id": "jrc_cos7-11",
+    "thumbnailURL": "https://janelia-cosem-datasets.s3.amazonaws.com/jrc_cos7-11/thumbnail.jpg",
     "imaging": {
       "id": "Cryo_LoadID_277_Cell11",
       "institution": "Janelia",
@@ -72,47 +73,6 @@
     ]
   },
   "sources": {
-    "mito_pred": {
-      "name": "mito_pred",
-      "description": "Mitochondria",
-      "url": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/labels/mito_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          4.0,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "green",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
     "mito_palm": {
       "name": "mito_palm",
       "description": "Light Microscopy (PALM) of Mitochondria",
@@ -195,10 +155,10 @@
       },
       "subsources": []
     },
-    "fibsem-uint16": {
-      "name": "fibsem-uint16",
-      "description": "FIB-SEM Data (uncompressed)",
-      "url": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/em/fibsem-uint16",
+    "mito_pred": {
+      "name": "mito_pred",
+      "description": "Mitochondria",
+      "url": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/labels/mito_pred",
       "format": "n5",
       "transform": {
         "axes": [
@@ -217,21 +177,21 @@
           0.0
         ],
         "scale": [
-          8.0,
-          8.0,
-          8.0
+          4.0,
+          4.0,
+          4.0
         ]
       },
       "sampleType": "scalar",
-      "contentType": "em",
+      "contentType": "prediction",
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
-          "end": 456,
+          "end": 255,
           "min": 0,
-          "max": 65535
+          "max": 255
         },
-        "color": "white",
+        "color": "green",
         "invertLUT": false
       },
       "subsources": []
@@ -314,6 +274,47 @@
           "max": 255
         },
         "color": "blue",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "fibsem-uint16": {
+      "name": "fibsem-uint16",
+      "description": "FIB-SEM Data (uncompressed)",
+      "url": "s3://janelia-cosem-datasets/jrc_cos7-11/jrc_cos7-11.n5/em/fibsem-uint16",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "em",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 456,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
         "invertLUT": false
       },
       "subsources": []

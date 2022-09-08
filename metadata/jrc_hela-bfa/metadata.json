@@ -1,6 +1,7 @@
 {
   "title": "BFA-treated HeLa cell",
   "id": "jrc_hela-bfa",
+  "thumbnailURL": "https://janelia-cosem-datasets.s3.amazonaws.com/jrc_hela-bfa/thumbnail.jpg",
   "imaging": {
     "id": "Cryo_LoadID445_ROI3",
     "institution": "Janelia",

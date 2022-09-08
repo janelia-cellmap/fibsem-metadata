@@ -3,6 +3,7 @@
   "metadata": {
     "title": "Entire C. elegans dauer (e1370)",
     "id": "jrc_dauer-larva",
+    "thumbnailURL": "https://janelia-cosem-datasets.s3.amazonaws.com/jrc_dauer-larva/thumbnail.jpg",
     "imaging": {
       "id": "",
       "institution": "HHMI/Janelia",
@@ -55,47 +56,6 @@
     "publications": []
   },
   "sources": {
-    "tem-uint8": {
-      "name": "tem-uint8",
-      "description": "TEM Data",
-      "url": "s3://janelia-cosem-datasets/jrc_dauer-larva/jrc_dauer-larva.n5/em/tem-uint8",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          70.0,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "em",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
     "nucleus_seg": {
       "name": "nucleus_seg",
       "description": "Nucleus",
@@ -133,6 +93,47 @@
           "max": 255
         },
         "color": "red",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "tem-uint8": {
+      "name": "tem-uint8",
+      "description": "TEM Data",
+      "url": "s3://janelia-cosem-datasets/jrc_dauer-larva/jrc_dauer-larva.n5/em/tem-uint8",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          70.0,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "em",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
         "invertLUT": false
       },
       "subsources": []

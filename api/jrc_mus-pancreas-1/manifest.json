@@ -3,6 +3,7 @@
   "metadata": {
     "title": "Isolated murine pancreatic islets",
     "id": "jrc_mus-pancreas-1",
+    "thumbnailURL": "https://janelia-cosem-datasets.s3.amazonaws.com/jrc_mus-pancreas-1/thumbnail.jpg",
     "imaging": {
       "id": "G64-2-1_HighGlucose",
       "institution": "Janelia",

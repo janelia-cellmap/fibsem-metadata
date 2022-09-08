@@ -1,6 +1,7 @@
 {
   "title": "Mitotic HeLa cell",
   "id": "jrc_hela-4",
+  "thumbnailURL": "https://janelia-cosem-datasets.s3.amazonaws.com/jrc_hela-4/thumbnail.jpg",
   "imaging": {
     "id": "Cryo_17-7_17_Cell4",
     "institution": "Janelia",
