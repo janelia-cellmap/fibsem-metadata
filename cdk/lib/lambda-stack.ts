@@ -27,6 +27,7 @@ export class CellmapAPILambdaStack extends cdk.Stack {
           vpcSubnets: {subnetType: ec2.SubnetType.PRIVATE_WITH_NAT},
           securityGroups: [props.lambdaToRDSProxyGroup],
           runtime: lambda.Runtime.PYTHON_3_9,
+          memorySize: 2048,
           handler: 'fibsem_metadata/main.handler',
           code: lambda.Code.fromAsset('../artifact.zip'),
           environment: {
