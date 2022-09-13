@@ -30,9 +30,7 @@ def get_datasets(
 def get_dataset_by_name(
     *, dataset_name: str, db: Session = Depends(deps.get_db)
 ) -> schemas.DatasetTable:
-    crud_class = crud.dataset_crud
-    query = db.query(crud_class.model).filter(crud_class.model.name == dataset_name)
-    result = query.first()
+    result = crud.dataset_crud.get_by_name(db, name=dataset_name)
     if not result:
         raise HTTPException(
             status_code=404, detail=f"Dataset with name {dataset_name} was not found."

@@ -21,5 +21,6 @@ class PublicationTable(Base):
     type = Column(String)
     url = Column(String)
     datasets = relationship(
-        "DatasetTable", secondary=pub_to_dataset, back_populates="publications"
+        "DatasetTable", secondary=pub_to_dataset, back_populates="publications",
+        lazy='selectin'
     )

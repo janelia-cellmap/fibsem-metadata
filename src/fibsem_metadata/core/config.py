@@ -9,7 +9,7 @@ class Settings(BaseSettings):
     DB_HOST: str = 'localhost'
     DB_USER: str = 'postgres'
     DB_PORT: int = 5432
-    DB_NAME: str = 'fibsem_metadata'
+    DB_NAME: str = 'cellmap'
     DB_PASSWORD: str = 'admin'
 
     BACKEND_CORS_ORIGINS: List[AnyHttpUrl] = [

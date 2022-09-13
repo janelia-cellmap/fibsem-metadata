@@ -62,7 +62,8 @@ export class CellmapDBStack extends cdk.Stack {
       allowAllOutbound: true
     });
 
-    DbBastionHostGroup.addIngressRule(ec2.Peer.ipv4('206.241.0.254/32'), ec2.Port.tcp(22), 'ssh access');
+    DbBastionHostGroup.addIngressRule(ec2.Peer.anyIpv4(), ec2.Port.tcp(22), 'ssh from anywhere');
+    //DbBastionHostGroup.addIngressRule(ec2.Peer.ipv4('206.241.0.254/32'), ec2.Port.tcp(22), 'ssh access from janelia workstation');
     
     dbConnectionGroup.addIngressRule(dbConnectionGroup, ec2.Port.tcp(dbPort), 'allow db connection');
     dbConnectionGroup.addIngressRule(this.lambdaToRDSProxyGroup, ec2.Port.tcp(dbPort), 'allow lambda connection');
@@ -77,8 +78,8 @@ export class CellmapDBStack extends cdk.Stack {
         version: rds.PostgresEngineVersion.VER_13_7,
       }),
       instanceType: ec2.InstanceType.of(
-        ec2.InstanceClass.BURSTABLE3,
-        ec2.InstanceSize.MICRO,
+        ec2.InstanceClass.M5,
+        ec2.InstanceSize.LARGE,
       ),
       credentials: rds.Credentials.fromSecret(secret),
       multiAz: false,
