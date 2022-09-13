@@ -62,7 +62,7 @@ export class CellmapDBStack extends cdk.Stack {
       allowAllOutbound: true
     });
 
-    DbBastionHostGroup.addIngressRule(ec2.Peer.ipv4('173.67.197.229/32'), ec2.Port.tcp(22), 'ssh access');
+    DbBastionHostGroup.addIngressRule(ec2.Peer.ipv4('206.241.0.254/32'), ec2.Port.tcp(22), 'ssh access');
     
     dbConnectionGroup.addIngressRule(dbConnectionGroup, ec2.Port.tcp(dbPort), 'allow db connection');
     dbConnectionGroup.addIngressRule(this.lambdaToRDSProxyGroup, ec2.Port.tcp(dbPort), 'allow lambda connection');
