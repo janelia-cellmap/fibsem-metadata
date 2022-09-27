@@ -1,5 +1,5 @@
 {
-  "title": "your title here",
+  "title": "D. melanogaster whole larva ('igor')",
   "id": "jrc_fly-larva-1",
   "thumbnailURL": "https://janelia-cosem-datasets.s3.amazonaws.com/jrc_fly-larva-1/thumbnail.jpg",
   "imaging": {
@@ -8,17 +8,17 @@
     "gridSpacing": {
       "unit": "nm",
       "values": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
+        "x": 5.0,
+        "y": 5.0,
+        "z": 35.0
       }
     },
     "dimensions": {
-      "unit": "\u00b5m",
+      "unit": "nm",
       "values": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
+        "x": 499200.0,
+        "y": 158080.0,
+        "z": 168560.0
       }
     },
     "startDate": "2000-00-00",
@@ -29,7 +29,7 @@
     "primaryEnergy": 0.0
   },
   "sample": {
-    "description": "your description here",
+    "description": "D. melanogaster whole larva ('igor')",
     "protocol": "your protocol here",
     "contributions": "your contributions here",
     "organism": [
@@ -49,12 +49,6 @@
     "HHMI/Janelia"
   ],
   "softwareAvailability": "open",
-  "DOI": [{
-    "href": "url to DOI",
-    "title": "title of DOI"
-  }],
-  "publications": [{
-    "href": "url to paper",
-    "title": "title of paper"
-  }]
+  "DOI": [],
+  "publications": []
 }
