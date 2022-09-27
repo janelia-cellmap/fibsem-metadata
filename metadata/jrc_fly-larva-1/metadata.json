@@ -21,8 +21,8 @@
         "z": 168560.0
       }
     },
-    "startDate": "2000-00-00",
-    "duration": 0,
+    "startDate": "2000-00-00",  // todo
+    "duration": 0,  // todo
     "biasVoltage": 0.0,
     "scanRate": 0.0,
     "current": 0.0,
@@ -30,8 +30,8 @@
   },
   "sample": {
     "description": "D. melanogaster whole larva ('igor')",
-    "protocol": "your protocol here",
-    "contributions": "your contributions here",
+    "protocol": "your protocol here",  // todo
+    "contributions": "your contributions here",  // todo
     "organism": [
       "fly"
     ],
