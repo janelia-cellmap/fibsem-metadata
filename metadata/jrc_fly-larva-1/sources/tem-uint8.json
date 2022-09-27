@@ -1,7 +1,7 @@
 {
     "name": "tem-uint8",
     "description": "TEM Data",
-    "url": "s3://janelia-cosem-datasets/jrc_dauer-larva/jrc_fly-larva-1.n5/em/tem-uint8",
+    "url": "s3://janelia-cosem-datasets/jrc_fly-larva-1/jrc_fly-larva-1.n5/em/tem-uint8",
     "format": "n5",
     "transform": {
       "axes": [
