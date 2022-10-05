@@ -1,0 +1,54 @@
+{
+  "title": "D. melanogaster whole larva ('igor')",
+  "id": "jrc_fly-larva-1",
+  "thumbnailURL": "https://janelia-cosem-datasets.s3.amazonaws.com/jrc_fly-larva-1/thumbnail.jpg",
+  "imaging": {
+    "id": "jrc_fly-larva-1",
+    "institution": "HHMI/Janelia",
+    "gridSpacing": {
+      "unit": "nm",
+      "values": {
+        "x": 5.0,
+        "y": 5.0,
+        "z": 35.0
+      }
+    },
+    "dimensions": {
+      "unit": "nm",
+      "values": {
+        "x": 499200.0,
+        "y": 158080.0,
+        "z": 168560.0
+      }
+    },
+    "startDate": "2015-01-01",
+    "duration": 365,
+    "biasVoltage": 0.0,
+    "scanRate": 0.0,
+    "current": 0.0,
+    "primaryEnergy": 0.0
+  },
+  "sample": {
+    "description": "D. melanogaster whole larva ('igor')",
+    "protocol": "Chemical fixation with PFA and Glutaraldehyde, followed by osmification, then on-section contrasting with uranyl acetate and lead citrate.",
+    "contributions": "Sample provided by Albert Cardona (HHMI Janelia). Sample fixed, stained, and embedded by Rick Fetter (HHMI Janelia). Sample heavy metal contrasting by Wei-Peng Lee (HHMI Janelia). Sample sectioned by David Peale and Harald Hess (both HHMI Janelia) with iTome. Sections imaged by David Peale (HHMI Janelia).",
+    "organism": [
+      "fly"
+    ],
+    "type": [
+      "Whole organism"
+    ],
+    "subtype": [
+      "d melanogaster"
+    ],
+    "treatment": [
+      ""
+    ]
+  },
+  "institution": [
+    "HHMI/Janelia"
+  ],
+  "softwareAvailability": "open",
+  "DOI": [],
+  "publications": []
+}
