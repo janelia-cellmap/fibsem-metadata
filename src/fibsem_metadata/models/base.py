@@ -14,3 +14,4 @@ class Base(BaseModel):
         extra = Extra.forbid
         orm_mode = True
         alias_generator = camelize
+        allow_population_by_field_name = True

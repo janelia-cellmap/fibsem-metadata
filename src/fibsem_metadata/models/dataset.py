@@ -26,7 +26,8 @@ class Dataset(Base):
     publications: List[Publication]
     images: List[Image]
     views: List[View]
-    thumbnailURL: HttpUrl
+    thumbnail_url: HttpUrl
+    published: bool
 
 
 class DatasetCreate(Dataset):

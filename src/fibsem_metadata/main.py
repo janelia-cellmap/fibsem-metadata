@@ -4,7 +4,7 @@ from fastapi import APIRouter, FastAPI
 from mangum import Mangum
 from fibsem_metadata.api.v1.api import api_router
 from fibsem_metadata.core.config import settings
-from typing import Dict
+from typing import Dict, Union
 
 
 app = FastAPI(title="Cellmap")
@@ -12,7 +12,7 @@ root_router = APIRouter()
 
 
 @root_router.get("/health")
-def api_status() -> Dict[str, bool]:
+async def api_status() -> Dict[str, Union[bool, str]]:
     from fibsem_metadata.db.session import engine
     from sqlalchemy.exc import OperationalError
     import fibsem_metadata
