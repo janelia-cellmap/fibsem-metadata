@@ -10,5 +10,5 @@ services:
       - ./data/db:/var/lib/postgresql/data
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_DB=fibsem_metadata
+      - POSTGRES_DB=cellmap
       - POSTGRES_PASSWORD=admin
