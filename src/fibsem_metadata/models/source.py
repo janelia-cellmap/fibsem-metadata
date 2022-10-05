@@ -99,6 +99,7 @@ class ArrayContainerFormat(str, Enum):
     """
     Supported chunked array container formats
     """
+
     n5 = "n5"
     zarr = "zarr"
     precomputed = "precomputed"
@@ -108,6 +109,7 @@ class ContentType(str, Enum):
     """
     Semantic classes for image data
     """
+
     em = "em"
     lm = "lm"
     prediction = "prediction"
@@ -121,6 +123,7 @@ class SampleType(str, Enum):
     The class "scalar" contains samples that represent a quantity.
     The class "label" contains samples that represent a class or identity.
     """
+
     scalar = "scalar"
     label = "label"
 
@@ -136,6 +139,7 @@ class ContrastLimits(Base):
     the range of a histogram adjustment display to include a sensible range
     of values.
     """
+
     start: float
     end: float
     min: float
@@ -157,6 +161,7 @@ class DataSource(Base):
     A representation of some describable, accessible piece of
     spatial data.
     """
+
     name: str
     description: str
     url: str
@@ -168,6 +173,7 @@ class Mesh(DataSource):
     """
     A mesh, parametrized by a format and a list of integer ids
     """
+
     format: MeshFormat
     ids: List[int]
 
@@ -186,9 +192,9 @@ class MeshUpdate(Mesh):
 
 class Image(DataSource):
     format: ArrayContainerFormat
-    sampleType: SampleType
-    contentType: ContentType
-    displaySettings: DisplaySettings
+    sample_type: SampleType
+    content_type: ContentType
+    display_settings: DisplaySettings
     subsources: List[Mesh]
 
 

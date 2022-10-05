@@ -4,5 +4,5 @@ from .crop import Crop
 from .dataset import Dataset
 from .publication import Publication
 from .sample import Sample
-from .source import Mesh, Volume
+from .source import Mesh, Image
 from .view import View

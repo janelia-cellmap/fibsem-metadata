@@ -22,7 +22,7 @@ class CropTable(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String, index=True, unique=True)
     description = Column(String, index=True)
-    source_id = Column(ForeignKey("volume.id"), nullable=False)
+    source_id = Column(ForeignKey("image.id"), nullable=False)
     annotations = relationship(LabelClassTable, back_populates="crop")
     shape = Column(postgresql.ARRAY(Integer))
     completion_stage = Column(String, index=True)

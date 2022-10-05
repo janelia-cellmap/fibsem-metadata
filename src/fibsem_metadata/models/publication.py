@@ -9,6 +9,7 @@ class PublicationType(str, Enum):
     """
     The types of publications supported -- DOI or paper.
     """
+
     doi = "doi"
     paper = "paper"
 

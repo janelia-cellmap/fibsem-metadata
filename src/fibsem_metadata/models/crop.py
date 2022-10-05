@@ -8,12 +8,12 @@ from .source import Image
 
 class CompletionStage(str, Enum):
     validation = "Validation"
-    trainingActive = "In training"
-    trainingReady = "Ready for training"
-    convertH5 = "Converted to h5"
+    training_active = "In training"
+    training_ready = "Ready for training"
+    convert_h5 = "Converted to h5"
     finalization = "Finalization and export"
-    annotationDetailed = "Detailed annotation"
-    annotationBulk = "Bulk annotation"
+    annotation_detailed = "Detailed annotation"
+    annotation_bulk = "Bulk annotation"
 
 
 class LabelName(Base):
@@ -24,8 +24,7 @@ class LabelName(Base):
 LABELS = (
     LabelName(long="Centrosome", short="Centrosome"),
     LabelName(long="Centrosome Distal Appendage", short="Controsome D App"),
-    LabelName(long="Centrosome Subdistal Appendage",
-              short="Controsome SD App"),
+    LabelName(long="Centrosome Subdistal Appendage", short="Controsome SD App"),
     LabelName(long="Chromatin", short="Chromatin"),
     LabelName(long="Extracellular Space", short="ECS"),
     LabelName(long="Endosomal Network", short="Endo"),
@@ -33,8 +32,7 @@ LABELS = (
     LabelName(long="Endoplasmic Reticulum", short="ER"),
     LabelName(long="Endoplasmic Reticulum Membrane", short="ER mem"),
     LabelName(long="Endoplasmic Reticulum Exit Site", short="ERES"),
-    LabelName(long="Endoplasmic Reticulum Exit Site Membrane",
-              short="ERES mem"),
+    LabelName(long="Endoplasmic Reticulum Exit Site Membrane", short="ERES mem"),
     LabelName(long="Euchromatin", short="E Chrom"),
     LabelName(long="Nucleolus-associated Euchromatin", short="N-E Chrom"),
     LabelName(long="Golgi", short="Golgi"),
@@ -71,7 +69,7 @@ class AnnotationState(Base):
 class Label(Base):
     name: LabelName
     value: int
-    annotationState: AnnotationState
+    annotation_state: AnnotationState
 
 
 class Crop(Base):
@@ -80,6 +78,6 @@ class Crop(Base):
     source: Image
     annotations: List[Label]
     shape: List[int]
-    completionStage: CompletionStage
-    transformWorld: SpatialTransform
-    transformSource: SpatialTransform
+    completion_stage: CompletionStage
+    transform_world: SpatialTransform
+    transform_source: SpatialTransform

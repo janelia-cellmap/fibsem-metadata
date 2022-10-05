@@ -16,4 +16,4 @@ class SampleTable(Base):
     type = Column(postgresql.ARRAY(String))
     subtype = Column(postgresql.ARRAY(String))
     treatment = Column(postgresql.ARRAY(String))
-    datasets = relationship("DatasetTable", lazy='selectin')
+    datasets = relationship("DatasetTable", lazy="selectin")

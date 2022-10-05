@@ -9,7 +9,7 @@ from .base import Base
 class View(Base):
     name: str
     description: str
-    sourceNames: List[str]
+    source_names: List[str]
     position: Optional[List[float]]
     scale: Optional[float]
     orientation: Optional[List[float]]

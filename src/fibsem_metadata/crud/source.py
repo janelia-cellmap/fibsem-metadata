@@ -1,11 +1,11 @@
-from fibsem_metadata.models.source import VolumeCreate, VolumeUpdate
-from fibsem_metadata.schemas.source import VolumeTable
+from fibsem_metadata.models.source import ImageCreate, ImageUpdate
+from fibsem_metadata.schemas.source import ImageTable
 
 from .base import Base
 
 
-class VolumeCRUD(Base[VolumeTable, VolumeCreate, VolumeUpdate]):
+class ImageCRUD(Base[ImageTable, ImageCreate, ImageUpdate]):
     pass
 
 
-volume_crud = VolumeCRUD(VolumeTable)
+image_crud = ImageCRUD(ImageTable)

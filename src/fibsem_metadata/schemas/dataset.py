@@ -6,7 +6,7 @@ from .acquisition import FIBSEMAcquisitionTable
 from .base import Base
 from .publication import PublicationTable, pub_to_dataset
 from .sample import SampleTable
-from .source import VolumeTable
+from .source import ImageTable
 from .view import ViewTable
 
 
@@ -20,16 +20,14 @@ class DatasetTable(Base):
     institutions = Column(postgresql.ARRAY(String))
     software_availability = Column(String)
 
-    volumes = relationship(VolumeTable)
+    images = relationship(ImageTable)
     views = relationship(ViewTable)
 
     acquisition_id = Column(
         Integer, ForeignKey("fibsem_acquisition.id"), nullable=True, index=True
     )
 
-    acquisition = relationship(
-        FIBSEMAcquisitionTable, back_populates="datasets"
-    )
+    acquisition = relationship(FIBSEMAcquisitionTable, back_populates="datasets")
 
     sample_id = Column(Integer, ForeignKey("sample.id"), nullable=True, index=True)
 

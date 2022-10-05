@@ -20,7 +20,7 @@ class Dataset(Base):
     name: str
     description: str
     institutions: List[str]
-    softwareAvailability: SoftwareAvailability
+    software_availability: SoftwareAvailability
     acquisition: Optional[FIBSEMAcquisition]
     sample: Optional[Sample]
     publications: List[Publication]

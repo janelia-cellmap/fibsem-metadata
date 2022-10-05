@@ -5,11 +5,11 @@ from sqlalchemy.orm import relationship
 
 from .base import Base
 
-view_to_volume = Table(
-    "view_to_volume",
+view_to_image = Table(
+    "view_to_image",
     Base.metadata,
     Column("view_id", ForeignKey("view.id"), primary_key=True, index=True),
-    Column("volume_id", ForeignKey("volume.id"), primary_key=True, index=True),
+    Column("image_id", ForeignKey("image.id"), primary_key=True, index=True),
 )
 
 
@@ -22,7 +22,7 @@ class ViewTable(Base):
         String, ForeignKey("dataset.name"), nullable=False, index=True
     )
     description = Column(String)
-    sources = relationship("VolumeTable", secondary=view_to_volume)
+    sources = relationship("ImageTable", secondary=view_to_image)
     source_names = association_proxy("sources", "name")
     position = Column(postgresql.ARRAY(Float))
     scale = Column(Float)

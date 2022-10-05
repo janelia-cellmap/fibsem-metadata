@@ -1,5 +1,5 @@
 from pydantic import PositiveInt
-
+from typing import List
 from ..base import Base
 
 
