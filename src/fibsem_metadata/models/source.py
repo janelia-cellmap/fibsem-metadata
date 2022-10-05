@@ -77,7 +77,8 @@ class OffsetTransform(ScaleTranslate):
 
 class SpatialTransform(ScaleTranslate):
     """
-    Representation of an N-dimensional scaling + translation transform for labelled axes with units.
+    Representation of an N-dimensional scaling + translation transform for
+    labelled axes with units.
     """
 
     units: List[str]
@@ -85,22 +86,28 @@ class SpatialTransform(ScaleTranslate):
     scale: List[float]
 
 
-class MeshTypeEnum(str, Enum):
+class MeshFormat(str, Enum):
     """
-    Strings representing supported mesh formats
+    Supported mesh formats
     """
 
     neuroglancer_legacy_mesh = "neuroglancer_legacy_mesh"
     neuroglancer_multilod_draco = "neuroglancer_multilod_draco"
 
 
-class ArrayContainerTypeEnum(str, Enum):
+class ArrayContainerFormat(str, Enum):
+    """
+    Supported chunked array container formats
+    """
     n5 = "n5"
     zarr = "zarr"
     precomputed = "precomputed"
 
 
-class ContentTypeEnum(str, Enum):
+class ContentType(str, Enum):
+    """
+    Semantic classes for image data
+    """
     em = "em"
     lm = "lm"
     prediction = "prediction"
@@ -108,21 +115,36 @@ class ContentTypeEnum(str, Enum):
     analysis = "analysis"
 
 
-class SampleTypeEnum(str, Enum):
+class SampleType(str, Enum):
+    """
+    Semantic classes for image samples.
+    The class "scalar" contains samples that represent a quantity.
+    The class "label" contains samples that represent a class or identity.
+    """
     scalar = "scalar"
     label = "label"
 
 
 class ContrastLimits(Base):
-    start: int
-    end: int
-    min: int
-    max: int
+    """
+    Specifies the range of values to use when displaying an image.
+    The "start" and "end" properties determine the values that should be
+    mapped to the lowest and highest intensities in a given lookup table.
+
+    The "min" and "max" values determine the lowest and highest possible
+    values in the image histogram. These values are useful to setting up
+    the range of a histogram adjustment display to include a sensible range
+    of values.
+    """
+    start: float
+    end: float
+    min: float
+    max: float
 
 
 class DisplaySettings(Base):
     """
-    Metadata for display settings
+    Metadata for display settings.
     """
 
     contrast_limits: ContrastLimits
@@ -131,6 +153,10 @@ class DisplaySettings(Base):
 
 
 class DataSource(Base):
+    """
+    A representation of some describable, accessible piece of
+    spatial data.
+    """
     name: str
     description: str
     url: str
@@ -139,7 +165,10 @@ class DataSource(Base):
 
 
 class Mesh(DataSource):
-    format: MeshTypeEnum
+    """
+    A mesh, parametrized by a format and a list of integer ids
+    """
+    format: MeshFormat
     ids: List[int]
 
 
@@ -155,21 +184,21 @@ class MeshUpdate(Mesh):
     pass
 
 
-class Volume(DataSource):
-    format: ArrayContainerTypeEnum
-    sample_type: SampleTypeEnum
-    content_type: ContentTypeEnum
-    display_settings: DisplaySettings
+class Image(DataSource):
+    format: ArrayContainerFormat
+    sampleType: SampleType
+    contentType: ContentType
+    displaySettings: DisplaySettings
     subsources: List[Mesh]
 
 
-class VolumeRead(Volume):
+class ImageRead(Image):
     id: int
 
 
-class VolumeCreate(Volume):
+class ImageCreate(Image):
     pass
 
 
-class VolumeUpdate(Volume):
+class ImageUpdate(Image):
     pass

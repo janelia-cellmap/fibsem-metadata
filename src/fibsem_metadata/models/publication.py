@@ -5,14 +5,17 @@ from pydantic import HttpUrl
 from .base import Base
 
 
-class PublicationTypeEnum(str, Enum):
+class PublicationType(str, Enum):
+    """
+    The types of publications supported -- DOI or paper.
+    """
     doi = "doi"
     paper = "paper"
 
 
 class Publication(Base):
     name: str
-    type: PublicationTypeEnum
+    type: PublicationType
     url: HttpUrl
 
 

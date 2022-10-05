@@ -12,8 +12,8 @@ class UnitfulVector(Base):
 class ImageAcquisition(Base):
     name: str
     institution: str
-    start_date: Optional[date]
-    grid_spacing: UnitfulVector
+    startDate: Optional[date]
+    gridSpacing: UnitfulVector
     dimensions: UnitfulVector
 
 
@@ -22,12 +22,12 @@ class FIBSEMAcquisition(ImageAcquisition):
     Metadata describing the FIB-SEM imaging process.
     """
 
-    start_date: Optional[date]
-    duration_days: Optional[int]
-    bias_voltage: Optional[float]
-    scan_rate: Optional[float]
+    startDate: Optional[date]
+    durationDays: Optional[int]
+    biasVoltage: Optional[float]
+    scanRate: Optional[float]
     current: Optional[float]
-    primary_energy: Optional[float]
+    primaryEnergy: Optional[float]
 
 
 class FIBSEMAcquisitionRead(FIBSEMAcquisition):

@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import List, Optional, Any
 
 from pydantic import validator
 from sqlalchemy.ext.associationproxy import _AssociationList
@@ -9,13 +9,13 @@ from .base import Base
 class View(Base):
     name: str
     description: str
-    source_names: List[str]
+    sourceNames: List[str]
     position: Optional[List[float]]
     scale: Optional[float]
     orientation: Optional[List[float]]
 
     @validator("source_names", pre=True)
-    def listify_association_proxy(cls, v):
+    def listify_association_proxy(cls, v: Any) -> List[str]:
         """
         Convert a list-like sqlalchemy association proxy into a list
         """

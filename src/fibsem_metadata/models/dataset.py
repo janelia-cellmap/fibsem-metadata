@@ -1,11 +1,12 @@
 from enum import Enum
 from typing import List, Optional
+from pydantic import HttpUrl
 
 from .acquisition import FIBSEMAcquisition
 from .base import Base
 from .publication import Publication
 from .sample import Sample
-from .source import Volume
+from .source import Image
 from .view import View
 
 
@@ -19,12 +20,13 @@ class Dataset(Base):
     name: str
     description: str
     institutions: List[str]
-    software_availability: SoftwareAvailability
+    softwareAvailability: SoftwareAvailability
     acquisition: Optional[FIBSEMAcquisition]
     sample: Optional[Sample]
     publications: List[Publication]
-    volumes: List[Volume]
+    images: List[Image]
     views: List[View]
+    thumbnailURL: HttpUrl
 
 
 class DatasetCreate(Dataset):

@@ -3,17 +3,17 @@ from typing import List
 
 from .base import Base
 from .multiscale.cosem import SpatialTransform
-from .source import Volume
+from .source import Image
 
 
-class CompletionStageEnum(str, Enum):
+class CompletionStage(str, Enum):
     validation = "Validation"
-    training_active = "In training"
-    training_ready = "Ready for training"
-    convert_h5 = "Converted to h5"
+    trainingActive = "In training"
+    trainingReady = "Ready for training"
+    convertH5 = "Converted to h5"
     finalization = "Finalization and export"
-    annotation_detailed = "Detailed annotation"
-    annotation_bulk = "Bulk annotation"
+    annotationDetailed = "Detailed annotation"
+    annotationBulk = "Bulk annotation"
 
 
 class LabelName(Base):
@@ -24,7 +24,8 @@ class LabelName(Base):
 LABELS = (
     LabelName(long="Centrosome", short="Centrosome"),
     LabelName(long="Centrosome Distal Appendage", short="Controsome D App"),
-    LabelName(long="Centrosome Subdistal Appendage", short="Controsome SD App"),
+    LabelName(long="Centrosome Subdistal Appendage",
+              short="Controsome SD App"),
     LabelName(long="Chromatin", short="Chromatin"),
     LabelName(long="Extracellular Space", short="ECS"),
     LabelName(long="Endosomal Network", short="Endo"),
@@ -32,7 +33,8 @@ LABELS = (
     LabelName(long="Endoplasmic Reticulum", short="ER"),
     LabelName(long="Endoplasmic Reticulum Membrane", short="ER mem"),
     LabelName(long="Endoplasmic Reticulum Exit Site", short="ERES"),
-    LabelName(long="Endoplasmic Reticulum Exit Site Membrane", short="ERES mem"),
+    LabelName(long="Endoplasmic Reticulum Exit Site Membrane",
+              short="ERES mem"),
     LabelName(long="Euchromatin", short="E Chrom"),
     LabelName(long="Nucleolus-associated Euchromatin", short="N-E Chrom"),
     LabelName(long="Golgi", short="Golgi"),
@@ -75,9 +77,9 @@ class Label(Base):
 class Crop(Base):
     name: str
     description: str
-    source: Volume
+    source: Image
     annotations: List[Label]
     shape: List[int]
-    completion_stage: CompletionStageEnum
-    transform_world: SpatialTransform
-    transform_source: SpatialTransform
+    completionStage: CompletionStage
+    transformWorld: SpatialTransform
+    transformSource: SpatialTransform
