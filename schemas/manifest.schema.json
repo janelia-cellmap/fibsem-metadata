@@ -1,0 +1,574 @@
+{
+  "title": "DatasetManifest",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "metadata": {
+      "$ref": "#/definitions/DatasetMetadata"
+    },
+    "sources": {
+      "title": "Sources",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/VolumeSource"
+      }
+    },
+    "views": {
+      "title": "Views",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/DatasetView"
+      }
+    }
+  },
+  "required": [
+    "name",
+    "metadata",
+    "sources",
+    "views"
+  ],
+  "additionalProperties": false,
+  "definitions": {
+    "UnitfulVector": {
+      "title": "UnitfulVector",
+      "type": "object",
+      "properties": {
+        "unit": {
+          "title": "Unit",
+          "type": "string"
+        },
+        "values": {
+          "title": "Values",
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        }
+      },
+      "required": [
+        "unit",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "FIBSEMImagingMetadata": {
+      "title": "FIBSEMImagingMetadata",
+      "description": "Metadata describing the FIB-SEM imaging process.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "institution": {
+          "title": "Institution",
+          "type": "string"
+        },
+        "gridSpacing": {
+          "$ref": "#/definitions/UnitfulVector"
+        },
+        "dimensions": {
+          "$ref": "#/definitions/UnitfulVector"
+        },
+        "startDate": {
+          "title": "Startdate",
+          "type": "string",
+          "format": "date"
+        },
+        "duration": {
+          "title": "Duration",
+          "type": "integer"
+        },
+        "biasVoltage": {
+          "title": "Biasvoltage",
+          "type": "number"
+        },
+        "scanRate": {
+          "title": "Scanrate",
+          "type": "number"
+        },
+        "current": {
+          "title": "Current",
+          "type": "number"
+        },
+        "primaryEnergy": {
+          "title": "Primaryenergy",
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "institution",
+        "gridSpacing",
+        "dimensions",
+        "startDate",
+        "duration",
+        "biasVoltage",
+        "scanRate",
+        "current",
+        "primaryEnergy"
+      ],
+      "additionalProperties": false
+    },
+    "SampleMetadata": {
+      "title": "SampleMetadata",
+      "description": "Metadata describing the sample and sample preparation.",
+      "type": "object",
+      "properties": {
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "protocol": {
+          "title": "Protocol",
+          "type": "string"
+        },
+        "contributions": {
+          "title": "Contributions",
+          "type": "string"
+        },
+        "organism": {
+          "title": "Organism",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "type": {
+          "title": "Type",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "subtype": {
+          "title": "Subtype",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "treatment": {
+          "title": "Treatment",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "description",
+        "protocol",
+        "contributions",
+        "organism",
+        "type",
+        "subtype",
+        "treatment"
+      ],
+      "additionalProperties": false
+    },
+    "SoftwareAvailability": {
+      "title": "SoftwareAvailability",
+      "description": "An enumeration.",
+      "enum": [
+        "open",
+        "partially open",
+        "closed"
+      ],
+      "type": "string"
+    },
+    "Hyperlink": {
+      "title": "Hyperlink",
+      "type": "object",
+      "properties": {
+        "href": {
+          "title": "Href",
+          "minLength": 1,
+          "maxLength": 2083,
+          "format": "uri",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "href",
+        "title"
+      ],
+      "additionalProperties": false
+    },
+    "DOI": {
+      "title": "DOI",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "DOI": {
+          "title": "Doi",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "DOI"
+      ],
+      "additionalProperties": false
+    },
+    "DatasetMetadata": {
+      "title": "DatasetMetadata",
+      "description": "Metadata for a bioimaging dataset.",
+      "type": "object",
+      "properties": {
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "thumbnailURL": {
+          "title": "Thumbnailurl",
+          "minLength": 1,
+          "maxLength": 2083,
+          "format": "uri",
+          "type": "string"
+        },
+        "imaging": {
+          "$ref": "#/definitions/FIBSEMImagingMetadata"
+        },
+        "sample": {
+          "$ref": "#/definitions/SampleMetadata"
+        },
+        "institution": {
+          "title": "Institution",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "softwareAvailability": {
+          "$ref": "#/definitions/SoftwareAvailability"
+        },
+        "DOI": {
+          "title": "Doi",
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "#/definitions/Hyperlink"
+              },
+              {
+                "$ref": "#/definitions/DOI"
+              }
+            ]
+          }
+        },
+        "publications": {
+          "title": "Publications",
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "#/definitions/Hyperlink"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          }
+        }
+      },
+      "required": [
+        "title",
+        "id",
+        "imaging",
+        "sample",
+        "institution",
+        "softwareAvailability",
+        "DOI",
+        "publications"
+      ],
+      "additionalProperties": false
+    },
+    "ArrayContainerTypeEnum": {
+      "title": "ArrayContainerTypeEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "n5",
+        "zarr",
+        "precomputed"
+      ],
+      "type": "string"
+    },
+    "SpatialTransform": {
+      "title": "SpatialTransform",
+      "description": "Representation of an N-dimensional scaling + translation transform for labelled axes with units.",
+      "type": "object",
+      "properties": {
+        "axes": {
+          "title": "Axes",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "units": {
+          "title": "Units",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "translate": {
+          "title": "Translate",
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "scale": {
+          "title": "Scale",
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        }
+      },
+      "required": [
+        "axes",
+        "units",
+        "translate",
+        "scale"
+      ],
+      "additionalProperties": false
+    },
+    "SampleTypeEnum": {
+      "title": "SampleTypeEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "scalar",
+        "label"
+      ],
+      "type": "string"
+    },
+    "ContentTypeEnum": {
+      "title": "ContentTypeEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "em",
+        "lm",
+        "prediction",
+        "segmentation",
+        "analysis"
+      ],
+      "type": "string"
+    },
+    "ContrastLimits": {
+      "title": "ContrastLimits",
+      "type": "object",
+      "properties": {
+        "start": {
+          "title": "Start",
+          "type": "integer"
+        },
+        "end": {
+          "title": "End",
+          "type": "integer"
+        },
+        "min": {
+          "title": "Min",
+          "type": "integer"
+        },
+        "max": {
+          "title": "Max",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "start",
+        "end",
+        "min",
+        "max"
+      ],
+      "additionalProperties": false
+    },
+    "DisplaySettings": {
+      "title": "DisplaySettings",
+      "description": "Metadata for display settings",
+      "type": "object",
+      "properties": {
+        "contrastLimits": {
+          "$ref": "#/definitions/ContrastLimits"
+        },
+        "color": {
+          "title": "Color",
+          "type": "string",
+          "format": "color"
+        },
+        "invertLUT": {
+          "title": "Invertlut",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "contrastLimits",
+        "invertLUT"
+      ],
+      "additionalProperties": false
+    },
+    "MeshTypeEnum": {
+      "title": "MeshTypeEnum",
+      "description": "Strings representing supported mesh formats",
+      "enum": [
+        "neuroglancer_legacy_mesh",
+        "neuroglancer_multilod_draco"
+      ],
+      "type": "string"
+    },
+    "MeshSource": {
+      "title": "MeshSource",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        },
+        "format": {
+          "$ref": "#/definitions/MeshTypeEnum"
+        },
+        "transform": {
+          "$ref": "#/definitions/SpatialTransform"
+        },
+        "ids": {
+          "title": "Ids",
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "url",
+        "format",
+        "transform",
+        "ids"
+      ],
+      "additionalProperties": false
+    },
+    "VolumeSource": {
+      "title": "VolumeSource",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        },
+        "format": {
+          "$ref": "#/definitions/ArrayContainerTypeEnum"
+        },
+        "transform": {
+          "$ref": "#/definitions/SpatialTransform"
+        },
+        "sampleType": {
+          "$ref": "#/definitions/SampleTypeEnum"
+        },
+        "contentType": {
+          "$ref": "#/definitions/ContentTypeEnum"
+        },
+        "displaySettings": {
+          "$ref": "#/definitions/DisplaySettings"
+        },
+        "subsources": {
+          "title": "Subsources",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MeshSource"
+          }
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "url",
+        "format",
+        "transform",
+        "sampleType",
+        "contentType",
+        "displaySettings",
+        "subsources"
+      ],
+      "additionalProperties": false
+    },
+    "DatasetView": {
+      "title": "DatasetView",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "sources": {
+          "title": "Sources",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "position": {
+          "title": "Position",
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "scale": {
+          "title": "Scale",
+          "type": "number"
+        },
+        "orientation": {
+          "title": "Orientation",
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "sources"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

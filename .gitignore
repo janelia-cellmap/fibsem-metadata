@@ -10,10 +10,13 @@ build
 _build
 .cache
 *.so
+<<<<<<< HEAD
 package
 *.zip
 # API
 api/**
+=======
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
 
 # Installer logs
 pip-log.txt

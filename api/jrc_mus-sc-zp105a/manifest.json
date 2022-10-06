@@ -3,6 +3,10 @@
   "metadata": {
     "title": "Mouse Spinal Cord",
     "id": "jrc_mus-sc-zp105a",
+<<<<<<< HEAD
+=======
+    "thumbnailURL": "https://janelia-cosem-datasets.s3.amazonaws.com/jrc_mus-sc-zp105a/thumbnail.jpg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
     "imaging": {
       "id": "",
       "institution": "Janelia",

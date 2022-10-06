@@ -2,7 +2,7 @@
 
 ## Motivation
 
-We store large electron microscopy datasets on cloud storage and offer a web site ([openorganelle](https://) openorganelle.janelia.org/)) for browsing those datasets. That site uses this github repo to discover which datasets exist, what their metadata is, which volumes are contained within each dataset, etc.
+We store large electron microscopy datasets on cloud storage and offer a web site ([openorganelle.janelia.org](https://openorganelle.janelia.org/)) for browsing those datasets. That site uses this github repo to discover which datasets exist, what their metadata is, which volumes are contained within each dataset, etc.
 
 ## Metadata model
 
@@ -23,9 +23,9 @@ metadata/jrc_fly-fsb-1
 ```
 
 The structures of the different JSON files are defined by python classes:
-- [dataset metadata](https://github.com/janelia-cosem/fibsem-metadata/blob/master/src/fibsem_metadata/models/dataset.py)
+- [dataset metadata](https://github.com/janelia-cosem/fibsem-metadata/blob/master/src/fibsem_metadata/models/metadata.py)
 - [dataset views](https://github.com/janelia-cosem/fibsem-metadata/blob/master/src/fibsem_metadata/models/views.py)
-- [sources](https://github.com/janelia-cosem/fibsem-metadata/blob/manifest_refactor/src/fibsem_metadata/models/sources.py)
+- [sources](https://github.com/janelia-cosem/fibsem-metadata/blob/master/src/fibsem_metadata/models/sources.py)
 
 ## Metadata API
 
@@ -38,7 +38,7 @@ api/jrc_fly-fsb-1
 ```
 OpenOrganelle accesses these files directly from github for each dataset.
 
-Because the `api` directory is derived entirely from the contents of the `metadata` directory, you should not edit the contents of `api` directly. Instead, the `api` directory is created programmatically by the [`generate_endpoints.py`](https://github.com/janelia-cosem/fibsem-metadata/blob/manifest_refactor/src/fibsem_metadata/generate_endpoints.py) script, which is used by a github actions workflow triggered on each commit.
+Because the `api` directory is derived entirely from the contents of the `metadata` directory, you should not edit the contents of `api` directly. Instead, the `api` directory is created programmatically by the [`generate_endpoints.py`](https://github.com/janelia-cosem/fibsem-metadata/blob/master/src/fibsem_metadata/generate_endpoints.py) script, which is used by a github actions workflow triggered on each commit.
 
 
 ## Adding metadata

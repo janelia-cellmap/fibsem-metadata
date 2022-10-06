@@ -1,7 +1,7 @@
 {
     "name": "er_seg",
-    "description": "Endoplasmic Reticulum (Ariadne)",
-    "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/ariadne/er_seg",
+    "description": "Endoplasmic Reticulum",
+    "url": "s3://janelia-cosem-datasets/jrc_mus-liver/jrc_mus-liver.n5/labels/er_seg",
     "format": "n5",
     "transform": {
       "axes": [
@@ -15,14 +15,14 @@
         "nm"
       ],
       "translate": [
-        15728,
-        30912,
-        30984
+        0,
+        0,
+        0
       ],
       "scale": [
-        8.0,
-        8.0,
-        8.0      ]
+        4.0,
+        4.0,
+        4.0      ]
     },
     "sampleType": "label",
     "contentType": "segmentation",
@@ -33,8 +33,9 @@
         "min": 0,
         "max": 255
       },
-      "color": null,
+      "color": "blue",
       "invertLUT": false
     },
     "subsources": []
   }
+  

@@ -3,6 +3,7 @@
   "metadata": {
     "title": "Macrophage cell",
     "id": "jrc_macrophage-2",
+    "thumbnailURL": "https://janelia-cosem-datasets.s3.amazonaws.com/jrc_macrophage-2/thumbnail.jpg",
     "imaging": {
       "id": "Cryo_FS80_Cell2",
       "institution": "Janelia",
@@ -72,6 +73,7 @@
     ]
   },
   "sources": {
+<<<<<<< HEAD
     "nucleus_seg": {
       "name": "nucleus_seg",
       "description": "Nucleus",
@@ -147,129 +149,12 @@
       "name": "mito_pm_contacts",
       "description": "Mito - Plasma Membrane Contact Sites",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mito_pm_contacts",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          3.36,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "analysis",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "ld-mem_seg": {
-      "name": "ld-mem_seg",
-      "description": "Lipid Droplet membrane",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ld-mem_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          3.36,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "lyso-mem_seg": {
-      "name": "lyso-mem_seg",
-      "description": "Lysosome membrane",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/lyso-mem_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          3.36,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "cent-dapp_pred": {
-      "name": "cent-dapp_pred",
-      "description": "Centrosome Distal Appendage",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/cent-dapp_pred",
+=======
+    "er-mem_pred": {
+      "name": "er-mem_pred",
+      "description": "Endoplasmic Reticulum membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er-mem_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -302,89 +187,7 @@
           "min": 0,
           "max": 255
         },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "cent-dapp_seg": {
-      "name": "cent-dapp_seg",
-      "description": "Centrosome Distal Appendage",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/cent-dapp_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          3.36,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "vesicle_pred": {
-      "name": "vesicle_pred",
-      "description": "Vesicle",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/vesicle_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          8000.0,
-          0.0
-        ],
-        "scale": [
-          3.36,
-          -4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "red",
+        "color": "blue",
         "invertLUT": false
       },
       "subsources": []
@@ -430,10 +233,17 @@
       },
       "subsources": []
     },
-    "ld_seg": {
-      "name": "ld_seg",
-      "description": "Lipid Droplet",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ld_seg",
+<<<<<<< HEAD
+    "ld-mem_seg": {
+      "name": "ld-mem_seg",
+      "description": "Lipid Droplet membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ld-mem_seg",
+=======
+    "lyso_pred": {
+      "name": "lyso_pred",
+      "description": "Lysosome",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/lyso_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -471,10 +281,17 @@
       },
       "subsources": []
     },
-    "er_pred": {
-      "name": "er_pred",
-      "description": "Endoplasmic Reticulum",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_pred",
+<<<<<<< HEAD
+    "lyso-mem_seg": {
+      "name": "lyso-mem_seg",
+      "description": "Lysosome membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/lyso-mem_seg",
+=======
+    "mt_pm_contacts": {
+      "name": "mt_pm_contacts",
+      "description": "Microtubule - Plasma Membrane Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mt_pm_contacts",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -489,33 +306,46 @@
         ],
         "translate": [
           0.0,
-          8000.0,
+          0.0,
           0.0
         ],
         "scale": [
           3.36,
-          -4.0,
+          4.0,
           4.0
         ]
       },
-      "sampleType": "scalar",
-      "contentType": "prediction",
+      "sampleType": "label",
+      "contentType": "segmentation",
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
+<<<<<<< HEAD
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+=======
           "end": 255,
           "min": 0,
           "max": 255
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
         },
-        "color": "blue",
+        "color": "white",
         "invertLUT": false
       },
       "subsources": []
     },
-    "ne-mem_seg": {
-      "name": "ne-mem_seg",
-      "description": "Nuclear Envelope membrane",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ne-mem_seg",
+<<<<<<< HEAD
+    "cent-dapp_pred": {
+      "name": "cent-dapp_pred",
+      "description": "Centrosome Distal Appendage",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/cent-dapp_pred",
+=======
+    "nucleolus_seg": {
+      "name": "nucleolus_seg",
+      "description": "Nucleoulus",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/nucleolus_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -553,10 +383,64 @@
       },
       "subsources": []
     },
-    "ribo_classified": {
-      "name": "ribo_classified",
-      "description": "Ribosomes classified by contact surface",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ribo_classified",
+<<<<<<< HEAD
+    "cent-dapp_seg": {
+      "name": "cent-dapp_seg",
+      "description": "Centrosome Distal Appendage",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/cent-dapp_seg",
+=======
+    "lyso-mem_seg": {
+      "name": "lyso-mem_seg",
+      "description": "Lysosome membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/lyso-mem_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+<<<<<<< HEAD
+    "vesicle_pred": {
+      "name": "vesicle_pred",
+      "description": "Vesicle",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/vesicle_pred",
+=======
+    "mito_skeleton": {
+      "name": "mito_skeleton",
+      "description": "Mitochrondria Skeletons",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mito_skeleton",
       "format": "n5",
       "transform": {
         "axes": [
@@ -585,19 +469,20 @@
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
-          "end": 255,
+          "end": 65535,
           "min": 0,
-          "max": 255
+          "max": 65535
         },
         "color": "white",
         "invertLUT": false
       },
       "subsources": []
     },
-    "endo-mem_pred": {
-      "name": "endo-mem_pred",
-      "description": "Endosome membrane",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/endo-mem_pred",
+    "nucleolus_pred": {
+      "name": "nucleolus_pred",
+      "description": "Nucleoulus",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/nucleolus_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -630,11 +515,375 @@
           "min": 0,
           "max": 255
         },
+        "color": "red",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+<<<<<<< HEAD
+    "endo_pred": {
+      "name": "endo_pred",
+      "description": "Endosomal Network",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/endo_pred",
+=======
+    "mito_seg": {
+      "name": "mito_seg",
+      "description": "Mitochondria",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mito_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          8000.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          -4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "prediction",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+<<<<<<< HEAD
         "color": "magenta",
         "invertLUT": false
       },
       "subsources": []
     },
+    "ld_seg": {
+      "name": "ld_seg",
+      "description": "Lipid Droplet",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ld_seg",
+=======
+        "color": "green",
+        "invertLUT": false
+      },
+      "subsources": [
+        {
+          "name": "mito_seg",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/neuroglancer/mesh/mito_seg",
+          "format": "neuroglancer_legacy_mesh",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "ids": []
+        }
+      ]
+    },
+    "er_mt_contacts": {
+      "name": "er_mt_contacts",
+      "description": "ER - Microtubule Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_mt_contacts",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+<<<<<<< HEAD
+      "contentType": "segmentation",
+=======
+      "contentType": "analysis",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+<<<<<<< HEAD
+    "er_pred": {
+      "name": "er_pred",
+      "description": "Endoplasmic Reticulum",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_pred",
+=======
+    "er_golgi_contacts": {
+      "name": "er_golgi_contacts",
+      "description": "ER - Golgi Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_golgi_contacts",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "blue",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+<<<<<<< HEAD
+    "ne-mem_seg": {
+      "name": "ne-mem_seg",
+      "description": "Nuclear Envelope membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ne-mem_seg",
+=======
+    "ne_seg": {
+      "name": "ne_seg",
+      "description": "Nuclear Envelope",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ne_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+<<<<<<< HEAD
+    "ribo_classified": {
+      "name": "ribo_classified",
+      "description": "Ribosomes classified by contact surface",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ribo_classified",
+=======
+    "nucleus_seg": {
+      "name": "nucleus_seg",
+      "description": "Nucleus",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/nucleus_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "red",
+        "invertLUT": false
+      },
+<<<<<<< HEAD
+      "subsources": []
+    },
+    "endo-mem_pred": {
+      "name": "endo-mem_pred",
+      "description": "Endosome membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/endo-mem_pred",
+=======
+      "subsources": [
+        {
+          "name": "nucleus_seg",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/neuroglancer/mesh/nucleus_seg",
+          "format": "neuroglancer_legacy_mesh",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "ids": []
+        }
+      ]
+    },
+    "vesicle_pred": {
+      "name": "vesicle_pred",
+      "description": "Vesicle",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/vesicle_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          8000.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          -4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "prediction",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+<<<<<<< HEAD
+        "color": "magenta",
+=======
+        "color": "red",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+<<<<<<< HEAD
     "endo_seg": {
       "name": "endo_seg",
       "description": "Endosomal Network",
@@ -710,6 +959,12 @@
       "name": "golgi-mem_pred",
       "description": "Golgi membrane",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/golgi-mem_pred",
+=======
+    "np_pred": {
+      "name": "np_pred",
+      "description": "Nuclear Pore",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/np_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -742,15 +997,26 @@
           "min": 0,
           "max": 255
         },
+<<<<<<< HEAD
         "color": "cyan",
+=======
+        "color": "white",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
         "invertLUT": false
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "endo-mem_seg": {
       "name": "endo-mem_seg",
       "description": "Endosome membrane",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/endo-mem_seg",
+=======
+    "golgi-mem_seg": {
+      "name": "golgi-mem_seg",
+      "description": "Golgi membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/golgi-mem_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -779,19 +1045,30 @@
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
-          "end": 65535,
+          "end": 255,
           "min": 0,
-          "max": 65535
+          "max": 255
         },
+<<<<<<< HEAD
         "color": "magenta",
+=======
+        "color": "cyan",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
         "invertLUT": false
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "mito-mem_seg": {
       "name": "mito-mem_seg",
       "description": "Mitochondria membrane",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mito-mem_seg",
+=======
+    "eres_pred": {
+      "name": "eres_pred",
+      "description": "Endoplasmic Reticulum Exit Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/eres_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -829,92 +1106,17 @@
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "mito-mem_pred": {
       "name": "mito-mem_pred",
       "description": "Mitochondria membrane",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mito-mem_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          8000.0,
-          0.0
-        ],
-        "scale": [
-          3.36,
-          -4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "green",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "er_curvature": {
-      "name": "er_curvature",
-      "description": "Reconstructed ER from Medial Surface with Curvature",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_curvature",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          3.36,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "analysis",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "mt-out_seg": {
-      "name": "mt-out_seg",
-      "description": "Microtubule outer",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mt-out_seg",
+=======
+    "endo_seg": {
+      "name": "endo_seg",
+      "description": "Endosomal Network",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/endo_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -947,14 +1149,14 @@
           "min": 0,
           "max": 65535
         },
-        "color": "orange",
+        "color": "green",
         "invertLUT": false
       },
       "subsources": [
         {
-          "name": "mt-out_seg",
+          "name": "endo_seg",
           "description": "",
-          "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/neuroglancer/mesh/mt-out_seg",
+          "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/neuroglancer/mesh/endo_seg",
           "format": "neuroglancer_legacy_mesh",
           "transform": {
             "axes": [
@@ -982,92 +1184,10 @@
         }
       ]
     },
-    "nucleolus_pred": {
-      "name": "nucleolus_pred",
-      "description": "Nucleoulus",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/nucleolus_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          8000.0,
-          0.0
-        ],
-        "scale": [
-          3.36,
-          -4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "cent_seg": {
-      "name": "cent_seg",
-      "description": "Centrosome",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/cent_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          3.36,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "mito_mt_contacts": {
-      "name": "mito_mt_contacts",
-      "description": "Mitochondria - Microtubule Contact Sites",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mito_mt_contacts",
+    "mt_nucleus_contacts": {
+      "name": "mt_nucleus_contacts",
+      "description": "Microtubule - Nucleus Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mt_nucleus_contacts",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1105,10 +1225,264 @@
       },
       "subsources": []
     },
+<<<<<<< HEAD
+    "mt-out_seg": {
+      "name": "mt-out_seg",
+      "description": "Microtubule outer",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mt-out_seg",
+=======
+    "er_seg": {
+      "name": "er_seg",
+      "description": "Endoplasmic Reticulum",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+<<<<<<< HEAD
+        "color": "orange",
+=======
+        "color": "blue",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+        "invertLUT": false
+      },
+      "subsources": [
+        {
+<<<<<<< HEAD
+          "name": "mt-out_seg",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/neuroglancer/mesh/mt-out_seg",
+=======
+          "name": "er_seg",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/neuroglancer/mesh/er_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+          "format": "neuroglancer_legacy_mesh",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "ids": []
+        }
+      ]
+    },
+<<<<<<< HEAD
+    "nucleolus_pred": {
+      "name": "nucleolus_pred",
+      "description": "Nucleoulus",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/nucleolus_pred",
+=======
+    "golgi_vesicle_contacts": {
+      "name": "golgi_vesicle_contacts",
+      "description": "Golgi - Vesicle Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/golgi_vesicle_contacts",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          8000.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          -4.0,
+          4.0
+        ]
+      },
+<<<<<<< HEAD
+      "sampleType": "scalar",
+      "contentType": "prediction",
+=======
+      "sampleType": "label",
+      "contentType": "analysis",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+<<<<<<< HEAD
+    "cent_seg": {
+      "name": "cent_seg",
+      "description": "Centrosome",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/cent_seg",
+=======
+    "eres_seg": {
+      "name": "eres_seg",
+      "description": "Endoplasmic Reticulum Exit Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/eres_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+<<<<<<< HEAD
+          3.36,
+          4.0,
+          4.0
+=======
+          1.0,
+          1.0,
+          1.0
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+<<<<<<< HEAD
+    "mito_mt_contacts": {
+      "name": "mito_mt_contacts",
+      "description": "Mitochondria - Microtubule Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mito_mt_contacts",
+=======
+    "vesicle-mem_seg": {
+      "name": "vesicle-mem_seg",
+      "description": "Vesicle membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/vesicle-mem_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+<<<<<<< HEAD
+      "contentType": "analysis",
+=======
+      "contentType": "segmentation",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "red",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+<<<<<<< HEAD
     "np_seg": {
       "name": "np_seg",
       "description": "Nuclear Pore",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/np_seg",
+=======
+    "lyso_seg": {
+      "name": "lyso_seg",
+      "description": "Lysosome",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/lyso_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -1146,10 +1520,17 @@
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "cent_pred": {
       "name": "cent_pred",
       "description": "Centrosome",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/cent_pred",
+=======
+    "endo_golgi_contacts": {
+      "name": "endo_golgi_contacts",
+      "description": "Endosome - Golgi Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/endo_golgi_contacts",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -1178,142 +1559,26 @@
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
-          "end": 255,
+          "end": 65535,
           "min": 0,
-          "max": 255
+          "max": 65535
         },
         "color": "white",
         "invertLUT": false
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "mito_pred": {
       "name": "mito_pred",
       "description": "Mitochondria",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mito_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          8000.0,
-          0.0
-        ],
-        "scale": [
-          3.36,
-          -4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "green",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "golgi_pred": {
-      "name": "golgi_pred",
-      "description": "Golgi",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/golgi_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          8000.0,
-          0.0
-        ],
-        "scale": [
-          3.36,
-          -4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "cyan",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "fibsem-uint8": {
-      "name": "fibsem-uint8",
-      "description": "FIB-SEM Data (compressed)",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/neuroglancer/em/fibsem-uint8.precomputed",
-      "format": "precomputed",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          8000.0,
-          0.0
-        ],
-        "scale": [
-          3.36,
-          -4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "em",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 214,
-          "end": 233,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "pm_seg": {
-      "name": "pm_seg",
-      "description": "Plasma Membrane",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/pm_seg",
+=======
+    "er_ribo_contacts": {
+      "name": "er_ribo_contacts",
+      "description": "ER - Ribosome Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_ribo_contacts",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -1338,13 +1603,176 @@
         ]
       },
       "sampleType": "label",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 4294967295,
+          "min": 0,
+          "max": 4294967295
+        },
+<<<<<<< HEAD
+        "color": "green",
+=======
+        "color": "white",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+<<<<<<< HEAD
+    "golgi_pred": {
+      "name": "golgi_pred",
+      "description": "Golgi",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/golgi_pred",
+=======
+    "er-mem_seg": {
+      "name": "er-mem_seg",
+      "description": "Endoplasmic Reticulum membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er-mem_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          8000.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          -4.0,
+          4.0
+        ]
+      },
+<<<<<<< HEAD
+      "sampleType": "scalar",
+      "contentType": "prediction",
+=======
+      "sampleType": "label",
       "contentType": "segmentation",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
           "end": 255,
           "min": 0,
           "max": 255
+        },
+<<<<<<< HEAD
+        "color": "cyan",
+=======
+        "color": "blue",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+<<<<<<< HEAD
+    "fibsem-uint8": {
+      "name": "fibsem-uint8",
+      "description": "FIB-SEM Data (compressed)",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/neuroglancer/em/fibsem-uint8.precomputed",
+      "format": "precomputed",
+=======
+    "mt_vesicle_contacts": {
+      "name": "mt_vesicle_contacts",
+      "description": "Microtubule - Vesicle Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mt_vesicle_contacts",
+      "format": "n5",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          4.0,
+          4.0
+        ]
+      },
+<<<<<<< HEAD
+      "sampleType": "scalar",
+      "contentType": "em",
+=======
+      "sampleType": "label",
+      "contentType": "analysis",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 214,
+          "end": 233,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+<<<<<<< HEAD
+    "pm_seg": {
+      "name": "pm_seg",
+      "description": "Plasma Membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/pm_seg",
+=======
+    "er_vesicle_contacts": {
+      "name": "er_vesicle_contacts",
+      "description": "ER - Vesicle Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_vesicle_contacts",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
         },
         "color": "orange",
         "invertLUT": false
@@ -1381,245 +1809,17 @@
         }
       ]
     },
+<<<<<<< HEAD
     "nucleolus_seg": {
       "name": "nucleolus_seg",
       "description": "Nucleoulus",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/nucleolus_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          3.36,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "eres_pred": {
-      "name": "eres_pred",
-      "description": "Endoplasmic Reticulum Exit Sites",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/eres_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          8000.0,
-          0.0
-        ],
-        "scale": [
-          3.36,
-          -4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "mt_vesicle_contacts": {
-      "name": "mt_vesicle_contacts",
-      "description": "Microtubule - Vesicle Contact Sites",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mt_vesicle_contacts",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          3.36,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "analysis",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "er_vesicle_contacts": {
-      "name": "er_vesicle_contacts",
-      "description": "ER - Vesicle Contact Sites",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_vesicle_contacts",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          3.36,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "analysis",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "er_seg": {
-      "name": "er_seg",
-      "description": "Endoplasmic Reticulum",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          3.36,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "blue",
-        "invertLUT": false
-      },
-      "subsources": [
-        {
-          "name": "er_seg",
-          "description": "",
-          "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/neuroglancer/mesh/er_seg",
-          "format": "neuroglancer_legacy_mesh",
-          "transform": {
-            "axes": [
-              "z",
-              "y",
-              "x"
-            ],
-            "units": [
-              "nm",
-              "nm",
-              "nm"
-            ],
-            "translate": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "scale": [
-              1.0,
-              1.0,
-              1.0
-            ]
-          },
-          "ids": []
-        }
-      ]
-    },
+=======
     "chrom_seg": {
       "name": "chrom_seg",
       "description": "Chromatin",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/chrom_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -1648,6 +1848,102 @@
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+<<<<<<< HEAD
+    "eres_pred": {
+      "name": "eres_pred",
+      "description": "Endoplasmic Reticulum Exit Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/eres_pred",
+=======
+    "nhchrom_pred": {
+      "name": "nhchrom_pred",
+      "description": "Nucleoulus associated Heterochromatin",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/nhchrom_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          8000.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          -4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "prediction",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+<<<<<<< HEAD
+    "mt_vesicle_contacts": {
+      "name": "mt_vesicle_contacts",
+      "description": "Microtubule - Vesicle Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mt_vesicle_contacts",
+=======
+    "endo_er_contacts": {
+      "name": "endo_er_contacts",
+      "description": "Endosome - ER Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/endo_er_contacts",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
           "end": 65535,
           "min": 0,
           "max": 65535
@@ -1657,10 +1953,363 @@
       },
       "subsources": []
     },
+<<<<<<< HEAD
+    "er_vesicle_contacts": {
+      "name": "er_vesicle_contacts",
+      "description": "ER - Vesicle Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_vesicle_contacts",
+=======
+    "golgi-mem_pred": {
+      "name": "golgi-mem_pred",
+      "description": "Golgi membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/golgi-mem_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          4.0,
+          4.0
+        ]
+      },
+<<<<<<< HEAD
+      "sampleType": "label",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+=======
+      "sampleType": "scalar",
+      "contentType": "prediction",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+          "min": 0,
+          "max": 65535
+        },
+        "color": "cyan",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+<<<<<<< HEAD
+    "er_seg": {
+      "name": "er_seg",
+      "description": "Endoplasmic Reticulum",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_seg",
+=======
+    "golgi_seg": {
+      "name": "golgi_seg",
+      "description": "Golgi",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/golgi_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+<<<<<<< HEAD
+        "color": "blue",
+=======
+        "color": "cyan",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+        "invertLUT": false
+      },
+      "subsources": [
+        {
+<<<<<<< HEAD
+          "name": "er_seg",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/neuroglancer/mesh/er_seg",
+=======
+          "name": "golgi_seg",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/neuroglancer/mesh/golgi_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+          "format": "neuroglancer_legacy_mesh",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "ids": []
+        }
+      ]
+    },
+<<<<<<< HEAD
+    "chrom_seg": {
+      "name": "chrom_seg",
+      "description": "Chromatin",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/chrom_seg",
+=======
+    "ld_seg": {
+      "name": "ld_seg",
+      "description": "Lipid Droplet",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ld_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+<<<<<<< HEAD
+          1.0,
+          1.0,
+          1.0
+=======
+          3.36,
+          4.0,
+          4.0
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+<<<<<<< HEAD
     "lyso_seg": {
       "name": "lyso_seg",
       "description": "Lysosome",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/lyso_seg",
+=======
+    "ribo_pred": {
+      "name": "ribo_pred",
+      "description": "Ribosome",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ribo_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+<<<<<<< HEAD
+        "color": "white",
+=======
+        "color": "yellow",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+<<<<<<< HEAD
+    "golgi_mt_contacts": {
+      "name": "golgi_mt_contacts",
+      "description": "Golgi - Microtubule Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/golgi_mt_contacts",
+=======
+    "ne-mem_pred": {
+      "name": "ne-mem_pred",
+      "description": "Nuclear Envelope membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ne-mem_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          8000.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          -4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "prediction",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+<<<<<<< HEAD
+    "ld_pred": {
+      "name": "ld_pred",
+      "description": "Lipid Droplet",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ld_pred",
+=======
+    "ecs_seg": {
+      "name": "ecs_seg",
+      "description": "Extracellular Space",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ecs_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+<<<<<<< HEAD
+    "chrom_pred": {
+      "name": "chrom_pred",
+      "description": "Chromatin",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/chrom_pred",
+=======
+    "ld-mem_seg": {
+      "name": "ld-mem_seg",
+      "description": "Lipid Droplet membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ld-mem_seg",
       "format": "n5",
       "transform": {
         "axes": [
@@ -1698,51 +2347,11 @@
       },
       "subsources": []
     },
-    "golgi_mt_contacts": {
-      "name": "golgi_mt_contacts",
-      "description": "Golgi - Microtubule Contact Sites",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/golgi_mt_contacts",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          3.36,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "analysis",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "ld_pred": {
-      "name": "ld_pred",
-      "description": "Lipid Droplet",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ld_pred",
+    "mito-mem_pred": {
+      "name": "mito-mem_pred",
+      "description": "Mitochondria membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mito-mem_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -1775,56 +2384,22 @@
           "min": 0,
           "max": 255
         },
-        "color": "white",
+        "color": "green",
         "invertLUT": false
       },
       "subsources": []
     },
-    "chrom_pred": {
-      "name": "chrom_pred",
-      "description": "Chromatin",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/chrom_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          8000.0,
-          0.0
-        ],
-        "scale": [
-          3.36,
-          -4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
+<<<<<<< HEAD
     "fibsem-uint16": {
       "name": "fibsem-uint16",
       "description": "FIB-SEM Data (uncompressed)",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/em/fibsem-uint16",
+=======
+    "ecs_pred": {
+      "name": "ecs_pred",
+      "description": "Extracellular Space",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ecs_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -1839,33 +2414,48 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          8000.0,
           0.0
         ],
         "scale": [
           3.36,
-          4.0,
+          -4.0,
           4.0
         ]
       },
       "sampleType": "scalar",
+<<<<<<< HEAD
       "contentType": "em",
       "displaySettings": {
         "contrastLimits": {
           "start": 19463,
           "end": 28573,
+=======
+      "contentType": "prediction",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
           "min": 0,
-          "max": 65535
+          "max": 255
         },
         "color": "white",
         "invertLUT": true
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "er_mt_contacts": {
       "name": "er_mt_contacts",
       "description": "ER - Microtubule Contact Sites",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_mt_contacts",
+=======
+    "mito_pred": {
+      "name": "mito_pred",
+      "description": "Mitochondria",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mito_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -1880,17 +2470,17 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          8000.0,
           0.0
         ],
         "scale": [
           3.36,
-          4.0,
+          -4.0,
           4.0
         ]
       },
-      "sampleType": "label",
-      "contentType": "analysis",
+      "sampleType": "scalar",
+      "contentType": "prediction",
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
@@ -1898,7 +2488,7 @@
           "min": 0,
           "max": 65535
         },
-        "color": "white",
+        "color": "green",
         "invertLUT": false
       },
       "subsources": []
@@ -1944,10 +2534,58 @@
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "mt-in_pred": {
       "name": "mt-in_pred",
       "description": "Microtubule inner",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mt-in_pred",
+=======
+    "fibsem-uint8": {
+      "name": "fibsem-uint8",
+      "description": "FIB-SEM Data (compressed)",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/neuroglancer/em/fibsem-uint8.precomputed",
+      "format": "precomputed",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          8000.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          -4.0,
+          4.0
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "em",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 214,
+          "end": 233,
+          "min": 0,
+          "max": 255
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "ribo_seg": {
+      "name": "ribo_seg",
+      "description": "Ribosome",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ribo_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -1976,19 +2614,34 @@
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
+<<<<<<< HEAD
           "end": 255,
           "min": 0,
           "max": 255
         },
         "color": "orange",
+=======
+          "end": 4294967295,
+          "min": 0,
+          "max": 4294967295
+        },
+        "color": "yellow",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
         "invertLUT": false
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "nhchrom_seg": {
       "name": "nhchrom_seg",
       "description": "Nucleoulus associated Heterochromatin",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/nhchrom_seg",
+=======
+    "er_curvature": {
+      "name": "er_curvature",
+      "description": "Reconstructed ER from Medial Surface with Curvature",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_curvature",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -2013,7 +2666,7 @@
         ]
       },
       "sampleType": "label",
-      "contentType": "segmentation",
+      "contentType": "analysis",
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
@@ -2026,10 +2679,17 @@
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "golgi-mem_seg": {
       "name": "golgi-mem_seg",
       "description": "Golgi membrane",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/golgi-mem_seg",
+=======
+    "golgi_mt_contacts": {
+      "name": "golgi_mt_contacts",
+      "description": "Golgi - Microtubule Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/golgi_mt_contacts",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -2054,7 +2714,7 @@
         ]
       },
       "sampleType": "label",
-      "contentType": "segmentation",
+      "contentType": "analysis",
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
@@ -2067,10 +2727,17 @@
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "er_golgi_contacts": {
       "name": "er_golgi_contacts",
       "description": "ER - Golgi Contact Sites",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_golgi_contacts",
+=======
+    "er_medial-surface": {
+      "name": "er_medial-surface",
+      "description": "ER Medial Surface",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_medial-surface",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -2108,10 +2775,17 @@
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "er_medial-surface": {
       "name": "er_medial-surface",
       "description": "ER Medial Surface",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_medial-surface",
+=======
+    "endo-mem_seg": {
+      "name": "endo-mem_seg",
+      "description": "Endosome membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/endo-mem_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -2140,19 +2814,30 @@
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
-          "end": 255,
+          "end": 65535,
           "min": 0,
-          "max": 255
+          "max": 65535
         },
+<<<<<<< HEAD
         "color": "white",
+=======
+        "color": "magenta",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
         "invertLUT": false
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "ribo_pred": {
       "name": "ribo_pred",
       "description": "Ribosome",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ribo_pred",
+=======
+    "endo-mem_pred": {
+      "name": "endo-mem_pred",
+      "description": "Endosome membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/endo-mem_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -2185,15 +2870,26 @@
           "min": 0,
           "max": 255
         },
+<<<<<<< HEAD
         "color": "yellow",
+=======
+        "color": "magenta",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
         "invertLUT": false
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "vesicle-mem_seg": {
       "name": "vesicle-mem_seg",
       "description": "Vesicle membrane",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/vesicle-mem_seg",
+=======
+    "ld-mem_pred": {
+      "name": "ld-mem_pred",
+      "description": "Lipid Droplet membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ld-mem_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -2208,17 +2904,22 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          8000.0,
           0.0
         ],
         "scale": [
           3.36,
-          4.0,
+          -4.0,
           4.0
         ]
       },
+<<<<<<< HEAD
       "sampleType": "label",
       "contentType": "segmentation",
+=======
+      "sampleType": "scalar",
+      "contentType": "prediction",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
@@ -2231,10 +2932,17 @@
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "np_pred": {
       "name": "np_pred",
       "description": "Nuclear Pore",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/np_pred",
+=======
+    "mito_mt_contacts": {
+      "name": "mito_mt_contacts",
+      "description": "Mitochondria - Microtubule Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mito_mt_contacts",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -2272,10 +2980,17 @@
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "er-mem_pred": {
       "name": "er-mem_pred",
       "description": "Endoplasmic Reticulum membrane",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er-mem_pred",
+=======
+    "endo_mt_contacts": {
+      "name": "endo_mt_contacts",
+      "description": "Endosome - Microtubule Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/endo_mt_contacts",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -2313,10 +3028,17 @@
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "lyso-mem_pred": {
       "name": "lyso-mem_pred",
       "description": "Lysosome membrane",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/lyso-mem_pred",
+=======
+    "chrom_pred": {
+      "name": "chrom_pred",
+      "description": "Chromatin",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/chrom_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -2354,10 +3076,17 @@
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "golgi_seg": {
       "name": "golgi_seg",
       "description": "Golgi",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/golgi_seg",
+=======
+    "mito-mem_seg": {
+      "name": "mito-mem_seg",
+      "description": "Mitochondria membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mito-mem_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -2386,11 +3115,15 @@
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
-          "end": 255,
+          "end": 65535,
           "min": 0,
-          "max": 255
+          "max": 65535
         },
+<<<<<<< HEAD
         "color": "cyan",
+=======
+        "color": "green",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
         "invertLUT": false
       },
       "subsources": [
@@ -2425,10 +3158,17 @@
         }
       ]
     },
+<<<<<<< HEAD
     "endo_golgi_contacts": {
       "name": "endo_golgi_contacts",
       "description": "Endosome - Golgi Contact Sites",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/endo_golgi_contacts",
+=======
+    "nucleus_pred": {
+      "name": "nucleus_pred",
+      "description": "Nucleus",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/nucleus_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -2443,25 +3183,25 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          8000.0,
           0.0
         ],
         "scale": [
           3.36,
-          4.0,
+          -4.0,
           4.0
         ]
       },
-      "sampleType": "label",
-      "contentType": "analysis",
+      "sampleType": "scalar",
+      "contentType": "prediction",
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
-          "end": 65535,
+          "end": 255,
           "min": 0,
-          "max": 65535
+          "max": 255
         },
-        "color": "white",
+        "color": "red",
         "invertLUT": false
       },
       "subsources": []
@@ -2507,10 +3247,17 @@
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "ecs_seg": {
       "name": "ecs_seg",
       "description": "Extracellular Space",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ecs_seg",
+=======
+    "vesicle_seg": {
+      "name": "vesicle_seg",
+      "description": "Vesicle",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/vesicle_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -2543,6 +3290,7 @@
           "min": 0,
           "max": 255
         },
+<<<<<<< HEAD
         "color": "white",
         "invertLUT": false
       },
@@ -2552,210 +3300,15 @@
       "name": "golgi_vesicle_contacts",
       "description": "Golgi - Vesicle Contact Sites",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/golgi_vesicle_contacts",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          3.36,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "analysis",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "mito_skeleton-lsp": {
-      "name": "mito_skeleton-lsp",
-      "description": "Mitochrondria Skeletons: Longest Shortest Path",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mito_skeleton-lsp",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          3.36,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "analysis",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "nucleus_pred": {
-      "name": "nucleus_pred",
-      "description": "Nucleus",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/nucleus_pred",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          8000.0,
-          0.0
-        ],
-        "scale": [
-          3.36,
-          -4.0,
-          4.0
-        ]
-      },
-      "sampleType": "scalar",
-      "contentType": "prediction",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
+=======
         "color": "red",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "ne_seg": {
-      "name": "ne_seg",
-      "description": "Nuclear Envelope",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ne_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          3.36,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 255,
-          "min": 0,
-          "max": 255
-        },
-        "color": "white",
-        "invertLUT": false
-      },
-      "subsources": []
-    },
-    "mito_seg": {
-      "name": "mito_seg",
-      "description": "Mitochondria",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mito_seg",
-      "format": "n5",
-      "transform": {
-        "axes": [
-          "z",
-          "y",
-          "x"
-        ],
-        "units": [
-          "nm",
-          "nm",
-          "nm"
-        ],
-        "translate": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": [
-          3.36,
-          4.0,
-          4.0
-        ]
-      },
-      "sampleType": "label",
-      "contentType": "segmentation",
-      "displaySettings": {
-        "contrastLimits": {
-          "start": 0,
-          "end": 65535,
-          "min": 0,
-          "max": 65535
-        },
-        "color": "green",
         "invertLUT": false
       },
       "subsources": [
         {
-          "name": "mito_seg",
+          "name": "vesicle_seg",
           "description": "",
-          "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/neuroglancer/mesh/mito_seg",
+          "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/neuroglancer/mesh/vesicle_seg",
           "format": "neuroglancer_legacy_mesh",
           "transform": {
             "axes": [
@@ -2783,10 +3336,120 @@
         }
       ]
     },
-    "ne_pred": {
-      "name": "ne_pred",
-      "description": "Nuclear Envelope",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ne_pred",
+    "er_pred": {
+      "name": "er_pred",
+      "description": "Endoplasmic Reticulum",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          8000.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          -4.0,
+          4.0
+        ]
+      },
+<<<<<<< HEAD
+      "sampleType": "label",
+      "contentType": "analysis",
+=======
+      "sampleType": "scalar",
+      "contentType": "prediction",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+<<<<<<< HEAD
+        "color": "white",
+=======
+        "color": "blue",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+<<<<<<< HEAD
+    "mito_skeleton-lsp": {
+      "name": "mito_skeleton-lsp",
+      "description": "Mitochrondria Skeletons: Longest Shortest Path",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mito_skeleton-lsp",
+=======
+    "vesicle-mem_pred": {
+      "name": "vesicle-mem_pred",
+      "description": "Vesicle membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/vesicle-mem_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "analysis",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+<<<<<<< HEAD
+        "color": "white",
+=======
+        "color": "red",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+<<<<<<< HEAD
+    "nucleus_pred": {
+      "name": "nucleus_pred",
+      "description": "Nucleus",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/nucleus_pred",
+=======
+    "cent-dapp_pred": {
+      "name": "cent-dapp_pred",
+      "description": "Centrosome Distal Appendage",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/cent-dapp_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -2824,10 +3487,259 @@
       },
       "subsources": []
     },
+<<<<<<< HEAD
+    "ne_seg": {
+      "name": "ne_seg",
+      "description": "Nuclear Envelope",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ne_seg",
+=======
+    "mt-in_pred": {
+      "name": "mt-in_pred",
+      "description": "Microtubule inner",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mt-in_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          8000.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          -4.0,
+          4.0
+        ]
+      },
+<<<<<<< HEAD
+      "sampleType": "label",
+      "contentType": "segmentation",
+=======
+      "sampleType": "scalar",
+      "contentType": "prediction",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
+        "color": "orange",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+<<<<<<< HEAD
+    "mito_seg": {
+      "name": "mito_seg",
+      "description": "Mitochondria",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mito_seg",
+=======
+    "cent_seg": {
+      "name": "cent_seg",
+      "description": "Centrosome",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/cent_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+<<<<<<< HEAD
+        "color": "green",
+=======
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+    "mt-out_seg": {
+      "name": "mt-out_seg",
+      "description": "Microtubule outer",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mt-out_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+        },
+        "color": "orange",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+        "invertLUT": false
+      },
+      "subsources": [
+        {
+<<<<<<< HEAD
+          "name": "mito_seg",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/neuroglancer/mesh/mito_seg",
+=======
+          "name": "mt-out_seg",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/neuroglancer/mesh/mt-out_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+          "format": "neuroglancer_legacy_mesh",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "ids": []
+        }
+      ]
+    },
+<<<<<<< HEAD
+    "ne_pred": {
+      "name": "ne_pred",
+      "description": "Nuclear Envelope",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ne_pred",
+=======
+    "gt": {
+      "name": "gt",
+      "description": "Ground truth",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/gt",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          8000.0,
+          0.0
+        ],
+        "scale": [
+<<<<<<< HEAD
+          3.36,
+          -4.0,
+          4.0
+=======
+          1.68,
+          2.0,
+          2.0
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+        ]
+      },
+      "sampleType": "scalar",
+      "contentType": "prediction",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+<<<<<<< HEAD
+          "end": 255,
+          "min": 0,
+          "max": 255
+=======
+          "end": 1,
+          "min": 0,
+          "max": 1
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
+        },
+        "color": "white",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+<<<<<<< HEAD
     "endo_mt_contacts": {
       "name": "endo_mt_contacts",
       "description": "Endosome - Microtubule Contact Sites",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/endo_mt_contacts",
+=======
+    "ne_pred": {
+      "name": "ne_pred",
+      "description": "Nuclear Envelope",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ne_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -2865,10 +3777,17 @@
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "endo_er_contacts": {
       "name": "endo_er_contacts",
       "description": "Endosome - ER Contact Sites",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/endo_er_contacts",
+=======
+    "mito_pm_contacts": {
+      "name": "mito_pm_contacts",
+      "description": "Mito - Plasma Membrane Contact Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mito_pm_contacts",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -2906,10 +3825,17 @@
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "mt_nucleus_contacts": {
       "name": "mt_nucleus_contacts",
       "description": "Microtubule - Nucleus Contact Sites",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mt_nucleus_contacts",
+=======
+    "pm_seg": {
+      "name": "pm_seg",
+      "description": "Plasma Membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/pm_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -2945,6 +3871,7 @@
         "color": "white",
         "invertLUT": false
       },
+<<<<<<< HEAD
       "subsources": []
     },
     "nhchrom_pred": {
@@ -3063,6 +3990,44 @@
       "name": "ecs_pred",
       "description": "Extracellular Space",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ecs_pred",
+=======
+      "subsources": [
+        {
+          "name": "pm_seg",
+          "description": "",
+          "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/neuroglancer/mesh/pm_seg",
+          "format": "neuroglancer_legacy_mesh",
+          "transform": {
+            "axes": [
+              "z",
+              "y",
+              "x"
+            ],
+            "units": [
+              "nm",
+              "nm",
+              "nm"
+            ],
+            "translate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "ids": []
+        }
+      ]
+    },
+    "ld_pred": {
+      "name": "ld_pred",
+      "description": "Lipid Droplet",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ld_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -3100,10 +4065,17 @@
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "eres_seg": {
       "name": "eres_seg",
       "description": "Endoplasmic Reticulum Exit Sites",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/eres_seg",
+=======
+    "ribo_classified": {
+      "name": "ribo_classified",
+      "description": "Ribosomes classified by contact surface",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ribo_classified",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -3122,13 +4094,19 @@
           0.0
         ],
         "scale": [
+<<<<<<< HEAD
           1.0,
           1.0,
           1.0
+=======
+          3.36,
+          4.0,
+          4.0
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
         ]
       },
       "sampleType": "label",
-      "contentType": "segmentation",
+      "contentType": "analysis",
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
@@ -3141,10 +4119,17 @@
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "er_pm_contacts": {
       "name": "er_pm_contacts",
       "description": "ER - Plasma Membrane Contat Sites",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_pm_contacts",
+=======
+    "fibsem-uint16": {
+      "name": "fibsem-uint16",
+      "description": "FIB-SEM Data (uncompressed)",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/em/fibsem-uint16",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -3168,16 +4153,22 @@
           4.0
         ]
       },
+<<<<<<< HEAD
       "sampleType": "label",
       "contentType": "analysis",
+=======
+      "sampleType": "scalar",
+      "contentType": "em",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "displaySettings": {
         "contrastLimits": {
-          "start": 0,
-          "end": 65535,
+          "start": 19463,
+          "end": 28573,
           "min": 0,
           "max": 65535
         },
         "color": "white",
+<<<<<<< HEAD
         "invertLUT": false
       },
       "subsources": []
@@ -3186,6 +4177,16 @@
       "name": "er_ribo_contacts",
       "description": "ER - Ribosome Contact Sites",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_ribo_contacts",
+=======
+        "invertLUT": true
+      },
+      "subsources": []
+    },
+    "golgi_pred": {
+      "name": "golgi_pred",
+      "description": "Golgi",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/golgi_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -3218,15 +4219,63 @@
           "min": 0,
           "max": 4294967295
         },
+        "color": "cyan",
+        "invertLUT": false
+      },
+      "subsources": []
+    },
+<<<<<<< HEAD
+    "gt": {
+      "name": "gt",
+      "description": "Ground truth",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/gt",
+=======
+    "cent-dapp_seg": {
+      "name": "cent-dapp_seg",
+      "description": "Centrosome Distal Appendage",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/cent-dapp_seg",
+      "format": "n5",
+      "transform": {
+        "axes": [
+          "z",
+          "y",
+          "x"
+        ],
+        "units": [
+          "nm",
+          "nm",
+          "nm"
+        ],
+        "translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          3.36,
+          4.0,
+          4.0
+        ]
+      },
+      "sampleType": "label",
+      "contentType": "segmentation",
+      "displaySettings": {
+        "contrastLimits": {
+          "start": 0,
+          "end": 255,
+          "min": 0,
+          "max": 255
+        },
         "color": "white",
         "invertLUT": false
       },
       "subsources": []
     },
-    "gt": {
-      "name": "gt",
-      "description": "Ground truth",
-      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/gt",
+    "nhchrom_seg": {
+      "name": "nhchrom_seg",
+      "description": "Nucleoulus associated Heterochromatin",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/nhchrom_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -3255,19 +4304,32 @@
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
+<<<<<<< HEAD
           "end": 1,
           "min": 0,
           "max": 1
+=======
+          "end": 65535,
+          "min": 0,
+          "max": 65535
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
         },
         "color": "white",
         "invertLUT": false
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "mito_skeleton": {
       "name": "mito_skeleton",
       "description": "Mitochrondria Skeletons",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mito_skeleton",
+=======
+    "er_pm_contacts": {
+      "name": "er_pm_contacts",
+      "description": "ER - Plasma Membrane Contat Sites",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_pm_contacts",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -3305,10 +4367,17 @@
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "lyso_pred": {
       "name": "lyso_pred",
       "description": "Lysosome",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/lyso_pred",
+=======
+    "mito_skeleton-lsp": {
+      "name": "mito_skeleton-lsp",
+      "description": "Mitochrondria Skeletons: Longest Shortest Path",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mito_skeleton-lsp",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -3337,19 +4406,26 @@
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
-          "end": 255,
+          "end": 65535,
           "min": 0,
-          "max": 255
+          "max": 65535
         },
         "color": "white",
         "invertLUT": false
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "er_mito_contacts": {
       "name": "er_mito_contacts",
       "description": "ER - Mito Contact Sites",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er_mito_contacts",
+=======
+    "pm_pred": {
+      "name": "pm_pred",
+      "description": "Plasma Membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/pm_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -3382,7 +4458,11 @@
           "min": 0,
           "max": 65535
         },
+<<<<<<< HEAD
         "color": "white",
+=======
+        "color": "orange",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
         "invertLUT": false
       },
       "subsources": [
@@ -3417,10 +4497,17 @@
         }
       ]
     },
+<<<<<<< HEAD
     "mt_pm_contacts": {
       "name": "mt_pm_contacts",
       "description": "Microtubule - Plasma Membrane Contact Sites",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/mt_pm_contacts",
+=======
+    "ne-mem_seg": {
+      "name": "ne-mem_seg",
+      "description": "Nuclear Envelope membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ne-mem_seg",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -3445,7 +4532,7 @@
         ]
       },
       "sampleType": "label",
-      "contentType": "analysis",
+      "contentType": "segmentation",
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
@@ -3458,6 +4545,7 @@
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "ribo_seg": {
       "name": "ribo_seg",
       "description": "Ribosome",
@@ -3544,6 +4632,12 @@
       "name": "er-mem_seg",
       "description": "Endoplasmic Reticulum membrane",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/er-mem_seg",
+=======
+    "cent_pred": {
+      "name": "cent_pred",
+      "description": "Centrosome",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/cent_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [
@@ -3558,17 +4652,17 @@
         ],
         "translate": [
           0.0,
-          0.0,
+          8000.0,
           0.0
         ],
         "scale": [
           3.36,
-          4.0,
+          -4.0,
           4.0
         ]
       },
-      "sampleType": "label",
-      "contentType": "segmentation",
+      "sampleType": "scalar",
+      "contentType": "prediction",
       "displaySettings": {
         "contrastLimits": {
           "start": 0,
@@ -3581,10 +4675,17 @@
       },
       "subsources": []
     },
+<<<<<<< HEAD
     "ld-mem_pred": {
       "name": "ld-mem_pred",
       "description": "Lipid Droplet membrane",
       "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/ld-mem_pred",
+=======
+    "lyso-mem_pred": {
+      "name": "lyso-mem_pred",
+      "description": "Lysosome membrane",
+      "url": "s3://janelia-cosem-datasets/jrc_macrophage-2/jrc_macrophage-2.n5/labels/lyso-mem_pred",
+>>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683
       "format": "n5",
       "transform": {
         "axes": [

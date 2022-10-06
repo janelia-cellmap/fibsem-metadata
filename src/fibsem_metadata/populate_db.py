@@ -23,7 +23,7 @@ from fibsem_metadata.schemas import (
     PublicationTable,
     SampleTable,
     ViewTable,
-    VolumeTable,
+    ImageTable,
 )
 
 
@@ -91,7 +91,7 @@ def legacy_create_dataset(
 
 
 def legacy_create_view(
-    metadata: LegacyView, dataset: DatasetTable, volumes: List[VolumeTable]
+    metadata: LegacyView, dataset: DatasetTable, images: List[ImageTable]
 ) -> ViewTable:
     view = ViewTable(
         name=metadata.name,
@@ -100,7 +100,7 @@ def legacy_create_view(
         position=metadata.position,
         scale=metadata.scale,
         orientation=metadata.orientation,
-        sources=volumes,
+        sources=images,
     )
     return view
 
@@ -135,7 +135,7 @@ def ingest_dataset(path: str, session: Session):
 
     session.add(dataset)
     session.commit()
-    volume_tables: Dict[str, VolumeTable] = {}
+    image_tables: Dict[str, VolumeTable] = {}
 
     for value in dmeta.sources.values():
         display_settings = DisplaySettings(
@@ -145,7 +145,7 @@ def ingest_dataset(path: str, session: Session):
             invert_lut=value.displaySettings.invertLUT,
             color=value.displaySettings.color,
         )
-        volume_tables[value.name] = VolumeTable(
+        image_tables[value.name] = ImageTable(
             name=value.name,
             description=value.description,
             url=value.url,
@@ -157,7 +157,7 @@ def ingest_dataset(path: str, session: Session):
             dataset_name=dataset.name,
         )
 
-    session.add_all(list(volume_tables.values()))
+    session.add_all(list(image_tables.values()))
     session.commit()
     view_tables = []
     for v in dmeta.views:

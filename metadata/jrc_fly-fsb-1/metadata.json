@@ -1,6 +1,7 @@
 {
   "title": "Drosophila brain: Fan-shaped body",
   "id": "jrc_fly-fsb-1",
+  "thumbnailURL": "https://janelia-cosem-datasets.s3.amazonaws.com/jrc_fly-fsb-1/thumbnail.jpg",
   "imaging": {
     "id": "FB-Z0519-11",
     "institution": "Janelia",

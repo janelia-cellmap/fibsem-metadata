@@ -1,6 +1,7 @@
 {
   "title": "H89 treated HeLa cell",
   "id": "jrc_hela-h89-2",
+  "thumbnailURL": "https://janelia-cosem-datasets.s3.amazonaws.com/jrc_hela-h89-2/thumbnail.jpg",
   "imaging": {
     "id": "CryoLoadID528_ROI7",
     "institution": "Janelia",

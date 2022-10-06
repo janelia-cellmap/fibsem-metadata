@@ -1,6 +1,7 @@
 {
   "title": "Immortalized breast cancer cell (SUM159)",
   "id": "jrc_sum159-1",
+  "thumbnailURL": "https://janelia-cosem-datasets.s3.amazonaws.com/jrc_sum159-1/thumbnail.jpg",
   "imaging": {
     "id": "Cryo_20171009_WT45_Cell2",
     "institution": "Janelia",

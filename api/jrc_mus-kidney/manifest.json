@@ -3,6 +3,7 @@
   "metadata": {
     "title": "Mouse Kidney",
     "id": "jrc_mus-kidney",
+    "thumbnailURL": "https://janelia-cosem-datasets.s3.amazonaws.com/jrc_mus-kidney/thumbnail.jpg",
     "imaging": {
       "id": "",
       "institution": "Janelia",
