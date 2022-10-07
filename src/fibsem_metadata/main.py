@@ -12,7 +12,7 @@ root_router = APIRouter()
 
 
 @root_router.get("/health")
-async def api_status() -> Dict[str, Union[bool, str]]:
+def api_status() -> Dict[str, Union[bool, str]]:
     from fibsem_metadata.db.session import engine
     from sqlalchemy.exc import OperationalError
     import fibsem_metadata

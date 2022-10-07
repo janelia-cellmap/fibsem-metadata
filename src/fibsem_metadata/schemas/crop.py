@@ -12,7 +12,7 @@ class LabelClassTable(Base):
     name = Column(String, index=True)
     value = Column(Integer)
     annotation_state = Column(postgresql.JSONB)
-    crop_id = Column(Integer, ForeignKey("crop.id"), nullable=False)
+    crop_id = Column(Integer, ForeignKey("crop.id", ondelete="CASCADE"), nullable=False)
     crop = relationship("CropTable")
 
 
@@ -22,7 +22,7 @@ class CropTable(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String, index=True, unique=True)
     description = Column(String, index=True)
-    source_id = Column(ForeignKey("image.id"), nullable=False)
+    source_id = Column(ForeignKey("image.id", ondelete="CASCADE"), nullable=False)
     annotations = relationship(LabelClassTable, back_populates="crop")
     shape = Column(postgresql.ARRAY(Integer))
     completion_stage = Column(String, index=True)

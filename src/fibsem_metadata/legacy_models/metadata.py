@@ -1,8 +1,5 @@
 from datetime import date
-<<<<<<< HEAD:src/fibsem_metadata/legacy_models/metadata.py
-=======
 from typing import List, Dict, Union, Optional
->>>>>>> 36caf5c7d6c0e5093ecce486f05d00adf4181683:src/fibsem_metadata/models/metadata.py
 from enum import Enum
 from typing import Dict, List, Union
 
@@ -92,15 +89,3 @@ class DatasetMetadata(StrictBaseModel):
     softwareAvailability: SoftwareAvailability
     DOI: List[Union[Hyperlink, DOI]]
     publications: List[Union[Hyperlink, str]]
-
-
-class Dataset(StrictBaseModel):
-    name: str
-    description: str
-    institution: List[str]
-    softwareAvailability: SoftwareAvailability
-    acquisition: FIBSEMImagingMetadata
-    sample: SampleMetadata
-    publications: List[Publication]
-    volumes: List[VolumeSource]
-    views: List[DatasetView]

@@ -16,6 +16,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 logger.addHandler(logging.StreamHandler())
 
+
 def validate_tree(root: str) -> None:
     """
     root must be a string naming a directory tree that contains a
@@ -72,10 +73,10 @@ def main(root: str = ".") -> int:
     # generate the manifest
     api_paths = [api_dir / path.name for path in metadata_paths]
     for meta_source, meta_target in zip(metadata_paths, api_paths):
-        logger.info(f'Building manifest from {meta_source} to {meta_target}')
+        logger.info(f"Building manifest from {meta_source} to {meta_target}")
         build_manifest(meta_source, meta_target)
     # generate the index
-    index = Index(datasets={p.name : str(p) for p in api_paths})
+    index = Index(datasets={p.name: str(p) for p in api_paths})
     with open(Path(root) / "api/index.json", mode="w") as fh:
         fh.write(index.json())
     return 0

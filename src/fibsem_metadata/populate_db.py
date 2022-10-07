@@ -1,8 +1,10 @@
-import json
+import base64
 from glob import glob
+import requests
 from typing import Dict, List, Literal, Optional
-
+import json
 from sqlalchemy.orm import Session
+from rich import print_json
 
 from fibsem_metadata.db.session import SessionLocal, engine
 from fibsem_metadata.legacy_models.manifest import DatasetManifest
@@ -16,7 +18,7 @@ from fibsem_metadata.legacy_models.metadata import (
 from fibsem_metadata.legacy_models.metadata import Publication as LegacyPublication
 from fibsem_metadata.legacy_models.metadata import SampleMetadata as LegacySample
 from fibsem_metadata.models.acquisition import UnitfulVector
-from fibsem_metadata.models.source import ContrastLimits, DisplaySettings, Volume
+from fibsem_metadata.models.source import ContrastLimits, DisplaySettings, Image
 from fibsem_metadata.schemas import (
     DatasetTable,
     FIBSEMAcquisitionTable,
@@ -25,6 +27,40 @@ from fibsem_metadata.schemas import (
     ViewTable,
     ImageTable,
 )
+from typing import List, Dict, Any
+
+
+def fetch_json() -> List[Dict[str, Any]]:
+    branch = "stable"
+    url = "https://api.github.com/repos/janelia-cosem/fibsem-metadata/contents/api"
+    headers = {"Accept": "application/vnd.github+json"}
+    request = requests.get(f"{url}?={branch}", headers=headers)
+    if request.status_code != 200:
+        raise RuntimeError(
+            f"The status code is bad! it was {request.status_code} instead of 200!!!!!!"
+        )
+    api_contents = request.json()
+    blobs = []
+    for entry in api_contents:
+        name = entry["name"]
+        if name != "index.json":
+            payload = requests.get(
+                f"{url}/{name}/manifest.json?={branch}", headers=headers
+            ).json()
+            blob = json.loads(base64.b64decode(payload["content"]))
+            blobs.append(blob)
+
+    return blobs
+
+
+def get_json() -> List[Dict[str, Any]]:
+    files = glob("./api/*/manifest.json")
+    blobs = []
+    for file in files:
+        with open(file, mode="r") as fh:
+            blobs.append(json.load(fh))
+
+    return blobs
 
 
 def legacy_create_sample(metadata: LegacySample) -> SampleTable:
@@ -86,6 +122,8 @@ def legacy_create_dataset(
         acquisition_id=acquisition_id,
         sample_id=sample_id,
         publications=pub_tables,
+        published=True,
+        thumbnail_url=metadata.thumbnailURL,
     )
     return dataset
 
@@ -105,11 +143,10 @@ def legacy_create_view(
     return view
 
 
-def ingest_dataset(path: str, session: Session):
-
-    with open(path) as fh:
-        blob = json.load(fh)
+def ingest_dataset(blob: Dict[str, any], session: Session):
     dmeta = DatasetManifest(**blob)
+
+    session.query(DatasetTable).where(DatasetTable.name == dmeta.name).delete()
 
     # generate the acquisition table
     acq_model = dmeta.metadata.imaging
@@ -122,9 +159,7 @@ def ingest_dataset(path: str, session: Session):
     pub_tables.extend(
         [legacy_create_pub(d, type="paper") for d in dmeta.metadata.publications]
     )
-
     session.add_all([acq_table, sample_table, *pub_tables])
-    session.commit()
 
     dataset = legacy_create_dataset(
         dmeta.metadata,
@@ -132,7 +167,6 @@ def ingest_dataset(path: str, session: Session):
         sample_id=sample_table.id,
         pub_tables=pub_tables,
     )
-
     session.add(dataset)
     session.commit()
     image_tables: Dict[str, VolumeTable] = {}
@@ -158,22 +192,22 @@ def ingest_dataset(path: str, session: Session):
         )
 
     session.add_all(list(image_tables.values()))
-    session.commit()
     view_tables = []
     for v in dmeta.views:
-        view_volume_names = v.sources
-        view_volumes = [v for k, v in volume_tables.items() if k in view_volume_names]
-        view_tables.append(legacy_create_view(v, dataset, volumes=view_volumes))
+        view_image_names = v.sources
+        view_images = [v for k, v in image_tables.items() if k in view_image_names]
+        view_tables.append(legacy_create_view(v, dataset, images=view_images))
     session.add_all(view_tables)
     session.commit()
-    return (acq_table, sample_table, *pub_tables, dataset, volume_tables, view_tables)
+    return (acq_table, sample_table, *pub_tables, dataset, image_tables, view_tables)
 
 
 def main(SessionLocal):
+    blobs = get_json()
     with SessionLocal() as session:
-        paths = glob("api/*/manifest.json")
-        for path in paths:
-            tables = ingest_dataset(path, session=session)
+        for blob in blobs:
+            print_json(data=blob)
+            tables = ingest_dataset(blob, session=session)
 
 
 if __name__ == "__main__":

@@ -8,8 +8,18 @@ from .base import Base
 view_to_image = Table(
     "view_to_image",
     Base.metadata,
-    Column("view_id", ForeignKey("view.id"), primary_key=True, index=True),
-    Column("image_id", ForeignKey("image.id"), primary_key=True, index=True),
+    Column(
+        "view_id",
+        ForeignKey("view.id", ondelete="CASCADE"),
+        primary_key=True,
+        index=True,
+    ),
+    Column(
+        "image_id",
+        ForeignKey("image.id", ondelete="CASCADE"),
+        primary_key=True,
+        index=True,
+    ),
 )
 
 
@@ -19,7 +29,10 @@ class ViewTable(Base):
     id = Column(Integer, primary_key=True, autoincrement=True, index=True)
     name = Column(String, index=True)
     dataset_name = Column(
-        String, ForeignKey("dataset.name"), nullable=False, index=True
+        String,
+        ForeignKey("dataset.name", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
     )
     description = Column(String)
     sources = relationship("ImageTable", secondary=view_to_image)

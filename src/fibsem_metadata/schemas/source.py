@@ -1,4 +1,4 @@
-from sqlalchemy import JSON, Boolean, Column, ForeignKey, Integer, String
+from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.dialects import postgresql
 from sqlalchemy.orm import relationship
 
@@ -29,9 +29,14 @@ class ImageTable(Base, DataSourceMixin):
     content_type = Column(String)
     display_settings = Column(postgresql.JSONB)
     dataset_name = Column(
-        String, ForeignKey("dataset.name"), nullable=False, index=True
+        String,
+        ForeignKey("dataset.name", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
     )
-    subsources = relationship("MeshTable", back_populates="image")
+    subsources = relationship(
+        "MeshTable", back_populates="image", cascade="all, delete-orphan"
+    )
 
 
 class ContentTypeTable(Base):

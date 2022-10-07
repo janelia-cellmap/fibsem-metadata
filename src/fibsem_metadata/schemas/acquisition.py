@@ -23,4 +23,4 @@ class FIBSEMAcquisitionTable(Base, ImageAcquisitionMixin):
     scan_rate = Column(Float)
     current = Column(Float)
     primary_energy = Column(Float)
-    datasets = relationship("DatasetTable")
+    datasets = relationship("DatasetTable", cascade="all, delete-orphan")
