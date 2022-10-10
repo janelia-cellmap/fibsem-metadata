@@ -18,7 +18,7 @@ class MeshTable(Base, DataSourceMixin):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     image = relationship("ImageTable")
-    image_id = Column(Integer, ForeignKey("image.id"), index=True)
+    image_id = Column(Integer, ForeignKey("image.id", ondelete="CASCADE"), index=True)
 
 
 class ImageTable(Base, DataSourceMixin):
