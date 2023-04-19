@@ -1,4 +1,4 @@
-# DEPRECATION NOTICE
+# ⚠️ DEPRECATION NOTICE ⚠️
 
 This repo is no longer used, and the metadata contained within might be accurate but is *no longer being updated.* 
 
