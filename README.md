@@ -1,3 +1,11 @@
+# DEPRECATION NOTICE
+
+This repo is no longer used, and the metadata contained within might be accurate but is *no longer being updated.* 
+
+We no longer use this repo to store metadata for imagery on OpenOrganelle. 
+Instead, we use a postgresql database managed by [supabase](https://supabase.com/). That database can be accessed via the [supabase python client](https://github.com/supabase-community/supabase-py). Contact me ([davis bennett](https://github.com/d-v-b)) directly to get access to the database. Sorry for any inconvenience this may cause.
+
+
 # Metadata for publicly hosted fibsem datasets
 
 ## Motivation
